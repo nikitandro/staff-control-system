@@ -1,0 +1,49 @@
+{
+  "post": [
+    {
+      "id": 1,
+      "title": "Frontend-разработчик Angular Junior",
+      "salaryCurrency": "RUB",
+      "salaryLowest": 60000,
+      "salaryHighest": 90000,
+      "responsibilitiesDescription": ""
+    }
+  ],
+  "department": [
+    {
+      "id": 1,
+      "title": "Отдел разработки",
+      "postList": [
+        {
+          "id": 1,
+          "title": "Frontend-разработчик Angular Junior",
+          "salaryCurrency": "RUB",
+          "salaryLowest": 60000,
+          "salaryHighest": 90000,
+          "responsibilitiesDescription": ""
+        }
+      ],
+      "responsibilitiesDescription": ""
+    }
+  ],
+  "employee": [
+    {
+      "id": 1,
+      "firstName": "Никита",
+      "lastName": "Вишняков",
+      "patronymic": "Сергеевич",
+      "birthDate": "",
+      "employmentDate": "",
+      "departmentId": "",
+      "postId": "",
+      "salary": 1,
+      "successRate": "",
+      "isFired": false,
+      "firstWorkDay": "",
+      "vacationsList": [],
+      "salaryIncreaseList": [],
+      "education": [],
+      "firingDate": ""
+    }
+  ]
+}
