@@ -9,7 +9,7 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
     templateUrl: './login.page.web.component.html',
     styleUrls: ['./styles/login.page.web.component.scss']
 })
-export class LoginPageComponent implements OnInit, OnDestroy {
+export class LoginPageWebComponent implements OnInit, OnDestroy {
     public loginForm: FormGroup = new FormGroup({
         email: new FormControl('', [Validators.required, Validators.email]),
         password: new FormControl('', [Validators.required, Validators.minLength(6)])

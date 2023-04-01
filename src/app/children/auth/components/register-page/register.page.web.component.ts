@@ -9,7 +9,7 @@ import { Subscription } from 'rxjs';
     templateUrl: './register.page.web.component.html',
     styleUrls: ['./styles/register.page.web.component.scss']
 })
-export class RegisterPageComponent implements OnDestroy {
+export class RegisterPageWebComponent implements OnDestroy {
     public registerForm: FormGroup = new FormGroup({
         email: new FormControl('', [Validators.required, Validators.email]),
         password: new FormControl('', [Validators.required, Validators.minLength(6)])

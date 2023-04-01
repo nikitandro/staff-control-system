@@ -1,14 +1,19 @@
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { LoginPageComponent } from './components/login-page/login.page.web.component';
-import { RegisterPageComponent } from './components/register-page/register.page.web.component';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+
+import { LoginPageWebComponent } from './components/login-page/login.page.web.component';
+import { RegisterPageWebComponent } from './components/register-page/register.page.web.component';
+import { AuthLayoutWebComponent } from './components/auth-layout/auth-layout.web.component';
+import { AppRoutingModule } from '../../app-routing.module';
 
 
 const components: any[] = [
-    LoginPageComponent,
-    RegisterPageComponent
+    LoginPageWebComponent,
+    RegisterPageWebComponent,
+    AuthLayoutWebComponent
 ];
 
 @NgModule({
@@ -19,11 +24,13 @@ const components: any[] = [
         FormsModule,
         ReactiveFormsModule,
         HttpClientModule,
-        CommonModule
+        CommonModule,
+        RouterModule,
+        AppRoutingModule
     ],
     exports: [
-        LoginPageComponent,
-        RegisterPageComponent
+        LoginPageWebComponent,
+        RegisterPageWebComponent
     ],
     providers: []
 })
