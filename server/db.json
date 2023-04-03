@@ -4,6 +4,21 @@
       "email": "aaa@aaa",
       "password": "$2a$10$O5CUNtZBB7dmVULREdh4Ou28HcV/wC3bSNcvLLmDqdBNXkkPTMbeK",
       "id": 1
+    },
+    {
+      "email": "nikitan@nikita.ru",
+      "password": "$2a$10$4eZwW7zddnFaE8XbEGvJceDaMB9OGrUQoKVZ9Y/LnGShrgj7bk.e2",
+      "id": 2
+    },
+    {
+      "email": "test1@test1.com",
+      "password": "$2a$10$3/UlxYNWi0OoCMI3l8sJVuiGYejSpfsek0KAGCKkQv/VlDc.WMIQ2",
+      "id": 3
+    },
+    {
+      "email": "test2@test2.com",
+      "password": "$2a$10$2QUcMqZ5UETnvuCC/.cUs.Uels4CtrbuvjEz9q42JcIcWsyM/V95S",
+      "id": 4
     }
   ],
   "post": [

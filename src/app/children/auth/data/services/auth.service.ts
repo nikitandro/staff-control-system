@@ -3,25 +3,41 @@ import { IAuthUserRequestModel } from '../request-models/auth-user.request-model
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
+import { IAuthUserResponseModel } from '../response-models/auth-user.response-model.interface';
 
 @Injectable({
-    providedIn: 'root'
+    providedIn: 'root',
 })
 export class AuthService {
     private _token: string | undefined = undefined;
 
     constructor(private _http: HttpClient) {}
 
-    public register(user: IAuthUserRequestModel): Observable<IAuthUserRequestModel> {
-        return this._http.post<IAuthUserRequestModel>('http://localhost:3000/register', user);
+    public register(
+        user: IAuthUserRequestModel
+    ): Observable<IAuthUserResponseModel> {
+        return this._http
+            .post<IAuthUserResponseModel>(
+                'http://localhost:3000/register',
+                user
+            )
+            .pipe(
+                tap((request) => {
+                    localStorage.setItem('token', request.accessToken);
+                    this.setToken(request.accessToken);
+                })
+            );
     }
 
-    public login(user: IAuthUserRequestModel): Observable<{ accessToken: string }> {
-        return this._http.post<{ accessToken: string }>('http://localhost:3000/login', user)
+    public login(
+        user: IAuthUserRequestModel
+    ): Observable<IAuthUserResponseModel> {
+        return this._http
+            .post<IAuthUserResponseModel>('http://localhost:3000/login', user)
             .pipe(
-                tap(({ accessToken }) => {
-                    localStorage.setItem('token', accessToken);
-                    this.setToken(accessToken);
+                tap((request) => {
+                    localStorage.setItem('token', request.accessToken);
+                    this.setToken(request.accessToken);
                 })
             );
     }
