@@ -23,7 +23,6 @@ export class AuthService {
             )
             .pipe(
                 tap((response) => {
-                    localStorage.setItem('token', response.accessToken);
                     this.setToken(response.accessToken);
                 })
             );
@@ -36,25 +35,28 @@ export class AuthService {
             .post<IAuthUserResponseModel>('http://localhost:3000/login', user)
             .pipe(
                 tap((response) => {
-                    localStorage.setItem('token', response.accessToken);
                     this.setToken(response.accessToken);
                 })
             );
     }
 
     public logout(): void {
-        this.setToken(undefined);
-        localStorage.clear();
+        this.removeToken();
     }
 
     public isAuthenticated(): boolean {
         return !!this._token;
     }
 
-    private setToken(token: string | undefined): void {
+    private setToken(token: string): void {
+        localStorage.setItem('token', token);
         this._token = token;
     }
 
+    private removeToken(): void {
+        localStorage.removeItem('token');
+        this._token = undefined;
+    }
     private getToken(): string | undefined {
         return this._token;
     }
