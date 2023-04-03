@@ -22,9 +22,9 @@ export class AuthService {
                 user
             )
             .pipe(
-                tap((request) => {
-                    localStorage.setItem('token', request.accessToken);
-                    this.setToken(request.accessToken);
+                tap((response) => {
+                    localStorage.setItem('token', response.accessToken);
+                    this.setToken(response.accessToken);
                 })
             );
     }
@@ -35,9 +35,9 @@ export class AuthService {
         return this._http
             .post<IAuthUserResponseModel>('http://localhost:3000/login', user)
             .pipe(
-                tap((request) => {
-                    localStorage.setItem('token', request.accessToken);
-                    this.setToken(request.accessToken);
+                tap((response) => {
+                    localStorage.setItem('token', response.accessToken);
+                    this.setToken(response.accessToken);
                 })
             );
     }
