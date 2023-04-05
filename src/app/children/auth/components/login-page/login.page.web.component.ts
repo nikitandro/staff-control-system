@@ -21,7 +21,8 @@ export class LoginPageWebComponent implements OnInit, OnDestroy {
         private _auth: AuthService,
         private _router: Router,
         private _route: ActivatedRoute
-    ) { }
+    ) {
+    }
 
     public ngOnInit(): void {
         this._route.queryParams.subscribe((params: Params) => {
@@ -41,12 +42,14 @@ export class LoginPageWebComponent implements OnInit, OnDestroy {
 
     public onSubmit(): void {
         this.loginForm.disable();
-        this._aSub = this._auth.login(this.loginForm.value).subscribe(
-            () => this._router.navigate(['/home']), //TODO сделать главную страницу, на которую должно редиректить после логина
-            (error: Error) => {
-                console.warn(error);
-                this.loginForm.enable();
-            }
-        );
+        this._aSub = this._auth
+                         .login(this.loginForm.value)
+                         .subscribe(
+                             () => this._router.navigate(['/home']), //TODO сделать главную страницу, на которую должно редиректить после логина
+                             (error: Error) => {
+                                 console.warn(error);
+                                 this.loginForm.enable();
+                             }
+                         );
     }
 }

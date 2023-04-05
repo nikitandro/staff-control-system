@@ -6,38 +6,30 @@ import { tap } from 'rxjs/operators';
 import { IAuthUserResponseModel } from '../response-models/auth-user.response-model.interface';
 
 @Injectable({
-    providedIn: 'root',
+    providedIn: 'root'
 })
 export class AuthService {
     private _token: string | undefined = undefined;
 
-    constructor(private _http: HttpClient) {}
-
-    public register(
-        user: IAuthUserRequestModel
-    ): Observable<IAuthUserResponseModel> {
-        return this._http
-            .post<IAuthUserResponseModel>(
-                'http://localhost:3000/register',
-                user
-            )
-            .pipe(
-                tap((response) => {
-                    this.setToken(response.accessToken);
-                })
-            );
+    constructor(private _http: HttpClient) {
     }
 
-    public login(
-        user: IAuthUserRequestModel
-    ): Observable<IAuthUserResponseModel> {
-        return this._http
-            .post<IAuthUserResponseModel>('http://localhost:3000/login', user)
-            .pipe(
-                tap((response) => {
-                    this.setToken(response.accessToken);
-                })
-            );
+    public register(user: IAuthUserRequestModel): Observable<IAuthUserResponseModel> {
+        return this._http.post<IAuthUserResponseModel>('http://localhost:3000/register', user)
+                   .pipe(
+                       tap((response) => {
+                           this.setToken(response.accessToken);
+                       })
+                   );
+    }
+
+    public login(user: IAuthUserRequestModel): Observable<IAuthUserResponseModel> {
+        return this._http.post<IAuthUserResponseModel>('http://localhost:3000/login', user)
+                   .pipe(
+                       tap((response) => {
+                           this.setToken(response.accessToken);
+                       })
+                   );
     }
 
     public logout(): void {
@@ -45,7 +37,7 @@ export class AuthService {
     }
 
     public isAuthenticated(): boolean {
-        return !!this._token;
+        return !!this._token && !!localStorage.getItem('token');
     }
 
     private setToken(token: string): void {
@@ -57,6 +49,7 @@ export class AuthService {
         localStorage.removeItem('token');
         this._token = undefined;
     }
+
     private getToken(): string | undefined {
         return this._token;
     }

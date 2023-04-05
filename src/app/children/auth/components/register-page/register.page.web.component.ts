@@ -12,15 +12,16 @@ import { Subscription } from 'rxjs';
 export class RegisterPageWebComponent implements OnDestroy {
     public registerForm: FormGroup = new FormGroup({
         email: new FormControl('', [Validators.required, Validators.email]),
-        password: new FormControl('', [Validators.required, Validators.minLength(6)])
+        password: new FormControl('', [
+            Validators.required,
+            Validators.minLength(6)
+        ])
     });
 
     private _aSub!: Subscription;
 
-    constructor(
-        private _auth: AuthService,
-        private _router: Router
-    ) { }
+    constructor(private _auth: AuthService, private _router: Router) {
+    }
 
     public ngOnDestroy(): void {
         if (this._aSub) {
@@ -30,18 +31,20 @@ export class RegisterPageWebComponent implements OnDestroy {
 
     public onSubmit(): void {
         this.registerForm.disable();
-        this._aSub = this._auth.register(this.registerForm.value).subscribe(
-            () => {
-                this._router.navigate(['/login'], {
-                    queryParams: {
-                        registered: true
-                    }
-                });
-            },
-            (error: Error) => {
-                console.warn(error);
-                this.registerForm.enable();
-            }
-        );
+        this._aSub = this._auth
+                         .register(this.registerForm.value)
+                         .subscribe(
+                             () => {
+                                 this._router.navigate(['/login'], {
+                                     queryParams: {
+                                         registered: true
+                                     }
+                                 });
+                             },
+                             (error: Error) => {
+                                 console.warn(error);
+                                 this.registerForm.enable();
+                             }
+                         );
     }
 }

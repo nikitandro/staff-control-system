@@ -36,7 +36,8 @@
                 *ngIf="registerForm.controls['password'].invalid && registerForm.controls['password'].touched"
             >
         <span *ngIf="registerForm.controls['password'].errors?.['required']">Пароль не должен быть пустым</span>
-        <span *ngIf="registerForm.controls['password'].errors?.['minlength'] && registerForm.controls['password'].errors?.['minlength']['requiredLength']">
+        <span
+            *ngIf="registerForm.controls['password'].errors?.['minlength'] && registerForm.controls['password'].errors?.['minlength']['requiredLength']">
           Пароль должен быть больше {{ registerForm.controls['password'].errors?.['minlength']['requiredLength'] }} символов
           Сейчас {{ registerForm.controls['password'].errors?.['minlength']['actualLength'] }}
         </span>

@@ -5,4 +5,5 @@ import { Component } from '@angular/core';
     templateUrl: './auth-layout.web.component.html',
     styleUrls: ['./styles/auth-layout.web.component.scss']
 })
-export class AuthLayoutWebComponent { }
+export class AuthLayoutWebComponent {
+}

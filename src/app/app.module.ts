@@ -17,4 +17,5 @@ import { AuthModule } from './children/auth/auth.module';
     providers: [],
     bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

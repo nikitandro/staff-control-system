@@ -9,29 +9,23 @@ import { RegisterPageWebComponent } from './components/register-page/register.pa
 import { AuthLayoutWebComponent } from './components/auth-layout/auth-layout.web.component';
 import { AppRoutingModule } from '../../app-routing.module';
 
-
 const components: any[] = [
     LoginPageWebComponent,
     RegisterPageWebComponent,
-    AuthLayoutWebComponent
+    AuthLayoutWebComponent,
 ];
 
 @NgModule({
-    declarations: [
-        ...components
-    ],
+    declarations: [...components],
     imports: [
         FormsModule,
         ReactiveFormsModule,
         HttpClientModule,
         CommonModule,
         RouterModule,
-        AppRoutingModule
+        AppRoutingModule,
     ],
-    exports: [
-        LoginPageWebComponent,
-        RegisterPageWebComponent
-    ],
-    providers: []
+    exports: [LoginPageWebComponent, RegisterPageWebComponent],
+    providers: [],
 })
 export class AuthModule {}
