@@ -3,53 +3,62 @@
     [formGroup]="registerForm"
     (ngSubmit)="onSubmit()"
 >
-    <div class="card-content">
-        <span class="card-title">Регистрация в системе управления</span>
-        <div class="input-field">
-            <label for="email">Email:</label>
+    <div class="card__content">
+        <span class="card__title">Регистрация</span>
+        <div class="card-field">
             <input
+                class="card-field__input"
                 id="email"
                 type="email"
-                [ngClass]="{ 'invalid': registerForm.controls['email'].invalid && registerForm.controls['email'].touched }"
+                [ngClass]="{ 'card__input-field_invalid': registerForm.controls['email'].invalid && registerForm.controls['email'].touched }"
                 formControlName="email"
-                placeholder="Придумайте логин"
+                placeholder="Логин"
             >
             <span
-                class="helper-text red-text"
+                class="card__helper-text red-text"
                 *ngIf="registerForm.controls['email'].invalid && registerForm.controls['email'].touched"
             >
-        <span *ngIf="registerForm.controls['email'].errors?.['required']">Email не должен быть пустым</span>
-        <span *ngIf="registerForm.controls['email'].errors?.['email']">Введите корректный email адрес</span>
-      </span>
+                <span *ngIf="registerForm.controls['email'].errors?.['required']">Email не должен быть пустым</span>
+                <span *ngIf="registerForm.controls['email'].errors?.['email']">Введите корректный email адрес</span>
+            </span>
         </div>
-        <div class="input-field">
-            <label for="password">Пароль:</label>
+        <div class="card-field">
             <input
+                class="card-field__input"
                 id="password"
                 type="password"
-                [ngClass]="{ 'invalid': registerForm.controls['password'].invalid && registerForm.controls['password'].touched }"
+                [ngClass]="{ 'card__input-field_invalid': registerForm.controls['password'].invalid && registerForm.controls['password'].touched }"
                 formControlName="password"
-                placeholder="Придумайте пароль"
+                placeholder="Пароль"
             >
             <span
-                class="helper-text red-text"
+                class="card__helper-text red-text"
                 *ngIf="registerForm.controls['password'].invalid && registerForm.controls['password'].touched"
             >
-        <span *ngIf="registerForm.controls['password'].errors?.['required']">Пароль не должен быть пустым</span>
-        <span
-            *ngIf="registerForm.controls['password'].errors?.['minlength'] && registerForm.controls['password'].errors?.['minlength']['requiredLength']">
-          Пароль должен быть больше {{ registerForm.controls['password'].errors?.['minlength']['requiredLength'] }} символов
-          Сейчас {{ registerForm.controls['password'].errors?.['minlength']['actualLength'] }}
-        </span>
-      </span>
+                <span *ngIf="registerForm.controls['password'].errors?.['required']">Пароль не должен быть пустым</span>
+                <span *ngIf="registerForm.controls['password'].errors?.['minlength'] && registerForm.controls['password'].errors?.['minlength']['requiredLength']">
+                  Пароль должен быть больше {{registerForm.controls['password'].errors?.['minlength']['requiredLength']}} символов
+                  Сейчас {{ registerForm.controls['password'].errors?.['minlength']['actualLength']}}
+                </span>
+            </span>
         </div>
     </div>
-    <div class="card-action">
+    <div class="card__action">
         <button
+            class="card__button"
             type="submit"
             [disabled]="registerForm.invalid || registerForm.disabled"
         >
             Регистрация
         </button>
+    </div>
+    <div class="card-nav">
+        <a
+            class="card-nav__item"
+            routerLink="/login"
+            routerLinkActive="card-nav__item_active"
+        >
+            Войти
+        </a>
     </div>
 </form>

@@ -16,20 +16,20 @@ export class AuthService {
 
     public register(user: IAuthUserRequestModel): Observable<IAuthUserResponseModel> {
         return this._http.post<IAuthUserResponseModel>('http://localhost:3000/register', user)
-                   .pipe(
-                       tap((response) => {
-                           this.setToken(response.accessToken);
-                       })
-                   );
+            .pipe(
+                tap((response: IAuthUserResponseModel) => {
+                    this.setToken(response.accessToken);
+                })
+            );
     }
 
     public login(user: IAuthUserRequestModel): Observable<IAuthUserResponseModel> {
         return this._http.post<IAuthUserResponseModel>('http://localhost:3000/login', user)
-                   .pipe(
-                       tap((response) => {
-                           this.setToken(response.accessToken);
-                       })
-                   );
+            .pipe(
+                tap((response: IAuthUserResponseModel) => {
+                    this.setToken(response.accessToken);
+                })
+            );
     }
 
     public logout(): void {

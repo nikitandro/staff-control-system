@@ -15,7 +15,7 @@ export class LoginPageWebComponent implements OnInit, OnDestroy {
         password: new FormControl('', [Validators.required, Validators.minLength(6)])
     });
 
-    private _aSub!: Subscription;
+    private _loginSubscription!: Subscription;
 
     constructor(
         private _auth: AuthService,
@@ -24,6 +24,7 @@ export class LoginPageWebComponent implements OnInit, OnDestroy {
     ) {
     }
 
+    //TODO есть идея сделать что-то типо уведомлений для пользователя
     public ngOnInit(): void {
         this._route.queryParams.subscribe((params: Params) => {
             if (params['registered']) {
@@ -35,21 +36,21 @@ export class LoginPageWebComponent implements OnInit, OnDestroy {
     }
 
     public ngOnDestroy(): void {
-        if (this._aSub) {
-            this._aSub.unsubscribe();
+        if (this._loginSubscription) {
+            this._loginSubscription.unsubscribe();
         }
     }
 
     public onSubmit(): void {
         this.loginForm.disable();
-        this._aSub = this._auth
-                         .login(this.loginForm.value)
-                         .subscribe(
-                             () => this._router.navigate(['/home']), //TODO сделать главную страницу, на которую должно редиректить после логина
-                             (error: Error) => {
-                                 console.warn(error);
-                                 this.loginForm.enable();
-                             }
-                         );
+        this._loginSubscription = this._auth
+            .login(this.loginForm.value)
+            .subscribe(
+                () => this._router.navigate(['/home']), //TODO сделать главную страницу, на которую должно редиректить после логина
+                (error: Error) => {
+                    console.warn(error);
+                    this.loginForm.enable();
+                }
+            );
     }
 }

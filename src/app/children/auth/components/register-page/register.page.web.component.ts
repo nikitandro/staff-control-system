@@ -18,33 +18,33 @@ export class RegisterPageWebComponent implements OnDestroy {
         ])
     });
 
-    private _aSub!: Subscription;
+    private _registerSubscription!: Subscription;
 
     constructor(private _auth: AuthService, private _router: Router) {
     }
 
     public ngOnDestroy(): void {
-        if (this._aSub) {
-            this._aSub.unsubscribe();
+        if (this._registerSubscription) {
+            this._registerSubscription.unsubscribe();
         }
     }
 
     public onSubmit(): void {
         this.registerForm.disable();
-        this._aSub = this._auth
-                         .register(this.registerForm.value)
-                         .subscribe(
-                             () => {
-                                 this._router.navigate(['/login'], {
-                                     queryParams: {
-                                         registered: true
-                                     }
-                                 });
-                             },
-                             (error: Error) => {
-                                 console.warn(error);
-                                 this.registerForm.enable();
-                             }
-                         );
+        this._registerSubscription = this._auth
+            .register(this.registerForm.value)
+            .subscribe(
+                () => {
+                    this._router.navigate(['/login'], {
+                        queryParams: {
+                            registered: true
+                        }
+                    });
+                },
+                (error: Error) => {
+                    console.warn(error);
+                    this.registerForm.enable();
+                }
+            );
     }
 }
