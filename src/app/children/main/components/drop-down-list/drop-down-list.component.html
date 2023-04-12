@@ -1,4 +1,4 @@
-<div class="drop-down-list">
+<div class="drop-down-list unselectable">
     <div
         class="drop-down-list__view"
         (click)="toggleIsOpen()"
@@ -16,6 +16,8 @@
         class="drop-down-list__list"
         [ngClass]="{'drop-down-list__list_open': (isOpen$ | async)}"
     >
-        <div *ngFor="let property of propertyList; let index">{{property}}</div>
+        <div class="drop-down-list__list-item" *ngFor="let property of propertyList; let index">
+            <main-checkbox [text]="property"></main-checkbox>
+        </div>
     </div>
 </div>

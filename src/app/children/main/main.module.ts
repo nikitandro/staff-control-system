@@ -9,6 +9,7 @@ import { BurgerButtonComponent } from './components/burger-button/burger-button.
 import { FilterFormComponent } from './components/filter-form/filter-form.component';
 import { DropDownListComponent } from './components/drop-down-list/drop-down-list.component';
 import { FilterService } from './services/filter.service';
+import { CheckboxComponent } from './components/checkbox/checkbox.component';
 
 @NgModule({
     declarations: [
@@ -17,7 +18,8 @@ import { FilterService } from './services/filter.service';
         MainHeaderComponent,
         BurgerButtonComponent,
         FilterFormComponent,
-        DropDownListComponent
+        DropDownListComponent,
+        CheckboxComponent
     ],
     exports: [],
     imports: [

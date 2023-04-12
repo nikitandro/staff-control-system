@@ -11,3 +11,11 @@
 body {
     font-family: Inter, sans-serif;
 }
+
+.clickable {
+    cursor: pointer;
+}
+
+.unselectable {
+    user-select: none;
+}
