@@ -24,6 +24,16 @@
       "email": "a@a.com",
       "password": "$2a$10$SECZX3ZPGVjZEDLGFIN7jei6gm83u2ZjuT74Eml6DtkvyfOeT8LTa",
       "id": 5
+    },
+    {
+      "email": "nik.vishnyakov.6256@gmail.com",
+      "password": "$2a$10$IWAj0dEGhYeL1IzEvK0O9OYVDprxIUmE5sE6.ppIDIWXi4Dc/2e/m",
+      "id": 6
+    },
+    {
+      "email": "test@test.com",
+      "password": "$2a$10$wvBHQhQIOelqqZM1Lzxz0.jAA/J7LLc5oYynNG/uSIQf2hO.4HBuG",
+      "id": 7
     }
   ],
   "post": [

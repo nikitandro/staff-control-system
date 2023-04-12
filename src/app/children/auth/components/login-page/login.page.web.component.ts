@@ -46,7 +46,7 @@ export class LoginPageWebComponent implements OnInit, OnDestroy {
         this._loginSubscription = this._auth
             .login(this.loginForm.value)
             .subscribe(
-                () => this._router.navigate(['/home']), //TODO сделать главную страницу, на которую должно редиректить после логина
+                () => this._router.navigate(['/cabinet']), //TODO сделать главную страницу, на которую должно редиректить после логина
                 (error: Error) => {
                     console.warn(error);
                     this.loginForm.enable();

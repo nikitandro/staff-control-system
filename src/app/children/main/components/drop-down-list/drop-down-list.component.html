@@ -1,0 +1,21 @@
+<div class="drop-down-list">
+    <div
+        class="drop-down-list__view"
+        (click)="toggleIsOpen()"
+        [ngClass]="{'drop-down-list__view_open': (isOpen$ | async)}"
+    >
+        <p class="drop-down-list__name">{{name}}</p>
+        <img
+            src="/assets/images/icons/chevron-down.svg"
+            class="drop-down-list__chevron"
+            [ngClass]="{'drop-down-list__chevron_open': (isOpen$ | async)}"
+        >
+    </div>
+
+    <div
+        class="drop-down-list__list"
+        [ngClass]="{'drop-down-list__list_open': (isOpen$ | async)}"
+    >
+        <div *ngFor="let property of propertyList; let index">{{property}}</div>
+    </div>
+</div>

@@ -35,7 +35,7 @@ export class RegisterPageWebComponent implements OnDestroy {
             .register(this.registerForm.value)
             .subscribe(
                 () => {
-                    this._router.navigate(['/login'], {
+                    this._router.navigate(['auth/login'], {
                         queryParams: {
                             registered: true
                         }

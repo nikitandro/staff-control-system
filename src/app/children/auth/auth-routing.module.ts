@@ -4,21 +4,18 @@ import { RouterModule, Routes } from '@angular/router';
 import { AuthLayoutWebComponent } from './components/auth-layout/auth-layout.web.component';
 import { LoginPageWebComponent } from './components/login-page/login.page.web.component';
 import { RegisterPageWebComponent } from './components/register-page/register.page.web.component';
-import { authGuard } from './guards/authGuard';
+import { authGuard } from './guards/auth.guard';
+import { isLoggedInGuard } from './guards/isLoggedIn.guard';
 
 const routes: Routes = [
     {
         path: '',
         component: AuthLayoutWebComponent,
+        canActivate: [isLoggedInGuard],
         children: [
-            { path: '', redirectTo: '/login', pathMatch: 'full' },
+            { path: '', redirectTo: 'login', pathMatch: 'full' },
             { path: 'login', component: LoginPageWebComponent },
-            { path: 'register', component: RegisterPageWebComponent },
-            {
-                path: 'private',
-                canActivate: [authGuard],
-                component: AuthLayoutWebComponent
-            }
+            { path: 'register', component: RegisterPageWebComponent }
         ]
     }
 ];
