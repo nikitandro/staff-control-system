@@ -10,6 +10,9 @@ import { FilterFormComponent } from './components/filter-form/filter-form.compon
 import { DropDownListComponent } from './components/drop-down-list/drop-down-list.component';
 import { FilterService } from './services/filter.service';
 import { CheckboxComponent } from './components/checkbox/checkbox.component';
+import { SalaryPickerComponent } from './components/salary-picker/salary-picker.component';
+import { NgxSliderModule } from '@angular-slider/ngx-slider';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
     declarations: [
@@ -19,12 +22,15 @@ import { CheckboxComponent } from './components/checkbox/checkbox.component';
         BurgerButtonComponent,
         FilterFormComponent,
         DropDownListComponent,
-        CheckboxComponent
+        CheckboxComponent,
+        SalaryPickerComponent
     ],
     exports: [],
     imports: [
         RouterModule,
         CommonModule,
+        NgxSliderModule,
+        FormsModule,
     ],
     providers: [
         FilterService

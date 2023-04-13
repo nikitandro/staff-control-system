@@ -1,0 +1,18 @@
+<div class="salary-picker">
+    <div class="salary-picker__content">
+        <p class="salary-picker__title">Зарплата</p>
+        <div class="salary-picker__inputs">
+            <div class="salary-input">
+                <label class="salary-input__label">От</label>
+                <input class="salary-input__input" type="number" [(ngModel)]="lowestSalary">
+            </div>
+            <div class="salary-input">
+                <label class="salary-input__label">До</label>
+                <input class="salary-input__input" type="number" [(ngModel)]="highestSalary">
+            </div>
+        </div>
+        <div class="salary-picker__slider">
+            <ngx-slider [(value)]="lowestSalary" [(highValue)]="highestSalary" [options]="sliderOptions"></ngx-slider>
+        </div>
+    </div>
+</div>

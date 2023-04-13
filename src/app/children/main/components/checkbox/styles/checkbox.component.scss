@@ -3,8 +3,12 @@
     &__content {
         display: flex;
         gap: 15px;
+        align-items: center;
     }
 
     &__icon {
+        display: block;
+        height: 16px;
+        width: 16px;
     }
 }

@@ -25,15 +25,13 @@
         background: white;
         border-bottom-right-radius: 3px;
         border-bottom-left-radius: 3px;
-        padding: 0 11px;
+        padding: 3px 11px 7px 11px;
 
         &_open {
-            display: block;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
         }
-    }
-
-    &__list-item {
-        padding-bottom: 8px;
     }
 
     &__chevron {
