@@ -1,0 +1,13 @@
+.meta-page {
+  margin-left: 300px;
+}
+
+.side-bar {
+  width: 300px;
+  height: 100vh;
+  position: fixed;
+  background: #F0F0F0;
+  padding: 36px 18px;
+}
+
+/*# sourceMappingURL=main-layout.component.css.map */
