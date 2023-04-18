@@ -1,0 +1,10 @@
+.validation-message {
+    max-width: 500px;
+    font-size: 22px;
+    line-height: 22px;
+    color: red;
+
+    &__error {
+        margin-bottom: 10px;
+    }
+}

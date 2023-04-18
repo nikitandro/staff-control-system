@@ -1,0 +1,11 @@
+.validation-message {
+  max-width: 500px;
+  font-size: 22px;
+  line-height: 22px;
+  color: red;
+}
+.validation-message__error {
+  margin-bottom: 10px;
+}
+
+/*# sourceMappingURL=message.validation.component.css.map */

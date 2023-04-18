@@ -1,11 +1,13 @@
 import { Component, OnDestroy } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { AuthService } from '../../data/services/auth.service';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
+
+import { AuthService } from '../../data/services/auth.service';
 import { IRegisterForm } from '../../data/interfaces/register-form.interface';
 import { ILoginForm } from '../../data/interfaces/login-form.interface';
 import { IAuthUserRequestModel } from '../../data/request-models/auth-user.request-model.interface';
+import { passwordValidator } from '../../validators/password.validator';
 
 @Component({
     selector: 'auth-register-page',
@@ -25,7 +27,11 @@ export class RegisterPageWebComponent implements OnDestroy {
             }),
             password: new FormControl('', {
                 nonNullable: true,
-                validators: [Validators.required, Validators.minLength(6)]
+                validators: [
+                    Validators.required,
+                    Validators.minLength(6),
+                    passwordValidator
+                ]
             })
         });
     }
@@ -37,6 +43,11 @@ export class RegisterPageWebComponent implements OnDestroy {
     }
 
     public onSubmit(): void {
+        if (this.registerForm.invalid) {
+            this.registerForm.markAllAsTouched();
+
+            return;
+        }
         const user: IAuthUserRequestModel = {
             email: this.registerForm.controls.email.value,
             password: this.registerForm.controls.password.value
@@ -46,7 +57,7 @@ export class RegisterPageWebComponent implements OnDestroy {
             .register(user)
             .subscribe(
                 () => {
-                    this._router.navigate(['auth/login'], { //TODO Здесь скорее всего логичней будет на кабинет перекидывать
+                    this._router.navigate(['/cabinet'], {
                         queryParams: {
                             registered: true
                         }

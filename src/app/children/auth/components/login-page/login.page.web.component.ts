@@ -6,6 +6,7 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
 import { AuthService } from '../../data/services/auth.service';
 import { ILoginForm } from '../../data/interfaces/login-form.interface';
 import { IAuthUserRequestModel } from '../../data/request-models/auth-user.request-model.interface';
+import { passwordValidator } from '../../validators/password.validator';
 
 
 @Component({
@@ -30,7 +31,11 @@ export class LoginPageWebComponent implements OnInit, OnDestroy {
             }),
             password: new FormControl('', {
                 nonNullable: true,
-                validators: [Validators.required, Validators.minLength(6)]
+                validators: [
+                    Validators.required,
+                    Validators.minLength(6),
+                    passwordValidator
+                ]
             })
         });
     }
@@ -53,6 +58,11 @@ export class LoginPageWebComponent implements OnInit, OnDestroy {
     }
 
     public onSubmit(): void {
+        if (this.loginForm.invalid) {
+            this.loginForm.markAllAsTouched();
+
+            return;
+        }
         const user: IAuthUserRequestModel = {
             email: this.loginForm.controls.email.value,
             password: this.loginForm.controls.password.value

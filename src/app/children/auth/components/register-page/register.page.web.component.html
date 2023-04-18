@@ -6,48 +6,32 @@
     <div class="register-form__content">
         <span class="register-form__title">Регистрация</span>
         <div class="register-form-field">
+            <validation-message [control]="registerForm.controls.email">
+            </validation-message>
             <input
                 class="register-form-field__input"
                 id="email"
                 type="email"
-                [ngClass]="{ 'card__input-field_invalid': registerForm.controls.email.invalid && registerForm.controls.email.touched }"
                 formControlName="email"
                 placeholder="Логин"
             >
-            <span
-                class="register-form-field__helper-text"
-                *ngIf="registerForm.controls.email.invalid && registerForm.controls.email.touched"
-            >
-                <span *ngIf="registerForm.controls.email.errors?.['required']">Email не должен быть пустым</span>
-                <span *ngIf="registerForm.controls.email.errors?.['email']">Введите корректный email адрес</span>
-            </span>
         </div>
         <div class="register-form-field">
+            <validation-message [control]="registerForm.controls.password">
+            </validation-message>
             <input
                 class="register-form-field__input"
                 id="password"
                 type="password"
-                [ngClass]="{ 'card__input-field_invalid': registerForm.controls.password.invalid && registerForm.controls.password.touched }"
                 formControlName="password"
                 placeholder="Пароль"
             >
-            <span
-                class="register-form-field__helper-text"
-                *ngIf="registerForm.controls.password.invalid && registerForm.controls.password.touched"
-            >
-                <span *ngIf="registerForm.controls.password.errors?.['required']">Пароль не должен быть пустым</span>
-                <span *ngIf="registerForm.controls.password.errors?.['minlength'] && registerForm.controls.password.errors?.['minlength']['requiredLength']">
-                  Пароль должен быть больше {{registerForm.controls.password.errors?.['minlength']['requiredLength']}} символов
-                  Сейчас {{ registerForm.controls.password.errors?.['minlength']['actualLength']}}
-                </span>
-            </span>
         </div>
     </div>
     <div class="register-form-action">
         <button
             class="register-form-action__button"
             type="submit"
-            [disabled]="registerForm.invalid || registerForm.disabled"
         >
             Регистрация
         </button>
@@ -62,3 +46,4 @@
         </a>
     </div>
 </form>
+
