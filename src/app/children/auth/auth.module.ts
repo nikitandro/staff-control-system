@@ -8,6 +8,7 @@ import { LoginPageWebComponent } from './components/login-page/login.page.web.co
 import { RegisterPageWebComponent } from './components/register-page/register.page.web.component';
 import { AuthLayoutWebComponent } from './components/auth-layout/auth-layout.web.component';
 import { AppRoutingModule } from '../../app-routing.module';
+import { ValidationMessageComponent } from './components/validation/message.validation.component';
 
 const components: any[] = [
     LoginPageWebComponent,
@@ -24,6 +25,7 @@ const components: any[] = [
         CommonModule,
         RouterModule,
         AppRoutingModule,
+        ValidationMessageComponent
     ],
     exports: [LoginPageWebComponent, RegisterPageWebComponent],
     providers: [],

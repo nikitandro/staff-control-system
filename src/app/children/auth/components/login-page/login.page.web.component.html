@@ -1,64 +1,49 @@
 <form
-    class="card"
+    class="login-form"
     [formGroup]="loginForm"
     (ngSubmit)="onSubmit()"
 >
-    <div class="card__content">
-        <span class="card__title">Войти</span>
-        <div class="card-field">
+    <div class="login-form__content">
+        <span class="login-form__title">Войти</span>
+        <div class="login-form-field">
+            <validation-message [control]="loginForm.controls.email">
+            </validation-message>
             <input
-                class="card-field__input"
+                class="login-form-field__input"
                 id="email"
                 type="email"
-                [ngClass]="{ 'card__input-field_invalid': loginForm.controls['email'].invalid && loginForm.controls['email'].touched }"
                 formControlName="email"
                 placeholder="Логин"
             >
-            <span
-                class="card__helper-text red-text"
-                *ngIf="loginForm.controls['email'].invalid && loginForm.controls['email'].touched"
-            >
-                <span *ngIf="loginForm.controls['email'].errors?.['required']">Email не должен быть пустым</span>
-                <span *ngIf="loginForm.controls['email'].errors?.['email']">Введите корректный email адрес</span>
-            </span>
         </div>
-        <div class="card-field">
+        <div class="login-form-field">
+            <validation-message [control]="loginForm.controls.password">
+            </validation-message>
             <input
-                class="card-field__input"
+                class="login-form-field__input"
                 id="password"
                 type="password"
-                [ngClass]="{ 'card__input-field_invalid': loginForm.controls['password'].invalid && loginForm.controls['password'].touched }"
                 formControlName="password"
                 placeholder="Пароль"
             >
-            <span
-                class="card__helper-text red-text"
-                *ngIf="loginForm.controls['password'].invalid && loginForm.controls['password'].touched"
-            >
-                <span *ngIf="loginForm.controls['password'].errors?.['required']">Пароль не должен быть пустым</span>
-                <span *ngIf="loginForm.controls['password'].errors?.['minlength'] && loginForm.controls['password'].errors?.['minlength']['requiredLength']">
-                  Пароль должен быть больше {{loginForm.controls['password'].errors?.['minlength']['requiredLength']}} символов
-                  Сейчас {{ loginForm.controls['password'].errors?.['minlength']['actualLength']}}
-                </span>
-            </span>
         </div>
     </div>
-    <div class="card__action">
+    <div class="login-form-action">
         <button
-            class="card__button"
+            class="login-form-action__button"
             type="submit"
-            [disabled]="loginForm.invalid || loginForm.disabled"
         >
             Вход
         </button>
     </div>
-    <div class="card-nav">
+    <div class="login-form-nav">
         <a
-            class="card-nav__item"
+            class="login-form-nav__item"
             routerLink="/auth/register"
             routerLinkActive="card-nav__item_active"
         >
-            Зарегестрироваться
+            Зарегистрироваться
         </a>
     </div>
 </form>
+

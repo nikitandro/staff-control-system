@@ -1,8 +1,13 @@
 import { Component, OnDestroy } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { AuthService } from '../../data/services/auth.service';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
+
+import { AuthService } from '../../data/services/auth.service';
+import { IRegisterForm } from '../../data/interfaces/register-form.interface';
+import { ILoginForm } from '../../data/interfaces/login-form.interface';
+import { IAuthUserRequestModel } from '../../data/request-models/auth-user.request-model.interface';
+import { passwordValidator } from '../../validators/password.validator';
 
 @Component({
     selector: 'auth-register-page',
@@ -10,17 +15,25 @@ import { Subscription } from 'rxjs';
     styleUrls: ['./styles/register.page.web.component.scss']
 })
 export class RegisterPageWebComponent implements OnDestroy {
-    public registerForm: FormGroup = new FormGroup({
-        email: new FormControl('', [Validators.required, Validators.email]),
-        password: new FormControl('', [
-            Validators.required,
-            Validators.minLength(6)
-        ])
-    });
+    public registerForm!: FormGroup<IRegisterForm>;
 
     private _registerSubscription!: Subscription;
 
     constructor(private _auth: AuthService, private _router: Router) {
+        this.registerForm = new FormGroup<ILoginForm>({
+            email: new FormControl('', {
+                nonNullable: true,
+                validators: [Validators.required, Validators.email]
+            }),
+            password: new FormControl('', {
+                nonNullable: true,
+                validators: [
+                    Validators.required,
+                    Validators.minLength(6),
+                    passwordValidator
+                ]
+            })
+        });
     }
 
     public ngOnDestroy(): void {
@@ -30,12 +43,21 @@ export class RegisterPageWebComponent implements OnDestroy {
     }
 
     public onSubmit(): void {
+        if (this.registerForm.invalid) {
+            this.registerForm.markAllAsTouched();
+
+            return;
+        }
+        const user: IAuthUserRequestModel = {
+            email: this.registerForm.controls.email.value,
+            password: this.registerForm.controls.password.value
+        };
         this.registerForm.disable();
         this._registerSubscription = this._auth
-            .register(this.registerForm.value)
+            .register(user)
             .subscribe(
                 () => {
-                    this._router.navigate(['auth/login'], {
+                    this._router.navigate(['/cabinet'], {
                         queryParams: {
                             registered: true
                         }
