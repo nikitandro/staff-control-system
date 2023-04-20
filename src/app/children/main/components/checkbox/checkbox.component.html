@@ -1,6 +1,7 @@
-<div class="checkbox clickable unselectable" (click)="toggleIsChecked()">
+<div class="checkbox clickable unselectable" (click)="click()">
     <div class="checkbox__content">
-        <img class="checkbox__icon" [src]="(isChecked$ | async) ? '/assets/images/icons/checkbox-icon_on.svg' : '/assets/images/icons/checkbox-icon_off.svg'" alt="">
-        <p class="checkbox__text">{{text}}</p>
+        <img class="checkbox__icon"
+             [src]="(isChecked) ? '/assets/images/icons/checkbox-icon_on.svg' : '/assets/images/icons/checkbox-icon_off.svg'" alt="">
+        <p class="checkbox__text">{{title}}</p>
     </div>
 </div>
