@@ -19,6 +19,15 @@
         }
     }
 
+    &__list-item {
+
+        ::ng-deep {
+            .checkbox {
+                padding: 4px 0;
+            }
+        }
+    }
+
     &__list {
         width: 100%;
         display: none;
@@ -30,7 +39,7 @@
         &_open {
             display: flex;
             flex-direction: column;
-            gap: 8px;
+            //gap: 8px;
         }
     }
 

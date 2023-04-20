@@ -1,6 +1,4 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
-import { SalaryPercentage } from './salary-picker.types';
 import { Options } from '@angular-slider/ngx-slider';
 
 @Component({
@@ -14,7 +12,7 @@ export class SalaryPickerComponent {
     public highestSalary: number = 100000;
     public sliderOptions: Options = {
         floor: this.lowestSalary,
-        ceil: this.highestSalary
+        ceil: this.highestSalary,
     };
 
     public changeHighestSalary(event: Event) {
