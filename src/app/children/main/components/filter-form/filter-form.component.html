@@ -1,5 +1,5 @@
-<div class="filter-form">
-    <drop-down-list [name]="'Отдел'" [propertyList]="['1', '2']"></drop-down-list>
-    <drop-down-list [name]="'Должность'" [propertyList]="['1', '2']"></drop-down-list>
+<div class="filter-form" [formGroup]="filterForm">
+    <drop-down-list title="Отдел" formControlName="selectedDepartments"></drop-down-list>
+    <drop-down-list title="Должность" formControlName="selectedPosts"></drop-down-list>
     <salary-picker></salary-picker>
 </div>

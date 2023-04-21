@@ -1,14 +1,12 @@
 import {
     ChangeDetectionStrategy,
     Component,
-    EventEmitter,
     forwardRef,
-    HostBinding,
     Input,
-    Output,
 } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { ICheckboxModel } from './checkbox.types';
+
 
 @Component({
     selector: 'main-checkbox',
@@ -22,10 +20,13 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
     }],
 })
 export class CheckboxComponent implements ControlValueAccessor {
-    @Input() public title: string = '';
-    @Input() public defaultState: boolean = false;
-    public isChecked: boolean = false;
-    private onChange = (value: boolean) => {
+    @Input()
+    public title: string = '';
+    @Input()
+    public isChecked?: boolean = false;
+    @Input()
+    public name: string = '';
+    private onChange = (value: ICheckboxModel) => {
     };
     private onTouched = () => {
     };
@@ -38,14 +39,14 @@ export class CheckboxComponent implements ControlValueAccessor {
         this.onTouched = fn;
     }
 
-    public writeValue(value: boolean): void {
-        this.isChecked = value;
+    public writeValue(value: ICheckboxModel): void {
+        this.name = value.name;
+        this.title = value.title;
+        this.isChecked = value.isChecked;
         this.onChange(value);
     }
 
-    @HostBinding('click')
     public click() {
-        this.writeValue(!this.isChecked);
-        console.log('clicked');
+        this.writeValue({ name: this.name, title: this.title, isChecked: !this.isChecked });
     }
 }

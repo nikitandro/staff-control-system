@@ -1,9 +1,24 @@
-import { ChangeDetectionStrategy, Component, EventEmitter, forwardRef, Input, Output } from '@angular/core';
+import {
+    AfterViewInit,
+    ChangeDetectionStrategy,
+    Component,
+    EventEmitter,
+    forwardRef,
+    Input,
+    OnInit,
+    Output,
+} from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { trigger } from '@angular/animations';
-import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
+import {
+    ControlValueAccessor, FormArray,
+    FormBuilder,
+    FormControl,
+    NG_VALUE_ACCESSOR,
+    NonNullableFormBuilder,
+} from '@angular/forms';
 import { values } from 'json-server-auth';
-import { IDropDownListProperties } from './drop-down-list.types';
+import { IDropDownListProperties, IDropDownListProperty } from './drop-down-list.types';
 
 @Component({
     selector: 'drop-down-list',
@@ -16,30 +31,32 @@ import { IDropDownListProperties } from './drop-down-list.types';
         multi: true,
     }],
 })
-export class DropDownListComponent implements ControlValueAccessor {
+export class DropDownListComponent implements ControlValueAccessor, AfterViewInit {
     @Input()
-    public name: string = '';
+    public title: string = '';
     @Input()
-    public propertyList: string[] = [];
-    @Output()
-    public selectPropertyEvent: EventEmitter<string[]> = new EventEmitter();
-
+    public selectedProperties: IDropDownListProperties = [];
     public isOpen$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
-    public selectedProperties$: BehaviorSubject<IDropDownListProperties> = new BehaviorSubject<IDropDownListProperties>({});
-    private onChange = (value: any) => {
+    public checkboxFormBuilder: NonNullableFormBuilder = new FormBuilder().nonNullable;
+    public checkboxFormControls: FormArray<FormControl<IDropDownListProperty>> = new FormArray<FormControl<IDropDownListProperty>>([]);
+    private onChange: (properties: IDropDownListProperties) => void = () => {
     };
-    private onTouched = (value: any) => {
+    private onTouched: () => void = () => {
     };
+
+    public ngAfterViewInit() {
+        for (let property of this.selectedProperties) {
+            const newFormControl = this.checkboxFormBuilder.control<IDropDownListProperty>(property);
+            newFormControl.valueChanges.subscribe(this.onPropertyIsCheckedChange(property.name));
+            this.checkboxFormControls.push(newFormControl);
+        }
+    }
 
     public toggleIsOpen(): void {
         this.isOpen$.next(!this.isOpen$.value);
     }
 
-    public setIsCheckedProperty(): void {
-
-    }
-
-    public registerOnChange(fn: any): void {
+    public registerOnChange(fn: (properties: IDropDownListProperties) => void): void {
         this.onChange = fn;
     }
 
@@ -47,6 +64,19 @@ export class DropDownListComponent implements ControlValueAccessor {
         this.onTouched = fn;
     }
 
-    public writeValue(obj: any): void {
+    public writeValue(properties: IDropDownListProperties): void {
+        this.selectedProperties = properties;
+        this.onChange(properties);
+    }
+
+    public onPropertyIsCheckedChange(name: string) {
+        return (value: IDropDownListProperty) => {
+            this.writeValue([...this.selectedProperties.map((property) => {
+                if (name === property.name) {
+                    return value;
+                }
+                return property;
+            })]);
+        };
     }
 }

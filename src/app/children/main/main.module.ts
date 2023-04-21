@@ -12,7 +12,7 @@ import { FilterService } from './services/filter.service';
 import { CheckboxComponent } from './components/checkbox/checkbox.component';
 import { SalaryPickerComponent } from './components/salary-picker/salary-picker.component';
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
     declarations: [
@@ -31,6 +31,7 @@ import { FormsModule } from '@angular/forms';
         CommonModule,
         NgxSliderModule,
         FormsModule,
+        ReactiveFormsModule,
     ],
     providers: [
         FilterService
