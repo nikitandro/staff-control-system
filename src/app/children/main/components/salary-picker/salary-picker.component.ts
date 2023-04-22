@@ -3,13 +3,13 @@ import {
     ChangeDetectionStrategy,
     Component,
     ElementRef,
-    forwardRef,
+    forwardRef, Input,
     OnInit,
     ViewChild,
 } from '@angular/core';
 import { Options } from '@angular-slider/ngx-slider';
 import { ControlValueAccessor, FormControl, NG_VALUE_ACCESSOR } from '@angular/forms';
-import { filter, from, fromEvent, map, pipe, Subject, takeUntil } from 'rxjs';
+import { Subject } from 'rxjs';
 import { tap } from 'rxjs/operators';
 
 @Component({
@@ -23,21 +23,18 @@ import { tap } from 'rxjs/operators';
         multi: true,
     }],
 })
-export class SalaryPickerComponent implements OnInit, ControlValueAccessor {
+export class SalaryPickerComponent implements OnInit, ControlValueAccessor, AfterViewInit {
 
     public lowestSalaryControl: FormControl<number> = new FormControl<number>(14000, { nonNullable: true });
     public highestSalaryControl: FormControl<number> = new FormControl<number>(100000, { nonNullable: true });
-    public sliderControl: FormControl<[number, number]> = new FormControl<[number, number]>([14000, 100000], { nonNullable: true });
-    public lowestSalary: number = 14000;
-    public highestSalary: number = 100000;
-
-    private lowestSalaryKeyDownEnter$: Subject<void> = new Subject<void>();
-    private highestSalaryKeyDownEnter$: Subject<void> = new Subject<void>();
-    private lowestSalaryBlur$: Subject<void> = new Subject<void>();
-    private highestSalaryBlur$: Subject<void> = new Subject<void>();
+    public sliderControl: FormControl<[number, number]> = new FormControl<[number, number]>([0, 0], { nonNullable: true });
+    @Input()
+    public salaryBounds: [number, number] = [0, 0];
+    public lowestSalary: number = 0;
+    public highestSalary: number = 0;
     public sliderOptions: Options = {
-        floor: this.lowestSalary,
-        ceil: this.highestSalary,
+        floor: 0,
+        ceil: 0,
     };
     @ViewChild('lowestSalary')
     public lowestSalaryElementRef?: ElementRef<HTMLInputElement>;
@@ -47,6 +44,10 @@ export class SalaryPickerComponent implements OnInit, ControlValueAccessor {
     };
     public onTouch = () => {
     };
+
+    public ngAfterViewInit() {
+
+    }
 
     public swapLowAndHighSalaryControlsValues() {
         const currLowestSalaryControlValue = this.lowestSalaryControl.getRawValue();
@@ -97,6 +98,7 @@ export class SalaryPickerComponent implements OnInit, ControlValueAccessor {
                 }
                 this.lowestSalaryControl.setValue(value[0]);
                 this.highestSalaryControl.setValue(value[1]);
+                this.writeValue(value);
             }),
         )
             .subscribe();
@@ -142,6 +144,11 @@ export class SalaryPickerComponent implements OnInit, ControlValueAccessor {
             }),
         )
             .subscribe();
+        this.sliderOptions.ceil = this.salaryBounds[1];
+        this.sliderOptions.floor = this.salaryBounds[0];
+        this.lowestSalary = this.salaryBounds[0];
+        this.highestSalary = this.salaryBounds[1];
+        this.sliderControl.setValue(this.salaryBounds);
     }
 
     public registerOnChange(fn: any): void {
@@ -155,6 +162,4 @@ export class SalaryPickerComponent implements OnInit, ControlValueAccessor {
     public writeValue(value: [number, number]): void {
         this.onChange(value);
     }
-
-
 }

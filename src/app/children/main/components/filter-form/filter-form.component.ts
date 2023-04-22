@@ -27,7 +27,7 @@ export class FilterFormComponent implements ControlValueAccessor, AfterViewInit 
                 isChecked: false,
             }], { nonNullable: true }),
             selectedPosts: new FormControl<IDropDownListProperties>([], { nonNullable: true }),
-            salary: new FormControl<ISalaryOption>({ from: 0, to: 0 }, { nonNullable: true }),
+            salary: new FormControl<[number, number]>([140, 100000], { nonNullable: true }),
             isFired: new FormControl<boolean>(false, { nonNullable: true }),
             isSuccessful: new FormControl<boolean | null>(false),
         },

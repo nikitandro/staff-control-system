@@ -11,7 +11,7 @@ export interface ISalaryOption {
 export interface IFilterFormControls {
     selectedDepartments: FormControl<IDropDownListProperties>;
     selectedPosts: FormControl<IDropDownListProperties>;
-    salary: FormControl<ISalaryOption>;
+    salary: FormControl<[number, number]>;
     isFired: FormControl<boolean>;
     isSuccessful: FormControl<boolean | null>;
 }

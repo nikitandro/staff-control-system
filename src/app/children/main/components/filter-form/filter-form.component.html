@@ -1,5 +1,5 @@
 <div class="filter-form" [formGroup]="filterForm">
     <drop-down-list title="Отдел" formControlName="selectedDepartments"></drop-down-list>
     <drop-down-list title="Должность" formControlName="selectedPosts"></drop-down-list>
-    <salary-picker></salary-picker>
+    <salary-picker formControlName="salary" [salaryBounds]="[300, 100000]"></salary-picker>
 </div>
