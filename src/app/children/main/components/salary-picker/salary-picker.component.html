@@ -4,15 +4,25 @@
         <div class="salary-picker__inputs">
             <div class="salary-input">
                 <label class="salary-input__label">От</label>
-                <input class="salary-input__input" type="number" [(ngModel)]="lowestSalary">
+                <input #lowestSalary
+                       class="salary-input__input"
+                       (keydown.enter)="onLowestSalaryControlKeyDownEnter()"
+                       (blur)="onLowestSalaryControlBlur()"
+                       type="number"
+                       [formControl]="lowestSalaryControl">
             </div>
             <div class="salary-input">
                 <label class="salary-input__label">До</label>
-                <input class="salary-input__input" type="number" [(ngModel)]="highestSalary">
+                <input #highestSalary
+                       class="salary-input__input"
+                       type="number"
+                       [formControl]="highestSalaryControl"
+                       (keydown.enter)="onHighestSalaryControlKeyDownEnter()"
+                       (blur)="onHighestSalaryControlBlur()">
             </div>
         </div>
         <div class="salary-picker__slider">
-            <ngx-slider [(value)]="lowestSalary" [(highValue)]="highestSalary" [options]="sliderOptions"></ngx-slider>
+            <ngx-slider [options]="sliderOptions" [formControl]="sliderControl"></ngx-slider>
         </div>
     </div>
 </div>
