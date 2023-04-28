@@ -1,1 +1,35 @@
-<p>ФОРМА</p>
+<form
+    class="employee-form"
+    [formGroup]="employeeForm"
+    (ngSubmit)="onSubmit()"
+>
+    <button (click)="close()">close</button>
+    <ul formArrayName="fieldsEmployeeForm">
+        <ng-container
+            *ngFor="let fieldEmployeeForm of getFormsControls()['controls']; index as i"
+        >
+            <div class="employee-form__content">
+                <div class="employee-form-field">
+                    <label for="field">{{employeeFormLabels[i]}}</label>
+                    <input
+                        class="employee-form-field__input"
+                        id="field"
+                        type="text"
+                        formControlName="{{i}}"
+                    >
+                </div>
+            </div>
+        </ng-container>
+    </ul>
+
+    <div class="employee-form-action">
+        <button
+            class="employee-form-action__button"
+            type="submit"
+        >
+            Сохранить изменения
+        </button>
+    </div>
+</form>
+
+

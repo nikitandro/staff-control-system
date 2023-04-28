@@ -11,7 +11,7 @@ import { FilterService } from './services/filter.service';
 import { CheckboxComponent } from './components/checkbox/checkbox.component';
 import { SalaryPickerComponent } from './components/salary-picker/salary-picker.component';
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EmployeePersonalDataPageWebComponent } from './pages/employee-personal-data-page/employee-personal-data.page.web.component';
 import { EmployeeCardComponent } from './components/employee-card/employee-card.component';
 import { EmployeeFormComponent } from './components/employee-form/employee-form.component';
@@ -38,6 +38,7 @@ import { PopupComponent } from './components/popup/popup.component';
         CommonModule,
         NgxSliderModule,
         FormsModule,
+        ReactiveFormsModule,
     ],
     providers: [
         FilterService

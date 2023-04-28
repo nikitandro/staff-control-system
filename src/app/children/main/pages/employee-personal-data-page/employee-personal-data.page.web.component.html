@@ -2,4 +2,4 @@
     <employee-card></employee-card>
     <button (click)="open()">Нажми, чтобы открыть модалку</button>
 </div>
-<popup [isOpen]="(isOpen$ | async) || false"></popup>
+<popup [isOpen]="(isOpen$ | async) || false" [data]="data"></popup>

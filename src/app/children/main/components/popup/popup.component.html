@@ -1,7 +1,8 @@
-<div class="popup" [ngClass]="{ popup_open: isOpen }" (click)="close()">
+<div class="popup" [ngClass]="{ popup_open: isOpen }">
     <div class="popup__body">
         <div class="popup__content">
-            <employee-form></employee-form>
+            <employee-form [employeeData]="data" (isClose)="close($event)">
+            </employee-form>
         </div>
     </div>
 </div>
