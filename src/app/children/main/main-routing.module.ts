@@ -3,6 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { MainLayoutComponent } from './layouts/main-layout/main-layout.component';
 import { EmployeeListPageComponent } from './pages/employee-list-page/employee-list-page.component';
 import { authGuard } from '../auth/guards/auth.guard';
+import {
+    EmployeePersonalDataPageWebComponent
+} from './pages/employee-personal-data-page/employee-personal-data.page.web.component';
 
 const routes: Routes = [
     {
@@ -18,6 +21,10 @@ const routes: Routes = [
             {
                 path: 'employee-list/:page',
                 component: EmployeeListPageComponent
+            },
+            {
+                path: 'employee-info',
+                component: EmployeePersonalDataPageWebComponent,
             }
         ],
     },
