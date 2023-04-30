@@ -2,9 +2,9 @@ import { AfterViewInit, ChangeDetectionStrategy, Component, forwardRef } from '@
 import { ControlValueAccessor, FormControl, FormGroup, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { IFilterFormControls, ISalaryOption, ISelectedOptions } from './filter-form.types';
 import {
-    IDropDownListControlValue,
-    IDropDownListProperties,
-    IDropDownListProperty,
+    IDropDownListControlValue, IDropDownListOptions,
+    IDropDownListOptionsFormGroup,
+    IDropDownListOption,
 } from '../drop-down-list/drop-down-list.types';
 
 @Component({
@@ -21,15 +21,16 @@ import {
 export class FilterFormComponent implements ControlValueAccessor, AfterViewInit {
     public filterForm: FormGroup<IFilterFormControls> = new FormGroup<IFilterFormControls>(
         {
-            selectedDepartments: new FormControl<IDropDownListProperties>([{
-                name: 'one',
-                title: 'one',
-                isChecked: false,
-            }], { nonNullable: true }),
-            selectedPosts: new FormControl<IDropDownListProperties>([], { nonNullable: true }),
+            selectedDepartments: new FormControl<IDropDownListOptions>({
+                // one: {
+                //     title: 'one',
+                //     isChecked: false,
+                // },
+            }, { nonNullable: true }),
+            selectedPosts: new FormControl<IDropDownListOptions>({}, { nonNullable: true }),
             salary: new FormControl<[number, number]>([140, 100000], { nonNullable: true }),
             isFired: new FormControl<boolean>(false, { nonNullable: true }),
-            isSuccessful: new FormControl<boolean | null>(false),
+            isSuccessful: new FormControl<boolean>(false, { nonNullable: true }),
         },
     );
 
@@ -47,12 +48,12 @@ export class FilterFormComponent implements ControlValueAccessor, AfterViewInit 
         });
     }
 
-    public test(properties: IDropDownListProperties) {
+    public test(properties: IDropDownListOptionsFormGroup) {
         console.log(properties);
     }
 
     public onDepartmentOptionChange() {
-        return (properties: IDropDownListProperties) => {
+        return (properties: IDropDownListOptionsFormGroup) => {
             this.test(properties);
         };
     }
@@ -66,6 +67,7 @@ export class FilterFormComponent implements ControlValueAccessor, AfterViewInit 
     }
 
     public writeValue(value: typeof this.filterForm.value): void {
+        console.log(value);
         this.onChange(value);
     }
 }

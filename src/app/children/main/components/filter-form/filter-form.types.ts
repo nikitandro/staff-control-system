@@ -1,5 +1,9 @@
 import { FormControl } from '@angular/forms';
-import { IDropDownListControlValue, IDropDownListProperties } from '../drop-down-list/drop-down-list.types';
+import {
+    IDropDownListControlValue,
+    IDropDownListOptions,
+    IDropDownListOptionsFormGroup,
+} from '../drop-down-list/drop-down-list.types';
 
 export type ISelectedOptions = string[]
 
@@ -9,8 +13,8 @@ export interface ISalaryOption {
 }
 
 export interface IFilterFormControls {
-    selectedDepartments: FormControl<IDropDownListProperties>;
-    selectedPosts: FormControl<IDropDownListProperties>;
+    selectedDepartments: FormControl<IDropDownListOptions>;
+    selectedPosts: FormControl<IDropDownListOptions>;
     salary: FormControl<[number, number]>;
     isFired: FormControl<boolean>;
     isSuccessful: FormControl<boolean | null>;

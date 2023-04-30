@@ -2,7 +2,7 @@ import { forwardRef, NgModule } from '@angular/core';
 import { MainLayoutComponent } from './layouts/main-layout/main-layout.component';
 import { EmployeeListPageComponent } from './pages/employee-list-page/employee-list-page.component';
 import { RouterModule, RouterOutlet } from '@angular/router';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { AppModule } from '../../app.module';
 import { MainHeaderComponent } from './components/header/main-header.component';
 import { BurgerButtonComponent } from './components/burger-button/burger-button.component';
@@ -13,6 +13,8 @@ import { CheckboxComponent } from './components/checkbox/checkbox.component';
 import { SalaryPickerComponent } from './components/salary-picker/salary-picker.component';
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DropDownListItemComponent } from './components/drop-down-list-item/drop-down-list-item.component';
+import { EmployeeListItemComponent } from './components/employee-list-item/employee-list-item.component';
 
 @NgModule({
     declarations: [
@@ -23,7 +25,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
         FilterFormComponent,
         DropDownListComponent,
         CheckboxComponent,
-        SalaryPickerComponent
+        SalaryPickerComponent,
+        DropDownListItemComponent,
+        EmployeeListItemComponent
     ],
     exports: [],
     imports: [
@@ -32,6 +36,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
         NgxSliderModule,
         FormsModule,
         ReactiveFormsModule,
+        NgOptimizedImage,
     ],
     providers: [
         FilterService

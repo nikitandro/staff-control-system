@@ -24,9 +24,7 @@ export class CheckboxComponent implements ControlValueAccessor {
     public title: string = '';
     @Input()
     public isChecked?: boolean = false;
-    @Input()
-    public name: string = '';
-    private onChange = (value: ICheckboxModel) => {
+    private onChange = (value: boolean) => {
     };
     private onTouched = () => {
     };
@@ -39,14 +37,12 @@ export class CheckboxComponent implements ControlValueAccessor {
         this.onTouched = fn;
     }
 
-    public writeValue(value: ICheckboxModel): void {
-        this.name = value.name;
-        this.title = value.title;
-        this.isChecked = value.isChecked;
+    public writeValue(value: boolean): void {
+        this.isChecked = value;
         this.onChange(value);
     }
 
     public click() {
-        this.writeValue({ name: this.name, title: this.title, isChecked: !this.isChecked });
+        this.writeValue(!this.isChecked);
     }
 }

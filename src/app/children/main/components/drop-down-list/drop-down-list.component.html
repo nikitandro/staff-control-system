@@ -16,8 +16,8 @@
         class="drop-down-list__list"
         [ngClass]="{'drop-down-list__list_open': (isOpen$ | async)}"
     >
-        <div class="drop-down-list__list-item" *ngFor="let propertyFormControl of checkboxFormControls.controls">
-            <main-checkbox [formControl]="propertyFormControl"></main-checkbox>
+        <div class="drop-down-list__list-item" *ngFor="let property of []">
+            <main-checkbox [formControl]="property" [title]="'0'"></main-checkbox>
         </div>
     </div>
 </div>
