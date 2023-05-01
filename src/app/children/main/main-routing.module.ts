@@ -18,7 +18,41 @@ const routes: Routes = [
             {
                 path: 'employee-list/:page',
                 component: EmployeeListPageComponent
-            }
+            },
+            {
+                path: 'employee-info/:employeeId',
+                children: [
+                    {
+                        path: 'personal',
+                        component: EmployeeListPageComponent
+                    },
+                    {
+                        path: 'contacts',
+                        component: EmployeeListPageComponent
+                    },
+                    {
+                        path: 'education',
+                        component: EmployeeListPageComponent
+                    },
+                    {
+                        path: 'condition',
+                        component: EmployeeListPageComponent
+                    },
+                    {
+                        path: 'experience',
+                        component: EmployeeListPageComponent
+                    },
+                    {
+                        path: 'vacation',
+                        component: EmployeeListPageComponent
+                    },
+                    {
+                        path: 'achievements',
+                        component: EmployeeListPageComponent
+                    }
+                ]
+            },
+
         ],
     },
 ];

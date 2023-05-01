@@ -13,6 +13,8 @@ import { CheckboxComponent } from './components/checkbox/checkbox.component';
 import { SalaryPickerComponent } from './components/salary-picker/salary-picker.component';
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
 import { FormsModule } from '@angular/forms';
+import { EmployeeInfoNavigationComponent } from './components/employee-info-navigation/employee-info-navigation.component';
+import { NavigationButtonComponent } from './components/navigation-button/navigation-button.component';
 
 @NgModule({
     declarations: [
@@ -23,7 +25,9 @@ import { FormsModule } from '@angular/forms';
         FilterFormComponent,
         DropDownListComponent,
         CheckboxComponent,
-        SalaryPickerComponent
+        SalaryPickerComponent,
+        EmployeeInfoNavigationComponent,
+        NavigationButtonComponent
     ],
     exports: [],
     imports: [
