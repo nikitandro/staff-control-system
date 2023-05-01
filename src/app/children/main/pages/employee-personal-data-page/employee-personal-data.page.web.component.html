@@ -1,5 +1,4 @@
 <div>
-    <employee-card></employee-card>
-    <button (click)="open()">Нажми, чтобы открыть модалку</button>
+    <employee-card (isEdit$)="open($event)"></employee-card>
 </div>
-<popup [isOpen]="(isOpen$ | async) || false" [employeeData]="employeePersonalData"></popup>
+<popup [isOpenINP]="isPopupOpen" [employeeData]="employeePersonalData" (isOpen)="close($event)"></popup>

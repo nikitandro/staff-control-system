@@ -17,7 +17,7 @@ export class EmployeeFormComponent implements OnInit, OnDestroy {
     public employeeFormData!: IEmployeeData;
 
     @Output()
-    public isClose: EventEmitter<boolean> = new EventEmitter<boolean>();
+    public isOpen: EventEmitter<boolean> = new EventEmitter<boolean>();
 
     public employeeFormFields!: IEmployeeFormFieldInterface[];
 
@@ -54,6 +54,6 @@ export class EmployeeFormComponent implements OnInit, OnDestroy {
     }
 
     public close(): void {
-        this.isClose.emit(false);
+        this.isOpen.emit(false);
     }
 }

@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, Output } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 @Component({
     selector: 'employee-card',
@@ -7,5 +8,13 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class EmployeeCardComponent {
+    @Output()
+    public isEdit$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
 
+    @Input()
+    public isEditINP: boolean = false;
+
+    public edit(): void {
+        this.isEdit$.next(!this.isEditINP);
+    }
 }

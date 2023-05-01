@@ -1,5 +1,4 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
 import { FormControl, Validators } from '@angular/forms';
 import { IEmployeeData } from '../../data/interfaces/employee-data.interface';
 
@@ -10,7 +9,7 @@ import { IEmployeeData } from '../../data/interfaces/employee-data.interface';
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class EmployeePersonalDataPageWebComponent {
-    public isOpen$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
+    public isPopupOpen: boolean = false;
 
     public employeePersonalData: IEmployeeData = {
         employeeFormFields: [
@@ -34,7 +33,11 @@ export class EmployeePersonalDataPageWebComponent {
         photo: 'ФОТОЧКА'
     };
 
-    public open(): void {
-        this.isOpen$.next(!this.isOpen$.getValue());
+    public open(isEdit: boolean): void {
+        this.isPopupOpen = isEdit;
+    }
+
+    public close(isOpen: boolean): void {
+        this.isPopupOpen = isOpen;
     }
 }
