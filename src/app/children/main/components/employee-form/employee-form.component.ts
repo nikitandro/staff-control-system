@@ -1,7 +1,8 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
 import { FormArray, FormControl, FormGroup } from '@angular/forms';
 import { Subscription } from 'rxjs';
-import { IEmployeePersonalData } from '../../data/interfaces/employee-personal-data.interface';
+import { IEmployeeData } from '../../data/interfaces/employee-data.interface';
+import { IEmployeeFormFieldInterface } from '../../data/interfaces/employee-form-field.interface';
 
 @Component({
     selector: 'employee-form',
@@ -13,10 +14,12 @@ export class EmployeeFormComponent implements OnInit, OnDestroy {
     public employeeForm!: FormGroup;
 
     @Input()
-    public employeeData!: IEmployeePersonalData;
+    public employeeFormData!: IEmployeeData;
 
     @Output()
     public isClose: EventEmitter<boolean> = new EventEmitter<boolean>();
+
+    public employeeFormFields!: IEmployeeFormFieldInterface[];
 
     public employeeFormLabels!: string[];
 
@@ -27,9 +30,10 @@ export class EmployeeFormComponent implements OnInit, OnDestroy {
     private _employeeFormSubscription!: Subscription;
 
     public ngOnInit(): void {
-        this.employeeFormLabels = this.employeeData.labels;
-        this.employeeFormControls = this.employeeData.controls;
-        this.employeeFormPhoto = this.employeeData.photo;
+        this.employeeFormFields = this.employeeFormData.employeeFormFields;
+        this.employeeFormLabels = this.employeeFormFields.map((field: IEmployeeFormFieldInterface) => field.label);
+        this.employeeFormControls = this.employeeFormFields.map((field: IEmployeeFormFieldInterface) => field.control);
+        this.employeeFormPhoto = this.employeeFormData.photo;
         this.employeeForm = new FormGroup({
             fieldsEmployeeForm: new FormArray(this.employeeFormControls)
         });

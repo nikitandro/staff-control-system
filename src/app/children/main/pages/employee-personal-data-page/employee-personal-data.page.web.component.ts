@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { FormControl, Validators } from '@angular/forms';
-import { IEmployeePersonalData } from '../../data/interfaces/employee-personal-data.interface';
+import { IEmployeeData } from '../../data/interfaces/employee-data.interface';
 
 @Component({
     selector: 'employee-personal-data',
@@ -12,18 +12,24 @@ import { IEmployeePersonalData } from '../../data/interfaces/employee-personal-d
 export class EmployeePersonalDataPageWebComponent {
     public isOpen$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
 
-    public data: IEmployeePersonalData = {
-        labels: [
-            'Фамилия',
-            'Имя',
-            'Отчество',
-            'Дата рождения'
-        ],
-        controls: [
-            new FormControl('Иванов', Validators.required),
-            new FormControl('Иван', Validators.required),
-            new FormControl('Иванович', Validators.required),
-            new FormControl(new Date('1943-01-19'), Validators.required),
+    public employeePersonalData: IEmployeeData = {
+        employeeFormFields: [
+            {
+                label: 'Фамилия',
+                control: new FormControl('Иванов', Validators.required)
+            },
+            {
+                label: 'Имя',
+                control: new FormControl('Иван', Validators.required)
+            },
+            {
+                label: 'Отчество',
+                control: new FormControl('Иванович', Validators.required)
+            },
+            {
+                label: 'Дата рождения',
+                control: new FormControl(new Date('1943-01-19').toLocaleDateString(), Validators.required)
+            }
         ],
         photo: 'ФОТОЧКА'
     };

@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { IEmployeePersonalData } from '../../data/interfaces/employee-personal-data.interface';
+import { IEmployeeData } from '../../data/interfaces/employee-data.interface';
 
 @Component({
     selector: 'popup',
@@ -11,7 +11,7 @@ export class PopupComponent {
     public isOpen: boolean = false;
 
     @Input()
-    public data!: IEmployeePersonalData;
+    public employeeData!: IEmployeeData;
 
     public close(isClose: boolean): void {
         this.isOpen = isClose;
