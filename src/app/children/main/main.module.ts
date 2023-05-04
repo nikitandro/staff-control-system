@@ -15,6 +15,7 @@ import { NgxSliderModule } from '@angular-slider/ngx-slider';
 import { FormsModule } from '@angular/forms';
 import { EmployeeInfoNavigationComponent } from './components/employee-info-navigation/employee-info-navigation.component';
 import { NavigationButtonComponent } from './components/navigation-button/navigation-button.component';
+import { EmployeeInfoLayoutComponent } from './layouts/employee-info-layout/employee-info-layout.component';
 
 @NgModule({
     declarations: [
@@ -27,7 +28,8 @@ import { NavigationButtonComponent } from './components/navigation-button/naviga
         CheckboxComponent,
         SalaryPickerComponent,
         EmployeeInfoNavigationComponent,
-        NavigationButtonComponent
+        NavigationButtonComponent,
+        EmployeeInfoLayoutComponent
     ],
     exports: [],
     imports: [

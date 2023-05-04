@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { MainLayoutComponent } from './layouts/main-layout/main-layout.component';
 import { EmployeeListPageComponent } from './pages/employee-list-page/employee-list-page.component';
 import { authGuard } from '../auth/guards/auth.guard';
+import {EmployeeInfoLayoutComponent} from "./layouts/employee-info-layout/employee-info-layout.component";
 
 const routes: Routes = [
     {
@@ -18,42 +19,42 @@ const routes: Routes = [
             {
                 path: 'employee-list/:page',
                 component: EmployeeListPageComponent
+            }
+        ],
+    },
+    {
+        path: 'employee-info',
+        component: EmployeeInfoLayoutComponent,
+        children: [
+            {
+                path: ':employeeId/personal',
+                component: EmployeeListPageComponent
             },
             {
-                path: 'employee-info/:employeeId',
-                children: [
-                    {
-                        path: 'personal',
-                        component: EmployeeListPageComponent
-                    },
-                    {
-                        path: 'contacts',
-                        component: EmployeeListPageComponent
-                    },
-                    {
-                        path: 'education',
-                        component: EmployeeListPageComponent
-                    },
-                    {
-                        path: 'condition',
-                        component: EmployeeListPageComponent
-                    },
-                    {
-                        path: 'experience',
-                        component: EmployeeListPageComponent
-                    },
-                    {
-                        path: 'vacation',
-                        component: EmployeeListPageComponent
-                    },
-                    {
-                        path: 'achievements',
-                        component: EmployeeListPageComponent
-                    }
-                ]
+                path: ':employeeId/contacts',
+                component: EmployeeListPageComponent
             },
-
-        ],
+            {
+                path: ':employeeId/education',
+                component: EmployeeListPageComponent
+            },
+            {
+                path: ':employeeId/condition',
+                component: EmployeeListPageComponent
+            },
+            {
+                path: ':employeeId/experience',
+                component: EmployeeListPageComponent
+            },
+            {
+                path: ':employeeId/vacation',
+                component: EmployeeListPageComponent
+            },
+            {
+                path: ':employeeId/achievements',
+                component: EmployeeListPageComponent
+            }
+        ]
     },
 ];
 

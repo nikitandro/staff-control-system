@@ -21,6 +21,6 @@ export class NavigationButtonComponent implements OnInit{
     public routLink!: string;
 
     public ngOnInit() {
-        this.routLink = `employee-info/${this.Id}/${this.pageRout}`;
+        this.routLink = `${this.Id}/${this.pageRout}`;
     }
 }
