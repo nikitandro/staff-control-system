@@ -1,6 +1,6 @@
 import { FormControl } from '@angular/forms';
 
-export interface IEmployeeFormFieldInterface {
+export interface IEmployeeFormField {
     label: string,
-    control: FormControl;
+    control: FormControl
 }

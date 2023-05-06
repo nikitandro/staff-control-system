@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { IEmployeeData } from '../../data/interfaces/employee-data.interface';
+import { IEmployeeFormData } from '../../data/interfaces/employee-form-data.interface';
 
 @Component({
     selector: 'popup',
@@ -14,7 +14,7 @@ export class PopupComponent implements OnInit {
     public isOpen: EventEmitter<boolean> = new EventEmitter<boolean>();
 
     @Input()
-    public employeeData!: IEmployeeData;
+    public employeeData!: IEmployeeFormData;
 
     public ngOnInit(): void {
         this.isOpen.emit(this.isOpenINP);

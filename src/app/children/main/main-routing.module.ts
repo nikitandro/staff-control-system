@@ -23,8 +23,13 @@ const routes: Routes = [
                 component: EmployeeListPageComponent
             },
             {
-                path: 'employee-info',
-                component: EmployeePersonalDataPageWebComponent,
+                path: 'employee-info/:employeeId',
+                children: [
+                    {
+                        path: 'personal',
+                        component: EmployeePersonalDataPageWebComponent
+                    }
+                ]
             }
         ],
     },

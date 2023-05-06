@@ -1,4 +1,11 @@
 <div>
-    <employee-card (isEdit$)="open($event)"></employee-card>
+    <employee-card [employeeCardData]="employeePersonalCardData" (isEdit$)="open($event)"></employee-card>
+    <button
+        class="add-button"
+        (click)="add()"
+        *ngIf="canAdd"
+    >
+        {{ addTitle }}
+    </button>
 </div>
-<popup [isOpenINP]="isPopupOpen" [employeeData]="employeePersonalData" (isOpen)="close($event)"></popup>
+<popup [isOpenINP]="isPopupOpen" [employeeData]="employeePersonalFormData" (isOpen)="close($event)"></popup>

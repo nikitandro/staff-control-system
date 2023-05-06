@@ -1,0 +1,63 @@
+.employee-card {
+    width: 957px;
+    padding: 50px 50px 65px;
+    position: relative;
+    background-color: #F0F0F0;
+
+    &__title {
+        font-size: 28px;
+        line-height: 34px;
+        margin-bottom: 19px;
+    }
+
+    &__content {
+        width: 857px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__employee-data {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 25px;
+        column-gap: min(30px);
+    }
+
+    &__label {
+        font-size: 20px;
+        line-height: 24px;
+        font-weight: 600;
+
+        &_not-set {
+            color: red;
+        }
+    }
+
+    &__data {
+        font-size: 20px;
+        line-height: 24px;
+
+        &_not-set {
+            color: red;
+        }
+    }
+
+    &__employee-photo {
+        width: 155px;
+        height: 182px;
+    }
+
+    &__edit-button {
+        width: 24px;
+        height: 24px;
+        right: 15px;
+        bottom: 15px;
+        position: absolute;
+    }
+
+    &__delete-button {
+        right: 15px;
+        top: 15px;
+        position: absolute;
+    }
+}

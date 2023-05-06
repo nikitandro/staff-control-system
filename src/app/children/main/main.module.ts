@@ -16,6 +16,7 @@ import { EmployeePersonalDataPageWebComponent } from './pages/employee-personal-
 import { EmployeeCardComponent } from './components/employee-card/employee-card.component';
 import { EmployeeFormComponent } from './components/employee-form/employee-form.component';
 import { PopupComponent } from './components/popup/popup.component';
+import { EmployeeDataService } from './data/services/employee-data.service';
 
 @NgModule({
     declarations: [
@@ -41,7 +42,8 @@ import { PopupComponent } from './components/popup/popup.component';
         ReactiveFormsModule,
     ],
     providers: [
-        FilterService
+        FilterService,
+        EmployeeDataService
     ],
 })
 export class MainModule {

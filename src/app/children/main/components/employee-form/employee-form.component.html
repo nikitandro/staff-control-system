@@ -1,35 +1,45 @@
+<button (click)="showForm()">show</button>
 <form
     class="employee-form"
     [formGroup]="employeeForm"
+    *ngIf="show"
     (ngSubmit)="onSubmit()"
 >
-    <button (click)="close()">close</button>
-    <ul formArrayName="fieldsEmployeeForm">
-        <ng-container
-            *ngFor="let fieldEmployeeForm of getFormsControls()['controls']; index as i"
-        >
-            <div class="employee-form__content">
-                <div class="employee-form-field">
-                    <label for="field">{{employeeFormLabels[i]}}</label>
+    <div
+        class="employee-form__close-button"
+        (click)="close()"
+    >
+        <img class="cross-img" src="assets/images/icons/close-button.svg" alt="закрыть">
+    </div>
+    <div class="employee-form__body">
+        <div class="employee-form__content">
+            <div class="employee-form__employee-data" formArrayName="employeeFormFields">
+                <ng-container *ngFor="let employeeFormField of employeeFormFields.controls; index as i">
+                    <label class="employee-form__label" for="field">{{ employeeFormLabels[i] }}</label>
                     <input
-                        class="employee-form-field__input"
+                        class="employee-form__data"
                         id="field"
                         type="text"
-                        formControlName="{{i}}"
+                        formControlName="{{ i }}"
                     >
-                </div>
+                </ng-container>
             </div>
-        </ng-container>
-    </ul>
-
-    <div class="employee-form-action">
-        <button
-            class="employee-form-action__button"
-            type="submit"
-        >
-            Сохранить изменения
-        </button>
+            <div class="employee-form__employee-photo" *ngIf="employeeFormData.photo; else notSetPhoto">
+                <img src="assets/images/icons/{{ employeeFormData.photo }}" alt="фото сотрудника">
+            </div>
+            <ng-template #notSetPhoto>
+                <div class="employee-form__employee-photo" >
+                    <img src="assets/images/icons/user-img.png" alt="фото сотрудника">
+                </div>
+            </ng-template>
+        </div>
     </div>
+
+    <button
+        class="employee-form__submit-button"
+        type="submit"
+        (click)="onSubmit()"
+    >
+        Сохранить изменения
+    </button>
 </form>
-
-

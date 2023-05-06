@@ -1,8 +1,16 @@
-import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
-import { FormArray, FormControl, FormGroup } from '@angular/forms';
+import {
+    ChangeDetectionStrategy,
+    Component,
+    EventEmitter,
+    Input,
+    OnDestroy,
+    OnInit,
+    Output
+} from '@angular/core';
 import { Subscription } from 'rxjs';
-import { IEmployeeData } from '../../data/interfaces/employee-data.interface';
-import { IEmployeeFormFieldInterface } from '../../data/interfaces/employee-form-field.interface';
+import { IEmployeeFormData } from '../../data/interfaces/employee-form-data.interface';
+import { FormArray, FormGroup } from '@angular/forms';
+import { IEmployeeFormField } from '../../data/interfaces/employee-form-field.interface';
 
 @Component({
     selector: 'employee-form',
@@ -11,32 +19,22 @@ import { IEmployeeFormFieldInterface } from '../../data/interfaces/employee-form
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class EmployeeFormComponent implements OnInit, OnDestroy {
-    public employeeForm!: FormGroup;
-
     @Input()
-    public employeeFormData!: IEmployeeData;
+    public employeeFormData!: IEmployeeFormData;
 
     @Output()
     public isOpen: EventEmitter<boolean> = new EventEmitter<boolean>();
 
-    public employeeFormFields!: IEmployeeFormFieldInterface[];
-
     public employeeFormLabels!: string[];
 
-    public employeeFormControls!: FormControl[];
+    public employeeFormFieldsArray!: FormArray;
 
-    public employeeFormPhoto?: string;
+    public employeeForm!: FormGroup;
 
     private _employeeFormSubscription!: Subscription;
 
     public ngOnInit(): void {
-        this.employeeFormFields = this.employeeFormData.employeeFormFields;
-        this.employeeFormLabels = this.employeeFormFields.map((field: IEmployeeFormFieldInterface) => field.label);
-        this.employeeFormControls = this.employeeFormFields.map((field: IEmployeeFormFieldInterface) => field.control);
-        this.employeeFormPhoto = this.employeeFormData.photo;
-        this.employeeForm = new FormGroup({
-            fieldsEmployeeForm: new FormArray(this.employeeFormControls)
-        });
+        console.log(this.employeeFormData);
     }
 
     public ngOnDestroy(): void {
@@ -45,8 +43,8 @@ export class EmployeeFormComponent implements OnInit, OnDestroy {
         }
     }
 
-    public getFormsControls() : FormArray{
-        return this.employeeForm.controls['fieldsEmployeeForm'] as FormArray;
+    public get employeeFormFields(): FormArray {
+        return this.employeeForm.controls['employeeFormFields'] as FormArray;
     }
 
     public onSubmit(): void {
@@ -56,4 +54,40 @@ export class EmployeeFormComponent implements OnInit, OnDestroy {
     public close(): void {
         this.isOpen.emit(false);
     }
+
+    // eslint-disable-next-line @typescript-eslint/member-ordering
+    public show: boolean = false;
+    public showForm(): void {
+        this.show = !this.show;
+        this.employeeFormLabels = this.employeeFormData.employeeFormFields.map((field: IEmployeeFormField) => field.label);
+        this.employeeFormFieldsArray = new FormArray(
+            this.employeeFormData.employeeFormFields.map((field: IEmployeeFormField) => field.control)
+        );
+        this.employeeForm = new FormGroup({
+            employeeFormFields: this.employeeFormFieldsArray
+        });
+    }
 }
+
+// Просто чтоб каждый раз не заполнять поля оставил это тут (если что можно смело удалять)
+// @Input()
+// public employeeFormData: IEmployeeFormData = {
+//         employeeFormFields: [
+//             {
+//                 label: 'Фамилия',
+//                 control: new FormControl('Иванов', Validators.required)
+//             },
+//             {
+//                 label: 'Имя',
+//                 control: new FormControl('Иван', Validators.required)
+//             },
+//             {
+//                 label: 'Отчество',
+//                 control: new FormControl('Иваныч', Validators.required)
+//             },
+//             {
+//                 label: 'Дата рождения',
+//                 control: new FormControl(new Date('1223-02-23').toLocaleDateString(), Validators.required)
+//             }
+//         ],
+//     };

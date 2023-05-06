@@ -78,7 +78,7 @@
       "responsibilitiesDescription": ""
     }
   ],
-  "employee": [
+  "employees": [
     {
       "id": 1,
       "firstName": "Никита",
@@ -96,6 +96,24 @@
       "salaryIncreaseList": [],
       "education": [],
       "firingDate": ""
-    }
+    },
+      {
+          "id": 2,
+          "firstName": "Дмитрий",
+          "lastName": "Козаченко",
+          "patronymic": "Сергеевич",
+          "birthDate": "2002-12-21",
+          "employmentDate": "",
+          "departmentId": "",
+          "postId": "",
+          "salary": 1,
+          "successRate": "",
+          "isFired": false,
+          "firstWorkDay": "",
+          "vacationsList": [],
+          "salaryIncreaseList": [],
+          "education": [],
+          "firingDate": ""
+      }
   ]
 }
