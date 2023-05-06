@@ -1,0 +1,8 @@
+.navigation-button-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+/*# sourceMappingURL=employee-info-navigation.component.css.map */

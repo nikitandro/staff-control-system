@@ -17,6 +17,9 @@ import { EmployeeCardComponent } from './components/employee-card/employee-card.
 import { EmployeeFormComponent } from './components/employee-form/employee-form.component';
 import { PopupComponent } from './components/popup/popup.component';
 import { EmployeeDataService } from './data/services/employee-data.service';
+import { EmployeeInfoNavigationComponent } from './components/employee-info-navigation/employee-info-navigation.component';
+import { NavigationButtonComponent } from './components/navigation-button/navigation-button.component';
+import { EmployeeInfoLayoutComponent } from './layouts/employee-info-layout/employee-info-layout.component';
 
 @NgModule({
     declarations: [
@@ -32,6 +35,9 @@ import { EmployeeDataService } from './data/services/employee-data.service';
         PopupComponent,
         SalaryPickerComponent,
         EmployeePersonalDataPageWebComponent,
+        EmployeeInfoNavigationComponent,
+        NavigationButtonComponent,
+        EmployeeInfoLayoutComponent
     ],
     exports: [],
     imports: [

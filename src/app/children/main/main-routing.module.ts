@@ -6,6 +6,7 @@ import { authGuard } from '../auth/guards/auth.guard';
 import {
     EmployeePersonalDataPageWebComponent
 } from './pages/employee-personal-data-page/employee-personal-data.page.web.component';
+import { EmployeeInfoLayoutComponent } from './layouts/employee-info-layout/employee-info-layout.component';
 
 const routes: Routes = [
     {
@@ -32,6 +33,40 @@ const routes: Routes = [
                 ]
             }
         ],
+    },
+    {
+        path: 'employee-info',
+        component: EmployeeInfoLayoutComponent,
+        children: [
+            {
+                path: ':employeeId/personal',
+                component: EmployeeListPageComponent
+            },
+            {
+                path: ':employeeId/contacts',
+                component: EmployeeListPageComponent
+            },
+            {
+                path: ':employeeId/education',
+                component: EmployeeListPageComponent
+            },
+            {
+                path: ':employeeId/condition',
+                component: EmployeeListPageComponent
+            },
+            {
+                path: ':employeeId/experience',
+                component: EmployeeListPageComponent
+            },
+            {
+                path: ':employeeId/vacation',
+                component: EmployeeListPageComponent
+            },
+            {
+                path: ':employeeId/achievements',
+                component: EmployeeListPageComponent
+            }
+        ]
     },
 ];
 
