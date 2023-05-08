@@ -8,68 +8,68 @@ import { BehaviorSubject } from 'rxjs';
 import { FormControl, Validators } from '@angular/forms';
 
 @Component({
-    selector: 'employee-personal-data',
-    templateUrl: 'employee-personal-data.page.web.component.html',
-    styleUrls: ['./styles/employee-personal-data.page.web.component.scss'],
+    selector: 'employee-condition-data',
+    templateUrl: 'employee-condition-data.page.web.component.html',
+    styleUrls: ['./styles/employee-condition-data.page.web.component.scss'],
 })
-export class EmployeePersonalDataPageWebComponent implements OnInit {
+export class EmployeeConditionDataPageWebComponent implements OnInit {
     public isPopupOpen: boolean = false;
 
-    public employeePersonalCardData!: IEmployeeCardData;
+    public employeeConditionCardData!: IEmployeeCardData;
 
     constructor(
         private _employeeDataService: EmployeeDataService,
         private _ref: ChangeDetectorRef,
-        @Inject(EMPLOYEE_FORM_DATA_TOKEN) public employeePersonalFormData$: BehaviorSubject<IEmployeeFormData>
+        @Inject(EMPLOYEE_FORM_DATA_TOKEN) public employeeConditionFormData$: BehaviorSubject<IEmployeeFormData>
     ) {
     }
 
     public ngOnInit(): void {
         this._employeeDataService.getEmployeeData(2)
             .subscribe((data: IEmployeeResponseModel) => {
-                this.employeePersonalCardData = {
-                    title: 'Личная информация',
+                this.employeeConditionCardData = {
+                    title: 'Условия работы',
                     employeeCardFields: [
                         {
-                            label: 'Фамилия:',
-                            data: data.lastName
+                            label: 'Отдел:',
+                            data: data.departmentName
                         },
                         {
-                            label: 'Имя:',
-                            data: data.firstName
+                            label: 'Должность:',
+                            data: data.post
                         },
                         {
-                            label: 'Отчество:',
-                            data: data.patronymic
+                            label: 'Заработая плата (в рублях):',
+                            data: data.salary
                         },
                         {
-                            label: 'Дата рождения:',
-                            data: new Date(data.birthDate).toLocaleDateString()
-                        }
+                            label: 'Формат работы:',
+                            data: data.workFormat
+                        },
                     ],
                     photo: 'user-img.png',
                     canEdit: true,
                     canDelete: false
                 };
 
-                this.employeePersonalFormData$.next({
+                this.employeeConditionFormData$.next({
                     employeeFormFields: [
                         {
-                            label: 'Фамилия:',
-                            control: new FormControl(data.lastName, Validators.required)
+                            label: 'Отдел:',
+                            control: new FormControl(data.departmentName, Validators.required)
                         },
                         {
-                            label: 'Имя:',
-                            control: new FormControl(data.firstName, Validators.required)
+                            label: 'Должность:',
+                            control: new FormControl(data.post, Validators.required)
                         },
                         {
-                            label: 'Отчество:',
-                            control: new FormControl(data.patronymic, Validators.required)
+                            label: 'Заработая плата (в рублях):',
+                            control: new FormControl(data.salary, Validators.required)
                         },
                         {
-                            label: 'Дата рождения:',
-                            control: new FormControl(new Date(data.birthDate).toLocaleDateString(), Validators.required)
-                        }
+                            label: 'Формат работы:',
+                            control: new FormControl(data.workFormat, Validators.required)
+                        },
                     ]
                 });
                 this._ref.detectChanges();

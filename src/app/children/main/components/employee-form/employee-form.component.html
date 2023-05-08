@@ -1,8 +1,7 @@
-<button (click)="showForm()">show</button>
 <form
     class="employee-form"
     [formGroup]="employeeForm"
-    *ngIf="show"
+    *ngIf="employeeFormData$ | async"
     (ngSubmit)="onSubmit()"
 >
     <div
@@ -24,14 +23,9 @@
                     >
                 </ng-container>
             </div>
-            <div class="employee-form__employee-photo" *ngIf="employeeFormData.photo; else notSetPhoto">
-                <img src="assets/images/icons/{{ employeeFormData.photo }}" alt="фото сотрудника">
+            <div class="employee-form__employee-photo" *ngIf="employeePhoto">
+                <img src="assets/images/icons/{{ employeePhoto }}" alt="фото сотрудника">
             </div>
-            <ng-template #notSetPhoto>
-                <div class="employee-form__employee-photo" >
-                    <img src="assets/images/icons/user-img.png" alt="фото сотрудника">
-                </div>
-            </ng-template>
         </div>
     </div>
 

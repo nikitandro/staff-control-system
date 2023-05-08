@@ -20,6 +20,29 @@ import { EmployeeDataService } from './data/services/employee-data.service';
 import { EmployeeInfoNavigationComponent } from './components/employee-info-navigation/employee-info-navigation.component';
 import { NavigationButtonComponent } from './components/navigation-button/navigation-button.component';
 import { EmployeeInfoLayoutComponent } from './layouts/employee-info-layout/employee-info-layout.component';
+import { EMPLOYEE_FORM_DATA_TOKEN } from './data/tokens/employee-form-data.token';
+import { BehaviorSubject } from 'rxjs';
+import { IEmployeeFormData } from './data/interfaces/employee-form-data.interface';
+import {
+    EmployeeEducationDataPageWebComponent
+} from './pages/employee-education-data-page/employee-education-data.page.web.component';
+import {
+    EmployeeContactsDataPageWebComponent
+} from './pages/employee-contacts-data-page/employee-contacts-data.page.web.component';
+import {
+    EmployeeConditionDataPageWebComponent
+} from './pages/employee-condition-data-page/employee-condition-data.page.web.component';
+import {
+    EmployeeAchievementsDataPageWebComponent
+} from './pages/employee-achievements-data-page/employee-achievements-data.page.web.component';
+import {
+    EmployeeVacationDataPageWebComponent
+} from './pages/employee-vacantion-data-page/employee-vacation-data.page.web.component';
+import {
+    EmployeeExperienceDataPageWebComponent
+} from './pages/employee-experience-data-page/employee-experience-data.page.web.component';
+
+
 
 @NgModule({
     declarations: [
@@ -37,7 +60,13 @@ import { EmployeeInfoLayoutComponent } from './layouts/employee-info-layout/empl
         EmployeePersonalDataPageWebComponent,
         EmployeeInfoNavigationComponent,
         NavigationButtonComponent,
-        EmployeeInfoLayoutComponent
+        EmployeeInfoLayoutComponent,
+        EmployeeEducationDataPageWebComponent,
+        EmployeeContactsDataPageWebComponent,
+        EmployeeConditionDataPageWebComponent,
+        EmployeeAchievementsDataPageWebComponent,
+        EmployeeVacationDataPageWebComponent,
+        EmployeeExperienceDataPageWebComponent
     ],
     exports: [],
     imports: [
@@ -49,7 +78,11 @@ import { EmployeeInfoLayoutComponent } from './layouts/employee-info-layout/empl
     ],
     providers: [
         FilterService,
-        EmployeeDataService
+        EmployeeDataService,
+        {
+            provide: EMPLOYEE_FORM_DATA_TOKEN,
+            useValue: new BehaviorSubject<IEmployeeFormData | null>(null)
+        }
     ],
 })
 export class MainModule {

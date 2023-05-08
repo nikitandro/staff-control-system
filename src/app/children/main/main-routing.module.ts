@@ -7,6 +7,24 @@ import {
     EmployeePersonalDataPageWebComponent
 } from './pages/employee-personal-data-page/employee-personal-data.page.web.component';
 import { EmployeeInfoLayoutComponent } from './layouts/employee-info-layout/employee-info-layout.component';
+import {
+    EmployeeEducationDataPageWebComponent
+} from './pages/employee-education-data-page/employee-education-data.page.web.component';
+import {
+    EmployeeContactsDataPageWebComponent
+} from './pages/employee-contacts-data-page/employee-contacts-data.page.web.component';
+import {
+    EmployeeConditionDataPageWebComponent
+} from './pages/employee-condition-data-page/employee-condition-data.page.web.component';
+import {
+    EmployeeAchievementsDataPageWebComponent
+} from './pages/employee-achievements-data-page/employee-achievements-data.page.web.component';
+import {
+    EmployeeVacationDataPageWebComponent
+} from './pages/employee-vacantion-data-page/employee-vacation-data.page.web.component';
+import {
+    EmployeeExperienceDataPageWebComponent
+} from './pages/employee-experience-data-page/employee-experience-data.page.web.component';
 
 const routes: Routes = [
     {
@@ -23,15 +41,6 @@ const routes: Routes = [
                 path: 'employee-list/:page',
                 component: EmployeeListPageComponent
             },
-            {
-                path: 'employee-info/:employeeId',
-                children: [
-                    {
-                        path: 'personal',
-                        component: EmployeePersonalDataPageWebComponent
-                    }
-                ]
-            }
         ],
     },
     {
@@ -40,31 +49,31 @@ const routes: Routes = [
         children: [
             {
                 path: ':employeeId/personal',
-                component: EmployeeListPageComponent
+                component: EmployeePersonalDataPageWebComponent
             },
             {
                 path: ':employeeId/contacts',
-                component: EmployeeListPageComponent
+                component: EmployeeContactsDataPageWebComponent
             },
             {
                 path: ':employeeId/education',
-                component: EmployeeListPageComponent
+                component: EmployeeEducationDataPageWebComponent
             },
             {
                 path: ':employeeId/condition',
-                component: EmployeeListPageComponent
+                component: EmployeeConditionDataPageWebComponent
             },
             {
                 path: ':employeeId/experience',
-                component: EmployeeListPageComponent
+                component: EmployeeExperienceDataPageWebComponent
             },
             {
                 path: ':employeeId/vacation',
-                component: EmployeeListPageComponent
+                component: EmployeeVacationDataPageWebComponent
             },
             {
                 path: ':employeeId/achievements',
-                component: EmployeeListPageComponent
+                component: EmployeeAchievementsDataPageWebComponent
             }
         ]
     },

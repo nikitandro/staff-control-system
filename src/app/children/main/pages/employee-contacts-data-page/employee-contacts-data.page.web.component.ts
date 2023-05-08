@@ -8,68 +8,60 @@ import { BehaviorSubject } from 'rxjs';
 import { FormControl, Validators } from '@angular/forms';
 
 @Component({
-    selector: 'employee-personal-data',
-    templateUrl: 'employee-personal-data.page.web.component.html',
-    styleUrls: ['./styles/employee-personal-data.page.web.component.scss'],
+    selector: 'employee-contacts-data',
+    templateUrl: 'employee-contacts-data.page.web.component.html',
+    styleUrls: ['./styles/employee-contacts-data.page.web.component.scss'],
 })
-export class EmployeePersonalDataPageWebComponent implements OnInit {
+export class EmployeeContactsDataPageWebComponent implements OnInit {
     public isPopupOpen: boolean = false;
 
-    public employeePersonalCardData!: IEmployeeCardData;
+    public employeeContactsCardData!: IEmployeeCardData;
 
     constructor(
         private _employeeDataService: EmployeeDataService,
         private _ref: ChangeDetectorRef,
-        @Inject(EMPLOYEE_FORM_DATA_TOKEN) public employeePersonalFormData$: BehaviorSubject<IEmployeeFormData>
+        @Inject(EMPLOYEE_FORM_DATA_TOKEN) public employeeContactsFormData$: BehaviorSubject<IEmployeeFormData>
     ) {
     }
 
     public ngOnInit(): void {
         this._employeeDataService.getEmployeeData(2)
             .subscribe((data: IEmployeeResponseModel) => {
-                this.employeePersonalCardData = {
-                    title: 'Личная информация',
+                this.employeeContactsCardData = {
+                    title: 'Контакты',
                     employeeCardFields: [
                         {
-                            label: 'Фамилия:',
-                            data: data.lastName
+                            label: 'Номер телефона:',
+                            data: data.phoneNumber
                         },
                         {
-                            label: 'Имя:',
-                            data: data.firstName
+                            label: 'Рабочая почта:',
+                            data: data.workEmail
                         },
                         {
-                            label: 'Отчество:',
-                            data: data.patronymic
+                            label: 'Личная почта:',
+                            data: data.personalEmail
                         },
-                        {
-                            label: 'Дата рождения:',
-                            data: new Date(data.birthDate).toLocaleDateString()
-                        }
                     ],
                     photo: 'user-img.png',
                     canEdit: true,
                     canDelete: false
                 };
 
-                this.employeePersonalFormData$.next({
+                this.employeeContactsFormData$.next({
                     employeeFormFields: [
                         {
-                            label: 'Фамилия:',
-                            control: new FormControl(data.lastName, Validators.required)
+                            label: 'Номер телефона:',
+                            control: new FormControl(data.phoneNumber, Validators.required)
                         },
                         {
-                            label: 'Имя:',
-                            control: new FormControl(data.firstName, Validators.required)
+                            label: 'Рабочая почта:',
+                            control: new FormControl(data.workEmail, Validators.required)
                         },
                         {
-                            label: 'Отчество:',
-                            control: new FormControl(data.patronymic, Validators.required)
+                            label: 'Личная почта:',
+                            control: new FormControl(data.personalEmail, Validators.required)
                         },
-                        {
-                            label: 'Дата рождения:',
-                            control: new FormControl(new Date(data.birthDate).toLocaleDateString(), Validators.required)
-                        }
                     ]
                 });
                 this._ref.detectChanges();

@@ -37,14 +37,9 @@
                 </ng-template>
             </div>
 
-            <div class="employee-card__employee-photo" *ngIf="employeeCardData.photo; else notSetPhoto">
+            <div class="employee-card__employee-photo" *ngIf="employeeCardData.photo">
                 <img src="assets/images/icons/{{ employeeCardData.photo }}" alt="фото сотрудника">
             </div>
-            <ng-template #notSetPhoto>
-                <div class="employee-card__employee-photo" >
-                    <img src="assets/images/icons/user-img.png" alt="фото сотрудника">
-                </div>
-            </ng-template>
         </div>
     </div>
     <div

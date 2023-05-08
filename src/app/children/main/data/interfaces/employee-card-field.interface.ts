@@ -1,4 +1,4 @@
 export interface IEmployeeCardField {
     label: string,
-    data: string | Date
+    data: string | Date | number
 }
