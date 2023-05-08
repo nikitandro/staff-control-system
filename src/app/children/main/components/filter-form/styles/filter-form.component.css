@@ -1,3 +1,7 @@
-
+.filter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
 
 /*# sourceMappingURL=filter-form.component.css.map */

@@ -1,0 +1,39 @@
+<form
+    class="employee-form"
+    [formGroup]="employeeForm"
+    *ngIf="employeeFormData$ | async"
+    (ngSubmit)="onSubmit()"
+>
+    <div
+        class="employee-form__close-button"
+        (click)="close()"
+    >
+        <img class="cross-img" src="assets/images/icons/close-button.svg" alt="закрыть">
+    </div>
+    <div class="employee-form__body">
+        <div class="employee-form__content">
+            <div class="employee-form__employee-data" formArrayName="employeeFormFields">
+                <ng-container *ngFor="let employeeFormField of employeeFormFields.controls; index as i">
+                    <label class="employee-form__label" for="field">{{ employeeFormLabels[i] }}</label>
+                    <input
+                        class="employee-form__data"
+                        id="field"
+                        type="text"
+                        formControlName="{{ i }}"
+                    >
+                </ng-container>
+            </div>
+            <div class="employee-form__employee-photo" *ngIf="employeePhoto">
+                <img src="assets/images/icons/{{ employeePhoto }}" alt="фото сотрудника">
+            </div>
+        </div>
+    </div>
+
+    <button
+        class="employee-form__submit-button"
+        type="submit"
+        (click)="onSubmit()"
+    >
+        Сохранить изменения
+    </button>
+</form>

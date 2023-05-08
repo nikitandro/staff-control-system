@@ -1,0 +1,11 @@
+<div *ngFor="let employeeEducationCardData of employeeEducationCardDataList">
+    <employee-card [employeeCardData]="employeeEducationCardData"></employee-card>
+</div>
+<button
+    class="add-button"
+    (click)="add()"
+    *ngIf="canAdd"
+>
+    {{ addTitle }}
+</button>
+<popup [isOpenINP]="isPopupOpen" (isOpen)="close($event)"></popup>

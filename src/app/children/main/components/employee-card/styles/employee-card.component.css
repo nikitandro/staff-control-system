@@ -1,0 +1,56 @@
+.employee-card {
+  width: 957px;
+  padding: 50px 50px 65px;
+  position: relative;
+  background-color: #F0F0F0;
+  margin-bottom: 33px;
+}
+.employee-card__title {
+  font-size: 28px;
+  line-height: 34px;
+  margin-bottom: 19px;
+}
+.employee-card__content {
+  width: 857px;
+  display: flex;
+  justify-content: space-between;
+}
+.employee-card__employee-data {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 25px;
+  column-gap: 30px;
+}
+.employee-card__label {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 600;
+}
+.employee-card__label_not-set {
+  color: red;
+}
+.employee-card__data {
+  font-size: 20px;
+  line-height: 24px;
+}
+.employee-card__data_not-set {
+  color: red;
+}
+.employee-card__employee-photo {
+  width: 155px;
+  height: 182px;
+}
+.employee-card__edit-button {
+  width: 24px;
+  height: 24px;
+  right: 15px;
+  bottom: 15px;
+  position: absolute;
+}
+.employee-card__delete-button {
+  right: 15px;
+  top: 15px;
+  position: absolute;
+}
+
+/*# sourceMappingURL=employee-card.component.css.map */
