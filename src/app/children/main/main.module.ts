@@ -1,9 +1,8 @@
-import { forwardRef, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { MainLayoutComponent } from './layouts/main-layout/main-layout.component';
 import { EmployeeListPageComponent } from './pages/employee-list-page/employee-list-page.component';
-import { RouterModule, RouterOutlet } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { CommonModule, NgOptimizedImage } from '@angular/common';
-import { AppModule } from '../../app.module';
 import { MainHeaderComponent } from './components/header/main-header.component';
 import { BurgerButtonComponent } from './components/burger-button/burger-button.component';
 import { FilterFormComponent } from './components/filter-form/filter-form.component';
@@ -15,6 +14,8 @@ import { NgxSliderModule } from '@angular-slider/ngx-slider';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DropDownListItemComponent } from './components/drop-down-list-item/drop-down-list-item.component';
 import { EmployeeListItemComponent } from './components/employee-list-item/employee-list-item.component';
+import { ShortenPipe } from './pipes/shorten/shorten.pipe';
+import { MobileBottomSheetComponent } from './components/mobile-bottom-sheet/mobile-bottom-sheet.component';
 
 @NgModule({
     declarations: [
@@ -27,7 +28,9 @@ import { EmployeeListItemComponent } from './components/employee-list-item/emplo
         CheckboxComponent,
         SalaryPickerComponent,
         DropDownListItemComponent,
-        EmployeeListItemComponent
+        EmployeeListItemComponent,
+        ShortenPipe,
+        MobileBottomSheetComponent,
     ],
     exports: [],
     imports: [
@@ -39,7 +42,7 @@ import { EmployeeListItemComponent } from './components/employee-list-item/emplo
         NgOptimizedImage,
     ],
     providers: [
-        FilterService
+        FilterService,
     ],
 })
 export class MainModule {

@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { IEmployeeInfo } from './employee-list-item.types';
+import { EmployeeSuccessStatus, IEmployeeInfo } from './employee-list-item.types';
 
 @Component({
     selector: 'employee-list-item',
@@ -10,4 +10,8 @@ import { IEmployeeInfo } from './employee-list-item.types';
 export class EmployeeListItemComponent {
     @Input()
     public info: IEmployeeInfo = {};
+
+    public isSuccessStatusStated() {
+        return this.info.successStatus !== EmployeeSuccessStatus.NotStated || this.info.successStatus !== undefined;
+    }
 }

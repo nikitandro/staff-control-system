@@ -13,6 +13,12 @@
     @media screen and (min-width: 1440px) and (max-width: 1919px) {
         grid-template-columns: repeat(2, 500px);
     }
+
+    @media screen and (max-width: 895px) {
+        grid-template-columns: repeat(1, 360px);
+        margin-top: 10px;
+        grid-row-gap: 5px;
+    }
 }
 
 .employee-list-page {

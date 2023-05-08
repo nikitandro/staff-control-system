@@ -8,18 +8,20 @@
                 <span class="employee-info__full-name">{{info.lastname}} {{info.firstname}} {{info.patronymic}}</span>
                 <div class="employee-info__property" *ngIf="!!info.department">
                     <span>Отдел:</span>
-                    <span>{{info.department | slice:0:20}}</span>
+                    <span>{{info.department | shorten:20}}</span>
                 </div>
                 <div class="employee-info__property" *ngIf="!!info.post">
                     <span>Должность:</span>
-                    <span>{{info.post | slice:0:20}}{{info.post.length > 20 ? '...' : ''}}</span>
+                    <span>{{info.post  | shorten:20}}</span>
                 </div>
                 <div class="employee-info__property" *ngIf="!!info.salary">
                     <span>Заработная плата:</span>
-                    <span>{{info.salary | slice:0:20}}</span>
+                    <span>{{info.salary | currency: 'RUB': 'symbol-narrow': '1.0'}}</span>
                 </div>
             </div>
-            <div class="success-cont"><img src="assets/images/icons/like.svg" alt="" class="success"></div>
+            <div class="success-cont" *ngIf="isSuccessStatusStated()">
+                <img ngSrc="assets/images/icons/like.svg" alt="" class="success" height="26" width="26">
+            </div>
         </div>
     </div>
 </div>
