@@ -46,6 +46,7 @@ const routes: Routes = [
     {
         path: 'employee-info',
         component: EmployeeInfoLayoutComponent,
+        canActivate: [authGuard],
         children: [
             {
                 path: ':employeeId/personal',

@@ -1,4 +1,6 @@
-<div *ngFor="let employeeEducationCardData of employeeEducationCardDataList">
+<div
+    *ngFor="let employeeEducationCardData of employeeEducationCardDataList"
+>
     <employee-card [employeeCardData]="employeeEducationCardData"></employee-card>
 </div>
 <button
@@ -8,4 +10,8 @@
 >
     {{ addTitle }}
 </button>
-<popup [isOpenINP]="isPopupOpen" (isOpen)="close($event)"></popup>
+<popup
+    [isOpenINP]="isPopupOpen"
+    (isOpen)="close($event)"
+>
+</popup>

@@ -4,4 +4,12 @@
   gap: 17px;
 }
 
+.checkbox-container {
+  background: #fff;
+  padding: 6px 9px;
+  width: 100%;
+  border-radius: 3px;
+  filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.25));
+}
+
 /*# sourceMappingURL=filter-form.component.css.map */
