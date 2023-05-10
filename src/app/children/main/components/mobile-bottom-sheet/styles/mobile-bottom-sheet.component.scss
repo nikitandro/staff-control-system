@@ -1,0 +1,26 @@
+.mobile-bottom-sheet {
+    position: fixed;
+    width: 100%;
+    background-color: #353535;
+    height: 106%;
+    bottom: -100%;
+    left: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    &::before {
+        position: absolute;
+        content: "";
+        width: 80px;
+        height: 4px;
+        background: rgba(124, 124, 124, 0.5);
+        border-radius: 10px;
+        top: 6px;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+    @media screen and (min-width: 896px) {
+        display: none;
+    }
+}

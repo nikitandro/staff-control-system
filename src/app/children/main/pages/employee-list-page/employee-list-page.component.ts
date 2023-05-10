@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ElementRef, ViewChild } from '@angular/core';
 import { IEmployeeInfo } from '../../components/employee-list-item/employee-list-item.types';
 
 @Component({
@@ -14,6 +14,8 @@ export class EmployeeListPageComponent {
         patronymic: 'Сергеевич',
         post: 'Frontend-разработчик (Angular)',
         department: 'Разработка',
-        salary: '150000'
-    }
+        salary: '150000',
+    };
+
+
 }
