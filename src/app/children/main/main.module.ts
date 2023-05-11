@@ -45,6 +45,7 @@ import {
 import {
     EmployeeExperienceDataPageWebComponent
 } from './pages/employee-experience-data-page/employee-experience-data.page.web.component';
+import { SalaryHistoryCardComponent } from './components/salary-history-card/salary-history-card.component';
 
 @NgModule({
     declarations: [
@@ -72,7 +73,8 @@ import {
         EmployeeConditionDataPageWebComponent,
         EmployeeAchievementsDataPageWebComponent,
         EmployeeVacationDataPageWebComponent,
-        EmployeeExperienceDataPageWebComponent
+        EmployeeExperienceDataPageWebComponent,
+        SalaryHistoryCardComponent
     ],
     exports: [],
     imports: [

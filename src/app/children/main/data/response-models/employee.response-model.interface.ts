@@ -1,6 +1,7 @@
 import { IEmployeeEducation } from '../interfaces/employee-education.interface';
 import { IEmployeeAchievement } from '../interfaces/employee-achievement.interface';
 import { IEmployeeVacation } from '../interfaces/employee-vacation.interface';
+import { ISalaryChange } from '../interfaces/salary-change.interface';
 
 export interface IEmployeeResponseModel {
     id: number,
@@ -26,5 +27,6 @@ export interface IEmployeeResponseModel {
     vacationsList: IEmployeeVacation[],
     salaryIncreaseList: any[],
     education: IEmployeeEducation[],
+    salaryHistory: ISalaryChange[]
     firingDate: string
 }

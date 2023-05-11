@@ -54,6 +54,11 @@
       "email": "name@email",
       "password": "$2a$10$K3qdu8ralo80qIBY1XnguOFkJR1Ux9A5O9jM3Z08XyvyPMRZsJ96S",
       "id": 11
+    },
+    {
+      "email": "NAME@email",
+      "password": "$2a$10$2D/x15l4kK83X9Th3byyp.NGbloTmuaE06T8uMdJR3qvbkktHyml2",
+      "id": 12
     }
   ],
   "post": [
@@ -146,7 +151,16 @@
           "endDate": "2023-05-21"
         }
       ],
-      "salaryIncreaseList": [],
+      "salaryHistory": [
+          {
+              "date": "2022-04-3",
+              "salary": 60000
+          },
+          {
+              "date": "2022-10-3",
+              "salary": 80000
+          }
+      ],
       "education": [
         {
           "type": "Высшее образование (бакалавриат)",

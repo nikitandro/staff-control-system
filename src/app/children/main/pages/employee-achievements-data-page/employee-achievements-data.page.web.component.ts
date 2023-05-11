@@ -30,9 +30,6 @@ export class EmployeeAchievementsDataPageWebComponent implements OnInit {
 
     public ngOnInit(): void {
         this._employeeDataService.getEmployeeData(2)
-            .pipe(
-
-            )
             .subscribe((data: IEmployeeResponseModel) => {
                 data.achievementsList.forEach((achievement: IEmployeeAchievement) => {
                     this.employeeAchievementsCardDataList.push(
