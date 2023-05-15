@@ -1,0 +1,121 @@
+.employee-list-item {
+    padding: 15px 20px;
+    background: #F0F0F0;
+    border-radius: 3px;
+    width: 500px;
+    height: 132px;
+    transition: 150ms ease;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.025);
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25);
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+    }
+
+    &__avatar {
+        width: 80px;
+    }
+
+    .employee-info {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        .info-cont {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            font-size: 14px;
+        }
+
+        &__full-name {
+            font-size: 18px;
+        }
+
+        &__property {
+            display: flex;
+            flex-direction: row;
+            gap: 4px;
+        }
+    }
+
+    .success-cont {
+        align-self: flex-start;
+    }
+
+    .success {
+        position: relative;
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media screen and (max-width: 895px) {
+    .employee-list-item {
+        display: flex;
+        align-items: center;
+        padding: 0 14px;
+        background: #F0F0F0;
+        border-radius: 3px;
+        width: 360px;
+        height: 87px;
+
+        transition: 150ms ease;
+        cursor: pointer;
+
+        &:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        &__content {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            width: 100%;
+        }
+
+        &__avatar {
+            width: 50px;
+        }
+
+        .employee-info {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+
+            .info-cont {
+                display: flex;
+                flex-direction: column;
+                gap: 6px;
+                font-size: 8px;
+            }
+
+            &__full-name {
+                font-size: 12px;
+            }
+
+            &__property {
+                display: flex;
+                flex-direction: row;
+                gap: 4px;
+            }
+        }
+
+        .success-cont {
+            align-self: flex-start;
+        }
+
+        .success {
+            position: relative;
+            width: 13px;
+            height: 13px;
+        }
+    }
+}

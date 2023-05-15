@@ -1,11 +1,17 @@
 .burger-button {
     display: block;
+    background: none;
     width: fit-content;
     height: min-content;
-    background: none;
     border: none;
 }
 
 .burger-button__icon {
     display: block;
+}
+
+@media screen and (max-width: 895px) {
+    .burger-button__icon {
+        width: 40px;
+    }
 }

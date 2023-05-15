@@ -1,0 +1,14 @@
+.meta-page {
+  margin-left: 300px;
+  padding: 25px 40px;
+}
+
+.side-bar {
+  width: 300px;
+  height: 100vh;
+  position: fixed;
+  background: #F0F0F0;
+  padding: 36px 18px;
+}
+
+/*# sourceMappingURL=employee-info-layout.component.css.map */

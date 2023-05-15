@@ -13,10 +13,38 @@ body {
     font-family: Inter, sans-serif;
 }
 
+*::-webkit-scrollbar {
+    width: 8px;
+    background: white;
+}
+
+*::-webkit-scrollbar-track {
+    padding: 2px;
+    margin: 3px;
+}
+
+*::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    background-color: #353535;
+}
+
+*::-webkit-scrollbar-track-piece {
+    width: 1px;
+}
+
 .clickable {
     cursor: pointer;
 }
 
 .unselectable {
     user-select: none;
+}
+
+.page-heading {
+    font-weight: 400;
+    font-size: 30px;
+
+    @media screen and (max-width: 895px) {
+        font-size: 20px;
+    }
 }

@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { authGuard } from './children/auth/guards/auth.guard';
 
 
 const routes: Routes = [
@@ -10,7 +9,8 @@ const routes: Routes = [
         pathMatch: 'full',
     },
     {
-        path: 'auth', loadChildren: () => import('./children/auth/auth-routing.module').then(m => m.AuthRoutingModule),
+        path: 'auth',
+        loadChildren: () => import('./children/auth/auth-routing.module').then(module => module.AuthRoutingModule),
     },
     {
         path: 'cabinet',

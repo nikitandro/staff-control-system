@@ -4,7 +4,7 @@
         (click)="toggleIsOpen()"
         [ngClass]="{'drop-down-list__view_open': (isOpen$ | async)}"
     >
-        <p class="drop-down-list__name">{{name}}</p>
+        <p class="drop-down-list__name">{{title}}</p>
         <img
             src="/assets/images/icons/chevron-down.svg"
             class="drop-down-list__chevron"
@@ -16,8 +16,8 @@
         class="drop-down-list__list"
         [ngClass]="{'drop-down-list__list_open': (isOpen$ | async)}"
     >
-        <div class="drop-down-list__list-item" *ngFor="let property of propertyList; let index">
-            <main-checkbox [text]="property"></main-checkbox>
+        <div class="drop-down-list__list-item" *ngFor="let property of []">
+            <main-checkbox [formControl]="property" [title]="'0'"></main-checkbox>
         </div>
     </div>
 </div>

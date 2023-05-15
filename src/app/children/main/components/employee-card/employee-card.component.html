@@ -1,0 +1,53 @@
+<div class="employee-card" *ngIf="employeeCardData">
+    <div
+        class="employee-card__delete-button"
+        (click)="delete()"
+        *ngIf="employeeCardData.canDelete"
+    >
+        <img src="assets/images/icons/delete-button.svg" alt="удалить">
+    </div>
+    <div class="employee-card__title">{{ employeeCardData.title }}</div>
+    <div class="employee-card__body">
+        <div class="employee-card__content">
+            <div class="employee-card__employee-data">
+                <ng-container *ngFor="let field of employeeCardData.employeeCardFields">
+                    <label
+                        class="employee-card__label" for="field"
+                        *ngIf="field.label; else notSetLabel"
+                    >
+                        {{ field.label }}
+                    </label>
+                    <div
+                        class="employee-card__data"
+                        id="field"
+                        *ngIf="field.data; else notSetData"
+                    >
+                        {{ field.data }}
+                    </div>
+                </ng-container>
+                <ng-template #notSetLabel>
+                    <div class="employee-card__label_not-set" >
+                        Не задано
+                    </div>
+                </ng-template>
+                <ng-template #notSetData>
+                    <div class="employee-card__data_not-set" >
+                        Не задано
+                    </div>
+                </ng-template>
+            </div>
+
+            <div class="employee-card__employee-photo" *ngIf="employeeCardData.photo">
+                <img src="assets/images/icons/{{ employeeCardData.photo }}" alt="фото сотрудника">
+            </div>
+        </div>
+    </div>
+    <div
+        class="employee-card__edit-button"
+        (click)="edit()"
+        *ngIf="employeeCardData.canEdit"
+    >
+        <img src="assets/images/icons/edit-button.svg" alt="редактировать">
+    </div>
+</div>
+

@@ -1,5 +1,7 @@
-<div class="filter-form">
-    <drop-down-list [name]="'Отдел'" [propertyList]="['1', '2']"></drop-down-list>
-    <drop-down-list [name]="'Должность'" [propertyList]="['1', '2']"></drop-down-list>
-    <salary-picker></salary-picker>
+<div class="filter-form" [formGroup]="filterForm">
+    <drop-down-list title="Отдел" formControlName="selectedDepartments"></drop-down-list>
+    <drop-down-list title="Должность" formControlName="selectedPosts"></drop-down-list>
+    <salary-picker formControlName="salary" [salaryBounds]="[300, 100000]"></salary-picker>
+    <div class="checkbox-container"><main-checkbox title="Уволенные сотрудники" formControlName="isFired"></main-checkbox></div>
+    <div class="checkbox-container"><main-checkbox title="Успешные сотрудники" formControlName="isSuccessful"></main-checkbox></div>
 </div>
