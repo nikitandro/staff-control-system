@@ -1,3 +1,12 @@
-<div class="mobile-bottom-sheet" #sheet (touchstart)="onTouchStart($event)" draggable="true">
-
+<div class="mobile-bottom-sheet" #sheet
+     (touchstart)="onTouchStart($event)"
+     (touchend)="onTouchEnd($event)"
+     (touchmove)="onTouchMove($event)"
+     [ngClass]="{'mobile-bottom-sheet_changing': (isChangingState$ | async)}"
+     [ngStyle]="getStyles()">
+    <div class="mobile-bottom-sheet__content">
+        <div class="form-container" (touchstart)="passFormTouches($event)">
+            <filter-form></filter-form>
+        </div>
+    </div>
 </div>
