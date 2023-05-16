@@ -1,0 +1,40 @@
+.employee-add-form {
+  width: 957px;
+  padding: 50px 50px 65px;
+  position: relative;
+  background-color: #F0F0F0;
+  margin-bottom: 27px;
+}
+.employee-add-form__content {
+  width: 857px;
+  display: flex;
+  justify-content: space-between;
+}
+.employee-add-form__employee-data {
+  display: grid;
+  grid-template-columns: 1fr 2.5fr;
+  row-gap: 25px;
+  column-gap: 30px;
+}
+.employee-add-form__label {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+.employee-add-form__data {
+  font-size: 20px;
+  line-height: 24px;
+  border-radius: 3px;
+  border: none;
+  padding-top: 5px;
+  padding-left: 5px;
+  padding-bottom: 5px;
+}
+.employee-add-form__employee-photo {
+  width: 155px;
+  height: 211px;
+}
+
+/*# sourceMappingURL=employee-add-form.component.css.map */

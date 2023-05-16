@@ -1,6 +1,7 @@
 <employee-card
     [employeeCardData]="employeePersonalCardData"
     (isEdit$)="open($event)"
+    *delayRendering="1000"
 >
 </employee-card>
 <popup

@@ -46,6 +46,10 @@ import {
     EmployeeExperienceDataPageWebComponent
 } from './pages/employee-experience-data-page/employee-experience-data.page.web.component';
 import { SalaryHistoryCardComponent } from './components/salary-history-card/salary-history-card.component';
+import { EmployeeAddPageWebComponent } from './pages/employee-add-page/employee-add.page.web.component';
+import { EmployeeAddLayoutComponent } from './layouts/employee-add-layout/employee-add-layout.component';
+import { EmployeeAddFormComponent } from './components/employee-add-form/employee-add-form.component';
+import { DelayRenderingDirective } from './directives/delay-rendering.directive';
 
 @NgModule({
     declarations: [
@@ -74,7 +78,11 @@ import { SalaryHistoryCardComponent } from './components/salary-history-card/sal
         EmployeeAchievementsDataPageWebComponent,
         EmployeeVacationDataPageWebComponent,
         EmployeeExperienceDataPageWebComponent,
-        SalaryHistoryCardComponent
+        SalaryHistoryCardComponent,
+        EmployeeAddPageWebComponent,
+        EmployeeAddLayoutComponent,
+        EmployeeAddFormComponent,
+        DelayRenderingDirective
     ],
     exports: [],
     imports: [
