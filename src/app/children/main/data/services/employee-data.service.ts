@@ -8,7 +8,7 @@ export class EmployeeDataService {
     constructor(private _http: HttpClient) {
     }
 
-    public getEmployeeData(id: any): Observable<IEmployeeResponseModel> {
+    public getEmployeeData(id: number): Observable<IEmployeeResponseModel> {
         return this._http.get<IEmployeeResponseModel>(`http://localhost:3000/employees/${id}`);
     }
 }

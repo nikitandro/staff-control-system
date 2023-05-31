@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["burger-button.component.scss"],"names":[],"mappings":"AAAA;EACI;EACA;EACA;EACA;EACA;;;AAGJ;EACI","file":"burger-button.component.css"}
+{"version":3,"sourceRoot":"","sources":["burger-button.component.scss"],"names":[],"mappings":"AAAA;EACI;EACA;EACA;EACA;EACA;;;AAGJ;EACI;;;AAGJ;EACI;IACI","file":"burger-button.component.css"}

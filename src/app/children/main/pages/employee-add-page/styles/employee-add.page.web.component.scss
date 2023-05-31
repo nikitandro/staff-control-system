@@ -1,0 +1,30 @@
+.title {
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 48px;
+    margin-bottom: 26px;
+    margin-left: -20px;
+}
+
+.content {
+    width: 1036px;
+    height: 1931px;
+
+    &__add-button {
+        width: 268px;
+        height: 43px;
+        font-size: 24px;
+        line-height: 29px;
+        float: right;
+        margin-right: 79px;
+        margin-top: 59px;
+        margin-bottom: 106px;
+    }
+}
+
+.form-title {
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 34px;
+    margin-bottom: 27px;
+}

@@ -49,6 +49,16 @@
             "email": "test_form@mail.ru",
             "password": "$2a$10$DS2LU0nha2XWc0a9P.myHuJIZ0CHRQd0IlUVoY/vzagYvhYZ2l7i6",
             "id": 10
+        },
+        {
+            "email": "name@email",
+            "password": "$2a$10$K3qdu8ralo80qIBY1XnguOFkJR1Ux9A5O9jM3Z08XyvyPMRZsJ96S",
+            "id": 11
+        },
+        {
+            "email": "NAME@email",
+            "password": "$2a$10$2D/x15l4kK83X9Th3byyp.NGbloTmuaE06T8uMdJR3qvbkktHyml2",
+            "id": 12
         }
     ],
     "posts": [

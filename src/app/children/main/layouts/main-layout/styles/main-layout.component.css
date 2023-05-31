@@ -1,6 +1,6 @@
 .meta-page {
   margin-left: 300px;
-  padding: 25px 40px;
+  padding: 107px 40px 25px 40px;
 }
 
 .side-bar {
@@ -9,6 +9,17 @@
   position: fixed;
   background: #F0F0F0;
   padding: 36px 18px;
+  margin-top: 82px;
+}
+
+@media screen and (max-width: 895px) {
+  .side-bar {
+    display: none;
+  }
+  .meta-page {
+    margin: 0 8px 0 8px;
+    padding: 61px 0 10px 0;
+  }
 }
 
 /*# sourceMappingURL=main-layout.component.css.map */

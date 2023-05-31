@@ -1,6 +1,6 @@
 .meta-page {
   margin-left: 300px;
-  padding: 25px 40px;
+  padding: 107px 40px 25px 40px;
 }
 
 .side-bar {
@@ -9,6 +9,7 @@
   position: fixed;
   background: #F0F0F0;
   padding: 36px 18px;
+  margin-top: 82px;
 }
 
 /*# sourceMappingURL=employee-info-layout.component.css.map */

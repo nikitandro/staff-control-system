@@ -1,0 +1,43 @@
+.employee-add-form {
+    width: 957px;
+    padding: 50px 50px 65px;
+    position: relative;
+    background-color: #F0F0F0;
+    margin-bottom: 27px;
+
+    &__content {
+        width: 857px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__employee-data {
+        display: grid;
+        grid-template-columns: 1fr 2.5fr;
+        row-gap: 25px;
+        column-gap: min(30px);
+    }
+
+    &__label {
+        font-size: 20px;
+        line-height: 24px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+    }
+
+    &__data {
+        font-size: 20px;
+        line-height: 24px;
+        border-radius: 3px;
+        border: none;
+        padding-top: 5px;
+        padding-left: 5px;
+        padding-bottom: 5px;
+    }
+
+    &__employee-photo {
+        width: 155px;
+        height: 211px;
+    }
+}

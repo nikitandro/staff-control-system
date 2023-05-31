@@ -47,6 +47,11 @@ import {
 } from './pages/employee-experience-data-page/employee-experience-data.page.web.component';
 import {RadioButtonComponent} from "./components/radio-button/radio-button.component";
 import {RadioButtonGroupComponent} from "./components/radio-button-group/radio-button-group.component";
+import { SalaryHistoryCardComponent } from './components/salary-history-card/salary-history-card.component';
+import { DelayRenderingDirective } from './directives/delay-rendering.directive';
+import { EmployeeAddPageWebComponent } from './pages/employee-add-page/employee-add.page.web.component';
+import { EmployeeAddFormComponent } from './components/employee-add-form/employee-add-form.component';
+import { EmployeeAddLayoutComponent } from './layouts/employee-add-layout/employee-add-layout.component';
 
 @NgModule({
     declarations: [
@@ -76,7 +81,12 @@ import {RadioButtonGroupComponent} from "./components/radio-button-group/radio-b
         EmployeeVacationDataPageWebComponent,
         EmployeeExperienceDataPageWebComponent,
         RadioButtonComponent,
-        RadioButtonGroupComponent
+        RadioButtonGroupComponent,
+        SalaryHistoryCardComponent,
+        EmployeeAddPageWebComponent,
+        EmployeeAddLayoutComponent,
+        EmployeeAddFormComponent,
+        DelayRenderingDirective
     ],
     exports: [],
     imports: [
