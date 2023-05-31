@@ -70,4 +70,8 @@ export class FilterFormComponent implements ControlValueAccessor, AfterViewInit 
         console.log(value);
         this.onChange(value);
     }
+
+    public onFormTouchEnd(event: TouchEvent) {
+        event.stopPropagation();
+    }
 }

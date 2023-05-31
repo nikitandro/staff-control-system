@@ -4,7 +4,7 @@
      (touchmove)="onTouchMove($event)"
      [ngClass]="{'mobile-bottom-sheet_changing': (isChangingState$ | async)}"
      [ngStyle]="getStyles()">
-    <div class="mobile-bottom-sheet__content">
+    <div class="mobile-bottom-sheet__content" (click)="stopPropagation($event)">
         <div class="form-container" (touchstart)="passFormTouches($event)">
             <filter-form></filter-form>
         </div>

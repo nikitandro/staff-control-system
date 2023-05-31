@@ -1,6 +1,6 @@
-import { AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { delay, Subject, timeout, timer } from 'rxjs';
-import { tap } from 'rxjs/operators';
+import {AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import {delay, Subject, timeout, timer} from 'rxjs';
+import {tap} from 'rxjs/operators';
 
 @Component({
     selector: 'mobile-bottom-sheet',
@@ -27,10 +27,10 @@ export class MobileBottomSheetComponent implements AfterViewInit {
 
     public getStyles() {
         if (this.isDragged) {
-            return { top: this.currentY! + 'px' };
+            return {top: this.currentY! + 'px'};
         }
         if (this.isOpen) {
-            return { top: '-5%' };
+            return {top: '-5%'};
         } else {
             return {};
         }
@@ -39,7 +39,7 @@ export class MobileBottomSheetComponent implements AfterViewInit {
     public onTouchMove(event: TouchEvent) {
         if (event.changedTouches[0].clientY >= 0) {
             const newY = event.changedTouches[0].clientY - Math.abs(this.startClientY! - this.startTopPosition!);
-            if (this.isOpen && newY > this.currentY!) {
+            if (this.isOpen && newY > 0) {
                 this.currentY = newY;
             } else if (!this.isOpen) {
                 this.currentY = newY;
@@ -81,4 +81,11 @@ export class MobileBottomSheetComponent implements AfterViewInit {
     public passFormTouches(event: TouchEvent) {
         event.stopPropagation();
     }
+
+    public stopPropagation(event: MouseEvent) {
+        event.stopPropagation()
+    }
+
+    protected readonly stop = stop;
+    protected readonly event = event;
 }

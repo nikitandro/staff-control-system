@@ -34,11 +34,11 @@ const routes: Routes = [
         children: [
             {
                 path: '',
-                redirectTo: 'employee-list/1',
+                redirectTo: 'employee-list',
                 pathMatch: 'full'
             },
             {
-                path: 'employee-list/:page',
+                path: 'employee-list',
                 component: EmployeeListPageComponent
             },
         ],

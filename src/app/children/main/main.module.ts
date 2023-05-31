@@ -45,6 +45,8 @@ import {
 import {
     EmployeeExperienceDataPageWebComponent
 } from './pages/employee-experience-data-page/employee-experience-data.page.web.component';
+import {RadioButtonComponent} from "./components/radio-button/radio-button.component";
+import {RadioButtonGroupComponent} from "./components/radio-button-group/radio-button-group.component";
 
 @NgModule({
     declarations: [
@@ -72,7 +74,9 @@ import {
         EmployeeConditionDataPageWebComponent,
         EmployeeAchievementsDataPageWebComponent,
         EmployeeVacationDataPageWebComponent,
-        EmployeeExperienceDataPageWebComponent
+        EmployeeExperienceDataPageWebComponent,
+        RadioButtonComponent,
+        RadioButtonGroupComponent
     ],
     exports: [],
     imports: [

@@ -2,6 +2,10 @@
     display: flex;
     flex-direction: column;
     gap: 17px;
+
+    &__radio-buttons {
+        background: white;
+    }
 }
 
 .checkbox-container {
