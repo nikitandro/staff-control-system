@@ -1,6 +1,8 @@
-import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, Inject, OnInit } from '@angular/core';
 import { IEmployeeFormData } from '../../data/interfaces/employee-form-data.interface';
 import { FormControl, Validators } from '@angular/forms';
+import { EMPLOYEE_ADD_TOKEN } from '../../data/tokens/employee-add.token';
+import { Subject } from 'rxjs';
 
 @Component({
     selector: 'employee-add',
@@ -18,7 +20,10 @@ export class EmployeeAddPageWebComponent implements OnInit {
         'Стаж работы'
     ];
 
-    constructor(private _ref: ChangeDetectorRef) {
+    constructor(
+        private _ref: ChangeDetectorRef,
+        @Inject(EMPLOYEE_ADD_TOKEN) public employeeAdd$: Subject<boolean>
+    ) {
     }
 
     public ngOnInit(): void {
@@ -120,7 +125,21 @@ export class EmployeeAddPageWebComponent implements OnInit {
         this._ref.detectChanges();
     }
 
-    public addEmployee(): void {
+    public personalData!: string[];
+    public contactsData!: string[];
 
+    public addEmployee(): void {
+        //... дернуть методы в формах
+        this.employeeAdd$.next(true);
+    }
+
+    public getPersonalData(pD: string[]): void {
+        this.personalData = pD;
+        console.log(this.personalData);
+    }
+
+    public getContactsData(cD: string[]): void {
+        this.contactsData = cD;
+        console.log(this.contactsData);
     }
 }

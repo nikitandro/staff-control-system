@@ -59,6 +59,11 @@
       "email": "NAME@email",
       "password": "$2a$10$2D/x15l4kK83X9Th3byyp.NGbloTmuaE06T8uMdJR3qvbkktHyml2",
       "id": 12
+    },
+    {
+      "email": "super@mail",
+      "password": "$2a$10$R3sLQ3RGp4xafZiV0Y81aOXu9BPofOCy.dVkCgdfecs4upaPxk9Ba",
+      "id": 13
     }
   ],
   "post": [
@@ -121,17 +126,19 @@
       "workFormat": "В офисе",
       "achievementsList": [
         {
+          "achievementId": 1,
           "type": "Повышение в должности",
           "supportDocument": "Приказ о повышении",
           "date": "2023-02-25"
         },
         {
+          "achievementId": 2,
           "type": "Статус крутости повышен",
           "supportDocument": "Супер пупер документ",
           "date": "2002-12-21"
         }
       ],
-      "interviewDate": "2022-04-1",
+      "interviewDate": "2022-04-11",
       "employmentDate": "2022-04-3",
       "firstWorkDayDate": "2022-04-6",
       "departmentId": "",
@@ -141,34 +148,40 @@
       "isFired": false,
       "vacationsList": [
         {
+          "vacationId": 1,
           "type": "Отпуск",
           "startDate": "2022-04-1",
           "endDate": "2022-04-15"
         },
         {
+          "vacationId": 2,
           "type": "Отпуск",
           "startDate": "2023-05-5",
           "endDate": "2023-05-21"
         }
       ],
       "salaryHistory": [
-          {
-              "date": "2022-04-3",
-              "salary": 60000
-          },
-          {
-              "date": "2022-10-3",
-              "salary": 80000
-          }
+        {
+          "salaryChangeId": 1,
+          "date": "2022-04-3",
+          "salary": 60000
+        },
+        {
+          "salaryChangeId": 2,
+          "date": "2022-10-3",
+          "salary": 80000
+        }
       ],
       "education": [
         {
+          "educationId": 1,
           "type": "Высшее образование (бакалавриат)",
           "educationalInstitution": "Уральский федеральный университет",
           "endDate": "2025-06-30",
           "qualification": "Программист"
         },
         {
+          "educationId": 2,
           "type": "Высшее образование (магистратура)",
           "educationalInstitution": "Уральский федеральный университет",
           "endDate": "2027-06-30",

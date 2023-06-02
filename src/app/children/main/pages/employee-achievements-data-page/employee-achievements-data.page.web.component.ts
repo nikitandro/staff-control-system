@@ -29,11 +29,17 @@ export class EmployeeAchievementsDataPageWebComponent implements OnInit {
     }
 
     public ngOnInit(): void {
+        this.getAchievementList();
+    }
+
+    public getAchievementList(): void {
+        this.employeeAchievementsCardDataList = [];
         this._employeeDataService.getEmployeeData(2)
             .subscribe((data: IEmployeeResponseModel) => {
                 data.achievementsList.forEach((achievement: IEmployeeAchievement) => {
                     this.employeeAchievementsCardDataList.push(
                         {
+                            id: achievement.achievementId,
                             title: 'Достижения сотрудника',
                             employeeCardFields: [
                                 {
@@ -86,10 +92,5 @@ export class EmployeeAchievementsDataPageWebComponent implements OnInit {
 
     public add(): void {
         this.open();
-        //TODO: Реализовать добавление карточки
-    }
-
-    public delete(): void {
-        //TODO: Реализовать удаление карточки
     }
 }

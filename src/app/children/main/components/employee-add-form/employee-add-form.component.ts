@@ -1,8 +1,9 @@
-import { Component, Input, OnDestroy, OnInit } from '@angular/core';
+import { Component, EventEmitter, Inject, Input, OnDestroy, OnInit, Output } from '@angular/core';
 import { FormArray, FormGroup } from '@angular/forms';
-import { Subscription } from 'rxjs';
+import { Subject, Subscription } from 'rxjs';
 import { IEmployeeFormData } from '../../data/interfaces/employee-form-data.interface';
 import { IEmployeeFormField } from '../../data/interfaces/employee-form-field.interface';
+import { EMPLOYEE_ADD_TOKEN } from '../../data/tokens/employee-add.token';
 
 @Component({
     selector: 'employee-add-form',
@@ -18,10 +19,18 @@ export class EmployeeAddFormComponent implements OnInit, OnDestroy {
 
     public employeeAddPhoto?: string;
 
-    private _employeeAddFormSubscription!: Subscription;
-
     @Input()
     public employeeAddFormData!: IEmployeeFormData;
+
+    @Output()
+    public data$: EventEmitter<string[]> = new EventEmitter<string[]>();
+
+    private _employeeAddFormSubscription!: Subscription;
+
+    constructor(
+        @Inject(EMPLOYEE_ADD_TOKEN) public employeeAdd$: Subject<boolean>
+    ) {
+    }
 
     public ngOnInit(): void {
         if (!this.employeeAddFormData) {
@@ -35,8 +44,10 @@ export class EmployeeAddFormComponent implements OnInit, OnDestroy {
             employeeAddFormFields: this.employeeAddFormFieldsArray
         });
         this.employeeAddPhoto = this.employeeAddFormData.photo;
-    }
 
+        //Подписываемся при инциализации
+        //this.employeeAdd$.subscribe(this.getData());
+    }
 
     public ngOnDestroy(): void {
         if (this._employeeAddFormSubscription) {
@@ -46,5 +57,10 @@ export class EmployeeAddFormComponent implements OnInit, OnDestroy {
 
     public get employeeAddFormFields(): FormArray {
         return this.employeeAddForm.controls['employeeAddFormFields'] as FormArray;
+    }
+
+    public getData(): any {
+        this.data$.emit(this.employeeAddForm.value.employeeAddFormFields);
+        //console.log(this.employeeAddForm.value.employeeAddFormFields);
     }
 }

@@ -23,6 +23,7 @@ export class SalaryHistoryCardComponent implements OnInit {
                 data.salaryHistory.forEach((salaryChange: ISalaryChange) => {
                     this.salaryHistoryData.push(
                         {
+                            salaryChangeId: salaryChange.salaryChangeId,
                             date: salaryChange.date,
                             salary: salaryChange.salary
                         }

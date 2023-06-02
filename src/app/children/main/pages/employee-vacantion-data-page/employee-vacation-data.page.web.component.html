@@ -1,7 +1,10 @@
 <div
     *ngFor="let employeeVacationCardData of employeeVacationCardDataList"
 >
-    <employee-card [employeeCardData]="employeeVacationCardData"></employee-card>
+    <employee-card
+        [employeeCardData]="employeeVacationCardData"
+        (emitUpdateDataMethod)="getVacationList()"
+    ></employee-card>
 </div>
 <button
     class="add-button"

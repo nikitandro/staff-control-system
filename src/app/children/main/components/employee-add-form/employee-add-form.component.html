@@ -21,3 +21,6 @@
         </div>
     </div>
 </form>
+<ng-container *ngIf="employeeAdd$ | async">
+    <button (click)="getData()">Получить данные с формы</button>
+</ng-container>

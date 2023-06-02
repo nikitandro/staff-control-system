@@ -6,6 +6,7 @@ import { IEmployeeFormData } from '../../data/interfaces/employee-form-data.inte
 import { EMPLOYEE_FORM_DATA_TOKEN } from '../../data/tokens/employee-form-data.token';
 import { BehaviorSubject } from 'rxjs';
 import { FormControl, Validators } from '@angular/forms';
+import { UpdateDataService } from '../../services/update-data.service';
 
 @Component({
     selector: 'employee-personal-data',
@@ -20,11 +21,21 @@ export class EmployeePersonalDataPageWebComponent implements OnInit {
     constructor(
         private _employeeDataService: EmployeeDataService,
         private _ref: ChangeDetectorRef,
-        @Inject(EMPLOYEE_FORM_DATA_TOKEN) public employeePersonalFormData$: BehaviorSubject<IEmployeeFormData>
+        @Inject(EMPLOYEE_FORM_DATA_TOKEN) public employeePersonalFormData$: BehaviorSubject<IEmployeeFormData>,
+        private _updateDataService: UpdateDataService
     ) {
+        this._updateDataService.invokeEvent.subscribe((value: boolean) => {
+            if (value) {
+                this.getPersonalData();
+            }
+        });
     }
 
     public ngOnInit(): void {
+        this.getPersonalData();
+    }
+
+    public getPersonalData(): void {
         this._employeeDataService.getEmployeeData(2)
             .subscribe((data: IEmployeeResponseModel) => {
                 this.employeePersonalCardData = {
@@ -68,7 +79,7 @@ export class EmployeePersonalDataPageWebComponent implements OnInit {
                         },
                         {
                             label: 'Дата рождения:',
-                            control: new FormControl(new Date(data.birthDate).toLocaleDateString(), Validators.required)
+                            control: new FormControl(data.birthDate, Validators.required)
                         }
                     ]
                 });
