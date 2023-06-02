@@ -6,3 +6,9 @@
     margin-top: -7px;
     margin-left: 671px;
 }
+
+@media screen and (max-width: 895px) {
+    .add-button {
+        float: right;
+    }
+}

@@ -1,9 +1,9 @@
 import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'navigation-button',
-  templateUrl: './navigation-button.component.html',
-  styleUrls: ['./styles/navigation-button.component.scss']
+    selector: 'navigation-button',
+    templateUrl: './navigation-button.component.html',
+    styleUrls: ['./styles/navigation-button.component.scss']
 })
 export class NavigationButtonComponent implements OnInit{
 

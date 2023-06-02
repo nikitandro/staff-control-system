@@ -30,3 +30,21 @@ a {
     text-decoration: none;
     color: #000000;
 }
+
+.active-link {
+    background: #D8D8D8;
+}
+
+@media screen and (max-width: 895px) {
+    .navigation-button__name {
+        display: none;
+    }
+    .navigation-button {
+        width: 31px;
+        height: 31px;
+        background: none;
+        &__icon {
+            padding-left: 0;
+        }
+    }
+}
