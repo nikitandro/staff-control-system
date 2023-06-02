@@ -1,0 +1,47 @@
+.salary-history-card {
+  width: 957px;
+  padding: 50px 50px 65px;
+  position: relative;
+  background-color: #F0F0F0;
+  margin-bottom: 33px;
+}
+.salary-history-card__body {
+  margin-bottom: 25px;
+}
+.salary-history-card__title {
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+.salary-history-card__content {
+  width: 342px;
+  display: grid;
+  grid-template-columns: 202px 90px;
+  grid-column-gap: 50px;
+  grid-row-gap: 30px;
+}
+.salary-history-card__label {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+}
+.salary-history-card__data {
+  font-size: 24px;
+  line-height: 29px;
+}
+.salary-history-card__add-button {
+  font-size: 24px;
+  line-height: 29px;
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  background-color: white;
+  width: 268px;
+  height: 49px;
+  left: 50px;
+  bottom: 23px;
+  position: absolute;
+}
+
+/*# sourceMappingURL=salary-history-card.component.css.map */

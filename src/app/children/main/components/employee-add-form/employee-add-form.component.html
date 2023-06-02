@@ -1,0 +1,26 @@
+<form
+    class="employee-add-form"
+    [formGroup]="employeeAddForm"
+>
+    <div class="employee-add-form__body">
+        <div class="employee-add-form__content">
+            <div class="employee-add-form__employee-data" formArrayName="employeeAddFormFields">
+                <ng-container *ngFor="let employeeFormField of employeeAddFormFields.controls; index as i">
+                    <label class="employee-add-form__label" for="field">{{ employeeAddFormLabels[i] }}</label>
+                    <input
+                        class="employee-add-form__data"
+                        id="field"
+                        type="text"
+                        formControlName="{{ i }}"
+                    >
+                </ng-container>
+            </div>
+            <div class="employee-add-form__employee-photo" *ngIf="employeeAddPhoto">
+                <img src="assets/images/icons/{{ employeeAddPhoto }}" alt="фото сотрудника">
+            </div>
+        </div>
+    </div>
+</form>
+<ng-container *ngIf="employeeAdd$ | async">
+    <button (click)="getData()">Получить данные с формы</button>
+</ng-container>

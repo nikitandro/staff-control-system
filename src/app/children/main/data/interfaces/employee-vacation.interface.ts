@@ -1,5 +1,6 @@
 export interface IEmployeeVacation {
+    vacationId: number,
     type: string,
-    startDate: Date,
-    endDate: Date
+    startDate: Date | string,
+    endDate: Date | string
 }

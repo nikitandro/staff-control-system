@@ -1,16 +1,35 @@
-<div class="validation-message" *ngIf="control.invalid && control.touched">
-    <ng-container *ngIf="errorMessage; else baseError">{{errorMessage}}</ng-container>
+<div
+    class="validation-message"
+    *ngIf="control.invalid && control.touched"
+>
+    <ng-container
+        *ngIf="errorMessage; else baseError"
+    >{{errorMessage}}
+    </ng-container>
     <ng-template #baseError>
-        <div class="validation-message__error" *ngIf="control.errors?.['required']">
+        <div
+            class="validation-message__error"
+            *ngIf="control.errors?.['required']"
+        >
             Обязательно для заполнения
         </div>
-        <div class="validation-message__error" *ngIf="control.errors?.['passwordStrength']">
+        <div
+            class="validation-message__error"
+            *ngIf="control.errors?.['passwordStrength']"
+        >
             Пароль должен содержать латинские заглавные и прописные буквы, а также хотя бы одну цифру
         </div>
-        <div class="validation-message__error" *ngIf="control.errors?.['email']">
+        <div
+            class="validation-message__error"
+            *ngIf="control.errors?.['email']"
+        >
             Введите корректный email адрес
         </div>
-        <div class="validation-message__error" *ngIf="control.errors?.['minlength'] && control.errors?.['minlength']['requiredLength']">
+        <div
+            class="validation-message__error"
+            *ngIf="control.errors?.['minlength']
+            && control.errors?.['minlength']['requiredLength']"
+        >
             Пароль должен быть больше {{control.errors?.['minlength']['requiredLength']}} символов
             Сейчас: {{ control.errors?.['minlength']['actualLength']}}
         </div>

@@ -29,12 +29,18 @@ export class EmployeeEducationDataPageWebComponent implements OnInit {
     }
 
     public ngOnInit(): void {
+        this.getEducationList();
+    }
+
+    public getEducationList(): void {
+        this.employeeEducationCardDataList = [];
         this._employeeDataService.getEmployeeData(2)
             .subscribe((data: IEmployeeResponseModel) => {
                 data.education.forEach((educationItem: IEmployeeEducation) => {
                     this.employeeEducationCardDataList.push(
                         {
-                            title: 'Образованние',
+                            id: educationItem.educationId,
+                            title: 'Образование',
                             employeeCardFields: [
                                 {
                                     label: 'Вид:',
@@ -94,10 +100,5 @@ export class EmployeeEducationDataPageWebComponent implements OnInit {
 
     public add(): void {
         this.open();
-        //TODO: Реализовать добавление карточки
-    }
-
-    public delete(): void {
-        //TODO: Реализовать удаление карточки
     }
 }

@@ -7,5 +7,5 @@ import { Component, Input } from '@angular/core';
 })
 export class EmployeeInfoNavigationComponent {
     @Input()
-    public id: string = '1';
+    public id: string = '2';
 }

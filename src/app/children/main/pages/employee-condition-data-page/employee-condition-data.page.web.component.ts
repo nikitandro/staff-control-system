@@ -6,6 +6,7 @@ import { IEmployeeFormData } from '../../data/interfaces/employee-form-data.inte
 import { EMPLOYEE_FORM_DATA_TOKEN } from '../../data/tokens/employee-form-data.token';
 import { BehaviorSubject } from 'rxjs';
 import { FormControl, Validators } from '@angular/forms';
+import { UpdateDataService } from '../../services/update-data.service';
 
 @Component({
     selector: 'employee-condition-data',
@@ -20,11 +21,21 @@ export class EmployeeConditionDataPageWebComponent implements OnInit {
     constructor(
         private _employeeDataService: EmployeeDataService,
         private _ref: ChangeDetectorRef,
-        @Inject(EMPLOYEE_FORM_DATA_TOKEN) public employeeConditionFormData$: BehaviorSubject<IEmployeeFormData>
+        @Inject(EMPLOYEE_FORM_DATA_TOKEN) public employeeConditionFormData$: BehaviorSubject<IEmployeeFormData>,
+        private _updateDataService: UpdateDataService
     ) {
+        this._updateDataService.invokeEvent.subscribe((value: boolean) => {
+            if (value) {
+                this.getConditionData();
+            }
+        });
     }
 
     public ngOnInit(): void {
+        this.getConditionData();
+    }
+
+    public getConditionData(): void {
         this._employeeDataService.getEmployeeData(2)
             .subscribe((data: IEmployeeResponseModel) => {
                 this.employeeConditionCardData = {

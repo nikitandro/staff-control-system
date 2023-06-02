@@ -1,5 +1,10 @@
-<div *ngFor="let employeeAchievementsCardData of employeeAchievementsCardDataList">
-    <employee-card [employeeCardData]="employeeAchievementsCardData"></employee-card>
+<div
+    *ngFor="let employeeAchievementsCardData of employeeAchievementsCardDataList"
+>
+    <employee-card
+        [employeeCardData]="employeeAchievementsCardData"
+        (emitUpdateDataMethod)="getAchievementList()"
+    ></employee-card>
 </div>
 <button
     class="add-button"
@@ -8,4 +13,8 @@
 >
     {{ addTitle }}
 </button>
-<popup [isOpenINP]="isPopupOpen" (isOpen)="close($event)"></popup>
+<popup
+    [isOpenINP]="isPopupOpen"
+    (isOpen)="close($event)"
+>
+</popup>

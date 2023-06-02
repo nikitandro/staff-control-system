@@ -25,6 +25,8 @@ import {
 import {
     EmployeeExperienceDataPageWebComponent
 } from './pages/employee-experience-data-page/employee-experience-data.page.web.component';
+import { EmployeeAddLayoutComponent } from './layouts/employee-add-layout/employee-add-layout.component';
+import { EmployeeAddPageWebComponent } from './pages/employee-add-page/employee-add.page.web.component';
 
 const routes: Routes = [
     {
@@ -46,6 +48,7 @@ const routes: Routes = [
     {
         path: 'employee-info',
         component: EmployeeInfoLayoutComponent,
+        canActivate: [authGuard],
         children: [
             {
                 path: ':employeeId/personal',
@@ -77,6 +80,17 @@ const routes: Routes = [
             }
         ]
     },
+    {
+        path: 'employee-add',
+        component: EmployeeAddLayoutComponent,
+        canActivate: [authGuard],
+        children: [
+            {
+                path: '',
+                component: EmployeeAddPageWebComponent
+            }
+        ]
+    }
 ];
 
 @NgModule({

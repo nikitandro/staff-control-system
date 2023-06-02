@@ -29,11 +29,17 @@ export class EmployeeVacationDataPageWebComponent implements OnInit {
     }
 
     public ngOnInit(): void {
+        this.getVacationList();
+    }
+
+    public getVacationList(): void {
+        this.employeeVacationCardDataList = [];
         this._employeeDataService.getEmployeeData(2)
             .subscribe((data: IEmployeeResponseModel) => {
                 data.vacationsList.forEach((vacation: IEmployeeVacation) => {
                     this.employeeVacationCardDataList.push(
                         {
+                            id: vacation.vacationId,
                             title: 'Отпуска сотрудника',
                             employeeCardFields: [
                                 {
@@ -86,10 +92,5 @@ export class EmployeeVacationDataPageWebComponent implements OnInit {
 
     public add(): void {
         this.open();
-        //TODO: Реализовать добавление карточки
-    }
-
-    public delete(): void {
-        //TODO: Реализовать удаление карточки
     }
 }

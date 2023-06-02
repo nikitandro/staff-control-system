@@ -1,7 +1,7 @@
 <div class="employee-card" *ngIf="employeeCardData">
     <div
         class="employee-card__delete-button"
-        (click)="delete()"
+        (click)="delete(employeeCardData.id)"
         *ngIf="employeeCardData.canDelete"
     >
         <img src="assets/images/icons/delete-button.svg" alt="удалить">

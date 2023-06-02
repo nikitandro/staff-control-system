@@ -6,6 +6,7 @@ import { IEmployeeFormData } from '../../data/interfaces/employee-form-data.inte
 import { EMPLOYEE_FORM_DATA_TOKEN } from '../../data/tokens/employee-form-data.token';
 import { BehaviorSubject } from 'rxjs';
 import { FormControl, Validators } from '@angular/forms';
+import { UpdateDataService } from '../../services/update-data.service';
 
 @Component({
     selector: 'employee-experience-data',
@@ -20,11 +21,21 @@ export class EmployeeExperienceDataPageWebComponent implements OnInit {
     constructor(
         private _employeeDataService: EmployeeDataService,
         private _ref: ChangeDetectorRef,
-        @Inject(EMPLOYEE_FORM_DATA_TOKEN) public employeeExperienceFormData$: BehaviorSubject<IEmployeeFormData>
+        @Inject(EMPLOYEE_FORM_DATA_TOKEN) public employeeExperienceFormData$: BehaviorSubject<IEmployeeFormData>,
+        private _updateDataService: UpdateDataService
     ) {
+        this._updateDataService.invokeEvent.subscribe((value: boolean) => {
+            if (value) {
+                this.getExperienceData();
+            }
+        });
     }
 
     public ngOnInit(): void {
+        this.getExperienceData();
+    }
+
+    public getExperienceData(): void {
         this._employeeDataService.getEmployeeData(2)
             .subscribe((data: IEmployeeResponseModel) => {
                 this.employeeExperienceCardData = {
@@ -52,15 +63,15 @@ export class EmployeeExperienceDataPageWebComponent implements OnInit {
                     employeeFormFields: [
                         {
                             label: 'Дата собеседования:',
-                            control: new FormControl(new Date(data.interviewDate).toLocaleDateString(), Validators.required)
+                            control: new FormControl(data.interviewDate, Validators.required)
                         },
                         {
                             label: 'Дата подтверждения оффера:',
-                            control: new FormControl(new Date(data.employmentDate).toLocaleDateString(), Validators.required)
+                            control: new FormControl(data.employmentDate, Validators.required)
                         },
                         {
                             label: 'Дата первого рабочего дня:',
-                            control: new FormControl(new Date(data.firstWorkDayDate).toLocaleDateString(), Validators.required)
+                            control: new FormControl(data.firstWorkDayDate, Validators.required)
                         },
                     ]
                 });

@@ -25,7 +25,7 @@ import { EmployeeInfoNavigationComponent } from './components/employee-info-navi
 import { NavigationButtonComponent } from './components/navigation-button/navigation-button.component';
 import { EmployeeInfoLayoutComponent } from './layouts/employee-info-layout/employee-info-layout.component';
 import { EMPLOYEE_FORM_DATA_TOKEN } from './data/tokens/employee-form-data.token';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Subject } from 'rxjs';
 import { IEmployeeFormData } from './data/interfaces/employee-form-data.interface';
 import {
     EmployeeEducationDataPageWebComponent
@@ -46,6 +46,14 @@ import {
     EmployeeExperienceDataPageWebComponent
 } from './pages/employee-experience-data-page/employee-experience-data.page.web.component';
 import { MobileEmployeeInfoNavigationComponent } from './components/mobile-employee-info-navigation/mobile-employee-info-navigation.component';
+import { SalaryHistoryCardComponent } from './components/salary-history-card/salary-history-card.component';
+import { EmployeeAddPageWebComponent } from './pages/employee-add-page/employee-add.page.web.component';
+import { EmployeeAddLayoutComponent } from './layouts/employee-add-layout/employee-add-layout.component';
+import { EmployeeAddFormComponent } from './components/employee-add-form/employee-add-form.component';
+import { DelayRenderingDirective } from './directives/delay-rendering.directive';
+import { EMPLOYEE_ADD_TOKEN } from './data/tokens/employee-add.token';
+import { UpdateDataService } from './services/update-data.service';
+
 
 @NgModule({
     declarations: [
@@ -74,7 +82,12 @@ import { MobileEmployeeInfoNavigationComponent } from './components/mobile-emplo
         EmployeeAchievementsDataPageWebComponent,
         EmployeeVacationDataPageWebComponent,
         EmployeeExperienceDataPageWebComponent,
-        MobileEmployeeInfoNavigationComponent
+        MobileEmployeeInfoNavigationComponent,
+        SalaryHistoryCardComponent,
+        EmployeeAddPageWebComponent,
+        EmployeeAddLayoutComponent,
+        EmployeeAddFormComponent,
+        DelayRenderingDirective
     ],
     exports: [],
     imports: [
@@ -91,7 +104,12 @@ import { MobileEmployeeInfoNavigationComponent } from './components/mobile-emplo
         {
             provide: EMPLOYEE_FORM_DATA_TOKEN,
             useValue: new BehaviorSubject<IEmployeeFormData | null>(null)
-        }
+        },
+        {
+            provide: EMPLOYEE_ADD_TOKEN,
+            useValue: new Subject<boolean>()
+        },
+        UpdateDataService
     ],
 })
 export class MainModule {

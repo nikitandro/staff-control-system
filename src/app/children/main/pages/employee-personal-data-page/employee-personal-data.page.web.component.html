@@ -1,4 +1,11 @@
-<div>
-    <employee-card [employeeCardData]="employeePersonalCardData" (isEdit$)="open($event)"></employee-card>
-</div>
-<popup [isOpenINP]="isPopupOpen" (isOpen)="close($event)"></popup>
+<employee-card
+    [employeeCardData]="employeePersonalCardData"
+    (isEdit$)="open($event)"
+    *delayRendering="200"
+>
+</employee-card>
+<popup
+    [isOpenINP]="isPopupOpen"
+    (isOpen)="close($event)"
+>
+</popup>

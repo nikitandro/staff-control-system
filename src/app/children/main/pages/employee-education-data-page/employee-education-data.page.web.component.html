@@ -1,13 +1,21 @@
-<div class="page-content">
-    <div *ngFor="let employeeEducationCardData of employeeEducationCardDataList">
-        <employee-card [employeeCardData]="employeeEducationCardData"></employee-card>
-    </div>
-    <button
-        class="add-button"
-        (click)="add()"
-        *ngIf="canAdd"
+<div
+    *ngFor="let employeeEducationCardData of employeeEducationCardDataList"
+>
+    <employee-card
+        [employeeCardData]="employeeEducationCardData"
+        (emitUpdateDataMethod)="getEducationList()"
     >
-        {{ addTitle }}
-    </button>
+    </employee-card>
 </div>
-<popup [isOpenINP]="isPopupOpen" (isOpen)="close($event)"></popup>
+<button
+    class="add-button"
+    (click)="add()"
+    *ngIf="canAdd"
+>
+    {{ addTitle }}
+</button>
+<popup
+    [isOpenINP]="isPopupOpen"
+    (isOpen)="close($event)"
+>
+</popup>

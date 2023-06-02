@@ -1,0 +1,36 @@
+<h1 class="title">Добавление нового сотрудника:</h1>
+<div class="content">
+    <h2 class="form-title">{{ titleList[0] }}</h2>
+    <employee-add-form
+        [employeeAddFormData]="employeeAddFormDataList[0]"
+        (data$)="getPersonalData($event)"
+    >
+    </employee-add-form>
+    <h2 class="form-title">{{ titleList[1] }}</h2>
+    <employee-add-form
+        [employeeAddFormData]="employeeAddFormDataList[1]"
+        (data$)="getContactsData($event)"
+    >
+    </employee-add-form>
+
+    <button
+        class="content__add-button"
+        (click)="addEmployee()"
+    >
+        Добавить сотрудника
+    </button>
+</div>
+
+<!--<h1 class="title">Добавление нового сотрудника:</h1>-->
+<!--<div class="content">-->
+<!--    <ng-container *ngFor="let employeeAddFormData of employeeAddFormDataList; index as i">-->
+<!--        <h2 class="form-title">{{ titleList[i] }}</h2>-->
+<!--        <employee-add-form [employeeAddFormData]="employeeAddFormData"></employee-add-form>-->
+<!--    </ng-container>-->
+<!--    <button-->
+<!--        class="content__add-button"-->
+<!--        (click)="addEmployee()"-->
+<!--    >-->
+<!--        Добавить сотрудника-->
+<!--    </button>-->
+<!--</div>-->

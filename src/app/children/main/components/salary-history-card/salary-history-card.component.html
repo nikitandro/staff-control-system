@@ -1,0 +1,29 @@
+<div class="salary-history-card" *ngIf="salaryHistoryData">
+    <div class="salary-history-card__body">
+        <div class="salary-history-card__title">История заработной платы:</div>
+        <div class="salary-history-card__content">
+            <div class="salary-history-card__label">Дата изменения:</div>
+            <div class="salary-history-card__label">Сумма:</div>
+            <ng-container
+                *ngFor="let salaryChange of salaryHistoryData"
+            >
+                <div
+                    class="salary-history-card__data"
+                >
+                    {{ salaryChange.date }}
+                </div>
+                <div
+                    class="salary-history-card__data"
+                >
+                    {{ salaryChange.salary }}
+                </div>
+            </ng-container>
+        </div>
+    </div>
+    <button
+        class="salary-history-card__add-button"
+        (click)="add()"
+    >
+        Добавить изменения
+    </button>
+</div>

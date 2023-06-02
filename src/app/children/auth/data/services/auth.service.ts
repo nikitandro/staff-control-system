@@ -32,6 +32,7 @@ export class AuthService {
             );
     }
 
+    //TODO: В burger-button сделать кнопку "выйти", она будет использовать эту функцию
     public logout(): void {
         this.removeToken();
     }
@@ -50,6 +51,7 @@ export class AuthService {
         this._token = undefined;
     }
 
+    //TODO: использовать, чтобы передавать токен в запросах
     private getToken(): string | undefined {
         return this._token;
     }
