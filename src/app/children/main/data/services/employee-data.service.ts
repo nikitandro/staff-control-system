@@ -24,13 +24,13 @@ export class EmployeeDataService {
         return this._http.put<any>(`http://localhost:3000/employees/${id}`, employee, httpOptions);
     }
 
-    public deleteEmployeeData(id: number | undefined, employee: IEmployeeRequestModel): any {
+    public addEmployee(employee: IEmployeeRequestModel): any {
         const httpOptions: any = {
             headers: new HttpHeaders({
                 'Content-Type':  'application/json'
             })
         };
 
-        return this._http.put(`http://localhost:3000/employees/${id}`, employee, httpOptions);
+        return this._http.post<any>('http://localhost:3000/employees/', employee, httpOptions);
     }
 }

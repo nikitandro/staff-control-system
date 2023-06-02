@@ -18,10 +18,38 @@
                     {{ salaryChange.salary }}
                 </div>
             </ng-container>
+
+            <form
+                class="salary-history-form"
+                [formGroup]="salaryChangeForm"
+                (ngSubmit)="onSubmit()"
+                *ngIf="showForm"
+            >
+                <div class="salary-history-form__container">
+                    <input
+                        class="salary-history-form__data"
+                        type="date"
+                        formControlName="changeDate"
+                    >
+                    <input
+                        class="salary-history-form__data"
+                        type="number"
+                        formControlName="changeSalary"
+                    >
+                </div>
+
+                <button
+                    class="salary-history-form__submit-button"
+                    type="submit"
+                >
+                    Сохранить
+                </button>
+            </form>
         </div>
     </div>
     <button
         class="salary-history-card__add-button"
+        [ngClass]="{'salary-history-card__add-button_hide': showForm}"
         (click)="add()"
     >
         Добавить изменения

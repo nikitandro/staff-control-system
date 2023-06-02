@@ -1,6 +1,7 @@
 <form
     class="employee-add-form"
     [formGroup]="employeeAddForm"
+    (ngSubmit)="onSubmit()"
 >
     <div class="employee-add-form__body">
         <div class="employee-add-form__content">
@@ -21,6 +22,3 @@
         </div>
     </div>
 </form>
-<ng-container *ngIf="employeeAdd$ | async">
-    <button (click)="getData()">Получить данные с формы</button>
-</ng-container>

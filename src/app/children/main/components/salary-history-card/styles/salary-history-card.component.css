@@ -43,5 +43,37 @@
   bottom: 23px;
   position: absolute;
 }
+.salary-history-card__add-button_hide {
+  display: none;
+}
+
+.salary-history-form {
+  width: 342px;
+  position: relative;
+}
+.salary-history-form__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.salary-history-form__data {
+  font-size: 20px;
+  line-height: 24px;
+  border-radius: 3px;
+  border: none;
+  padding-top: 5px;
+  padding-left: 5px;
+  padding-bottom: 5px;
+}
+.salary-history-form__submit-button {
+  font-size: 16px;
+  line-height: 20px;
+  width: 100px;
+  height: 25px;
+  border-radius: 3px;
+  right: 0;
+  position: absolute;
+  margin-top: 10px;
+}
 
 /*# sourceMappingURL=salary-history-card.component.css.map */

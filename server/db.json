@@ -170,6 +170,11 @@
           "salaryChangeId": 2,
           "date": "2022-10-3",
           "salary": 80000
+        },
+        {
+          "salaryChangeId": 3,
+          "date": "2023-06-21",
+          "salary": 90000
         }
       ],
       "education": [

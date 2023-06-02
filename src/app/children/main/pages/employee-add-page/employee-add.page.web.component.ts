@@ -1,8 +1,15 @@
-import { ChangeDetectorRef, Component, Inject, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { IEmployeeFormData } from '../../data/interfaces/employee-form-data.interface';
 import { FormControl, Validators } from '@angular/forms';
-import { EMPLOYEE_ADD_TOKEN } from '../../data/tokens/employee-add.token';
-import { Subject } from 'rxjs';
+import { UpdateDataService } from '../../services/update-data.service';
+import { IEmployeeRequestModel } from '../../data/request-models/employee.request-model.interface';
+import { IEmployeePersonal } from '../../data/interfaces/employee-personal.interface';
+import { IEmployeeContacts } from '../../data/interfaces/employee-contacts.inteface';
+import { IEmployeeEducation } from '../../data/interfaces/employee-education.interface';
+import { IEmployeeCondition } from '../../data/interfaces/employee-condition.inteface';
+import { IEmployeeExperience } from '../../data/interfaces/employee-experience.interface';
+import { EmployeeDataService } from '../../data/services/employee-data.service';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'employee-add',
@@ -12,17 +19,17 @@ import { Subject } from 'rxjs';
 export class EmployeeAddPageWebComponent implements OnInit {
     public employeeAddFormDataList!: IEmployeeFormData[];
 
-    public titleList: string[] = [
-        'Личная информация',
-        'Контакты',
-        'Образование',
-        'Условия работы',
-        'Стаж работы'
-    ];
+    public personalData!: IEmployeePersonal;
+    public contactsData!: IEmployeeContacts;
+    public educationData!: IEmployeeEducation;
+    public conditionData!: IEmployeeCondition;
+    public experienceData!: IEmployeeExperience;
 
     constructor(
         private _ref: ChangeDetectorRef,
-        @Inject(EMPLOYEE_ADD_TOKEN) public employeeAdd$: Subject<boolean>
+        private _router: Router,
+        private _updateDataService: UpdateDataService,
+        private _employeeDataService: EmployeeDataService
     ) {
     }
 
@@ -125,21 +132,89 @@ export class EmployeeAddPageWebComponent implements OnInit {
         this._ref.detectChanges();
     }
 
-    public personalData!: string[];
-    public contactsData!: string[];
-
     public addEmployee(): void {
-        //... дернуть методы в формах
-        this.employeeAdd$.next(true);
+        this._updateDataService.callMethodOfPageComponent();
+        const newEmployee: IEmployeeRequestModel = {
+            id: 3,
+            firstName: this.personalData.firstName,
+            lastName: this.personalData.lastName,
+            patronymic: this.personalData.patronymic,
+            birthDate: this.personalData.birthDate,
+            phoneNumber: this.contactsData.phoneNumber,
+            workEmail: this.contactsData.workEmail,
+            personalEmail: this.contactsData.personalEmail,
+            departmentName: this.conditionData.departmentName,
+            post: this.conditionData.post,
+            salary: this.conditionData.salary,
+            workFormat: this.conditionData.workFormat,
+            achievementsList: [],
+            interviewDate: this.experienceData.interviewDate,
+            employmentDate: this.experienceData.employmentDate,
+            firstWorkDayDate: this.experienceData.firstWorkDayDate,
+            departmentId: '',
+            postId: '',
+            successRate: '',
+            isFired: true,
+            vacationsList: [],
+            salaryIncreaseList: [],
+            education: [
+                {
+                    educationId: this.educationData.educationId,
+                    type: this.educationData.type,
+                    educationalInstitution: this.educationData.educationalInstitution,
+                    endDate: this.educationData.endDate,
+                    qualification: this.educationData.qualification
+                }
+            ],
+            salaryHistory: [],
+            firingDate: ''
+        };
+
+        this._employeeDataService.addEmployee(newEmployee)
+            .subscribe(this._router.navigate(['/cabinet']));
     }
 
-    public getPersonalData(pD: string[]): void {
-        this.personalData = pD;
-        console.log(this.personalData);
+    public getPersonalData(addPersonalData: string[]): void {
+        this.personalData = {
+            lastName: addPersonalData[0],
+            firstName: addPersonalData[1],
+            patronymic: addPersonalData[2],
+            birthDate: addPersonalData[3],
+        };
     }
 
-    public getContactsData(cD: string[]): void {
-        this.contactsData = cD;
-        console.log(this.contactsData);
+    public getContactsData(addContactsData: string[]): void {
+        this.contactsData = {
+            phoneNumber: addContactsData[0],
+            workEmail: addContactsData[1],
+            personalEmail: addContactsData[2]
+        };
+    }
+
+    public getEducationData(addEducationData: string[]): void {
+        this.educationData = {
+            educationId: 1,
+            type: addEducationData[0],
+            educationalInstitution: addEducationData[1],
+            endDate: addEducationData[2],
+            qualification: addEducationData[3]
+        };
+    }
+
+    public getConditionData(addConditionData: string[]): void {
+        this.conditionData = {
+            departmentName: addConditionData[0],
+            post: addConditionData[1],
+            salary: Number(addConditionData[2]),
+            workFormat: addConditionData[3]
+        };
+    }
+
+    public getExperienceData(addExperienceData: string[]): void {
+        this.experienceData = {
+            interviewDate: addExperienceData[0],
+            employmentDate: addExperienceData[1],
+            firstWorkDayDate: addExperienceData[2]
+        };
     }
 }

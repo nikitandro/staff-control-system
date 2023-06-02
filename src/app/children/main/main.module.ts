@@ -106,7 +106,7 @@ import { UpdateDataService } from './services/update-data.service';
             provide: EMPLOYEE_ADD_TOKEN,
             useValue: new Subject<boolean>()
         },
-        UpdateDataService
+        UpdateDataService,
     ],
 })
 export class MainModule {
