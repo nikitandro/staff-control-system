@@ -46,36 +46,36 @@ const routes: Routes = [
         ],
     },
     {
-        path: 'employee-info',
+        path: 'employee-info/:employeeId',
         component: EmployeeInfoLayoutComponent,
         canActivate: [authGuard],
         children: [
             {
-                path: ':employeeId/personal',
+                path: 'personal',
                 component: EmployeePersonalDataPageWebComponent
             },
             {
-                path: ':employeeId/contacts',
+                path: 'contacts',
                 component: EmployeeContactsDataPageWebComponent
             },
             {
-                path: ':employeeId/education',
+                path: 'education',
                 component: EmployeeEducationDataPageWebComponent
             },
             {
-                path: ':employeeId/condition',
+                path: 'condition',
                 component: EmployeeConditionDataPageWebComponent
             },
             {
-                path: ':employeeId/experience',
+                path: 'experience',
                 component: EmployeeExperienceDataPageWebComponent
             },
             {
-                path: ':employeeId/vacation',
+                path: 'vacation',
                 component: EmployeeVacationDataPageWebComponent
             },
             {
-                path: ':employeeId/achievements',
+                path: 'achievements',
                 component: EmployeeAchievementsDataPageWebComponent
             }
         ]

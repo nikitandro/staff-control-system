@@ -45,7 +45,6 @@ import {
 import {
     EmployeeExperienceDataPageWebComponent
 } from './pages/employee-experience-data-page/employee-experience-data.page.web.component';
-import { MobileEmployeeInfoNavigationComponent } from './components/mobile-employee-info-navigation/mobile-employee-info-navigation.component';
 import { SalaryHistoryCardComponent } from './components/salary-history-card/salary-history-card.component';
 import { EmployeeAddPageWebComponent } from './pages/employee-add-page/employee-add.page.web.component';
 import { EmployeeAddLayoutComponent } from './layouts/employee-add-layout/employee-add-layout.component';
@@ -82,7 +81,6 @@ import { UpdateDataService } from './services/update-data.service';
         EmployeeAchievementsDataPageWebComponent,
         EmployeeVacationDataPageWebComponent,
         EmployeeExperienceDataPageWebComponent,
-        MobileEmployeeInfoNavigationComponent,
         SalaryHistoryCardComponent,
         EmployeeAddPageWebComponent,
         EmployeeAddLayoutComponent,

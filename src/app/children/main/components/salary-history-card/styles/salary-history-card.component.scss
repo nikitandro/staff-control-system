@@ -60,5 +60,9 @@
             grid-column-gap: 50px;
             grid-row-gap: 30px;
         }
+
+        &__data, &__label, &__title {
+            font-size: 12px;
+        }
     }
 }

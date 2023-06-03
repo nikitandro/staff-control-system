@@ -67,6 +67,7 @@
 @media screen and (max-width: 895px) {
     .employee-card {
         width: 100%;
+        padding: 20px 50px;
 
         &__content {
             width: 100%;
@@ -77,5 +78,16 @@
         &__employee-photo {
             margin-bottom: 30px;
         }
+
+        &__employee-data {
+            row-gap: 15px;
+        }
+
+        &__data, &__label, &__title {
+            font-size: 12px;
+        }
     }
 }
+
+
+
