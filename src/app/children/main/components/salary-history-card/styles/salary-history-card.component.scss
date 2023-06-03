@@ -10,7 +10,7 @@
     }
 
     &__title {
-        font-size: 24px;
+        font-size: 20px;
         line-height: 29px;
         font-weight: 700;
         margin-bottom: 25px;
@@ -26,12 +26,12 @@
 
     &__label {
         font-weight: 600;
-        font-size: 24px;
+        font-size: 20px;
         line-height: 29px;
     }
 
     &__data {
-        font-size: 24px;
+        font-size: 20px;
         line-height: 29px;
     }
 
@@ -47,5 +47,18 @@
         left: 50px;
         bottom: 23px;
         position: absolute;
+    }
+}
+
+@media screen and (max-width: 895px) {
+    .salary-history-card {
+        width: 100%;
+        &__content {
+            width: auto;
+            display: grid;
+            grid-template-columns: auto 90px;
+            grid-column-gap: 50px;
+            grid-row-gap: 30px;
+        }
     }
 }

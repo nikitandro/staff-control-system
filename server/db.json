@@ -152,12 +152,6 @@
           "type": "Отпуск",
           "startDate": "2022-04-1",
           "endDate": "2022-04-15"
-        },
-        {
-          "vacationId": 2,
-          "type": "Отпуск",
-          "startDate": "2023-05-5",
-          "endDate": "2023-05-21"
         }
       ],
       "salaryHistory": [
