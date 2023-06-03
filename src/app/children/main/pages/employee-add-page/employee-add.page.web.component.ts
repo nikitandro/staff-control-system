@@ -39,19 +39,23 @@ export class EmployeeAddPageWebComponent implements OnInit {
                 employeeFormFields: [
                     {
                         label: 'Фамилия:',
-                        control: new FormControl('', Validators.required)
+                        control: new FormControl('', Validators.required),
+                        controlType: 'text'
                     },
                     {
                         label: 'Имя:',
-                        control: new FormControl('', Validators.required)
+                        control: new FormControl('', Validators.required),
+                        controlType: 'text'
                     },
                     {
                         label: 'Отчество:',
-                        control: new FormControl('', Validators.required)
+                        control: new FormControl('', Validators.required),
+                        controlType: 'text'
                     },
                     {
                         label: 'Дата рождения',
-                        control: new FormControl('', Validators.required)
+                        control: new FormControl('', Validators.required),
+                        controlType: 'date'
                     }
                 ]
             },
@@ -59,15 +63,18 @@ export class EmployeeAddPageWebComponent implements OnInit {
                 employeeFormFields: [
                     {
                         label: 'Номер телефона:',
-                        control: new FormControl('', Validators.required)
+                        control: new FormControl('', Validators.required),
+                        controlType: 'tel'
                     },
                     {
                         label: 'Рабочая почта:',
-                        control: new FormControl('', Validators.required)
+                        control: new FormControl('', Validators.required),
+                        controlType: 'email'
                     },
                     {
                         label: 'Личная почта:',
-                        control: new FormControl('', Validators.required)
+                        control: new FormControl('', Validators.required),
+                        controlType: 'email'
                     }
                 ]
             },
@@ -75,19 +82,23 @@ export class EmployeeAddPageWebComponent implements OnInit {
                 employeeFormFields: [
                     {
                         label: 'Вид:',
-                        control: new FormControl('', Validators.required)
+                        control: new FormControl('', Validators.required),
+                        controlType: 'text'
                     },
                     {
                         label: 'Учебное заведение:',
-                        control: new FormControl('', Validators.required)
+                        control: new FormControl('', Validators.required),
+                        controlType: 'text'
                     },
                     {
                         label: 'Дата окончания:',
-                        control: new FormControl('', Validators.required)
+                        control: new FormControl('', Validators.required),
+                        controlType: 'date'
                     },
                     {
                         label: 'Квалификация по выпуску:',
-                        control: new FormControl('', Validators.required)
+                        control: new FormControl('', Validators.required),
+                        controlType: 'text'
                     }
                 ]
             },
@@ -95,19 +106,23 @@ export class EmployeeAddPageWebComponent implements OnInit {
                 employeeFormFields: [
                     {
                         label: 'Отдел:',
-                        control: new FormControl('', Validators.required)
+                        control: new FormControl('', Validators.required),
+                        controlType: 'text'
                     },
                     {
                         label: 'Должность:',
-                        control: new FormControl('', Validators.required)
+                        control: new FormControl('', Validators.required),
+                        controlType: 'text'
                     },
                     {
                         label: 'Заработная плата (в рублях):',
-                        control: new FormControl('', Validators.required)
+                        control: new FormControl('', Validators.required),
+                        controlType: 'number'
                     },
                     {
                         label: 'Формат работы:',
-                        control: new FormControl('', Validators.required)
+                        control: new FormControl('', Validators.required),
+                        controlType: 'text'
                     }
                 ]
             },
@@ -115,15 +130,18 @@ export class EmployeeAddPageWebComponent implements OnInit {
                 employeeFormFields: [
                     {
                         label: 'Дата собеседования:',
-                        control: new FormControl('', Validators.required)
+                        control: new FormControl('', Validators.required),
+                        controlType: 'date'
                     },
                     {
                         label: 'Дата подтверждения оффера:',
-                        control: new FormControl('', Validators.required)
+                        control: new FormControl('', Validators.required),
+                        controlType: 'date'
                     },
                     {
                         label: 'Дата первого рабочего дня:',
-                        control: new FormControl('', Validators.required)
+                        control: new FormControl('', Validators.required),
+                        controlType: 'date'
                     }
                 ]
             }
@@ -135,7 +153,7 @@ export class EmployeeAddPageWebComponent implements OnInit {
     public addEmployee(): void {
         this._updateDataService.callMethodOfPageComponent();
         const newEmployee: IEmployeeRequestModel = {
-            id: 3,
+            id: Date.now(),
             firstName: this.personalData.firstName,
             lastName: this.personalData.lastName,
             patronymic: this.personalData.patronymic,
@@ -171,7 +189,10 @@ export class EmployeeAddPageWebComponent implements OnInit {
         };
 
         this._employeeDataService.addEmployee(newEmployee)
-            .subscribe(this._router.navigate(['/cabinet']));
+            .subscribe(() => {
+                alert('Сотрудник успешно добавлен');
+                this._router.navigate(['/cabinet']);
+            });
     }
 
     public getPersonalData(addPersonalData: string[]): void {
@@ -193,7 +214,7 @@ export class EmployeeAddPageWebComponent implements OnInit {
 
     public getEducationData(addEducationData: string[]): void {
         this.educationData = {
-            educationId: 1,
+            educationId: Date.now(),
             type: addEducationData[0],
             educationalInstitution: addEducationData[1],
             endDate: addEducationData[2],

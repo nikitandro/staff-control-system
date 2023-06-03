@@ -16,7 +16,7 @@ import { IEmployeeResponseModel } from '../../data/response-models/employee.resp
 import { IEmployeeVacation } from '../../data/interfaces/employee-vacation.interface';
 import { IEmployeeAchievement } from '../../data/interfaces/employee-achievement.interface';
 import { IEmployeeEducation } from '../../data/interfaces/employee-education.interface';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Params } from '@angular/router';
 import { UpdateDataService } from '../../services/update-data.service';
 
 @Component({
@@ -33,21 +33,31 @@ export class EmployeeFormComponent implements OnInit, OnDestroy {
 
     public employeeFormFieldsArray!: FormArray;
 
+    public employeeFormControlTypes!: string[];
+
     public employeeForm!: FormGroup;
 
     public employeePhoto?: string;
 
+    private _employeeId!: number;
+
     private _employeeFormSubscription!: Subscription;
+
+    private _routeSubscription!: Subscription;
 
     constructor(
         private _employeeDataService: EmployeeDataService,
-        private _activeRoute: ActivatedRoute,
+        private _route: ActivatedRoute,
         @Inject(EMPLOYEE_FORM_DATA_TOKEN) public employeeFormData$: BehaviorSubject<IEmployeeFormData>,
         private _updateDataService: UpdateDataService
     ) {
     }
 
     public ngOnInit(): void {
+        this._routeSubscription = this._route.params.subscribe((params: Params) => {
+            this._employeeId = params['employeeId'];
+        });
+
         this.employeeFormData$
             .subscribe((data: IEmployeeFormData) => {
                 if (!this.employeeFormData$.getValue()) {
@@ -57,6 +67,7 @@ export class EmployeeFormComponent implements OnInit, OnDestroy {
                 this.employeeFormFieldsArray = new FormArray(
                     data.employeeFormFields.map((field: IEmployeeFormField) => field.control)
                 );
+                this.employeeFormControlTypes = data.employeeFormFields.map((field: IEmployeeFormField) => field.controlType);
                 this.employeeForm = new FormGroup({
                     employeeFormFields: this.employeeFormFieldsArray
                 });
@@ -70,6 +81,10 @@ export class EmployeeFormComponent implements OnInit, OnDestroy {
         if (this._employeeFormSubscription) {
             this._employeeFormSubscription.unsubscribe();
         }
+
+        if (this._routeSubscription) {
+            this._routeSubscription.unsubscribe();
+        }
     }
 
     public get employeeFormFields(): FormArray {
@@ -78,7 +93,7 @@ export class EmployeeFormComponent implements OnInit, OnDestroy {
 
     public onSubmit(): void {
         const data: string[] = this.employeeForm.value.employeeFormFields;
-        const typeData: string = this._activeRoute.snapshot.url[1].path;
+        const typeData: string = this._route.snapshot.url[1].path;
         if (typeData === 'personal') {
             this.submitPersonalData(data);
         } else if (typeData === 'condition') {
@@ -104,7 +119,7 @@ export class EmployeeFormComponent implements OnInit, OnDestroy {
 
     public submitPersonalData(data: string[]): void {
         let updateEmployee!: IEmployeeRequestModel;
-        this._employeeDataService.getEmployeeData(2)
+        this._employeeDataService.getEmployeeData(this._employeeId)
             .pipe(
                 switchMap((currentEmployeeData: IEmployeeResponseModel) => {
                     updateEmployee = currentEmployeeData;
@@ -113,14 +128,14 @@ export class EmployeeFormComponent implements OnInit, OnDestroy {
                     updateEmployee.patronymic = data[2];
                     updateEmployee.birthDate = data[3];
 
-                    return this._employeeDataService.updateEmployeeData(2, updateEmployee);
+                    return this._employeeDataService.updateEmployeeData(this._employeeId, updateEmployee);
                 })
             ).subscribe(() => this._updateDataService.callMethodOfPageComponent());
     }
 
     public submitConditionData(data: string[]): void {
         let updateEmployee!: IEmployeeRequestModel;
-        this._employeeDataService.getEmployeeData(2)
+        this._employeeDataService.getEmployeeData(this._employeeId)
             .pipe(
                 switchMap((currentEmployeeData: IEmployeeResponseModel) => {
                     updateEmployee = currentEmployeeData;
@@ -129,7 +144,7 @@ export class EmployeeFormComponent implements OnInit, OnDestroy {
                     updateEmployee.salary = Number(data[2]);
                     updateEmployee.workFormat = data[3];
 
-                    return this._employeeDataService.updateEmployeeData(2, updateEmployee);
+                    return this._employeeDataService.updateEmployeeData(this._employeeId, updateEmployee);
                 })
             ).subscribe(() => this._updateDataService.callMethodOfPageComponent());
 
@@ -137,7 +152,7 @@ export class EmployeeFormComponent implements OnInit, OnDestroy {
 
     public submitContactsData(data: string[]): void {
         let updateEmployee!: IEmployeeRequestModel;
-        this._employeeDataService.getEmployeeData(2)
+        this._employeeDataService.getEmployeeData(this._employeeId)
             .pipe(
                 switchMap((currentEmployeeData: IEmployeeResponseModel) => {
                     updateEmployee = currentEmployeeData;
@@ -145,14 +160,14 @@ export class EmployeeFormComponent implements OnInit, OnDestroy {
                     updateEmployee.workEmail = data[1];
                     updateEmployee.personalEmail = data[2];
 
-                    return this._employeeDataService.updateEmployeeData(2, updateEmployee);
+                    return this._employeeDataService.updateEmployeeData(this._employeeId, updateEmployee);
                 })
             ).subscribe(() => this._updateDataService.callMethodOfPageComponent());
     }
 
     public submitExperienceData(data: string[]): void {
         let updateEmployee!: IEmployeeRequestModel;
-        this._employeeDataService.getEmployeeData(2)
+        this._employeeDataService.getEmployeeData(this._employeeId)
             .pipe(
                 switchMap((currentEmployeeData: IEmployeeResponseModel) => {
                     updateEmployee = currentEmployeeData;
@@ -160,65 +175,65 @@ export class EmployeeFormComponent implements OnInit, OnDestroy {
                     updateEmployee.employmentDate = data[1];
                     updateEmployee.firstWorkDayDate = data[2];
 
-                    return this._employeeDataService.updateEmployeeData(2, updateEmployee);
+                    return this._employeeDataService.updateEmployeeData(this._employeeId, updateEmployee);
                 })
             ).subscribe(() => this._updateDataService.callMethodOfPageComponent());
     }
 
     public submitVacationData(data: string[]): void {
         const newVacation: IEmployeeVacation = {
-            vacationId: 3,
+            vacationId: Date.now(),
             type: data[0],
             startDate: data[1],
             endDate: data[2]
         };
         let updateEmployee!: IEmployeeRequestModel;
-        this._employeeDataService.getEmployeeData(2)
+        this._employeeDataService.getEmployeeData(this._employeeId)
             .pipe(
                 switchMap((currentEmployeeData: IEmployeeResponseModel) => {
                     updateEmployee = currentEmployeeData;
                     updateEmployee.vacationsList.push(newVacation);
 
-                    return this._employeeDataService.updateEmployeeData(2, updateEmployee);
+                    return this._employeeDataService.updateEmployeeData(this._employeeId, updateEmployee);
                 })
             ).subscribe(() => this._updateDataService.callMethodOfPageComponent());
     }
 
     public submitAchievementsData(data: string[]): void {
         const newAchievement: IEmployeeAchievement = {
-            achievementId: 3,
+            achievementId: Date.now(),
             type: data[0],
             supportDocument: data[1],
             date: data[2]
         };
         let updateEmployee!: IEmployeeRequestModel;
-        this._employeeDataService.getEmployeeData(2)
+        this._employeeDataService.getEmployeeData(this._employeeId)
             .pipe(
                 switchMap((currentEmployeeData: IEmployeeResponseModel) => {
                     updateEmployee = currentEmployeeData;
                     updateEmployee.achievementsList.push(newAchievement);
 
-                    return this._employeeDataService.updateEmployeeData(2, updateEmployee);
+                    return this._employeeDataService.updateEmployeeData(this._employeeId, updateEmployee);
                 })
             ).subscribe(() => this._updateDataService.callMethodOfPageComponent());
     }
 
     public submitEducationData(data: string[]): void {
         const newEducation: IEmployeeEducation = {
-            educationId: 3,
+            educationId: Date.now(),
             type: data[0],
             educationalInstitution: data[1],
             endDate: data[2],
             qualification: data[3]
         };
         let updateEmployee!: IEmployeeRequestModel;
-        this._employeeDataService.getEmployeeData(2)
+        this._employeeDataService.getEmployeeData(this._employeeId)
             .pipe(
                 switchMap((currentEmployeeData: IEmployeeResponseModel) => {
                     updateEmployee = currentEmployeeData;
                     updateEmployee.education.push(newEducation);
 
-                    return this._employeeDataService.updateEmployeeData(2, updateEmployee);
+                    return this._employeeDataService.updateEmployeeData(this._employeeId, updateEmployee);
                 })
             ).subscribe(() => this._updateDataService.callMethodOfPageComponent());
     }

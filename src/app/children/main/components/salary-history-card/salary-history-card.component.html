@@ -37,13 +37,23 @@
                         formControlName="changeSalary"
                     >
                 </div>
+                <div class="salary-history-form__action">
+                    <button
+                        class="salary-history-form__cancel-button"
+                        type="button"
+                        (click)="cancel()"
+                    >
+                        Отмена
+                    </button>
 
-                <button
-                    class="salary-history-form__submit-button"
-                    type="submit"
-                >
-                    Сохранить
-                </button>
+                    <button
+                        class="salary-history-form__submit-button"
+                        type="submit"
+                    >
+                        Сохранить
+                    </button>
+                </div>
+
             </form>
         </div>
     </div>

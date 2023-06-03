@@ -1,26 +1,32 @@
-import { ChangeDetectorRef, Component, Inject, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, Inject, OnDestroy, OnInit } from '@angular/core';
 import { IEmployeeCardData } from '../../data/interfaces/employee-card-data.interface';
 import { EmployeeDataService } from '../../data/services/employee-data.service';
 import { IEmployeeResponseModel } from '../../data/response-models/employee.response-model.interface';
 import { IEmployeeFormData } from '../../data/interfaces/employee-form-data.interface';
 import { EMPLOYEE_FORM_DATA_TOKEN } from '../../data/tokens/employee-form-data.token';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Subscription } from 'rxjs';
 import { FormControl, Validators } from '@angular/forms';
 import { UpdateDataService } from '../../services/update-data.service';
+import { ActivatedRoute, Params } from '@angular/router';
 
 @Component({
     selector: 'employee-personal-data',
     templateUrl: 'employee-personal-data.page.web.component.html',
     styleUrls: ['./styles/employee-personal-data.page.web.component.scss'],
 })
-export class EmployeePersonalDataPageWebComponent implements OnInit {
+export class EmployeePersonalDataPageWebComponent implements OnInit, OnDestroy {
     public isPopupOpen: boolean = false;
 
     public employeePersonalCardData!: IEmployeeCardData;
 
+    private _employeeId!: number;
+
+    private _routeSubscription!: Subscription;
+
     constructor(
         private _employeeDataService: EmployeeDataService,
         private _ref: ChangeDetectorRef,
+        private _route: ActivatedRoute,
         @Inject(EMPLOYEE_FORM_DATA_TOKEN) public employeePersonalFormData$: BehaviorSubject<IEmployeeFormData>,
         private _updateDataService: UpdateDataService
     ) {
@@ -32,7 +38,17 @@ export class EmployeePersonalDataPageWebComponent implements OnInit {
     }
 
     public ngOnInit(): void {
+        this._routeSubscription = this._route.params.subscribe((params: Params) => {
+            this._employeeId = params['employeeId'];
+        });
+
         this.getPersonalData();
+    }
+
+    public ngOnDestroy(): void {
+        if (this._routeSubscription) {
+            this._routeSubscription.unsubscribe();
+        }
     }
 
     public getPersonalData(): void {
@@ -67,19 +83,23 @@ export class EmployeePersonalDataPageWebComponent implements OnInit {
                     employeeFormFields: [
                         {
                             label: 'Фамилия:',
-                            control: new FormControl(data.lastName, Validators.required)
+                            control: new FormControl(data.lastName, Validators.required),
+                            controlType: 'text'
                         },
                         {
                             label: 'Имя:',
-                            control: new FormControl(data.firstName, Validators.required)
+                            control: new FormControl(data.firstName, Validators.required),
+                            controlType: 'text'
                         },
                         {
                             label: 'Отчество:',
-                            control: new FormControl(data.patronymic, Validators.required)
+                            control: new FormControl(data.patronymic, Validators.required),
+                            controlType: 'text'
                         },
                         {
                             label: 'Дата рождения:',
-                            control: new FormControl(data.birthDate, Validators.required)
+                            control: new FormControl(data.birthDate, Validators.required),
+                            controlType: 'date'
                         }
                     ]
                 });

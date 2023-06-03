@@ -17,6 +17,8 @@ export class EmployeeAddFormComponent implements OnInit, OnDestroy {
 
     public employeeAddFormFieldsArray!: FormArray;
 
+    public employeeFormControlTypes!: string[];
+
     public employeeAddPhoto?: string;
 
     @Input()
@@ -45,6 +47,7 @@ export class EmployeeAddFormComponent implements OnInit, OnDestroy {
         this.employeeAddFormFieldsArray = new FormArray(
             this.employeeAddFormData.employeeFormFields.map((field: IEmployeeFormField) => field.control)
         );
+        this.employeeFormControlTypes = this.employeeAddFormData.employeeFormFields.map((field: IEmployeeFormField) => field.controlType);
         this.employeeAddForm = new FormGroup({
             employeeAddFormFields: this.employeeAddFormFieldsArray
         });

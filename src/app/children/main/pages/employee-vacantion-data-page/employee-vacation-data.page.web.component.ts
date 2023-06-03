@@ -1,19 +1,21 @@
-import { ChangeDetectorRef, Component, Inject, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, Inject, OnDestroy, OnInit } from '@angular/core';
 import { IEmployeeCardData } from '../../data/interfaces/employee-card-data.interface';
 import { EmployeeDataService } from '../../data/services/employee-data.service';
 import { IEmployeeResponseModel } from '../../data/response-models/employee.response-model.interface';
 import { EMPLOYEE_FORM_DATA_TOKEN } from '../../data/tokens/employee-form-data.token';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Subscription } from 'rxjs';
 import { IEmployeeFormData } from '../../data/interfaces/employee-form-data.interface';
 import { FormControl, Validators } from '@angular/forms';
 import { IEmployeeVacation } from '../../data/interfaces/employee-vacation.interface';
+import { UpdateDataService } from '../../services/update-data.service';
+import { ActivatedRoute, Params } from '@angular/router';
 
 @Component({
     selector: 'employee-vacation-data',
     templateUrl: 'employee-vacation-data.page.web.component.html',
     styleUrls: ['./styles/employee-vacation-data.page.web.component.scss'],
 })
-export class EmployeeVacationDataPageWebComponent implements OnInit {
+export class EmployeeVacationDataPageWebComponent implements OnInit, OnDestroy {
     public isPopupOpen: boolean = false;
 
     public canAdd: boolean = true;
@@ -21,15 +23,36 @@ export class EmployeeVacationDataPageWebComponent implements OnInit {
 
     public employeeVacationCardDataList: IEmployeeCardData[] = [];
 
+    private _employeeId!: number;
+
+    private _routeSubscription!: Subscription;
+
     constructor(
         private _employeeDataService: EmployeeDataService,
         private _ref: ChangeDetectorRef,
-        @Inject(EMPLOYEE_FORM_DATA_TOKEN) public employeeVacationFormData$: BehaviorSubject<IEmployeeFormData>
+        private _route: ActivatedRoute,
+        @Inject(EMPLOYEE_FORM_DATA_TOKEN) public employeeVacationFormData$: BehaviorSubject<IEmployeeFormData>,
+        private _updateDataService: UpdateDataService
     ) {
+        this._updateDataService.invokeEvent.subscribe((value: boolean) => {
+            if (value) {
+                this.getVacationList();
+            }
+        });
     }
 
     public ngOnInit(): void {
+        this._routeSubscription = this._route.params.subscribe((params: Params) => {
+            this._employeeId = params['employeeId'];
+        });
+
         this.getVacationList();
+    }
+
+    public ngOnDestroy(): void {
+        if (this._routeSubscription) {
+            this._routeSubscription.unsubscribe();
+        }
     }
 
     public getVacationList(): void {
@@ -65,15 +88,18 @@ export class EmployeeVacationDataPageWebComponent implements OnInit {
                     employeeFormFields: [
                         {
                             label: 'Вид:',
-                            control: new FormControl('', Validators.required)
+                            control: new FormControl('', Validators.required),
+                            controlType: 'text'
                         },
                         {
                             label: 'Дата начала:',
-                            control: new FormControl('', Validators.required)
+                            control: new FormControl('', Validators.required),
+                            controlType: 'date'
                         },
                         {
                             label: 'Дата окончая:',
-                            control: new FormControl('', Validators.required)
+                            control: new FormControl('', Validators.required),
+                            controlType: 'date'
                         },
                     ]
                 });

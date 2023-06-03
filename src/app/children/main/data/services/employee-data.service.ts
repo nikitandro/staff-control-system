@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { IEmployeeResponseModel } from '../response-models/employee.response-model.interface';
 import { IEmployeeRequestModel } from '../request-models/employee.request-model.interface';
@@ -14,23 +14,11 @@ export class EmployeeDataService {
     }
 
 
-    public updateEmployeeData(id: number | undefined, employee: IEmployeeRequestModel): any {
-        const httpOptions: any = {
-            headers: new HttpHeaders({
-                'Content-Type':  'application/json'
-            })
-        };
-
-        return this._http.put<any>(`http://localhost:3000/employees/${id}`, employee, httpOptions);
+    public updateEmployeeData(id: number | undefined, employee: IEmployeeRequestModel): Observable<IEmployeeResponseModel> {
+        return this._http.put<IEmployeeResponseModel>(`http://localhost:3000/employees/${id}`, employee);
     }
 
-    public addEmployee(employee: IEmployeeRequestModel): any {
-        const httpOptions: any = {
-            headers: new HttpHeaders({
-                'Content-Type':  'application/json'
-            })
-        };
-
-        return this._http.post<any>('http://localhost:3000/employees/', employee, httpOptions);
+    public addEmployee(employee: IEmployeeRequestModel): Observable<IEmployeeResponseModel> {
+        return this._http.post<IEmployeeResponseModel>('http://localhost:3000/employees/', employee);
     }
 }

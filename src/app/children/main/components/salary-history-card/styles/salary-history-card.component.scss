@@ -74,6 +74,20 @@
         padding-bottom: 5px;
     }
 
+    &__action {
+        display: flex;
+    }
+
+    &__cancel-button {
+        font-size: 16px;
+        line-height: 20px;
+        width: 100px;
+        height: 25px;
+        border-radius: 3px;
+        margin-top: 10px;
+        border: solid 0.5px;
+    }
+
     &__submit-button {
         font-size: 16px;
         line-height: 20px;
@@ -83,5 +97,8 @@
         right: 0;
         position: absolute;
         margin-top: 10px;
+        background-color: #507CB1;
+        color: white;
+        border: none;
     }
 }
