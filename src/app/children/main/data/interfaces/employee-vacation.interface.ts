@@ -1,5 +1,5 @@
 export interface IEmployeeVacation {
-    type: string,
-    startDate: Date,
-    endDate: Date
+    type: string;
+    startDate: string;
+    endDate: string;
 }

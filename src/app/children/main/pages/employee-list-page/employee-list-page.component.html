@@ -1,7 +1,10 @@
 <div class="employee-list-page">
     <h1 class="page-heading">Сотрудники компании:</h1>
     <div class="employee-list">
-        <employee-list-item *ngFor="let i of [].constructor(20)" [info]="info"></employee-list-item>
+        <ng-container *ngFor="let employeeData of employeeList">
+            <employee-list-item [info]="employeeData"></employee-list-item>
+        </ng-container>
+
     </div>
 </div>
 <mobile-bottom-sheet></mobile-bottom-sheet>

@@ -31,7 +31,7 @@ export class EmployeeVacationDataPageWebComponent implements OnInit {
     public ngOnInit(): void {
         this._employeeDataService.getEmployeeData(2)
             .subscribe((data: IEmployeeResponseModel) => {
-                data.vacationsList.forEach((vacation: IEmployeeVacation) => {
+                data.vacations.forEach((vacation: IEmployeeVacation) => {
                     this.employeeVacationCardDataList.push(
                         {
                             title: 'Отпуска сотрудника',

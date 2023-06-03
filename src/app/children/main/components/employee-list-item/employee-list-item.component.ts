@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { EmployeeSuccessStatus, IEmployeeInfo } from './employee-list-item.types';
+import {IEmployeeResponseModel} from '../../data/response-models/employee.response-model.interface';
 
 @Component({
     selector: 'employee-list-item',
@@ -9,9 +10,9 @@ import { EmployeeSuccessStatus, IEmployeeInfo } from './employee-list-item.types
 })
 export class EmployeeListItemComponent {
     @Input()
-    public info: IEmployeeInfo = {};
+    public info: IEmployeeResponseModel = {} as IEmployeeResponseModel;
 
-    public isSuccessStatusStated() {
-        return this.info.successStatus !== EmployeeSuccessStatus.NotStated || this.info.successStatus !== undefined;
-    }
+    // public isSuccessStatusStated() {
+    //     return this.info.successStatus !== EmployeeSuccessStatus.NotStated || this.info.successStatus !== undefined;
+    // }
 }

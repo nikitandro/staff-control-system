@@ -1,4 +1,4 @@
 export interface ISalaryChange {
-    date: Date,
-    salary: number
+    date: string;
+    salary: number;
 }

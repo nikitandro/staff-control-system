@@ -7,7 +7,7 @@ import { MainHeaderComponent } from './components/header/main-header.component';
 import { BurgerButtonComponent } from './components/burger-button/burger-button.component';
 import { FilterFormComponent } from './components/filter-form/filter-form.component';
 import { DropDownListComponent } from './components/drop-down-list/drop-down-list.component';
-import { FilterService } from './services/filter.service';
+import { FilterService } from './data/services/filter.service';
 import { CheckboxComponent } from './components/checkbox/checkbox.component';
 import { SalaryPickerComponent } from './components/salary-picker/salary-picker.component';
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
@@ -52,6 +52,9 @@ import { DelayRenderingDirective } from './directives/delay-rendering.directive'
 import { EmployeeAddPageWebComponent } from './pages/employee-add-page/employee-add.page.web.component';
 import { EmployeeAddFormComponent } from './components/employee-add-form/employee-add-form.component';
 import { EmployeeAddLayoutComponent } from './layouts/employee-add-layout/employee-add-layout.component';
+import {EmployeeService} from './data/services/employee.service';
+import {DepartmentsService} from './data/services/departments.service';
+import {PostsService} from './data/services/posts.service';
 
 @NgModule({
     declarations: [
@@ -103,7 +106,10 @@ import { EmployeeAddLayoutComponent } from './layouts/employee-add-layout/employ
         {
             provide: EMPLOYEE_FORM_DATA_TOKEN,
             useValue: new BehaviorSubject<IEmployeeFormData | null>(null)
-        }
+        },
+        EmployeeService,
+        DepartmentsService,
+        PostsService
     ],
 })
 export class MainModule {

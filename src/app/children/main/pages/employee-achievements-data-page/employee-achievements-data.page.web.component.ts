@@ -31,7 +31,7 @@ export class EmployeeAchievementsDataPageWebComponent implements OnInit {
     public ngOnInit(): void {
         this._employeeDataService.getEmployeeData(2)
             .subscribe((data: IEmployeeResponseModel) => {
-                data.achievementsList.forEach((achievement: IEmployeeAchievement) => {
+                data.achievements.forEach((achievement: IEmployeeAchievement) => {
                     this.employeeAchievementsCardDataList.push(
                         {
                             title: 'Достижения сотрудника',

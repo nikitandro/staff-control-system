@@ -1,77 +1,60 @@
-import { AfterViewInit, ChangeDetectionStrategy, Component, forwardRef } from '@angular/core';
-import { ControlValueAccessor, FormControl, FormGroup, NG_VALUE_ACCESSOR } from '@angular/forms';
-import { IFilterFormControls, ISalaryOption, ISelectedOptions } from './filter-form.types';
-import {
-    IDropDownListControlValue, IDropDownListOptions,
-    IDropDownListOptionsFormGroup,
-    IDropDownListOption,
-} from '../drop-down-list/drop-down-list.types';
+import {ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit} from '@angular/core';
+import {FilterService} from '../../data/services/filter.service';
+import {DepartmentsService} from '../../data/services/departments.service';
+import {IDepartment} from '../../data/interfaces/department.interface';
+import {PostsService} from '../../data/services/posts.service';
+import {IPost} from '../../data/interfaces/post.interface';
+import {SuccessStatus} from '../../data/interfaces/SuccessStatus.interface';
 
 @Component({
     selector: 'filter-form',
     templateUrl: './filter-form.component.html',
     styleUrls: ['./styles/filter-form.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush,
-    providers: [{
-        provide: NG_VALUE_ACCESSOR,
-        useExisting: forwardRef(() => FilterFormComponent),
-        multi: true,
-    }],
 })
-export class FilterFormComponent implements ControlValueAccessor, AfterViewInit {
-    public filterForm: FormGroup<IFilterFormControls> = new FormGroup<IFilterFormControls>(
-        {
-            selectedDepartments: new FormControl<IDropDownListOptions>({
-                // one: {
-                //     title: 'one',
-                //     isChecked: false,
-                // },
-            }, { nonNullable: true }),
-            selectedPosts: new FormControl<IDropDownListOptions>({}, { nonNullable: true }),
-            salary: new FormControl<[number, number]>([140, 100000], { nonNullable: true }),
-            isFired: new FormControl<boolean>(false, { nonNullable: true }),
-            isSuccessful: new FormControl<boolean>(false, { nonNullable: true }),
-        },
-    );
+export class FilterFormComponent implements OnInit {
 
-    public onChange = (value: typeof this.filterForm.value) => {
-    };
-    public onTouch = () => {
-    };
+    public departments: IDepartment[] = [];
+    public posts: IPost[] = [];
+    public sliderOptions: {floor: number, ceil: number} = {floor: 0, ceil: 0};
+    public salaryBounds: [number, number] = [0, 0];
 
-    constructor() {
+    constructor(private filterService: FilterService,
+                private departmentsService: DepartmentsService,
+                private changeDetection: ChangeDetectorRef,
+                private postsService: PostsService) {
     }
 
-    public ngAfterViewInit() {
-        this.filterForm.valueChanges.subscribe((value) => {
-            this.writeValue(value);
+    public ngOnInit() {
+        this.departmentsService.getDepartmentsList().subscribe((value) => {
+            this.departments = value;
+            this.changeDetection.detectChanges();
+        });
+        this.filterService.salary$.subscribe((value) => {
+            this.sliderOptions = {floor: value[0], ceil: value[1]};
+            this.salaryBounds = value;
+        });
+        this.postsService.getPosts().subscribe((value) => {
+            this.posts = value;
+            this.changeDetection.detectChanges();
         });
     }
 
-    public test(properties: IDropDownListOptionsFormGroup) {
-        console.log(properties);
+    public onIsFiredChange(value: boolean) {
+        this.filterService.isFired$.next(value);
     }
 
-    public onDepartmentOptionChange() {
-        return (properties: IDropDownListOptionsFormGroup) => {
-            this.test(properties);
-        };
+    public onSelectedDepartmentsChange(value: number[]) {
+        this.filterService.selectedDepartments$.next(value);
     }
 
-    public registerOnChange(fn: any): void {
-        this.onChange = fn;
-    }
-
-    public registerOnTouched(fn: any): void {
-        this.onTouch = fn;
-    }
-
-    public writeValue(value: typeof this.filterForm.value): void {
-        console.log(value);
-        this.onChange(value);
+    public onSelectedPostsChange(value: number[]) {
+        this.filterService.selectedPosts$.next(value);
     }
 
     public onFormTouchEnd(event: TouchEvent) {
         event.stopPropagation();
     }
+
+    protected readonly console = console;
 }

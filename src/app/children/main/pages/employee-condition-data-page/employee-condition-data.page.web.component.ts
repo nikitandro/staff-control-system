@@ -36,7 +36,7 @@ export class EmployeeConditionDataPageWebComponent implements OnInit {
                         },
                         {
                             label: 'Должность:',
-                            data: data.post
+                            data: data.post.title
                         },
                         {
                             label: 'Заработая плата (в рублях):',
