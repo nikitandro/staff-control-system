@@ -3,6 +3,7 @@ import { IEmployeeInfo } from '../../components/employee-list-item/employee-list
 import {EmployeeService} from '../../data/services/employee.service';
 import {tap} from 'rxjs/operators';
 import {IEmployeeResponseModel} from '../../data/response-models/employee.response-model.interface';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'employee-list-page',
@@ -13,7 +14,7 @@ import {IEmployeeResponseModel} from '../../data/response-models/employee.respon
 export class EmployeeListPageComponent implements OnInit{
 
     public employeeList: IEmployeeResponseModel[] = []
-    constructor(public employeeService: EmployeeService, private changeDetection: ChangeDetectorRef) {
+    constructor(public employeeService: EmployeeService, private changeDetection: ChangeDetectorRef, private router: Router) {
 
     }
 
@@ -24,5 +25,9 @@ export class EmployeeListPageComponent implements OnInit{
         })
         this.employeeService.limit$.next(20);
         this.employeeService.page$.next(1);
+    }
+
+    public onEmployeeListItemClick(id: number) {
+        this.router.navigate([`cabinet/employee-info/${id}/personal`])
     }
 }

@@ -15,21 +15,20 @@ export interface IEmployeeResponseModel {
     phoneNumber: string;
     workEmail: string;
     personalEmail: string;
-    departmentName: string;
     post: IPost;
     workFormat: string;
     achievements: IEmployeeAchievement[];
     interviewDate: string;
     employmentDate: string;
     firstWorkDayDate: string;
-    departmentId: string;
-    postId: string;
+    departmentId: number;
+    postId: number;
     salary: number;
     successRate: number;
     isFired: boolean;
     vacations: IEmployeeVacation[];
     education: IEmployeeEducation[];
     salaryHistory: ISalaryChange[];
-    firingDate: string;
+    firingDate: string | null;
     department: IDepartment;
 }

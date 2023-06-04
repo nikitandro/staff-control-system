@@ -69,11 +69,11 @@ export class EmployeeCardComponent implements OnInit, OnDestroy {
                             return education.educationId !== id;
                         });
                     } else if (typeData === 'vacation') {
-                        employee.vacationsList = employee.vacationsList.filter((vacation: IEmployeeVacation) => {
+                        employee.vacations = employee.vacations.filter((vacation: IEmployeeVacation) => {
                             return vacation.vacationId !== id;
                         });
                     } else if (typeData === 'achievements') {
-                        employee.achievementsList = employee.achievementsList.filter((achievement: IEmployeeAchievement) => {
+                        employee.achievements = employee.achievements.filter((achievement: IEmployeeAchievement) => {
                             return achievement.achievementId !== id;
                         });
                     }

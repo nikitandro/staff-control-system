@@ -198,6 +198,7 @@ export class EmployeeAddPageWebComponent implements OnInit {
         }
         const newEmployee: IEmployeeRequestModel = {
             id: Date.now(),
+            avatarUrl: null,
             firstName: this.personalData.firstName,
             lastName: this.personalData.lastName,
             patronymic: this.personalData.patronymic,
@@ -205,20 +206,17 @@ export class EmployeeAddPageWebComponent implements OnInit {
             phoneNumber: this.contactsData.phoneNumber,
             workEmail: this.contactsData.workEmail,
             personalEmail: this.contactsData.personalEmail,
-            departmentName: this.conditionData.departmentName,
-            post: this.conditionData.post,
+            departmentId: Number(this.conditionData.departmentName),
+            postId: this.conditionData.postId,
             salary: this.conditionData.salary,
             workFormat: this.conditionData.workFormat,
-            achievementsList: [],
+            achievements: [],
             interviewDate: this.experienceData.interviewDate,
             employmentDate: this.experienceData.employmentDate,
             firstWorkDayDate: this.experienceData.firstWorkDayDate,
-            departmentId: '',
-            postId: '',
-            successRate: '',
+            successRate: 0,
             isFired: true,
-            vacationsList: [],
-            salaryIncreaseList: [],
+            vacations: [],
             education: [
                 {
                     educationId: this.educationData.educationId,
@@ -229,7 +227,7 @@ export class EmployeeAddPageWebComponent implements OnInit {
                 }
             ],
             salaryHistory: [],
-            firingDate: ''
+            firingDate: null
         };
 
         this._employeeDataService.addEmployee(newEmployee)
@@ -269,7 +267,7 @@ export class EmployeeAddPageWebComponent implements OnInit {
     public getConditionData(addConditionData: string[]): void {
         this.conditionData = {
             departmentName: addConditionData[0],
-            post: addConditionData[1],
+            postId: Number(addConditionData[1]),
             salary: Number(addConditionData[2]),
             workFormat: addConditionData[3]
         };

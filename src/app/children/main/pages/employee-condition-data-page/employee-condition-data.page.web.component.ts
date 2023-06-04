@@ -58,7 +58,7 @@ export class EmployeeConditionDataPageWebComponent implements OnInit, OnDestroy 
                     employeeCardFields: [
                         {
                             label: 'Отдел:',
-                            data: data.departmentName
+                            data: data.department.title
                         },
                         {
                             label: 'Должность:',
@@ -81,7 +81,7 @@ export class EmployeeConditionDataPageWebComponent implements OnInit, OnDestroy 
                     employeeFormFields: [
                         {
                             label: 'Отдел:',
-                            control: new FormControl(data.departmentName, [
+                            control: new FormControl(data.department.title, [
                                 Validators.required
                             ]),
                             controlType: 'text'

@@ -1,6 +1,6 @@
-import {ChangeDetectionStrategy, Component, EventEmitter, Input, Output} from '@angular/core';
-import {IRadioButtons} from './radio-button-group.types';
-import {BehaviorSubject} from 'rxjs';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
+import { IRadioButton } from './radio-button-group.types';
+import { BehaviorSubject } from 'rxjs';
 
 @Component({
     selector: 'radio-button-group',
@@ -11,10 +11,7 @@ import {BehaviorSubject} from 'rxjs';
 export class RadioButtonGroupComponent {
 
     @Input()
-    public defaultIsActive: boolean = false;
-
-    @Input()
-    public radioButtons: IRadioButtons = [];
+    public radioButtons: IRadioButton[] = [];
 
     @Output()
     public groupChange: EventEmitter<number | null> = new EventEmitter<number | null>();
@@ -24,7 +21,7 @@ export class RadioButtonGroupComponent {
     public ngOnInit() {
         this.currentActiveRadioButton.subscribe((value) => {
             this.groupChange.emit(value);
-        })
+        });
     }
 
     public onRadioButtonChange(id: number) {

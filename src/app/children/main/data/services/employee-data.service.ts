@@ -10,7 +10,7 @@ export class EmployeeDataService {
     }
 
     public getEmployeeData(id: number | undefined): Observable<IEmployeeResponseModel> {
-        return this._http.get<IEmployeeResponseModel>(`http://localhost:3000/employees/${id}`);
+        return this._http.get<IEmployeeResponseModel>(`http://localhost:3000/employees/${id}?_expand=post&_expand=department`);
     }
 
 

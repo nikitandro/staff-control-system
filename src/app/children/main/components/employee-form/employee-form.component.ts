@@ -146,8 +146,8 @@ export class EmployeeFormComponent implements OnInit, OnDestroy {
             .pipe(
                 switchMap((currentEmployeeData: IEmployeeResponseModel) => {
                     updateEmployee = currentEmployeeData;
-                    updateEmployee.departmentName = data[0];
-                    updateEmployee.post = data[1];
+                    updateEmployee.departmentId = Number(data[0]);
+                    updateEmployee.postId = Number(data[1]);
                     updateEmployee.salary = Number(data[2]);
                     updateEmployee.workFormat = data[3];
 
@@ -199,7 +199,7 @@ export class EmployeeFormComponent implements OnInit, OnDestroy {
             .pipe(
                 switchMap((currentEmployeeData: IEmployeeResponseModel) => {
                     updateEmployee = currentEmployeeData;
-                    updateEmployee.vacationsList.push(newVacation);
+                    updateEmployee.vacations.push(newVacation);
 
                     return this._employeeDataService.updateEmployeeData(this._employeeId, updateEmployee);
                 })
@@ -211,14 +211,15 @@ export class EmployeeFormComponent implements OnInit, OnDestroy {
             achievementId: Date.now(),
             type: data[0],
             supportDocument: data[1],
-            date: data[2]
+            date: data[2],
+            successRateIncrease: 1
         };
         let updateEmployee!: IEmployeeRequestModel;
         this._employeeDataService.getEmployeeData(this._employeeId)
             .pipe(
                 switchMap((currentEmployeeData: IEmployeeResponseModel) => {
                     updateEmployee = currentEmployeeData;
-                    updateEmployee.achievementsList.push(newAchievement);
+                    updateEmployee.achievements.push(newAchievement);
 
                     return this._employeeDataService.updateEmployeeData(this._employeeId, updateEmployee);
                 })

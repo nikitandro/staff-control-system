@@ -2,7 +2,7 @@
     <h1 class="page-heading">Сотрудники компании:</h1>
     <div class="employee-list">
         <ng-container *ngFor="let employeeData of employeeList">
-            <employee-list-item [info]="employeeData"></employee-list-item>
+            <employee-list-item [info]="employeeData" (click)="onEmployeeListItemClick(employeeData.id)"></employee-list-item>
         </ng-container>
 
     </div>

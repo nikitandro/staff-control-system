@@ -1,5 +1,10 @@
 {
   "users": [
+    {
+      "email": "a@a.com",
+      "password": "$2a$10$7OiyOmUFb1kMwTtrldA6Hev2m2QlnAiIMEvSDf.S/bEO5NrHItNlu",
+      "id": 1
+    }
   ],
   "posts": [
     {
@@ -347,2140 +352,2140 @@
         }
       ]
     },
-      {
-          "id": 5,
-          "avatarUrl": null,
-          "firstName": "Дмитрий",
-          "lastName": "Козаченко",
-          "patronymic": "Сергеевич",
-          "birthDate": "2002-12-21",
-          "phoneNumber": "+71234567891",
-          "workEmail": "workEmail@mail.ru",
-          "personalEmail": "personalEmail@mail.ru",
-          "departmentId": 2,
-          "postId": 1,
-          "workFormat": "В офисе",
-          "achievements": [
-              {
-                  "type": "Повышение в должности",
-                  "supportDocument": "Приказ о повышении",
-                  "date": "2023-02-25",
-                  "successRateIncrease": 1
-              },
-              {
-                  "type": "Статус крутости повышен",
-                  "supportDocument": "Супер пупер документ",
-                  "date": "2002-12-21",
-                  "successRateIncrease": 1
-              }
-          ],
-          "interviewDate": "2022-04-1",
-          "employmentDate": "2022-04-3",
-          "firstWorkDayDate": "2022-04-6",
-          "salary": 70000,
-          "successRate": 2,
-          "isFired": false,
-          "firingDate": null,
-          "vacations": [
-              {
-                  "type": "Отпуск",
-                  "startDate": "2022-04-1",
-                  "endDate": "2022-04-15"
-              },
-              {
-                  "type": "Отпуск",
-                  "startDate": "2023-05-5",
-                  "endDate": "2023-05-21"
-              }
-          ],
-          "education": [
-              {
-                  "type": "Высшее образование (бакалавриат)",
-                  "educationalInstitution": "Уральский федеральный университет",
-                  "endDate": "2025-06-30",
-                  "qualification": "Программист"
-              },
-              {
-                  "type": "Высшее образование (магистратура)",
-                  "educationalInstitution": "Уральский федеральный университет",
-                  "endDate": "2027-06-30",
-                  "qualification": "Ваще крутой магистр"
-              }
-          ]
-      },
-      {
-          "id": 6,
-          "avatarUrl": null,
-          "firstName": "Дмитрий",
-          "lastName": "Козаченко",
-          "patronymic": "Сергеевич",
-          "birthDate": "2002-12-21",
-          "phoneNumber": "+71234567891",
-          "workEmail": "workEmail@mail.ru",
-          "personalEmail": "personalEmail@mail.ru",
-          "departmentId": 2,
-          "postId": 1,
-          "workFormat": "В офисе",
-          "achievements": [
-              {
-                  "type": "Повышение в должности",
-                  "supportDocument": "Приказ о повышении",
-                  "date": "2023-02-25",
-                  "successRateIncrease": 1
-              },
-              {
-                  "type": "Статус крутости повышен",
-                  "supportDocument": "Супер пупер документ",
-                  "date": "2002-12-21",
-                  "successRateIncrease": 1
-              }
-          ],
-          "interviewDate": "2022-04-1",
-          "employmentDate": "2022-04-3",
-          "firstWorkDayDate": "2022-04-6",
-          "salary": 70000,
-          "successRate": 2,
-          "isFired": false,
-          "firingDate": null,
-          "vacations": [
-              {
-                  "type": "Отпуск",
-                  "startDate": "2022-04-1",
-                  "endDate": "2022-04-15"
-              },
-              {
-                  "type": "Отпуск",
-                  "startDate": "2023-05-5",
-                  "endDate": "2023-05-21"
-              }
-          ],
-          "education": [
-              {
-                  "type": "Высшее образование (бакалавриат)",
-                  "educationalInstitution": "Уральский федеральный университет",
-                  "endDate": "2025-06-30",
-                  "qualification": "Программист"
-              },
-              {
-                  "type": "Высшее образование (магистратура)",
-                  "educationalInstitution": "Уральский федеральный университет",
-                  "endDate": "2027-06-30",
-                  "qualification": "Ваще крутой магистр"
-              }
-          ]
-      },
-      {
-          "id": 7,
-          "avatarUrl": null,
-          "firstName": "Дмитрий",
-          "lastName": "Козаченко",
-          "patronymic": "Сергеевич",
-          "birthDate": "2002-12-21",
-          "phoneNumber": "+71234567891",
-          "workEmail": "workEmail@mail.ru",
-          "personalEmail": "personalEmail@mail.ru",
-          "departmentId": 2,
-          "postId": 1,
-          "workFormat": "В офисе",
-          "achievements": [
-              {
-                  "type": "Повышение в должности",
-                  "supportDocument": "Приказ о повышении",
-                  "date": "2023-02-25",
-                  "successRateIncrease": 1
-              },
-              {
-                  "type": "Статус крутости повышен",
-                  "supportDocument": "Супер пупер документ",
-                  "date": "2002-12-21",
-                  "successRateIncrease": 1
-              }
-          ],
-          "interviewDate": "2022-04-1",
-          "employmentDate": "2022-04-3",
-          "firstWorkDayDate": "2022-04-6",
-          "salary": 70000,
-          "successRate": 2,
-          "isFired": false,
-          "firingDate": null,
-          "vacations": [
-              {
-                  "type": "Отпуск",
-                  "startDate": "2022-04-1",
-                  "endDate": "2022-04-15"
-              },
-              {
-                  "type": "Отпуск",
-                  "startDate": "2023-05-5",
-                  "endDate": "2023-05-21"
-              }
-          ],
-          "education": [
-              {
-                  "type": "Высшее образование (бакалавриат)",
-                  "educationalInstitution": "Уральский федеральный университет",
-                  "endDate": "2025-06-30",
-                  "qualification": "Программист"
-              },
-              {
-                  "type": "Высшее образование (магистратура)",
-                  "educationalInstitution": "Уральский федеральный университет",
-                  "endDate": "2027-06-30",
-                  "qualification": "Ваще крутой магистр"
-              }
-          ]
-      },
-      {
-          "id": 8,
-          "avatarUrl": null,
-          "firstName": "Дмитрий",
-          "lastName": "Козаченко",
-          "patronymic": "Сергеевич",
-          "birthDate": "2002-12-21",
-          "phoneNumber": "+71234567891",
-          "workEmail": "workEmail@mail.ru",
-          "personalEmail": "personalEmail@mail.ru",
-          "departmentId": 2,
-          "postId": 1,
-          "workFormat": "В офисе",
-          "achievements": [
-              {
-                  "type": "Повышение в должности",
-                  "supportDocument": "Приказ о повышении",
-                  "date": "2023-02-25",
-                  "successRateIncrease": 1
-              },
-              {
-                  "type": "Статус крутости повышен",
-                  "supportDocument": "Супер пупер документ",
-                  "date": "2002-12-21",
-                  "successRateIncrease": 1
-              }
-          ],
-          "interviewDate": "2022-04-1",
-          "employmentDate": "2022-04-3",
-          "firstWorkDayDate": "2022-04-6",
-          "salary": 70000,
-          "successRate": 2,
-          "isFired": false,
-          "firingDate": null,
-          "vacations": [
-              {
-                  "type": "Отпуск",
-                  "startDate": "2022-04-1",
-                  "endDate": "2022-04-15"
-              },
-              {
-                  "type": "Отпуск",
-                  "startDate": "2023-05-5",
-                  "endDate": "2023-05-21"
-              }
-          ],
-          "education": [
-              {
-                  "type": "Высшее образование (бакалавриат)",
-                  "educationalInstitution": "Уральский федеральный университет",
-                  "endDate": "2025-06-30",
-                  "qualification": "Программист"
-              },
-              {
-                  "type": "Высшее образование (магистратура)",
-                  "educationalInstitution": "Уральский федеральный университет",
-                  "endDate": "2027-06-30",
-                  "qualification": "Ваще крутой магистр"
-              }
-          ]
-      },
-      {
-          "id": 9,
-          "avatarUrl": null,
-          "firstName": "Дмитрий",
-          "lastName": "Козаченко",
-          "patronymic": "Сергеевич",
-          "birthDate": "2002-12-21",
-          "phoneNumber": "+71234567891",
-          "workEmail": "workEmail@mail.ru",
-          "personalEmail": "personalEmail@mail.ru",
-          "departmentId": 2,
-          "postId": 1,
-          "workFormat": "В офисе",
-          "achievements": [
-              {
-                  "type": "Повышение в должности",
-                  "supportDocument": "Приказ о повышении",
-                  "date": "2023-02-25",
-                  "successRateIncrease": 1
-              },
-              {
-                  "type": "Статус крутости повышен",
-                  "supportDocument": "Супер пупер документ",
-                  "date": "2002-12-21",
-                  "successRateIncrease": 1
-              }
-          ],
-          "interviewDate": "2022-04-1",
-          "employmentDate": "2022-04-3",
-          "firstWorkDayDate": "2022-04-6",
-          "salary": 70000,
-          "successRate": 2,
-          "isFired": false,
-          "firingDate": null,
-          "vacations": [
-              {
-                  "type": "Отпуск",
-                  "startDate": "2022-04-1",
-                  "endDate": "2022-04-15"
-              },
-              {
-                  "type": "Отпуск",
-                  "startDate": "2023-05-5",
-                  "endDate": "2023-05-21"
-              }
-          ],
-          "education": [
-              {
-                  "type": "Высшее образование (бакалавриат)",
-                  "educationalInstitution": "Уральский федеральный университет",
-                  "endDate": "2025-06-30",
-                  "qualification": "Программист"
-              },
-              {
-                  "type": "Высшее образование (магистратура)",
-                  "educationalInstitution": "Уральский федеральный университет",
-                  "endDate": "2027-06-30",
-                  "qualification": "Ваще крутой магистр"
-              }
-          ]
-      },
-      {
-          "id": 10,
-          "avatarUrl": null,
-          "firstName": "Дмитрий",
-          "lastName": "Козаченко",
-          "patronymic": "Сергеевич",
-          "birthDate": "2002-12-21",
-          "phoneNumber": "+71234567891",
-          "workEmail": "workEmail@mail.ru",
-          "personalEmail": "personalEmail@mail.ru",
-          "departmentId": 2,
-          "postId": 1,
-          "workFormat": "В офисе",
-          "achievements": [
-              {
-                  "type": "Повышение в должности",
-                  "supportDocument": "Приказ о повышении",
-                  "date": "2023-02-25",
-                  "successRateIncrease": 1
-              },
-              {
-                  "type": "Статус крутости повышен",
-                  "supportDocument": "Супер пупер документ",
-                  "date": "2002-12-21",
-                  "successRateIncrease": 1
-              }
-          ],
-          "interviewDate": "2022-04-1",
-          "employmentDate": "2022-04-3",
-          "firstWorkDayDate": "2022-04-6",
-          "salary": 70000,
-          "successRate": 2,
-          "isFired": false,
-          "firingDate": null,
-          "vacations": [
-              {
-                  "type": "Отпуск",
-                  "startDate": "2022-04-1",
-                  "endDate": "2022-04-15"
-              },
-              {
-                  "type": "Отпуск",
-                  "startDate": "2023-05-5",
-                  "endDate": "2023-05-21"
-              }
-          ],
-          "education": [
-              {
-                  "type": "Высшее образование (бакалавриат)",
-                  "educationalInstitution": "Уральский федеральный университет",
-                  "endDate": "2025-06-30",
-                  "qualification": "Программист"
-              },
-              {
-                  "type": "Высшее образование (магистратура)",
-                  "educationalInstitution": "Уральский федеральный университет",
-                  "endDate": "2027-06-30",
-                  "qualification": "Ваще крутой магистр"
-              }
-          ]
-      },
-      {
-          "id": 11,
-          "avatarUrl": null,
-          "firstName": "Дмитрий",
-          "lastName": "Козаченко",
-          "patronymic": "Сергеевич",
-          "birthDate": "2002-12-21",
-          "phoneNumber": "+71234567891",
-          "workEmail": "workEmail@mail.ru",
-          "personalEmail": "personalEmail@mail.ru",
-          "departmentId": 2,
-          "postId": 1,
-          "workFormat": "В офисе",
-          "achievements": [
-              {
-                  "type": "Повышение в должности",
-                  "supportDocument": "Приказ о повышении",
-                  "date": "2023-02-25",
-                  "successRateIncrease": 1
-              },
-              {
-                  "type": "Статус крутости повышен",
-                  "supportDocument": "Супер пупер документ",
-                  "date": "2002-12-21",
-                  "successRateIncrease": 1
-              }
-          ],
-          "interviewDate": "2022-04-1",
-          "employmentDate": "2022-04-3",
-          "firstWorkDayDate": "2022-04-6",
-          "salary": 70000,
-          "successRate": 2,
-          "isFired": false,
-          "firingDate": null,
-          "vacations": [
-              {
-                  "type": "Отпуск",
-                  "startDate": "2022-04-1",
-                  "endDate": "2022-04-15"
-              },
-              {
-                  "type": "Отпуск",
-                  "startDate": "2023-05-5",
-                  "endDate": "2023-05-21"
-              }
-          ],
-          "education": [
-              {
-                  "type": "Высшее образование (бакалавриат)",
-                  "educationalInstitution": "Уральский федеральный университет",
-                  "endDate": "2025-06-30",
-                  "qualification": "Программист"
-              },
-              {
-                  "type": "Высшее образование (магистратура)",
-                  "educationalInstitution": "Уральский федеральный университет",
-                  "endDate": "2027-06-30",
-                  "qualification": "Ваще крутой магистр"
-              }
-          ]
-      },
-      {
-          "id": 12,
-          "avatarUrl": null,
-          "firstName": "Дмитрий",
-          "lastName": "Козаченко",
-          "patronymic": "Сергеевич",
-          "birthDate": "2002-12-21",
-          "phoneNumber": "+71234567891",
-          "workEmail": "workEmail@mail.ru",
-          "personalEmail": "personalEmail@mail.ru",
-          "departmentId": 2,
-          "postId": 1,
-          "workFormat": "В офисе",
-          "achievements": [
-              {
-                  "type": "Повышение в должности",
-                  "supportDocument": "Приказ о повышении",
-                  "date": "2023-02-25",
-                  "successRateIncrease": 1
-              },
-              {
-                  "type": "Статус крутости повышен",
-                  "supportDocument": "Супер пупер документ",
-                  "date": "2002-12-21",
-                  "successRateIncrease": 1
-              }
-          ],
-          "interviewDate": "2022-04-1",
-          "employmentDate": "2022-04-3",
-          "firstWorkDayDate": "2022-04-6",
-          "salary": 70000,
-          "successRate": 2,
-          "isFired": false,
-          "firingDate": null,
-          "vacations": [
-              {
-                  "type": "Отпуск",
-                  "startDate": "2022-04-1",
-                  "endDate": "2022-04-15"
-              },
-              {
-                  "type": "Отпуск",
-                  "startDate": "2023-05-5",
-                  "endDate": "2023-05-21"
-              }
-          ],
-          "education": [
-              {
-                  "type": "Высшее образование (бакалавриат)",
-                  "educationalInstitution": "Уральский федеральный университет",
-                  "endDate": "2025-06-30",
-                  "qualification": "Программист"
-              },
-              {
-                  "type": "Высшее образование (магистратура)",
-                  "educationalInstitution": "Уральский федеральный университет",
-                  "endDate": "2027-06-30",
-                  "qualification": "Ваще крутой магистр"
-              }
-          ]
-      },
-      {
-          "id": 13,
-          "avatarUrl": null,
-          "firstName": "Дмитрий",
-          "lastName": "Козаченко",
-          "patronymic": "Сергеевич",
-          "birthDate": "2002-12-21",
-          "phoneNumber": "+71234567891",
-          "workEmail": "workEmail@mail.ru",
-          "personalEmail": "personalEmail@mail.ru",
-          "departmentId": 2,
-          "postId": 1,
-          "workFormat": "В офисе",
-          "achievements": [
-              {
-                  "type": "Повышение в должности",
-                  "supportDocument": "Приказ о повышении",
-                  "date": "2023-02-25",
-                  "successRateIncrease": 1
-              },
-              {
-                  "type": "Статус крутости повышен",
-                  "supportDocument": "Супер пупер документ",
-                  "date": "2002-12-21",
-                  "successRateIncrease": 1
-              }
-          ],
-          "interviewDate": "2022-04-1",
-          "employmentDate": "2022-04-3",
-          "firstWorkDayDate": "2022-04-6",
-          "salary": 70000,
-          "successRate": 2,
-          "isFired": false,
-          "firingDate": null,
-          "vacations": [
-              {
-                  "type": "Отпуск",
-                  "startDate": "2022-04-1",
-                  "endDate": "2022-04-15"
-              },
-              {
-                  "type": "Отпуск",
-                  "startDate": "2023-05-5",
-                  "endDate": "2023-05-21"
-              }
-          ],
-          "education": [
-              {
-                  "type": "Высшее образование (бакалавриат)",
-                  "educationalInstitution": "Уральский федеральный университет",
-                  "endDate": "2025-06-30",
-                  "qualification": "Программист"
-              },
-              {
-                  "type": "Высшее образование (магистратура)",
-                  "educationalInstitution": "Уральский федеральный университет",
-                  "endDate": "2027-06-30",
-                  "qualification": "Ваще крутой магистр"
-              }
-          ]
-      },
-      {
-          "id": 14,
-          "avatarUrl": null,
-          "firstName": "Дмитрий",
-          "lastName": "Козаченко",
-          "patronymic": "Сергеевич",
-          "birthDate": "2002-12-21",
-          "phoneNumber": "+71234567891",
-          "workEmail": "workEmail@mail.ru",
-          "personalEmail": "personalEmail@mail.ru",
-          "departmentId": 2,
-          "postId": 1,
-          "workFormat": "В офисе",
-          "achievements": [
-              {
-                  "type": "Повышение в должности",
-                  "supportDocument": "Приказ о повышении",
-                  "date": "2023-02-25",
-                  "successRateIncrease": 1
-              },
-              {
-                  "type": "Статус крутости повышен",
-                  "supportDocument": "Супер пупер документ",
-                  "date": "2002-12-21",
-                  "successRateIncrease": 1
-              }
-          ],
-          "interviewDate": "2022-04-1",
-          "employmentDate": "2022-04-3",
-          "firstWorkDayDate": "2022-04-6",
-          "salary": 70000,
-          "successRate": 2,
-          "isFired": false,
-          "firingDate": null,
-          "vacations": [
-              {
-                  "type": "Отпуск",
-                  "startDate": "2022-04-1",
-                  "endDate": "2022-04-15"
-              },
-              {
-                  "type": "Отпуск",
-                  "startDate": "2023-05-5",
-                  "endDate": "2023-05-21"
-              }
-          ],
-          "education": [
-              {
-                  "type": "Высшее образование (бакалавриат)",
-                  "educationalInstitution": "Уральский федеральный университет",
-                  "endDate": "2025-06-30",
-                  "qualification": "Программист"
-              },
-              {
-                  "type": "Высшее образование (магистратура)",
-                  "educationalInstitution": "Уральский федеральный университет",
-                  "endDate": "2027-06-30",
-                  "qualification": "Ваще крутой магистр"
-              }
-          ]
-      },
-      {
-          "id": 15,
-          "avatarUrl": null,
-          "firstName": "Дмитрий",
-          "lastName": "Козаченко",
-          "patronymic": "Сергеевич",
-          "birthDate": "2002-12-21",
-          "phoneNumber": "+71234567891",
-          "workEmail": "workEmail@mail.ru",
-          "personalEmail": "personalEmail@mail.ru",
-          "departmentId": 2,
-          "postId": 1,
-          "workFormat": "В офисе",
-          "achievements": [
-              {
-                  "type": "Повышение в должности",
-                  "supportDocument": "Приказ о повышении",
-                  "date": "2023-02-25",
-                  "successRateIncrease": 1
-              },
-              {
-                  "type": "Статус крутости повышен",
-                  "supportDocument": "Супер пупер документ",
-                  "date": "2002-12-21",
-                  "successRateIncrease": 1
-              }
-          ],
-          "interviewDate": "2022-04-1",
-          "employmentDate": "2022-04-3",
-          "firstWorkDayDate": "2022-04-6",
-          "salary": 70000,
-          "successRate": 2,
-          "isFired": false,
-          "firingDate": null,
-          "vacations": [
-              {
-                  "type": "Отпуск",
-                  "startDate": "2022-04-1",
-                  "endDate": "2022-04-15"
-              },
-              {
-                  "type": "Отпуск",
-                  "startDate": "2023-05-5",
-                  "endDate": "2023-05-21"
-              }
-          ],
-          "education": [
-              {
-                  "type": "Высшее образование (бакалавриат)",
-                  "educationalInstitution": "Уральский федеральный университет",
-                  "endDate": "2025-06-30",
-                  "qualification": "Программист"
-              },
-              {
-                  "type": "Высшее образование (магистратура)",
-                  "educationalInstitution": "Уральский федеральный университет",
-                  "endDate": "2027-06-30",
-                  "qualification": "Ваще крутой магистр"
-              }
-          ]
-      },
-      {
-          "id": 16,
-          "avatarUrl": null,
-          "firstName": "Дмитрий",
-          "lastName": "Козаченко",
-          "patronymic": "Сергеевич",
-          "birthDate": "2002-12-21",
-          "phoneNumber": "+71234567891",
-          "workEmail": "workEmail@mail.ru",
-          "personalEmail": "personalEmail@mail.ru",
-          "departmentId": 2,
-          "postId": 1,
-          "workFormat": "В офисе",
-          "achievements": [
-              {
-                  "type": "Повышение в должности",
-                  "supportDocument": "Приказ о повышении",
-                  "date": "2023-02-25",
-                  "successRateIncrease": 1
-              },
-              {
-                  "type": "Статус крутости повышен",
-                  "supportDocument": "Супер пупер документ",
-                  "date": "2002-12-21",
-                  "successRateIncrease": 1
-              }
-          ],
-          "interviewDate": "2022-04-1",
-          "employmentDate": "2022-04-3",
-          "firstWorkDayDate": "2022-04-6",
-          "salary": 70000,
-          "successRate": 2,
-          "isFired": false,
-          "firingDate": null,
-          "vacations": [
-              {
-                  "type": "Отпуск",
-                  "startDate": "2022-04-1",
-                  "endDate": "2022-04-15"
-              },
-              {
-                  "type": "Отпуск",
-                  "startDate": "2023-05-5",
-                  "endDate": "2023-05-21"
-              }
-          ],
-          "education": [
-              {
-                  "type": "Высшее образование (бакалавриат)",
-                  "educationalInstitution": "Уральский федеральный университет",
-                  "endDate": "2025-06-30",
-                  "qualification": "Программист"
-              },
-              {
-                  "type": "Высшее образование (магистратура)",
-                  "educationalInstitution": "Уральский федеральный университет",
-                  "endDate": "2027-06-30",
-                  "qualification": "Ваще крутой магистр"
-              }
-          ]
-      },
-      {
-          "id": 17,
-          "avatarUrl": null,
-          "firstName": "Дмитрий",
-          "lastName": "Козаченко",
-          "patronymic": "Сергеевич",
-          "birthDate": "2002-12-21",
-          "phoneNumber": "+71234567891",
-          "workEmail": "workEmail@mail.ru",
-          "personalEmail": "personalEmail@mail.ru",
-          "departmentId": 2,
-          "postId": 1,
-          "workFormat": "В офисе",
-          "achievements": [
-              {
-                  "type": "Повышение в должности",
-                  "supportDocument": "Приказ о повышении",
-                  "date": "2023-02-25",
-                  "successRateIncrease": 1
-              },
-              {
-                  "type": "Статус крутости повышен",
-                  "supportDocument": "Супер пупер документ",
-                  "date": "2002-12-21",
-                  "successRateIncrease": 1
-              }
-          ],
-          "interviewDate": "2022-04-1",
-          "employmentDate": "2022-04-3",
-          "firstWorkDayDate": "2022-04-6",
-          "salary": 70000,
-          "successRate": 2,
-          "isFired": false,
-          "firingDate": null,
-          "vacations": [
-              {
-                  "type": "Отпуск",
-                  "startDate": "2022-04-1",
-                  "endDate": "2022-04-15"
-              },
-              {
-                  "type": "Отпуск",
-                  "startDate": "2023-05-5",
-                  "endDate": "2023-05-21"
-              }
-          ],
-          "education": [
-              {
-                  "type": "Высшее образование (бакалавриат)",
-                  "educationalInstitution": "Уральский федеральный университет",
-                  "endDate": "2025-06-30",
-                  "qualification": "Программист"
-              },
-              {
-                  "type": "Высшее образование (магистратура)",
-                  "educationalInstitution": "Уральский федеральный университет",
-                  "endDate": "2027-06-30",
-                  "qualification": "Ваще крутой магистр"
-              }
-          ]
-      },
-      {
-          "id": 18,
-          "avatarUrl": null,
-          "firstName": "Дмитрий",
-          "lastName": "Козаченко",
-          "patronymic": "Сергеевич",
-          "birthDate": "2002-12-21",
-          "phoneNumber": "+71234567891",
-          "workEmail": "workEmail@mail.ru",
-          "personalEmail": "personalEmail@mail.ru",
-          "departmentId": 2,
-          "postId": 1,
-          "workFormat": "В офисе",
-          "achievements": [
-              {
-                  "type": "Повышение в должности",
-                  "supportDocument": "Приказ о повышении",
-                  "date": "2023-02-25",
-                  "successRateIncrease": 1
-              },
-              {
-                  "type": "Статус крутости повышен",
-                  "supportDocument": "Супер пупер документ",
-                  "date": "2002-12-21",
-                  "successRateIncrease": 1
-              }
-          ],
-          "interviewDate": "2022-04-1",
-          "employmentDate": "2022-04-3",
-          "firstWorkDayDate": "2022-04-6",
-          "salary": 70000,
-          "successRate": 2,
-          "isFired": false,
-          "firingDate": null,
-          "vacations": [
-              {
-                  "type": "Отпуск",
-                  "startDate": "2022-04-1",
-                  "endDate": "2022-04-15"
-              },
-              {
-                  "type": "Отпуск",
-                  "startDate": "2023-05-5",
-                  "endDate": "2023-05-21"
-              }
-          ],
-          "education": [
-              {
-                  "type": "Высшее образование (бакалавриат)",
-                  "educationalInstitution": "Уральский федеральный университет",
-                  "endDate": "2025-06-30",
-                  "qualification": "Программист"
-              },
-              {
-                  "type": "Высшее образование (магистратура)",
-                  "educationalInstitution": "Уральский федеральный университет",
-                  "endDate": "2027-06-30",
-                  "qualification": "Ваще крутой магистр"
-              }
-          ]
-      },
-      {
-          "id": 19,
-          "avatarUrl": null,
-          "firstName": "Дмитрий",
-          "lastName": "Козаченко",
-          "patronymic": "Сергеевич",
-          "birthDate": "2002-12-21",
-          "phoneNumber": "+71234567891",
-          "workEmail": "workEmail@mail.ru",
-          "personalEmail": "personalEmail@mail.ru",
-          "departmentId": 2,
-          "postId": 1,
-          "workFormat": "В офисе",
-          "achievements": [
-              {
-                  "type": "Повышение в должности",
-                  "supportDocument": "Приказ о повышении",
-                  "date": "2023-02-25",
-                  "successRateIncrease": 1
-              },
-              {
-                  "type": "Статус крутости повышен",
-                  "supportDocument": "Супер пупер документ",
-                  "date": "2002-12-21",
-                  "successRateIncrease": 1
-              }
-          ],
-          "interviewDate": "2022-04-1",
-          "employmentDate": "2022-04-3",
-          "firstWorkDayDate": "2022-04-6",
-          "salary": 70000,
-          "successRate": 2,
-          "isFired": false,
-          "firingDate": null,
-          "vacations": [
-              {
-                  "type": "Отпуск",
-                  "startDate": "2022-04-1",
-                  "endDate": "2022-04-15"
-              },
-              {
-                  "type": "Отпуск",
-                  "startDate": "2023-05-5",
-                  "endDate": "2023-05-21"
-              }
-          ],
-          "education": [
-              {
-                  "type": "Высшее образование (бакалавриат)",
-                  "educationalInstitution": "Уральский федеральный университет",
-                  "endDate": "2025-06-30",
-                  "qualification": "Программист"
-              },
-              {
-                  "type": "Высшее образование (магистратура)",
-                  "educationalInstitution": "Уральский федеральный университет",
-                  "endDate": "2027-06-30",
-                  "qualification": "Ваще крутой магистр"
-              }
-          ]
-      },
-      {
-          "id": 20,
-          "avatarUrl": null,
-          "firstName": "Дмитрий",
-          "lastName": "Козаченко",
-          "patronymic": "Сергеевич",
-          "birthDate": "2002-12-21",
-          "phoneNumber": "+71234567891",
-          "workEmail": "workEmail@mail.ru",
-          "personalEmail": "personalEmail@mail.ru",
-          "departmentId": 2,
-          "postId": 1,
-          "workFormat": "В офисе",
-          "achievements": [
-              {
-                  "type": "Повышение в должности",
-                  "supportDocument": "Приказ о повышении",
-                  "date": "2023-02-25",
-                  "successRateIncrease": 1
-              },
-              {
-                  "type": "Статус крутости повышен",
-                  "supportDocument": "Супер пупер документ",
-                  "date": "2002-12-21",
-                  "successRateIncrease": 1
-              }
-          ],
-          "interviewDate": "2022-04-1",
-          "employmentDate": "2022-04-3",
-          "firstWorkDayDate": "2022-04-6",
-          "salary": 70000,
-          "successRate": 2,
-          "isFired": false,
-          "firingDate": null,
-          "vacations": [
-              {
-                  "type": "Отпуск",
-                  "startDate": "2022-04-1",
-                  "endDate": "2022-04-15"
-              },
-              {
-                  "type": "Отпуск",
-                  "startDate": "2023-05-5",
-                  "endDate": "2023-05-21"
-              }
-          ],
-          "education": [
-              {
-                  "type": "Высшее образование (бакалавриат)",
-                  "educationalInstitution": "Уральский федеральный университет",
-                  "endDate": "2025-06-30",
-                  "qualification": "Программист"
-              },
-              {
-                  "type": "Высшее образование (магистратура)",
-                  "educationalInstitution": "Уральский федеральный университет",
-                  "endDate": "2027-06-30",
-                  "qualification": "Ваще крутой магистр"
-              }
-          ]
-      },
-      {
-          "id": 21,
-          "avatarUrl": null,
-          "firstName": "Дмитрий",
-          "lastName": "Козаченко",
-          "patronymic": "Сергеевич",
-          "birthDate": "2002-12-21",
-          "phoneNumber": "+71234567891",
-          "workEmail": "workEmail@mail.ru",
-          "personalEmail": "personalEmail@mail.ru",
-          "departmentId": 2,
-          "postId": 1,
-          "workFormat": "В офисе",
-          "achievements": [
-              {
-                  "type": "Повышение в должности",
-                  "supportDocument": "Приказ о повышении",
-                  "date": "2023-02-25",
-                  "successRateIncrease": 1
-              },
-              {
-                  "type": "Статус крутости повышен",
-                  "supportDocument": "Супер пупер документ",
-                  "date": "2002-12-21",
-                  "successRateIncrease": 1
-              }
-          ],
-          "interviewDate": "2022-04-1",
-          "employmentDate": "2022-04-3",
-          "firstWorkDayDate": "2022-04-6",
-          "salary": 70000,
-          "successRate": 2,
-          "isFired": false,
-          "firingDate": null,
-          "vacations": [
-              {
-                  "type": "Отпуск",
-                  "startDate": "2022-04-1",
-                  "endDate": "2022-04-15"
-              },
-              {
-                  "type": "Отпуск",
-                  "startDate": "2023-05-5",
-                  "endDate": "2023-05-21"
-              }
-          ],
-          "education": [
-              {
-                  "type": "Высшее образование (бакалавриат)",
-                  "educationalInstitution": "Уральский федеральный университет",
-                  "endDate": "2025-06-30",
-                  "qualification": "Программист"
-              },
-              {
-                  "type": "Высшее образование (магистратура)",
-                  "educationalInstitution": "Уральский федеральный университет",
-                  "endDate": "2027-06-30",
-                  "qualification": "Ваще крутой магистр"
-              }
-          ]
-      },
-      {
-          "id": 22,
-          "avatarUrl": null,
-          "firstName": "Дмитрий",
-          "lastName": "Козаченко",
-          "patronymic": "Сергеевич",
-          "birthDate": "2002-12-21",
-          "phoneNumber": "+71234567891",
-          "workEmail": "workEmail@mail.ru",
-          "personalEmail": "personalEmail@mail.ru",
-          "departmentId": 2,
-          "postId": 1,
-          "workFormat": "В офисе",
-          "achievements": [
-              {
-                  "type": "Повышение в должности",
-                  "supportDocument": "Приказ о повышении",
-                  "date": "2023-02-25",
-                  "successRateIncrease": 1
-              },
-              {
-                  "type": "Статус крутости повышен",
-                  "supportDocument": "Супер пупер документ",
-                  "date": "2002-12-21",
-                  "successRateIncrease": 1
-              }
-          ],
-          "interviewDate": "2022-04-1",
-          "employmentDate": "2022-04-3",
-          "firstWorkDayDate": "2022-04-6",
-          "salary": 70000,
-          "successRate": 2,
-          "isFired": false,
-          "firingDate": null,
-          "vacations": [
-              {
-                  "type": "Отпуск",
-                  "startDate": "2022-04-1",
-                  "endDate": "2022-04-15"
-              },
-              {
-                  "type": "Отпуск",
-                  "startDate": "2023-05-5",
-                  "endDate": "2023-05-21"
-              }
-          ],
-          "education": [
-              {
-                  "type": "Высшее образование (бакалавриат)",
-                  "educationalInstitution": "Уральский федеральный университет",
-                  "endDate": "2025-06-30",
-                  "qualification": "Программист"
-              },
-              {
-                  "type": "Высшее образование (магистратура)",
-                  "educationalInstitution": "Уральский федеральный университет",
-                  "endDate": "2027-06-30",
-                  "qualification": "Ваще крутой магистр"
-              }
-          ]
-      },
-      {
-          "id": 23,
-          "avatarUrl": null,
-          "firstName": "Дмитрий",
-          "lastName": "Козаченко",
-          "patronymic": "Сергеевич",
-          "birthDate": "2002-12-21",
-          "phoneNumber": "+71234567891",
-          "workEmail": "workEmail@mail.ru",
-          "personalEmail": "personalEmail@mail.ru",
-          "departmentId": 2,
-          "postId": 1,
-          "workFormat": "В офисе",
-          "achievements": [
-              {
-                  "type": "Повышение в должности",
-                  "supportDocument": "Приказ о повышении",
-                  "date": "2023-02-25",
-                  "successRateIncrease": 1
-              },
-              {
-                  "type": "Статус крутости повышен",
-                  "supportDocument": "Супер пупер документ",
-                  "date": "2002-12-21",
-                  "successRateIncrease": 1
-              }
-          ],
-          "interviewDate": "2022-04-1",
-          "employmentDate": "2022-04-3",
-          "firstWorkDayDate": "2022-04-6",
-          "salary": 70000,
-          "successRate": 2,
-          "isFired": false,
-          "firingDate": null,
-          "vacations": [
-              {
-                  "type": "Отпуск",
-                  "startDate": "2022-04-1",
-                  "endDate": "2022-04-15"
-              },
-              {
-                  "type": "Отпуск",
-                  "startDate": "2023-05-5",
-                  "endDate": "2023-05-21"
-              }
-          ],
-          "education": [
-              {
-                  "type": "Высшее образование (бакалавриат)",
-                  "educationalInstitution": "Уральский федеральный университет",
-                  "endDate": "2025-06-30",
-                  "qualification": "Программист"
-              },
-              {
-                  "type": "Высшее образование (магистратура)",
-                  "educationalInstitution": "Уральский федеральный университет",
-                  "endDate": "2027-06-30",
-                  "qualification": "Ваще крутой магистр"
-              }
-          ]
-      },
-      {
-          "id": 24,
-          "avatarUrl": null,
-          "firstName": "Дмитрий",
-          "lastName": "Козаченко",
-          "patronymic": "Сергеевич",
-          "birthDate": "2002-12-21",
-          "phoneNumber": "+71234567891",
-          "workEmail": "workEmail@mail.ru",
-          "personalEmail": "personalEmail@mail.ru",
-          "departmentId": 2,
-          "postId": 1,
-          "workFormat": "В офисе",
-          "achievements": [
-              {
-                  "type": "Повышение в должности",
-                  "supportDocument": "Приказ о повышении",
-                  "date": "2023-02-25",
-                  "successRateIncrease": 1
-              },
-              {
-                  "type": "Статус крутости повышен",
-                  "supportDocument": "Супер пупер документ",
-                  "date": "2002-12-21",
-                  "successRateIncrease": 1
-              }
-          ],
-          "interviewDate": "2022-04-1",
-          "employmentDate": "2022-04-3",
-          "firstWorkDayDate": "2022-04-6",
-          "salary": 70000,
-          "successRate": 2,
-          "isFired": false,
-          "firingDate": null,
-          "vacations": [
-              {
-                  "type": "Отпуск",
-                  "startDate": "2022-04-1",
-                  "endDate": "2022-04-15"
-              },
-              {
-                  "type": "Отпуск",
-                  "startDate": "2023-05-5",
-                  "endDate": "2023-05-21"
-              }
-          ],
-          "education": [
-              {
-                  "type": "Высшее образование (бакалавриат)",
-                  "educationalInstitution": "Уральский федеральный университет",
-                  "endDate": "2025-06-30",
-                  "qualification": "Программист"
-              },
-              {
-                  "type": "Высшее образование (магистратура)",
-                  "educationalInstitution": "Уральский федеральный университет",
-                  "endDate": "2027-06-30",
-                  "qualification": "Ваще крутой магистр"
-              }
-          ]
-      },
-      {
-          "id": 25,
-          "avatarUrl": null,
-          "firstName": "Дмитрий",
-          "lastName": "Козаченко",
-          "patronymic": "Сергеевич",
-          "birthDate": "2002-12-21",
-          "phoneNumber": "+71234567891",
-          "workEmail": "workEmail@mail.ru",
-          "personalEmail": "personalEmail@mail.ru",
-          "departmentId": 2,
-          "postId": 1,
-          "workFormat": "В офисе",
-          "achievements": [
-              {
-                  "type": "Повышение в должности",
-                  "supportDocument": "Приказ о повышении",
-                  "date": "2023-02-25",
-                  "successRateIncrease": 1
-              },
-              {
-                  "type": "Статус крутости повышен",
-                  "supportDocument": "Супер пупер документ",
-                  "date": "2002-12-21",
-                  "successRateIncrease": 1
-              }
-          ],
-          "interviewDate": "2022-04-1",
-          "employmentDate": "2022-04-3",
-          "firstWorkDayDate": "2022-04-6",
-          "salary": 70000,
-          "successRate": 2,
-          "isFired": false,
-          "firingDate": null,
-          "vacations": [
-              {
-                  "type": "Отпуск",
-                  "startDate": "2022-04-1",
-                  "endDate": "2022-04-15"
-              },
-              {
-                  "type": "Отпуск",
-                  "startDate": "2023-05-5",
-                  "endDate": "2023-05-21"
-              }
-          ],
-          "education": [
-              {
-                  "type": "Высшее образование (бакалавриат)",
-                  "educationalInstitution": "Уральский федеральный университет",
-                  "endDate": "2025-06-30",
-                  "qualification": "Программист"
-              },
-              {
-                  "type": "Высшее образование (магистратура)",
-                  "educationalInstitution": "Уральский федеральный университет",
-                  "endDate": "2027-06-30",
-                  "qualification": "Ваще крутой магистр"
-              }
-          ]
-      },
-      {
-          "id": 26,
-          "avatarUrl": null,
-          "firstName": "Дмитрий",
-          "lastName": "Козаченко",
-          "patronymic": "Сергеевич",
-          "birthDate": "2002-12-21",
-          "phoneNumber": "+71234567891",
-          "workEmail": "workEmail@mail.ru",
-          "personalEmail": "personalEmail@mail.ru",
-          "departmentId": 2,
-          "postId": 1,
-          "workFormat": "В офисе",
-          "achievements": [
-              {
-                  "type": "Повышение в должности",
-                  "supportDocument": "Приказ о повышении",
-                  "date": "2023-02-25",
-                  "successRateIncrease": 1
-              },
-              {
-                  "type": "Статус крутости повышен",
-                  "supportDocument": "Супер пупер документ",
-                  "date": "2002-12-21",
-                  "successRateIncrease": 1
-              }
-          ],
-          "interviewDate": "2022-04-1",
-          "employmentDate": "2022-04-3",
-          "firstWorkDayDate": "2022-04-6",
-          "salary": 70000,
-          "successRate": 2,
-          "isFired": false,
-          "firingDate": null,
-          "vacations": [
-              {
-                  "type": "Отпуск",
-                  "startDate": "2022-04-1",
-                  "endDate": "2022-04-15"
-              },
-              {
-                  "type": "Отпуск",
-                  "startDate": "2023-05-5",
-                  "endDate": "2023-05-21"
-              }
-          ],
-          "education": [
-              {
-                  "type": "Высшее образование (бакалавриат)",
-                  "educationalInstitution": "Уральский федеральный университет",
-                  "endDate": "2025-06-30",
-                  "qualification": "Программист"
-              },
-              {
-                  "type": "Высшее образование (магистратура)",
-                  "educationalInstitution": "Уральский федеральный университет",
-                  "endDate": "2027-06-30",
-                  "qualification": "Ваще крутой магистр"
-              }
-          ]
-      },
-      {
-          "id": 27,
-          "avatarUrl": null,
-          "firstName": "Дмитрий",
-          "lastName": "Козаченко",
-          "patronymic": "Сергеевич",
-          "birthDate": "2002-12-21",
-          "phoneNumber": "+71234567891",
-          "workEmail": "workEmail@mail.ru",
-          "personalEmail": "personalEmail@mail.ru",
-          "departmentId": 2,
-          "postId": 1,
-          "workFormat": "В офисе",
-          "achievements": [
-              {
-                  "type": "Повышение в должности",
-                  "supportDocument": "Приказ о повышении",
-                  "date": "2023-02-25",
-                  "successRateIncrease": 1
-              },
-              {
-                  "type": "Статус крутости повышен",
-                  "supportDocument": "Супер пупер документ",
-                  "date": "2002-12-21",
-                  "successRateIncrease": 1
-              }
-          ],
-          "interviewDate": "2022-04-1",
-          "employmentDate": "2022-04-3",
-          "firstWorkDayDate": "2022-04-6",
-          "salary": 70000,
-          "successRate": 2,
-          "isFired": false,
-          "firingDate": null,
-          "vacations": [
-              {
-                  "type": "Отпуск",
-                  "startDate": "2022-04-1",
-                  "endDate": "2022-04-15"
-              },
-              {
-                  "type": "Отпуск",
-                  "startDate": "2023-05-5",
-                  "endDate": "2023-05-21"
-              }
-          ],
-          "education": [
-              {
-                  "type": "Высшее образование (бакалавриат)",
-                  "educationalInstitution": "Уральский федеральный университет",
-                  "endDate": "2025-06-30",
-                  "qualification": "Программист"
-              },
-              {
-                  "type": "Высшее образование (магистратура)",
-                  "educationalInstitution": "Уральский федеральный университет",
-                  "endDate": "2027-06-30",
-                  "qualification": "Ваще крутой магистр"
-              }
-          ]
-      },
-      {
-          "id": 28,
-          "avatarUrl": null,
-          "firstName": "Дмитрий",
-          "lastName": "Козаченко",
-          "patronymic": "Сергеевич",
-          "birthDate": "2002-12-21",
-          "phoneNumber": "+71234567891",
-          "workEmail": "workEmail@mail.ru",
-          "personalEmail": "personalEmail@mail.ru",
-          "departmentId": 2,
-          "postId": 1,
-          "workFormat": "В офисе",
-          "achievements": [
-              {
-                  "type": "Повышение в должности",
-                  "supportDocument": "Приказ о повышении",
-                  "date": "2023-02-25",
-                  "successRateIncrease": 1
-              },
-              {
-                  "type": "Статус крутости повышен",
-                  "supportDocument": "Супер пупер документ",
-                  "date": "2002-12-21",
-                  "successRateIncrease": 1
-              }
-          ],
-          "interviewDate": "2022-04-1",
-          "employmentDate": "2022-04-3",
-          "firstWorkDayDate": "2022-04-6",
-          "salary": 70000,
-          "successRate": 2,
-          "isFired": false,
-          "firingDate": null,
-          "vacations": [
-              {
-                  "type": "Отпуск",
-                  "startDate": "2022-04-1",
-                  "endDate": "2022-04-15"
-              },
-              {
-                  "type": "Отпуск",
-                  "startDate": "2023-05-5",
-                  "endDate": "2023-05-21"
-              }
-          ],
-          "education": [
-              {
-                  "type": "Высшее образование (бакалавриат)",
-                  "educationalInstitution": "Уральский федеральный университет",
-                  "endDate": "2025-06-30",
-                  "qualification": "Программист"
-              },
-              {
-                  "type": "Высшее образование (магистратура)",
-                  "educationalInstitution": "Уральский федеральный университет",
-                  "endDate": "2027-06-30",
-                  "qualification": "Ваще крутой магистр"
-              }
-          ]
-      },
-      {
-          "id": 29,
-          "avatarUrl": null,
-          "firstName": "Дмитрий",
-          "lastName": "Козаченко",
-          "patronymic": "Сергеевич",
-          "birthDate": "2002-12-21",
-          "phoneNumber": "+71234567891",
-          "workEmail": "workEmail@mail.ru",
-          "personalEmail": "personalEmail@mail.ru",
-          "departmentId": 2,
-          "postId": 1,
-          "workFormat": "В офисе",
-          "achievements": [
-              {
-                  "type": "Повышение в должности",
-                  "supportDocument": "Приказ о повышении",
-                  "date": "2023-02-25",
-                  "successRateIncrease": 1
-              },
-              {
-                  "type": "Статус крутости повышен",
-                  "supportDocument": "Супер пупер документ",
-                  "date": "2002-12-21",
-                  "successRateIncrease": 1
-              }
-          ],
-          "interviewDate": "2022-04-1",
-          "employmentDate": "2022-04-3",
-          "firstWorkDayDate": "2022-04-6",
-          "salary": 70000,
-          "successRate": 2,
-          "isFired": false,
-          "firingDate": null,
-          "vacations": [
-              {
-                  "type": "Отпуск",
-                  "startDate": "2022-04-1",
-                  "endDate": "2022-04-15"
-              },
-              {
-                  "type": "Отпуск",
-                  "startDate": "2023-05-5",
-                  "endDate": "2023-05-21"
-              }
-          ],
-          "education": [
-              {
-                  "type": "Высшее образование (бакалавриат)",
-                  "educationalInstitution": "Уральский федеральный университет",
-                  "endDate": "2025-06-30",
-                  "qualification": "Программист"
-              },
-              {
-                  "type": "Высшее образование (магистратура)",
-                  "educationalInstitution": "Уральский федеральный университет",
-                  "endDate": "2027-06-30",
-                  "qualification": "Ваще крутой магистр"
-              }
-          ]
-      },
-      {
-          "id": 30,
-          "avatarUrl": null,
-          "firstName": "Дмитрий",
-          "lastName": "Козаченко",
-          "patronymic": "Сергеевич",
-          "birthDate": "2002-12-21",
-          "phoneNumber": "+71234567891",
-          "workEmail": "workEmail@mail.ru",
-          "personalEmail": "personalEmail@mail.ru",
-          "departmentId": 2,
-          "postId": 1,
-          "workFormat": "В офисе",
-          "achievements": [
-              {
-                  "type": "Повышение в должности",
-                  "supportDocument": "Приказ о повышении",
-                  "date": "2023-02-25",
-                  "successRateIncrease": 1
-              },
-              {
-                  "type": "Статус крутости повышен",
-                  "supportDocument": "Супер пупер документ",
-                  "date": "2002-12-21",
-                  "successRateIncrease": 1
-              }
-          ],
-          "interviewDate": "2022-04-1",
-          "employmentDate": "2022-04-3",
-          "firstWorkDayDate": "2022-04-6",
-          "salary": 70000,
-          "successRate": 2,
-          "isFired": false,
-          "firingDate": null,
-          "vacations": [
-              {
-                  "type": "Отпуск",
-                  "startDate": "2022-04-1",
-                  "endDate": "2022-04-15"
-              },
-              {
-                  "type": "Отпуск",
-                  "startDate": "2023-05-5",
-                  "endDate": "2023-05-21"
-              }
-          ],
-          "education": [
-              {
-                  "type": "Высшее образование (бакалавриат)",
-                  "educationalInstitution": "Уральский федеральный университет",
-                  "endDate": "2025-06-30",
-                  "qualification": "Программист"
-              },
-              {
-                  "type": "Высшее образование (магистратура)",
-                  "educationalInstitution": "Уральский федеральный университет",
-                  "endDate": "2027-06-30",
-                  "qualification": "Ваще крутой магистр"
-              }
-          ]
-      },
-      {
-          "id": 31,
-          "avatarUrl": null,
-          "firstName": "Дмитрий",
-          "lastName": "Козаченко",
-          "patronymic": "Сергеевич",
-          "birthDate": "2002-12-21",
-          "phoneNumber": "+71234567891",
-          "workEmail": "workEmail@mail.ru",
-          "personalEmail": "personalEmail@mail.ru",
-          "departmentId": 2,
-          "postId": 1,
-          "workFormat": "В офисе",
-          "achievements": [
-              {
-                  "type": "Повышение в должности",
-                  "supportDocument": "Приказ о повышении",
-                  "date": "2023-02-25",
-                  "successRateIncrease": 1
-              },
-              {
-                  "type": "Статус крутости повышен",
-                  "supportDocument": "Супер пупер документ",
-                  "date": "2002-12-21",
-                  "successRateIncrease": 1
-              }
-          ],
-          "interviewDate": "2022-04-1",
-          "employmentDate": "2022-04-3",
-          "firstWorkDayDate": "2022-04-6",
-          "salary": 70000,
-          "successRate": 2,
-          "isFired": false,
-          "firingDate": null,
-          "vacations": [
-              {
-                  "type": "Отпуск",
-                  "startDate": "2022-04-1",
-                  "endDate": "2022-04-15"
-              },
-              {
-                  "type": "Отпуск",
-                  "startDate": "2023-05-5",
-                  "endDate": "2023-05-21"
-              }
-          ],
-          "education": [
-              {
-                  "type": "Высшее образование (бакалавриат)",
-                  "educationalInstitution": "Уральский федеральный университет",
-                  "endDate": "2025-06-30",
-                  "qualification": "Программист"
-              },
-              {
-                  "type": "Высшее образование (магистратура)",
-                  "educationalInstitution": "Уральский федеральный университет",
-                  "endDate": "2027-06-30",
-                  "qualification": "Ваще крутой магистр"
-              }
-          ]
-      },
-      {
-          "id": 33,
-          "avatarUrl": null,
-          "firstName": "Дмитрий",
-          "lastName": "Козаченко",
-          "patronymic": "Сергеевич",
-          "birthDate": "2002-12-21",
-          "phoneNumber": "+71234567891",
-          "workEmail": "workEmail@mail.ru",
-          "personalEmail": "personalEmail@mail.ru",
-          "departmentId": 2,
-          "postId": 1,
-          "workFormat": "В офисе",
-          "achievements": [
-              {
-                  "type": "Повышение в должности",
-                  "supportDocument": "Приказ о повышении",
-                  "date": "2023-02-25",
-                  "successRateIncrease": 1
-              },
-              {
-                  "type": "Статус крутости повышен",
-                  "supportDocument": "Супер пупер документ",
-                  "date": "2002-12-21",
-                  "successRateIncrease": 1
-              }
-          ],
-          "interviewDate": "2022-04-1",
-          "employmentDate": "2022-04-3",
-          "firstWorkDayDate": "2022-04-6",
-          "salary": 70000,
-          "successRate": 2,
-          "isFired": false,
-          "firingDate": null,
-          "vacations": [
-              {
-                  "type": "Отпуск",
-                  "startDate": "2022-04-1",
-                  "endDate": "2022-04-15"
-              },
-              {
-                  "type": "Отпуск",
-                  "startDate": "2023-05-5",
-                  "endDate": "2023-05-21"
-              }
-          ],
-          "education": [
-              {
-                  "type": "Высшее образование (бакалавриат)",
-                  "educationalInstitution": "Уральский федеральный университет",
-                  "endDate": "2025-06-30",
-                  "qualification": "Программист"
-              },
-              {
-                  "type": "Высшее образование (магистратура)",
-                  "educationalInstitution": "Уральский федеральный университет",
-                  "endDate": "2027-06-30",
-                  "qualification": "Ваще крутой магистр"
-              }
-          ]
-      },
-      {
-          "id": 34,
-          "avatarUrl": null,
-          "firstName": "Дмитрий",
-          "lastName": "Козаченко",
-          "patronymic": "Сергеевич",
-          "birthDate": "2002-12-21",
-          "phoneNumber": "+71234567891",
-          "workEmail": "workEmail@mail.ru",
-          "personalEmail": "personalEmail@mail.ru",
-          "departmentId": 2,
-          "postId": 1,
-          "workFormat": "В офисе",
-          "achievements": [
-              {
-                  "type": "Повышение в должности",
-                  "supportDocument": "Приказ о повышении",
-                  "date": "2023-02-25",
-                  "successRateIncrease": 1
-              },
-              {
-                  "type": "Статус крутости повышен",
-                  "supportDocument": "Супер пупер документ",
-                  "date": "2002-12-21",
-                  "successRateIncrease": 1
-              }
-          ],
-          "interviewDate": "2022-04-1",
-          "employmentDate": "2022-04-3",
-          "firstWorkDayDate": "2022-04-6",
-          "salary": 70000,
-          "successRate": 2,
-          "isFired": false,
-          "firingDate": null,
-          "vacations": [
-              {
-                  "type": "Отпуск",
-                  "startDate": "2022-04-1",
-                  "endDate": "2022-04-15"
-              },
-              {
-                  "type": "Отпуск",
-                  "startDate": "2023-05-5",
-                  "endDate": "2023-05-21"
-              }
-          ],
-          "education": [
-              {
-                  "type": "Высшее образование (бакалавриат)",
-                  "educationalInstitution": "Уральский федеральный университет",
-                  "endDate": "2025-06-30",
-                  "qualification": "Программист"
-              },
-              {
-                  "type": "Высшее образование (магистратура)",
-                  "educationalInstitution": "Уральский федеральный университет",
-                  "endDate": "2027-06-30",
-                  "qualification": "Ваще крутой магистр"
-              }
-          ]
-      },
-      {
-          "id": 35,
-          "avatarUrl": null,
-          "firstName": "Дмитрий",
-          "lastName": "Козаченко",
-          "patronymic": "Сергеевич",
-          "birthDate": "2002-12-21",
-          "phoneNumber": "+71234567891",
-          "workEmail": "workEmail@mail.ru",
-          "personalEmail": "personalEmail@mail.ru",
-          "departmentId": 2,
-          "postId": 1,
-          "workFormat": "В офисе",
-          "achievements": [
-              {
-                  "type": "Повышение в должности",
-                  "supportDocument": "Приказ о повышении",
-                  "date": "2023-02-25",
-                  "successRateIncrease": 1
-              },
-              {
-                  "type": "Статус крутости повышен",
-                  "supportDocument": "Супер пупер документ",
-                  "date": "2002-12-21",
-                  "successRateIncrease": 1
-              }
-          ],
-          "interviewDate": "2022-04-1",
-          "employmentDate": "2022-04-3",
-          "firstWorkDayDate": "2022-04-6",
-          "salary": 70000,
-          "successRate": 2,
-          "isFired": false,
-          "firingDate": null,
-          "vacations": [
-              {
-                  "type": "Отпуск",
-                  "startDate": "2022-04-1",
-                  "endDate": "2022-04-15"
-              },
-              {
-                  "type": "Отпуск",
-                  "startDate": "2023-05-5",
-                  "endDate": "2023-05-21"
-              }
-          ],
-          "education": [
-              {
-                  "type": "Высшее образование (бакалавриат)",
-                  "educationalInstitution": "Уральский федеральный университет",
-                  "endDate": "2025-06-30",
-                  "qualification": "Программист"
-              },
-              {
-                  "type": "Высшее образование (магистратура)",
-                  "educationalInstitution": "Уральский федеральный университет",
-                  "endDate": "2027-06-30",
-                  "qualification": "Ваще крутой магистр"
-              }
-          ]
-      },
-      {
-          "id": 36,
-          "avatarUrl": null,
-          "firstName": "Дмитрий",
-          "lastName": "Козаченко",
-          "patronymic": "Сергеевич",
-          "birthDate": "2002-12-21",
-          "phoneNumber": "+71234567891",
-          "workEmail": "workEmail@mail.ru",
-          "personalEmail": "personalEmail@mail.ru",
-          "departmentId": 2,
-          "postId": 1,
-          "workFormat": "В офисе",
-          "achievements": [
-              {
-                  "type": "Повышение в должности",
-                  "supportDocument": "Приказ о повышении",
-                  "date": "2023-02-25",
-                  "successRateIncrease": 1
-              },
-              {
-                  "type": "Статус крутости повышен",
-                  "supportDocument": "Супер пупер документ",
-                  "date": "2002-12-21",
-                  "successRateIncrease": 1
-              }
-          ],
-          "interviewDate": "2022-04-1",
-          "employmentDate": "2022-04-3",
-          "firstWorkDayDate": "2022-04-6",
-          "salary": 70000,
-          "successRate": 2,
-          "isFired": false,
-          "firingDate": null,
-          "vacations": [
-              {
-                  "type": "Отпуск",
-                  "startDate": "2022-04-1",
-                  "endDate": "2022-04-15"
-              },
-              {
-                  "type": "Отпуск",
-                  "startDate": "2023-05-5",
-                  "endDate": "2023-05-21"
-              }
-          ],
-          "education": [
-              {
-                  "type": "Высшее образование (бакалавриат)",
-                  "educationalInstitution": "Уральский федеральный университет",
-                  "endDate": "2025-06-30",
-                  "qualification": "Программист"
-              },
-              {
-                  "type": "Высшее образование (магистратура)",
-                  "educationalInstitution": "Уральский федеральный университет",
-                  "endDate": "2027-06-30",
-                  "qualification": "Ваще крутой магистр"
-              }
-          ]
-      },
-      {
-          "id": 37,
-          "avatarUrl": null,
-          "firstName": "Дмитрий",
-          "lastName": "Козаченко",
-          "patronymic": "Сергеевич",
-          "birthDate": "2002-12-21",
-          "phoneNumber": "+71234567891",
-          "workEmail": "workEmail@mail.ru",
-          "personalEmail": "personalEmail@mail.ru",
-          "departmentId": 2,
-          "postId": 1,
-          "workFormat": "В офисе",
-          "achievements": [
-              {
-                  "type": "Повышение в должности",
-                  "supportDocument": "Приказ о повышении",
-                  "date": "2023-02-25",
-                  "successRateIncrease": 1
-              },
-              {
-                  "type": "Статус крутости повышен",
-                  "supportDocument": "Супер пупер документ",
-                  "date": "2002-12-21",
-                  "successRateIncrease": 1
-              }
-          ],
-          "interviewDate": "2022-04-1",
-          "employmentDate": "2022-04-3",
-          "firstWorkDayDate": "2022-04-6",
-          "salary": 70000,
-          "successRate": 2,
-          "isFired": false,
-          "firingDate": null,
-          "vacations": [
-              {
-                  "type": "Отпуск",
-                  "startDate": "2022-04-1",
-                  "endDate": "2022-04-15"
-              },
-              {
-                  "type": "Отпуск",
-                  "startDate": "2023-05-5",
-                  "endDate": "2023-05-21"
-              }
-          ],
-          "education": [
-              {
-                  "type": "Высшее образование (бакалавриат)",
-                  "educationalInstitution": "Уральский федеральный университет",
-                  "endDate": "2025-06-30",
-                  "qualification": "Программист"
-              },
-              {
-                  "type": "Высшее образование (магистратура)",
-                  "educationalInstitution": "Уральский федеральный университет",
-                  "endDate": "2027-06-30",
-                  "qualification": "Ваще крутой магистр"
-              }
-          ]
-      },
-      {
-          "id": 38,
-          "avatarUrl": null,
-          "firstName": "Дмитрий",
-          "lastName": "Козаченко",
-          "patronymic": "Сергеевич",
-          "birthDate": "2002-12-21",
-          "phoneNumber": "+71234567891",
-          "workEmail": "workEmail@mail.ru",
-          "personalEmail": "personalEmail@mail.ru",
-          "departmentId": 2,
-          "postId": 1,
-          "workFormat": "В офисе",
-          "achievements": [
-              {
-                  "type": "Повышение в должности",
-                  "supportDocument": "Приказ о повышении",
-                  "date": "2023-02-25",
-                  "successRateIncrease": 1
-              },
-              {
-                  "type": "Статус крутости повышен",
-                  "supportDocument": "Супер пупер документ",
-                  "date": "2002-12-21",
-                  "successRateIncrease": 1
-              }
-          ],
-          "interviewDate": "2022-04-1",
-          "employmentDate": "2022-04-3",
-          "firstWorkDayDate": "2022-04-6",
-          "salary": 70000,
-          "successRate": 2,
-          "isFired": false,
-          "firingDate": null,
-          "vacations": [
-              {
-                  "type": "Отпуск",
-                  "startDate": "2022-04-1",
-                  "endDate": "2022-04-15"
-              },
-              {
-                  "type": "Отпуск",
-                  "startDate": "2023-05-5",
-                  "endDate": "2023-05-21"
-              }
-          ],
-          "education": [
-              {
-                  "type": "Высшее образование (бакалавриат)",
-                  "educationalInstitution": "Уральский федеральный университет",
-                  "endDate": "2025-06-30",
-                  "qualification": "Программист"
-              },
-              {
-                  "type": "Высшее образование (магистратура)",
-                  "educationalInstitution": "Уральский федеральный университет",
-                  "endDate": "2027-06-30",
-                  "qualification": "Ваще крутой магистр"
-              }
-          ]
-      },
-      {
-          "id": 39,
-          "avatarUrl": null,
-          "firstName": "Дмитрий",
-          "lastName": "Козаченко",
-          "patronymic": "Сергеевич",
-          "birthDate": "2002-12-21",
-          "phoneNumber": "+71234567891",
-          "workEmail": "workEmail@mail.ru",
-          "personalEmail": "personalEmail@mail.ru",
-          "departmentId": 2,
-          "postId": 1,
-          "workFormat": "В офисе",
-          "achievements": [
-              {
-                  "type": "Повышение в должности",
-                  "supportDocument": "Приказ о повышении",
-                  "date": "2023-02-25",
-                  "successRateIncrease": 1
-              },
-              {
-                  "type": "Статус крутости повышен",
-                  "supportDocument": "Супер пупер документ",
-                  "date": "2002-12-21",
-                  "successRateIncrease": 1
-              }
-          ],
-          "interviewDate": "2022-04-1",
-          "employmentDate": "2022-04-3",
-          "firstWorkDayDate": "2022-04-6",
-          "salary": 70000,
-          "successRate": 2,
-          "isFired": false,
-          "firingDate": null,
-          "vacations": [
-              {
-                  "type": "Отпуск",
-                  "startDate": "2022-04-1",
-                  "endDate": "2022-04-15"
-              },
-              {
-                  "type": "Отпуск",
-                  "startDate": "2023-05-5",
-                  "endDate": "2023-05-21"
-              }
-          ],
-          "education": [
-              {
-                  "type": "Высшее образование (бакалавриат)",
-                  "educationalInstitution": "Уральский федеральный университет",
-                  "endDate": "2025-06-30",
-                  "qualification": "Программист"
-              },
-              {
-                  "type": "Высшее образование (магистратура)",
-                  "educationalInstitution": "Уральский федеральный университет",
-                  "endDate": "2027-06-30",
-                  "qualification": "Ваще крутой магистр"
-              }
-          ]
-      },
-      {
-          "id": 40,
-          "avatarUrl": null,
-          "firstName": "Дмитрий",
-          "lastName": "Козаченко",
-          "patronymic": "Сергеевич",
-          "birthDate": "2002-12-21",
-          "phoneNumber": "+71234567891",
-          "workEmail": "workEmail@mail.ru",
-          "personalEmail": "personalEmail@mail.ru",
-          "departmentId": 2,
-          "postId": 1,
-          "workFormat": "В офисе",
-          "achievements": [
-              {
-                  "type": "Повышение в должности",
-                  "supportDocument": "Приказ о повышении",
-                  "date": "2023-02-25",
-                  "successRateIncrease": 1
-              },
-              {
-                  "type": "Статус крутости повышен",
-                  "supportDocument": "Супер пупер документ",
-                  "date": "2002-12-21",
-                  "successRateIncrease": 1
-              }
-          ],
-          "interviewDate": "2022-04-1",
-          "employmentDate": "2022-04-3",
-          "firstWorkDayDate": "2022-04-6",
-          "salary": 70000,
-          "successRate": 2,
-          "isFired": false,
-          "firingDate": null,
-          "vacations": [
-              {
-                  "type": "Отпуск",
-                  "startDate": "2022-04-1",
-                  "endDate": "2022-04-15"
-              },
-              {
-                  "type": "Отпуск",
-                  "startDate": "2023-05-5",
-                  "endDate": "2023-05-21"
-              }
-          ],
-          "education": [
-              {
-                  "type": "Высшее образование (бакалавриат)",
-                  "educationalInstitution": "Уральский федеральный университет",
-                  "endDate": "2025-06-30",
-                  "qualification": "Программист"
-              },
-              {
-                  "type": "Высшее образование (магистратура)",
-                  "educationalInstitution": "Уральский федеральный университет",
-                  "endDate": "2027-06-30",
-                  "qualification": "Ваще крутой магистр"
-              }
-          ]
-      }
+    {
+      "id": 5,
+      "avatarUrl": null,
+      "firstName": "Дмитрий",
+      "lastName": "Козаченко",
+      "patronymic": "Сергеевич",
+      "birthDate": "2002-12-21",
+      "phoneNumber": "+71234567891",
+      "workEmail": "workEmail@mail.ru",
+      "personalEmail": "personalEmail@mail.ru",
+      "departmentId": 2,
+      "postId": 1,
+      "workFormat": "В офисе",
+      "achievements": [
+        {
+          "type": "Повышение в должности",
+          "supportDocument": "Приказ о повышении",
+          "date": "2023-02-25",
+          "successRateIncrease": 1
+        },
+        {
+          "type": "Статус крутости повышен",
+          "supportDocument": "Супер пупер документ",
+          "date": "2002-12-21",
+          "successRateIncrease": 1
+        }
+      ],
+      "interviewDate": "2022-04-1",
+      "employmentDate": "2022-04-3",
+      "firstWorkDayDate": "2022-04-6",
+      "salary": 70000,
+      "successRate": 2,
+      "isFired": false,
+      "firingDate": null,
+      "vacations": [
+        {
+          "type": "Отпуск",
+          "startDate": "2022-04-1",
+          "endDate": "2022-04-15"
+        },
+        {
+          "type": "Отпуск",
+          "startDate": "2023-05-5",
+          "endDate": "2023-05-21"
+        }
+      ],
+      "education": [
+        {
+          "type": "Высшее образование (бакалавриат)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2025-06-30",
+          "qualification": "Программист"
+        },
+        {
+          "type": "Высшее образование (магистратура)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2027-06-30",
+          "qualification": "Ваще крутой магистр"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "avatarUrl": null,
+      "firstName": "Дмитрий",
+      "lastName": "Козаченко",
+      "patronymic": "Сергеевич",
+      "birthDate": "2002-12-21",
+      "phoneNumber": "+71234567891",
+      "workEmail": "workEmail@mail.ru",
+      "personalEmail": "personalEmail@mail.ru",
+      "departmentId": 2,
+      "postId": 1,
+      "workFormat": "В офисе",
+      "achievements": [
+        {
+          "type": "Повышение в должности",
+          "supportDocument": "Приказ о повышении",
+          "date": "2023-02-25",
+          "successRateIncrease": 1
+        },
+        {
+          "type": "Статус крутости повышен",
+          "supportDocument": "Супер пупер документ",
+          "date": "2002-12-21",
+          "successRateIncrease": 1
+        }
+      ],
+      "interviewDate": "2022-04-1",
+      "employmentDate": "2022-04-3",
+      "firstWorkDayDate": "2022-04-6",
+      "salary": 70000,
+      "successRate": 2,
+      "isFired": false,
+      "firingDate": null,
+      "vacations": [
+        {
+          "type": "Отпуск",
+          "startDate": "2022-04-1",
+          "endDate": "2022-04-15"
+        },
+        {
+          "type": "Отпуск",
+          "startDate": "2023-05-5",
+          "endDate": "2023-05-21"
+        }
+      ],
+      "education": [
+        {
+          "type": "Высшее образование (бакалавриат)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2025-06-30",
+          "qualification": "Программист"
+        },
+        {
+          "type": "Высшее образование (магистратура)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2027-06-30",
+          "qualification": "Ваще крутой магистр"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "avatarUrl": null,
+      "firstName": "Дмитрий",
+      "lastName": "Козаченко",
+      "patronymic": "Сергеевич",
+      "birthDate": "2002-12-21",
+      "phoneNumber": "+71234567891",
+      "workEmail": "workEmail@mail.ru",
+      "personalEmail": "personalEmail@mail.ru",
+      "departmentId": 2,
+      "postId": 1,
+      "workFormat": "В офисе",
+      "achievements": [
+        {
+          "type": "Повышение в должности",
+          "supportDocument": "Приказ о повышении",
+          "date": "2023-02-25",
+          "successRateIncrease": 1
+        },
+        {
+          "type": "Статус крутости повышен",
+          "supportDocument": "Супер пупер документ",
+          "date": "2002-12-21",
+          "successRateIncrease": 1
+        }
+      ],
+      "interviewDate": "2022-04-1",
+      "employmentDate": "2022-04-3",
+      "firstWorkDayDate": "2022-04-6",
+      "salary": 70000,
+      "successRate": 2,
+      "isFired": false,
+      "firingDate": null,
+      "vacations": [
+        {
+          "type": "Отпуск",
+          "startDate": "2022-04-1",
+          "endDate": "2022-04-15"
+        },
+        {
+          "type": "Отпуск",
+          "startDate": "2023-05-5",
+          "endDate": "2023-05-21"
+        }
+      ],
+      "education": [
+        {
+          "type": "Высшее образование (бакалавриат)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2025-06-30",
+          "qualification": "Программист"
+        },
+        {
+          "type": "Высшее образование (магистратура)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2027-06-30",
+          "qualification": "Ваще крутой магистр"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "avatarUrl": null,
+      "firstName": "Дмитрий",
+      "lastName": "Козаченко",
+      "patronymic": "Сергеевич",
+      "birthDate": "2002-12-21",
+      "phoneNumber": "+71234567891",
+      "workEmail": "workEmail@mail.ru",
+      "personalEmail": "personalEmail@mail.ru",
+      "departmentId": 2,
+      "postId": 1,
+      "workFormat": "В офисе",
+      "achievements": [
+        {
+          "type": "Повышение в должности",
+          "supportDocument": "Приказ о повышении",
+          "date": "2023-02-25",
+          "successRateIncrease": 1
+        },
+        {
+          "type": "Статус крутости повышен",
+          "supportDocument": "Супер пупер документ",
+          "date": "2002-12-21",
+          "successRateIncrease": 1
+        }
+      ],
+      "interviewDate": "2022-04-1",
+      "employmentDate": "2022-04-3",
+      "firstWorkDayDate": "2022-04-6",
+      "salary": 70000,
+      "successRate": 2,
+      "isFired": false,
+      "firingDate": null,
+      "vacations": [
+        {
+          "type": "Отпуск",
+          "startDate": "2022-04-1",
+          "endDate": "2022-04-15"
+        },
+        {
+          "type": "Отпуск",
+          "startDate": "2023-05-5",
+          "endDate": "2023-05-21"
+        }
+      ],
+      "education": [
+        {
+          "type": "Высшее образование (бакалавриат)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2025-06-30",
+          "qualification": "Программист"
+        },
+        {
+          "type": "Высшее образование (магистратура)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2027-06-30",
+          "qualification": "Ваще крутой магистр"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "avatarUrl": null,
+      "firstName": "Дмитрий",
+      "lastName": "Козаченко",
+      "patronymic": "Сергеевич",
+      "birthDate": "2002-12-21",
+      "phoneNumber": "+71234567891",
+      "workEmail": "workEmail@mail.ru",
+      "personalEmail": "personalEmail@mail.ru",
+      "departmentId": 2,
+      "postId": 1,
+      "workFormat": "В офисе",
+      "achievements": [
+        {
+          "type": "Повышение в должности",
+          "supportDocument": "Приказ о повышении",
+          "date": "2023-02-25",
+          "successRateIncrease": 1
+        },
+        {
+          "type": "Статус крутости повышен",
+          "supportDocument": "Супер пупер документ",
+          "date": "2002-12-21",
+          "successRateIncrease": 1
+        }
+      ],
+      "interviewDate": "2022-04-1",
+      "employmentDate": "2022-04-3",
+      "firstWorkDayDate": "2022-04-6",
+      "salary": 70000,
+      "successRate": 2,
+      "isFired": false,
+      "firingDate": null,
+      "vacations": [
+        {
+          "type": "Отпуск",
+          "startDate": "2022-04-1",
+          "endDate": "2022-04-15"
+        },
+        {
+          "type": "Отпуск",
+          "startDate": "2023-05-5",
+          "endDate": "2023-05-21"
+        }
+      ],
+      "education": [
+        {
+          "type": "Высшее образование (бакалавриат)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2025-06-30",
+          "qualification": "Программист"
+        },
+        {
+          "type": "Высшее образование (магистратура)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2027-06-30",
+          "qualification": "Ваще крутой магистр"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "avatarUrl": null,
+      "firstName": "Дмитрий",
+      "lastName": "Козаченко",
+      "patronymic": "Сергеевич",
+      "birthDate": "2002-12-21",
+      "phoneNumber": "+71234567891",
+      "workEmail": "workEmail@mail.ru",
+      "personalEmail": "personalEmail@mail.ru",
+      "departmentId": 2,
+      "postId": 1,
+      "workFormat": "В офисе",
+      "achievements": [
+        {
+          "type": "Повышение в должности",
+          "supportDocument": "Приказ о повышении",
+          "date": "2023-02-25",
+          "successRateIncrease": 1
+        },
+        {
+          "type": "Статус крутости повышен",
+          "supportDocument": "Супер пупер документ",
+          "date": "2002-12-21",
+          "successRateIncrease": 1
+        }
+      ],
+      "interviewDate": "2022-04-1",
+      "employmentDate": "2022-04-3",
+      "firstWorkDayDate": "2022-04-6",
+      "salary": 70000,
+      "successRate": 2,
+      "isFired": false,
+      "firingDate": null,
+      "vacations": [
+        {
+          "type": "Отпуск",
+          "startDate": "2022-04-1",
+          "endDate": "2022-04-15"
+        },
+        {
+          "type": "Отпуск",
+          "startDate": "2023-05-5",
+          "endDate": "2023-05-21"
+        }
+      ],
+      "education": [
+        {
+          "type": "Высшее образование (бакалавриат)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2025-06-30",
+          "qualification": "Программист"
+        },
+        {
+          "type": "Высшее образование (магистратура)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2027-06-30",
+          "qualification": "Ваще крутой магистр"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "avatarUrl": null,
+      "firstName": "Дмитрий",
+      "lastName": "Козаченко",
+      "patronymic": "Сергеевич",
+      "birthDate": "2002-12-21",
+      "phoneNumber": "+71234567891",
+      "workEmail": "workEmail@mail.ru",
+      "personalEmail": "personalEmail@mail.ru",
+      "departmentId": 2,
+      "postId": 1,
+      "workFormat": "В офисе",
+      "achievements": [
+        {
+          "type": "Повышение в должности",
+          "supportDocument": "Приказ о повышении",
+          "date": "2023-02-25",
+          "successRateIncrease": 1
+        },
+        {
+          "type": "Статус крутости повышен",
+          "supportDocument": "Супер пупер документ",
+          "date": "2002-12-21",
+          "successRateIncrease": 1
+        }
+      ],
+      "interviewDate": "2022-04-1",
+      "employmentDate": "2022-04-3",
+      "firstWorkDayDate": "2022-04-6",
+      "salary": 70000,
+      "successRate": 2,
+      "isFired": false,
+      "firingDate": null,
+      "vacations": [
+        {
+          "type": "Отпуск",
+          "startDate": "2022-04-1",
+          "endDate": "2022-04-15"
+        },
+        {
+          "type": "Отпуск",
+          "startDate": "2023-05-5",
+          "endDate": "2023-05-21"
+        }
+      ],
+      "education": [
+        {
+          "type": "Высшее образование (бакалавриат)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2025-06-30",
+          "qualification": "Программист"
+        },
+        {
+          "type": "Высшее образование (магистратура)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2027-06-30",
+          "qualification": "Ваще крутой магистр"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "avatarUrl": null,
+      "firstName": "Дмитрий",
+      "lastName": "Козаченко",
+      "patronymic": "Сергеевич",
+      "birthDate": "2002-12-21",
+      "phoneNumber": "+71234567891",
+      "workEmail": "workEmail@mail.ru",
+      "personalEmail": "personalEmail@mail.ru",
+      "departmentId": 2,
+      "postId": 1,
+      "workFormat": "В офисе",
+      "achievements": [
+        {
+          "type": "Повышение в должности",
+          "supportDocument": "Приказ о повышении",
+          "date": "2023-02-25",
+          "successRateIncrease": 1
+        },
+        {
+          "type": "Статус крутости повышен",
+          "supportDocument": "Супер пупер документ",
+          "date": "2002-12-21",
+          "successRateIncrease": 1
+        }
+      ],
+      "interviewDate": "2022-04-1",
+      "employmentDate": "2022-04-3",
+      "firstWorkDayDate": "2022-04-6",
+      "salary": 70000,
+      "successRate": 2,
+      "isFired": false,
+      "firingDate": null,
+      "vacations": [
+        {
+          "type": "Отпуск",
+          "startDate": "2022-04-1",
+          "endDate": "2022-04-15"
+        },
+        {
+          "type": "Отпуск",
+          "startDate": "2023-05-5",
+          "endDate": "2023-05-21"
+        }
+      ],
+      "education": [
+        {
+          "type": "Высшее образование (бакалавриат)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2025-06-30",
+          "qualification": "Программист"
+        },
+        {
+          "type": "Высшее образование (магистратура)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2027-06-30",
+          "qualification": "Ваще крутой магистр"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "avatarUrl": null,
+      "firstName": "Дмитрий",
+      "lastName": "Козаченко",
+      "patronymic": "Сергеевич",
+      "birthDate": "2002-12-21",
+      "phoneNumber": "+71234567891",
+      "workEmail": "workEmail@mail.ru",
+      "personalEmail": "personalEmail@mail.ru",
+      "departmentId": 2,
+      "postId": 1,
+      "workFormat": "В офисе",
+      "achievements": [
+        {
+          "type": "Повышение в должности",
+          "supportDocument": "Приказ о повышении",
+          "date": "2023-02-25",
+          "successRateIncrease": 1
+        },
+        {
+          "type": "Статус крутости повышен",
+          "supportDocument": "Супер пупер документ",
+          "date": "2002-12-21",
+          "successRateIncrease": 1
+        }
+      ],
+      "interviewDate": "2022-04-1",
+      "employmentDate": "2022-04-3",
+      "firstWorkDayDate": "2022-04-6",
+      "salary": 70000,
+      "successRate": 2,
+      "isFired": false,
+      "firingDate": null,
+      "vacations": [
+        {
+          "type": "Отпуск",
+          "startDate": "2022-04-1",
+          "endDate": "2022-04-15"
+        },
+        {
+          "type": "Отпуск",
+          "startDate": "2023-05-5",
+          "endDate": "2023-05-21"
+        }
+      ],
+      "education": [
+        {
+          "type": "Высшее образование (бакалавриат)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2025-06-30",
+          "qualification": "Программист"
+        },
+        {
+          "type": "Высшее образование (магистратура)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2027-06-30",
+          "qualification": "Ваще крутой магистр"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "avatarUrl": null,
+      "firstName": "Дмитрий",
+      "lastName": "Козаченко",
+      "patronymic": "Сергеевич",
+      "birthDate": "2002-12-21",
+      "phoneNumber": "+71234567891",
+      "workEmail": "workEmail@mail.ru",
+      "personalEmail": "personalEmail@mail.ru",
+      "departmentId": 2,
+      "postId": 1,
+      "workFormat": "В офисе",
+      "achievements": [
+        {
+          "type": "Повышение в должности",
+          "supportDocument": "Приказ о повышении",
+          "date": "2023-02-25",
+          "successRateIncrease": 1
+        },
+        {
+          "type": "Статус крутости повышен",
+          "supportDocument": "Супер пупер документ",
+          "date": "2002-12-21",
+          "successRateIncrease": 1
+        }
+      ],
+      "interviewDate": "2022-04-1",
+      "employmentDate": "2022-04-3",
+      "firstWorkDayDate": "2022-04-6",
+      "salary": 70000,
+      "successRate": 2,
+      "isFired": false,
+      "firingDate": null,
+      "vacations": [
+        {
+          "type": "Отпуск",
+          "startDate": "2022-04-1",
+          "endDate": "2022-04-15"
+        },
+        {
+          "type": "Отпуск",
+          "startDate": "2023-05-5",
+          "endDate": "2023-05-21"
+        }
+      ],
+      "education": [
+        {
+          "type": "Высшее образование (бакалавриат)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2025-06-30",
+          "qualification": "Программист"
+        },
+        {
+          "type": "Высшее образование (магистратура)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2027-06-30",
+          "qualification": "Ваще крутой магистр"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "avatarUrl": null,
+      "firstName": "Дмитрий",
+      "lastName": "Козаченко",
+      "patronymic": "Сергеевич",
+      "birthDate": "2002-12-21",
+      "phoneNumber": "+71234567891",
+      "workEmail": "workEmail@mail.ru",
+      "personalEmail": "personalEmail@mail.ru",
+      "departmentId": 2,
+      "postId": 1,
+      "workFormat": "В офисе",
+      "achievements": [
+        {
+          "type": "Повышение в должности",
+          "supportDocument": "Приказ о повышении",
+          "date": "2023-02-25",
+          "successRateIncrease": 1
+        },
+        {
+          "type": "Статус крутости повышен",
+          "supportDocument": "Супер пупер документ",
+          "date": "2002-12-21",
+          "successRateIncrease": 1
+        }
+      ],
+      "interviewDate": "2022-04-1",
+      "employmentDate": "2022-04-3",
+      "firstWorkDayDate": "2022-04-6",
+      "salary": 70000,
+      "successRate": 2,
+      "isFired": false,
+      "firingDate": null,
+      "vacations": [
+        {
+          "type": "Отпуск",
+          "startDate": "2022-04-1",
+          "endDate": "2022-04-15"
+        },
+        {
+          "type": "Отпуск",
+          "startDate": "2023-05-5",
+          "endDate": "2023-05-21"
+        }
+      ],
+      "education": [
+        {
+          "type": "Высшее образование (бакалавриат)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2025-06-30",
+          "qualification": "Программист"
+        },
+        {
+          "type": "Высшее образование (магистратура)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2027-06-30",
+          "qualification": "Ваще крутой магистр"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "avatarUrl": null,
+      "firstName": "Дмитрий",
+      "lastName": "Козаченко",
+      "patronymic": "Сергеевич",
+      "birthDate": "2002-12-21",
+      "phoneNumber": "+71234567891",
+      "workEmail": "workEmail@mail.ru",
+      "personalEmail": "personalEmail@mail.ru",
+      "departmentId": 2,
+      "postId": 1,
+      "workFormat": "В офисе",
+      "achievements": [
+        {
+          "type": "Повышение в должности",
+          "supportDocument": "Приказ о повышении",
+          "date": "2023-02-25",
+          "successRateIncrease": 1
+        },
+        {
+          "type": "Статус крутости повышен",
+          "supportDocument": "Супер пупер документ",
+          "date": "2002-12-21",
+          "successRateIncrease": 1
+        }
+      ],
+      "interviewDate": "2022-04-1",
+      "employmentDate": "2022-04-3",
+      "firstWorkDayDate": "2022-04-6",
+      "salary": 70000,
+      "successRate": 2,
+      "isFired": false,
+      "firingDate": null,
+      "vacations": [
+        {
+          "type": "Отпуск",
+          "startDate": "2022-04-1",
+          "endDate": "2022-04-15"
+        },
+        {
+          "type": "Отпуск",
+          "startDate": "2023-05-5",
+          "endDate": "2023-05-21"
+        }
+      ],
+      "education": [
+        {
+          "type": "Высшее образование (бакалавриат)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2025-06-30",
+          "qualification": "Программист"
+        },
+        {
+          "type": "Высшее образование (магистратура)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2027-06-30",
+          "qualification": "Ваще крутой магистр"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "avatarUrl": null,
+      "firstName": "Дмитрий",
+      "lastName": "Козаченко",
+      "patronymic": "Сергеевич",
+      "birthDate": "2002-12-21",
+      "phoneNumber": "+71234567891",
+      "workEmail": "workEmail@mail.ru",
+      "personalEmail": "personalEmail@mail.ru",
+      "departmentId": 2,
+      "postId": 1,
+      "workFormat": "В офисе",
+      "achievements": [
+        {
+          "type": "Повышение в должности",
+          "supportDocument": "Приказ о повышении",
+          "date": "2023-02-25",
+          "successRateIncrease": 1
+        },
+        {
+          "type": "Статус крутости повышен",
+          "supportDocument": "Супер пупер документ",
+          "date": "2002-12-21",
+          "successRateIncrease": 1
+        }
+      ],
+      "interviewDate": "2022-04-1",
+      "employmentDate": "2022-04-3",
+      "firstWorkDayDate": "2022-04-6",
+      "salary": 70000,
+      "successRate": 2,
+      "isFired": false,
+      "firingDate": null,
+      "vacations": [
+        {
+          "type": "Отпуск",
+          "startDate": "2022-04-1",
+          "endDate": "2022-04-15"
+        },
+        {
+          "type": "Отпуск",
+          "startDate": "2023-05-5",
+          "endDate": "2023-05-21"
+        }
+      ],
+      "education": [
+        {
+          "type": "Высшее образование (бакалавриат)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2025-06-30",
+          "qualification": "Программист"
+        },
+        {
+          "type": "Высшее образование (магистратура)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2027-06-30",
+          "qualification": "Ваще крутой магистр"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "avatarUrl": null,
+      "firstName": "Дмитрий",
+      "lastName": "Козаченко",
+      "patronymic": "Сергеевич",
+      "birthDate": "2002-12-21",
+      "phoneNumber": "+71234567891",
+      "workEmail": "workEmail@mail.ru",
+      "personalEmail": "personalEmail@mail.ru",
+      "departmentId": 2,
+      "postId": 1,
+      "workFormat": "В офисе",
+      "achievements": [
+        {
+          "type": "Повышение в должности",
+          "supportDocument": "Приказ о повышении",
+          "date": "2023-02-25",
+          "successRateIncrease": 1
+        },
+        {
+          "type": "Статус крутости повышен",
+          "supportDocument": "Супер пупер документ",
+          "date": "2002-12-21",
+          "successRateIncrease": 1
+        }
+      ],
+      "interviewDate": "2022-04-1",
+      "employmentDate": "2022-04-3",
+      "firstWorkDayDate": "2022-04-6",
+      "salary": 70000,
+      "successRate": 2,
+      "isFired": false,
+      "firingDate": null,
+      "vacations": [
+        {
+          "type": "Отпуск",
+          "startDate": "2022-04-1",
+          "endDate": "2022-04-15"
+        },
+        {
+          "type": "Отпуск",
+          "startDate": "2023-05-5",
+          "endDate": "2023-05-21"
+        }
+      ],
+      "education": [
+        {
+          "type": "Высшее образование (бакалавриат)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2025-06-30",
+          "qualification": "Программист"
+        },
+        {
+          "type": "Высшее образование (магистратура)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2027-06-30",
+          "qualification": "Ваще крутой магистр"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "avatarUrl": null,
+      "firstName": "Дмитрий",
+      "lastName": "Козаченко",
+      "patronymic": "Сергеевич",
+      "birthDate": "2002-12-21",
+      "phoneNumber": "+71234567891",
+      "workEmail": "workEmail@mail.ru",
+      "personalEmail": "personalEmail@mail.ru",
+      "departmentId": 2,
+      "postId": 1,
+      "workFormat": "В офисе",
+      "achievements": [
+        {
+          "type": "Повышение в должности",
+          "supportDocument": "Приказ о повышении",
+          "date": "2023-02-25",
+          "successRateIncrease": 1
+        },
+        {
+          "type": "Статус крутости повышен",
+          "supportDocument": "Супер пупер документ",
+          "date": "2002-12-21",
+          "successRateIncrease": 1
+        }
+      ],
+      "interviewDate": "2022-04-1",
+      "employmentDate": "2022-04-3",
+      "firstWorkDayDate": "2022-04-6",
+      "salary": 70000,
+      "successRate": 2,
+      "isFired": false,
+      "firingDate": null,
+      "vacations": [
+        {
+          "type": "Отпуск",
+          "startDate": "2022-04-1",
+          "endDate": "2022-04-15"
+        },
+        {
+          "type": "Отпуск",
+          "startDate": "2023-05-5",
+          "endDate": "2023-05-21"
+        }
+      ],
+      "education": [
+        {
+          "type": "Высшее образование (бакалавриат)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2025-06-30",
+          "qualification": "Программист"
+        },
+        {
+          "type": "Высшее образование (магистратура)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2027-06-30",
+          "qualification": "Ваще крутой магистр"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "avatarUrl": null,
+      "firstName": "Дмитрий",
+      "lastName": "Козаченко",
+      "patronymic": "Сергеевич",
+      "birthDate": "2002-12-21",
+      "phoneNumber": "+71234567891",
+      "workEmail": "workEmail@mail.ru",
+      "personalEmail": "personalEmail@mail.ru",
+      "departmentId": 2,
+      "postId": 1,
+      "workFormat": "В офисе",
+      "achievements": [
+        {
+          "type": "Повышение в должности",
+          "supportDocument": "Приказ о повышении",
+          "date": "2023-02-25",
+          "successRateIncrease": 1
+        },
+        {
+          "type": "Статус крутости повышен",
+          "supportDocument": "Супер пупер документ",
+          "date": "2002-12-21",
+          "successRateIncrease": 1
+        }
+      ],
+      "interviewDate": "2022-04-1",
+      "employmentDate": "2022-04-3",
+      "firstWorkDayDate": "2022-04-6",
+      "salary": 70000,
+      "successRate": 2,
+      "isFired": false,
+      "firingDate": null,
+      "vacations": [
+        {
+          "type": "Отпуск",
+          "startDate": "2022-04-1",
+          "endDate": "2022-04-15"
+        },
+        {
+          "type": "Отпуск",
+          "startDate": "2023-05-5",
+          "endDate": "2023-05-21"
+        }
+      ],
+      "education": [
+        {
+          "type": "Высшее образование (бакалавриат)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2025-06-30",
+          "qualification": "Программист"
+        },
+        {
+          "type": "Высшее образование (магистратура)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2027-06-30",
+          "qualification": "Ваще крутой магистр"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "avatarUrl": null,
+      "firstName": "Дмитрий",
+      "lastName": "Козаченко",
+      "patronymic": "Сергеевич",
+      "birthDate": "2002-12-21",
+      "phoneNumber": "+71234567891",
+      "workEmail": "workEmail@mail.ru",
+      "personalEmail": "personalEmail@mail.ru",
+      "departmentId": 2,
+      "postId": 1,
+      "workFormat": "В офисе",
+      "achievements": [
+        {
+          "type": "Повышение в должности",
+          "supportDocument": "Приказ о повышении",
+          "date": "2023-02-25",
+          "successRateIncrease": 1
+        },
+        {
+          "type": "Статус крутости повышен",
+          "supportDocument": "Супер пупер документ",
+          "date": "2002-12-21",
+          "successRateIncrease": 1
+        }
+      ],
+      "interviewDate": "2022-04-1",
+      "employmentDate": "2022-04-3",
+      "firstWorkDayDate": "2022-04-6",
+      "salary": 70000,
+      "successRate": 2,
+      "isFired": false,
+      "firingDate": null,
+      "vacations": [
+        {
+          "type": "Отпуск",
+          "startDate": "2022-04-1",
+          "endDate": "2022-04-15"
+        },
+        {
+          "type": "Отпуск",
+          "startDate": "2023-05-5",
+          "endDate": "2023-05-21"
+        }
+      ],
+      "education": [
+        {
+          "type": "Высшее образование (бакалавриат)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2025-06-30",
+          "qualification": "Программист"
+        },
+        {
+          "type": "Высшее образование (магистратура)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2027-06-30",
+          "qualification": "Ваще крутой магистр"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "avatarUrl": null,
+      "firstName": "Дмитрий",
+      "lastName": "Козаченко",
+      "patronymic": "Сергеевич",
+      "birthDate": "2002-12-21",
+      "phoneNumber": "+71234567891",
+      "workEmail": "workEmail@mail.ru",
+      "personalEmail": "personalEmail@mail.ru",
+      "departmentId": 2,
+      "postId": 1,
+      "workFormat": "В офисе",
+      "achievements": [
+        {
+          "type": "Повышение в должности",
+          "supportDocument": "Приказ о повышении",
+          "date": "2023-02-25",
+          "successRateIncrease": 1
+        },
+        {
+          "type": "Статус крутости повышен",
+          "supportDocument": "Супер пупер документ",
+          "date": "2002-12-21",
+          "successRateIncrease": 1
+        }
+      ],
+      "interviewDate": "2022-04-1",
+      "employmentDate": "2022-04-3",
+      "firstWorkDayDate": "2022-04-6",
+      "salary": 70000,
+      "successRate": 2,
+      "isFired": false,
+      "firingDate": null,
+      "vacations": [
+        {
+          "type": "Отпуск",
+          "startDate": "2022-04-1",
+          "endDate": "2022-04-15"
+        },
+        {
+          "type": "Отпуск",
+          "startDate": "2023-05-5",
+          "endDate": "2023-05-21"
+        }
+      ],
+      "education": [
+        {
+          "type": "Высшее образование (бакалавриат)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2025-06-30",
+          "qualification": "Программист"
+        },
+        {
+          "type": "Высшее образование (магистратура)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2027-06-30",
+          "qualification": "Ваще крутой магистр"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "avatarUrl": null,
+      "firstName": "Дмитрий",
+      "lastName": "Козаченко",
+      "patronymic": "Сергеевич",
+      "birthDate": "2002-12-21",
+      "phoneNumber": "+71234567891",
+      "workEmail": "workEmail@mail.ru",
+      "personalEmail": "personalEmail@mail.ru",
+      "departmentId": 2,
+      "postId": 1,
+      "workFormat": "В офисе",
+      "achievements": [
+        {
+          "type": "Повышение в должности",
+          "supportDocument": "Приказ о повышении",
+          "date": "2023-02-25",
+          "successRateIncrease": 1
+        },
+        {
+          "type": "Статус крутости повышен",
+          "supportDocument": "Супер пупер документ",
+          "date": "2002-12-21",
+          "successRateIncrease": 1
+        }
+      ],
+      "interviewDate": "2022-04-1",
+      "employmentDate": "2022-04-3",
+      "firstWorkDayDate": "2022-04-6",
+      "salary": 70000,
+      "successRate": 2,
+      "isFired": false,
+      "firingDate": null,
+      "vacations": [
+        {
+          "type": "Отпуск",
+          "startDate": "2022-04-1",
+          "endDate": "2022-04-15"
+        },
+        {
+          "type": "Отпуск",
+          "startDate": "2023-05-5",
+          "endDate": "2023-05-21"
+        }
+      ],
+      "education": [
+        {
+          "type": "Высшее образование (бакалавриат)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2025-06-30",
+          "qualification": "Программист"
+        },
+        {
+          "type": "Высшее образование (магистратура)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2027-06-30",
+          "qualification": "Ваще крутой магистр"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "avatarUrl": null,
+      "firstName": "Дмитрий",
+      "lastName": "Козаченко",
+      "patronymic": "Сергеевич",
+      "birthDate": "2002-12-21",
+      "phoneNumber": "+71234567891",
+      "workEmail": "workEmail@mail.ru",
+      "personalEmail": "personalEmail@mail.ru",
+      "departmentId": 2,
+      "postId": 1,
+      "workFormat": "В офисе",
+      "achievements": [
+        {
+          "type": "Повышение в должности",
+          "supportDocument": "Приказ о повышении",
+          "date": "2023-02-25",
+          "successRateIncrease": 1
+        },
+        {
+          "type": "Статус крутости повышен",
+          "supportDocument": "Супер пупер документ",
+          "date": "2002-12-21",
+          "successRateIncrease": 1
+        }
+      ],
+      "interviewDate": "2022-04-1",
+      "employmentDate": "2022-04-3",
+      "firstWorkDayDate": "2022-04-6",
+      "salary": 70000,
+      "successRate": 2,
+      "isFired": false,
+      "firingDate": null,
+      "vacations": [
+        {
+          "type": "Отпуск",
+          "startDate": "2022-04-1",
+          "endDate": "2022-04-15"
+        },
+        {
+          "type": "Отпуск",
+          "startDate": "2023-05-5",
+          "endDate": "2023-05-21"
+        }
+      ],
+      "education": [
+        {
+          "type": "Высшее образование (бакалавриат)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2025-06-30",
+          "qualification": "Программист"
+        },
+        {
+          "type": "Высшее образование (магистратура)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2027-06-30",
+          "qualification": "Ваще крутой магистр"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "avatarUrl": null,
+      "firstName": "Дмитрий",
+      "lastName": "Козаченко",
+      "patronymic": "Сергеевич",
+      "birthDate": "2002-12-21",
+      "phoneNumber": "+71234567891",
+      "workEmail": "workEmail@mail.ru",
+      "personalEmail": "personalEmail@mail.ru",
+      "departmentId": 2,
+      "postId": 1,
+      "workFormat": "В офисе",
+      "achievements": [
+        {
+          "type": "Повышение в должности",
+          "supportDocument": "Приказ о повышении",
+          "date": "2023-02-25",
+          "successRateIncrease": 1
+        },
+        {
+          "type": "Статус крутости повышен",
+          "supportDocument": "Супер пупер документ",
+          "date": "2002-12-21",
+          "successRateIncrease": 1
+        }
+      ],
+      "interviewDate": "2022-04-1",
+      "employmentDate": "2022-04-3",
+      "firstWorkDayDate": "2022-04-6",
+      "salary": 70000,
+      "successRate": 2,
+      "isFired": false,
+      "firingDate": null,
+      "vacations": [
+        {
+          "type": "Отпуск",
+          "startDate": "2022-04-1",
+          "endDate": "2022-04-15"
+        },
+        {
+          "type": "Отпуск",
+          "startDate": "2023-05-5",
+          "endDate": "2023-05-21"
+        }
+      ],
+      "education": [
+        {
+          "type": "Высшее образование (бакалавриат)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2025-06-30",
+          "qualification": "Программист"
+        },
+        {
+          "type": "Высшее образование (магистратура)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2027-06-30",
+          "qualification": "Ваще крутой магистр"
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "avatarUrl": null,
+      "firstName": "Дмитрий",
+      "lastName": "Козаченко",
+      "patronymic": "Сергеевич",
+      "birthDate": "2002-12-21",
+      "phoneNumber": "+71234567891",
+      "workEmail": "workEmail@mail.ru",
+      "personalEmail": "personalEmail@mail.ru",
+      "departmentId": 2,
+      "postId": 1,
+      "workFormat": "В офисе",
+      "achievements": [
+        {
+          "type": "Повышение в должности",
+          "supportDocument": "Приказ о повышении",
+          "date": "2023-02-25",
+          "successRateIncrease": 1
+        },
+        {
+          "type": "Статус крутости повышен",
+          "supportDocument": "Супер пупер документ",
+          "date": "2002-12-21",
+          "successRateIncrease": 1
+        }
+      ],
+      "interviewDate": "2022-04-1",
+      "employmentDate": "2022-04-3",
+      "firstWorkDayDate": "2022-04-6",
+      "salary": 70000,
+      "successRate": 2,
+      "isFired": false,
+      "firingDate": null,
+      "vacations": [
+        {
+          "type": "Отпуск",
+          "startDate": "2022-04-1",
+          "endDate": "2022-04-15"
+        },
+        {
+          "type": "Отпуск",
+          "startDate": "2023-05-5",
+          "endDate": "2023-05-21"
+        }
+      ],
+      "education": [
+        {
+          "type": "Высшее образование (бакалавриат)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2025-06-30",
+          "qualification": "Программист"
+        },
+        {
+          "type": "Высшее образование (магистратура)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2027-06-30",
+          "qualification": "Ваще крутой магистр"
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "avatarUrl": null,
+      "firstName": "Дмитрий",
+      "lastName": "Козаченко",
+      "patronymic": "Сергеевич",
+      "birthDate": "2002-12-21",
+      "phoneNumber": "+71234567891",
+      "workEmail": "workEmail@mail.ru",
+      "personalEmail": "personalEmail@mail.ru",
+      "departmentId": 2,
+      "postId": 1,
+      "workFormat": "В офисе",
+      "achievements": [
+        {
+          "type": "Повышение в должности",
+          "supportDocument": "Приказ о повышении",
+          "date": "2023-02-25",
+          "successRateIncrease": 1
+        },
+        {
+          "type": "Статус крутости повышен",
+          "supportDocument": "Супер пупер документ",
+          "date": "2002-12-21",
+          "successRateIncrease": 1
+        }
+      ],
+      "interviewDate": "2022-04-1",
+      "employmentDate": "2022-04-3",
+      "firstWorkDayDate": "2022-04-6",
+      "salary": 70000,
+      "successRate": 2,
+      "isFired": false,
+      "firingDate": null,
+      "vacations": [
+        {
+          "type": "Отпуск",
+          "startDate": "2022-04-1",
+          "endDate": "2022-04-15"
+        },
+        {
+          "type": "Отпуск",
+          "startDate": "2023-05-5",
+          "endDate": "2023-05-21"
+        }
+      ],
+      "education": [
+        {
+          "type": "Высшее образование (бакалавриат)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2025-06-30",
+          "qualification": "Программист"
+        },
+        {
+          "type": "Высшее образование (магистратура)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2027-06-30",
+          "qualification": "Ваще крутой магистр"
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "avatarUrl": null,
+      "firstName": "Дмитрий",
+      "lastName": "Козаченко",
+      "patronymic": "Сергеевич",
+      "birthDate": "2002-12-21",
+      "phoneNumber": "+71234567891",
+      "workEmail": "workEmail@mail.ru",
+      "personalEmail": "personalEmail@mail.ru",
+      "departmentId": 2,
+      "postId": 1,
+      "workFormat": "В офисе",
+      "achievements": [
+        {
+          "type": "Повышение в должности",
+          "supportDocument": "Приказ о повышении",
+          "date": "2023-02-25",
+          "successRateIncrease": 1
+        },
+        {
+          "type": "Статус крутости повышен",
+          "supportDocument": "Супер пупер документ",
+          "date": "2002-12-21",
+          "successRateIncrease": 1
+        }
+      ],
+      "interviewDate": "2022-04-1",
+      "employmentDate": "2022-04-3",
+      "firstWorkDayDate": "2022-04-6",
+      "salary": 70000,
+      "successRate": 2,
+      "isFired": false,
+      "firingDate": null,
+      "vacations": [
+        {
+          "type": "Отпуск",
+          "startDate": "2022-04-1",
+          "endDate": "2022-04-15"
+        },
+        {
+          "type": "Отпуск",
+          "startDate": "2023-05-5",
+          "endDate": "2023-05-21"
+        }
+      ],
+      "education": [
+        {
+          "type": "Высшее образование (бакалавриат)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2025-06-30",
+          "qualification": "Программист"
+        },
+        {
+          "type": "Высшее образование (магистратура)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2027-06-30",
+          "qualification": "Ваще крутой магистр"
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "avatarUrl": null,
+      "firstName": "Дмитрий",
+      "lastName": "Козаченко",
+      "patronymic": "Сергеевич",
+      "birthDate": "2002-12-21",
+      "phoneNumber": "+71234567891",
+      "workEmail": "workEmail@mail.ru",
+      "personalEmail": "personalEmail@mail.ru",
+      "departmentId": 2,
+      "postId": 1,
+      "workFormat": "В офисе",
+      "achievements": [
+        {
+          "type": "Повышение в должности",
+          "supportDocument": "Приказ о повышении",
+          "date": "2023-02-25",
+          "successRateIncrease": 1
+        },
+        {
+          "type": "Статус крутости повышен",
+          "supportDocument": "Супер пупер документ",
+          "date": "2002-12-21",
+          "successRateIncrease": 1
+        }
+      ],
+      "interviewDate": "2022-04-1",
+      "employmentDate": "2022-04-3",
+      "firstWorkDayDate": "2022-04-6",
+      "salary": 70000,
+      "successRate": 2,
+      "isFired": false,
+      "firingDate": null,
+      "vacations": [
+        {
+          "type": "Отпуск",
+          "startDate": "2022-04-1",
+          "endDate": "2022-04-15"
+        },
+        {
+          "type": "Отпуск",
+          "startDate": "2023-05-5",
+          "endDate": "2023-05-21"
+        }
+      ],
+      "education": [
+        {
+          "type": "Высшее образование (бакалавриат)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2025-06-30",
+          "qualification": "Программист"
+        },
+        {
+          "type": "Высшее образование (магистратура)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2027-06-30",
+          "qualification": "Ваще крутой магистр"
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "avatarUrl": null,
+      "firstName": "Дмитрий",
+      "lastName": "Козаченко",
+      "patronymic": "Сергеевич",
+      "birthDate": "2002-12-21",
+      "phoneNumber": "+71234567891",
+      "workEmail": "workEmail@mail.ru",
+      "personalEmail": "personalEmail@mail.ru",
+      "departmentId": 2,
+      "postId": 1,
+      "workFormat": "В офисе",
+      "achievements": [
+        {
+          "type": "Повышение в должности",
+          "supportDocument": "Приказ о повышении",
+          "date": "2023-02-25",
+          "successRateIncrease": 1
+        },
+        {
+          "type": "Статус крутости повышен",
+          "supportDocument": "Супер пупер документ",
+          "date": "2002-12-21",
+          "successRateIncrease": 1
+        }
+      ],
+      "interviewDate": "2022-04-1",
+      "employmentDate": "2022-04-3",
+      "firstWorkDayDate": "2022-04-6",
+      "salary": 70000,
+      "successRate": 2,
+      "isFired": false,
+      "firingDate": null,
+      "vacations": [
+        {
+          "type": "Отпуск",
+          "startDate": "2022-04-1",
+          "endDate": "2022-04-15"
+        },
+        {
+          "type": "Отпуск",
+          "startDate": "2023-05-5",
+          "endDate": "2023-05-21"
+        }
+      ],
+      "education": [
+        {
+          "type": "Высшее образование (бакалавриат)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2025-06-30",
+          "qualification": "Программист"
+        },
+        {
+          "type": "Высшее образование (магистратура)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2027-06-30",
+          "qualification": "Ваще крутой магистр"
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "avatarUrl": null,
+      "firstName": "Дмитрий",
+      "lastName": "Козаченко",
+      "patronymic": "Сергеевич",
+      "birthDate": "2002-12-21",
+      "phoneNumber": "+71234567891",
+      "workEmail": "workEmail@mail.ru",
+      "personalEmail": "personalEmail@mail.ru",
+      "departmentId": 2,
+      "postId": 1,
+      "workFormat": "В офисе",
+      "achievements": [
+        {
+          "type": "Повышение в должности",
+          "supportDocument": "Приказ о повышении",
+          "date": "2023-02-25",
+          "successRateIncrease": 1
+        },
+        {
+          "type": "Статус крутости повышен",
+          "supportDocument": "Супер пупер документ",
+          "date": "2002-12-21",
+          "successRateIncrease": 1
+        }
+      ],
+      "interviewDate": "2022-04-1",
+      "employmentDate": "2022-04-3",
+      "firstWorkDayDate": "2022-04-6",
+      "salary": 70000,
+      "successRate": 2,
+      "isFired": false,
+      "firingDate": null,
+      "vacations": [
+        {
+          "type": "Отпуск",
+          "startDate": "2022-04-1",
+          "endDate": "2022-04-15"
+        },
+        {
+          "type": "Отпуск",
+          "startDate": "2023-05-5",
+          "endDate": "2023-05-21"
+        }
+      ],
+      "education": [
+        {
+          "type": "Высшее образование (бакалавриат)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2025-06-30",
+          "qualification": "Программист"
+        },
+        {
+          "type": "Высшее образование (магистратура)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2027-06-30",
+          "qualification": "Ваще крутой магистр"
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "avatarUrl": null,
+      "firstName": "Дмитрий",
+      "lastName": "Козаченко",
+      "patronymic": "Сергеевич",
+      "birthDate": "2002-12-21",
+      "phoneNumber": "+71234567891",
+      "workEmail": "workEmail@mail.ru",
+      "personalEmail": "personalEmail@mail.ru",
+      "departmentId": 2,
+      "postId": 1,
+      "workFormat": "В офисе",
+      "achievements": [
+        {
+          "type": "Повышение в должности",
+          "supportDocument": "Приказ о повышении",
+          "date": "2023-02-25",
+          "successRateIncrease": 1
+        },
+        {
+          "type": "Статус крутости повышен",
+          "supportDocument": "Супер пупер документ",
+          "date": "2002-12-21",
+          "successRateIncrease": 1
+        }
+      ],
+      "interviewDate": "2022-04-1",
+      "employmentDate": "2022-04-3",
+      "firstWorkDayDate": "2022-04-6",
+      "salary": 70000,
+      "successRate": 2,
+      "isFired": false,
+      "firingDate": null,
+      "vacations": [
+        {
+          "type": "Отпуск",
+          "startDate": "2022-04-1",
+          "endDate": "2022-04-15"
+        },
+        {
+          "type": "Отпуск",
+          "startDate": "2023-05-5",
+          "endDate": "2023-05-21"
+        }
+      ],
+      "education": [
+        {
+          "type": "Высшее образование (бакалавриат)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2025-06-30",
+          "qualification": "Программист"
+        },
+        {
+          "type": "Высшее образование (магистратура)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2027-06-30",
+          "qualification": "Ваще крутой магистр"
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "avatarUrl": null,
+      "firstName": "Дмитрий",
+      "lastName": "Козаченко",
+      "patronymic": "Сергеевич",
+      "birthDate": "2002-12-21",
+      "phoneNumber": "+71234567891",
+      "workEmail": "workEmail@mail.ru",
+      "personalEmail": "personalEmail@mail.ru",
+      "departmentId": 2,
+      "postId": 1,
+      "workFormat": "В офисе",
+      "achievements": [
+        {
+          "type": "Повышение в должности",
+          "supportDocument": "Приказ о повышении",
+          "date": "2023-02-25",
+          "successRateIncrease": 1
+        },
+        {
+          "type": "Статус крутости повышен",
+          "supportDocument": "Супер пупер документ",
+          "date": "2002-12-21",
+          "successRateIncrease": 1
+        }
+      ],
+      "interviewDate": "2022-04-1",
+      "employmentDate": "2022-04-3",
+      "firstWorkDayDate": "2022-04-6",
+      "salary": 70000,
+      "successRate": 2,
+      "isFired": false,
+      "firingDate": null,
+      "vacations": [
+        {
+          "type": "Отпуск",
+          "startDate": "2022-04-1",
+          "endDate": "2022-04-15"
+        },
+        {
+          "type": "Отпуск",
+          "startDate": "2023-05-5",
+          "endDate": "2023-05-21"
+        }
+      ],
+      "education": [
+        {
+          "type": "Высшее образование (бакалавриат)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2025-06-30",
+          "qualification": "Программист"
+        },
+        {
+          "type": "Высшее образование (магистратура)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2027-06-30",
+          "qualification": "Ваще крутой магистр"
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "avatarUrl": null,
+      "firstName": "Дмитрий",
+      "lastName": "Козаченко",
+      "patronymic": "Сергеевич",
+      "birthDate": "2002-12-21",
+      "phoneNumber": "+71234567891",
+      "workEmail": "workEmail@mail.ru",
+      "personalEmail": "personalEmail@mail.ru",
+      "departmentId": 2,
+      "postId": 1,
+      "workFormat": "В офисе",
+      "achievements": [
+        {
+          "type": "Повышение в должности",
+          "supportDocument": "Приказ о повышении",
+          "date": "2023-02-25",
+          "successRateIncrease": 1
+        },
+        {
+          "type": "Статус крутости повышен",
+          "supportDocument": "Супер пупер документ",
+          "date": "2002-12-21",
+          "successRateIncrease": 1
+        }
+      ],
+      "interviewDate": "2022-04-1",
+      "employmentDate": "2022-04-3",
+      "firstWorkDayDate": "2022-04-6",
+      "salary": 70000,
+      "successRate": 2,
+      "isFired": false,
+      "firingDate": null,
+      "vacations": [
+        {
+          "type": "Отпуск",
+          "startDate": "2022-04-1",
+          "endDate": "2022-04-15"
+        },
+        {
+          "type": "Отпуск",
+          "startDate": "2023-05-5",
+          "endDate": "2023-05-21"
+        }
+      ],
+      "education": [
+        {
+          "type": "Высшее образование (бакалавриат)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2025-06-30",
+          "qualification": "Программист"
+        },
+        {
+          "type": "Высшее образование (магистратура)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2027-06-30",
+          "qualification": "Ваще крутой магистр"
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "avatarUrl": null,
+      "firstName": "Дмитрий",
+      "lastName": "Козаченко",
+      "patronymic": "Сергеевич",
+      "birthDate": "2002-12-21",
+      "phoneNumber": "+71234567891",
+      "workEmail": "workEmail@mail.ru",
+      "personalEmail": "personalEmail@mail.ru",
+      "departmentId": 2,
+      "postId": 1,
+      "workFormat": "В офисе",
+      "achievements": [
+        {
+          "type": "Повышение в должности",
+          "supportDocument": "Приказ о повышении",
+          "date": "2023-02-25",
+          "successRateIncrease": 1
+        },
+        {
+          "type": "Статус крутости повышен",
+          "supportDocument": "Супер пупер документ",
+          "date": "2002-12-21",
+          "successRateIncrease": 1
+        }
+      ],
+      "interviewDate": "2022-04-1",
+      "employmentDate": "2022-04-3",
+      "firstWorkDayDate": "2022-04-6",
+      "salary": 70000,
+      "successRate": 2,
+      "isFired": false,
+      "firingDate": null,
+      "vacations": [
+        {
+          "type": "Отпуск",
+          "startDate": "2022-04-1",
+          "endDate": "2022-04-15"
+        },
+        {
+          "type": "Отпуск",
+          "startDate": "2023-05-5",
+          "endDate": "2023-05-21"
+        }
+      ],
+      "education": [
+        {
+          "type": "Высшее образование (бакалавриат)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2025-06-30",
+          "qualification": "Программист"
+        },
+        {
+          "type": "Высшее образование (магистратура)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2027-06-30",
+          "qualification": "Ваще крутой магистр"
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "avatarUrl": null,
+      "firstName": "Дмитрий",
+      "lastName": "Козаченко",
+      "patronymic": "Сергеевич",
+      "birthDate": "2002-12-21",
+      "phoneNumber": "+71234567891",
+      "workEmail": "workEmail@mail.ru",
+      "personalEmail": "personalEmail@mail.ru",
+      "departmentId": 2,
+      "postId": 1,
+      "workFormat": "В офисе",
+      "achievements": [
+        {
+          "type": "Повышение в должности",
+          "supportDocument": "Приказ о повышении",
+          "date": "2023-02-25",
+          "successRateIncrease": 1
+        },
+        {
+          "type": "Статус крутости повышен",
+          "supportDocument": "Супер пупер документ",
+          "date": "2002-12-21",
+          "successRateIncrease": 1
+        }
+      ],
+      "interviewDate": "2022-04-1",
+      "employmentDate": "2022-04-3",
+      "firstWorkDayDate": "2022-04-6",
+      "salary": 70000,
+      "successRate": 2,
+      "isFired": false,
+      "firingDate": null,
+      "vacations": [
+        {
+          "type": "Отпуск",
+          "startDate": "2022-04-1",
+          "endDate": "2022-04-15"
+        },
+        {
+          "type": "Отпуск",
+          "startDate": "2023-05-5",
+          "endDate": "2023-05-21"
+        }
+      ],
+      "education": [
+        {
+          "type": "Высшее образование (бакалавриат)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2025-06-30",
+          "qualification": "Программист"
+        },
+        {
+          "type": "Высшее образование (магистратура)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2027-06-30",
+          "qualification": "Ваще крутой магистр"
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "avatarUrl": null,
+      "firstName": "Дмитрий",
+      "lastName": "Козаченко",
+      "patronymic": "Сергеевич",
+      "birthDate": "2002-12-21",
+      "phoneNumber": "+71234567891",
+      "workEmail": "workEmail@mail.ru",
+      "personalEmail": "personalEmail@mail.ru",
+      "departmentId": 2,
+      "postId": 1,
+      "workFormat": "В офисе",
+      "achievements": [
+        {
+          "type": "Повышение в должности",
+          "supportDocument": "Приказ о повышении",
+          "date": "2023-02-25",
+          "successRateIncrease": 1
+        },
+        {
+          "type": "Статус крутости повышен",
+          "supportDocument": "Супер пупер документ",
+          "date": "2002-12-21",
+          "successRateIncrease": 1
+        }
+      ],
+      "interviewDate": "2022-04-1",
+      "employmentDate": "2022-04-3",
+      "firstWorkDayDate": "2022-04-6",
+      "salary": 70000,
+      "successRate": 2,
+      "isFired": false,
+      "firingDate": null,
+      "vacations": [
+        {
+          "type": "Отпуск",
+          "startDate": "2022-04-1",
+          "endDate": "2022-04-15"
+        },
+        {
+          "type": "Отпуск",
+          "startDate": "2023-05-5",
+          "endDate": "2023-05-21"
+        }
+      ],
+      "education": [
+        {
+          "type": "Высшее образование (бакалавриат)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2025-06-30",
+          "qualification": "Программист"
+        },
+        {
+          "type": "Высшее образование (магистратура)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2027-06-30",
+          "qualification": "Ваще крутой магистр"
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "avatarUrl": null,
+      "firstName": "Дмитрий",
+      "lastName": "Козаченко",
+      "patronymic": "Сергеевич",
+      "birthDate": "2002-12-21",
+      "phoneNumber": "+71234567891",
+      "workEmail": "workEmail@mail.ru",
+      "personalEmail": "personalEmail@mail.ru",
+      "departmentId": 2,
+      "postId": 1,
+      "workFormat": "В офисе",
+      "achievements": [
+        {
+          "type": "Повышение в должности",
+          "supportDocument": "Приказ о повышении",
+          "date": "2023-02-25",
+          "successRateIncrease": 1
+        },
+        {
+          "type": "Статус крутости повышен",
+          "supportDocument": "Супер пупер документ",
+          "date": "2002-12-21",
+          "successRateIncrease": 1
+        }
+      ],
+      "interviewDate": "2022-04-1",
+      "employmentDate": "2022-04-3",
+      "firstWorkDayDate": "2022-04-6",
+      "salary": 70000,
+      "successRate": 2,
+      "isFired": false,
+      "firingDate": null,
+      "vacations": [
+        {
+          "type": "Отпуск",
+          "startDate": "2022-04-1",
+          "endDate": "2022-04-15"
+        },
+        {
+          "type": "Отпуск",
+          "startDate": "2023-05-5",
+          "endDate": "2023-05-21"
+        }
+      ],
+      "education": [
+        {
+          "type": "Высшее образование (бакалавриат)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2025-06-30",
+          "qualification": "Программист"
+        },
+        {
+          "type": "Высшее образование (магистратура)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2027-06-30",
+          "qualification": "Ваще крутой магистр"
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "avatarUrl": null,
+      "firstName": "Дмитрий",
+      "lastName": "Козаченко",
+      "patronymic": "Сергеевич",
+      "birthDate": "2002-12-21",
+      "phoneNumber": "+71234567891",
+      "workEmail": "workEmail@mail.ru",
+      "personalEmail": "personalEmail@mail.ru",
+      "departmentId": 2,
+      "postId": 1,
+      "workFormat": "В офисе",
+      "achievements": [
+        {
+          "type": "Повышение в должности",
+          "supportDocument": "Приказ о повышении",
+          "date": "2023-02-25",
+          "successRateIncrease": 1
+        },
+        {
+          "type": "Статус крутости повышен",
+          "supportDocument": "Супер пупер документ",
+          "date": "2002-12-21",
+          "successRateIncrease": 1
+        }
+      ],
+      "interviewDate": "2022-04-1",
+      "employmentDate": "2022-04-3",
+      "firstWorkDayDate": "2022-04-6",
+      "salary": 70000,
+      "successRate": 2,
+      "isFired": false,
+      "firingDate": null,
+      "vacations": [
+        {
+          "type": "Отпуск",
+          "startDate": "2022-04-1",
+          "endDate": "2022-04-15"
+        },
+        {
+          "type": "Отпуск",
+          "startDate": "2023-05-5",
+          "endDate": "2023-05-21"
+        }
+      ],
+      "education": [
+        {
+          "type": "Высшее образование (бакалавриат)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2025-06-30",
+          "qualification": "Программист"
+        },
+        {
+          "type": "Высшее образование (магистратура)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2027-06-30",
+          "qualification": "Ваще крутой магистр"
+        }
+      ]
+    }
   ]
 }
