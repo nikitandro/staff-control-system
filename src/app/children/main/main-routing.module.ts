@@ -32,7 +32,6 @@ const routes: Routes = [
     {
         path: '',
         component: MainLayoutComponent,
-        canActivate: [authGuard],
         children: [
             {
                 path: '',
@@ -48,7 +47,6 @@ const routes: Routes = [
     {
         path: 'employee-info',
         component: EmployeeInfoLayoutComponent,
-        canActivate: [authGuard],
         children: [
             {
                 path: ':employeeId/personal',
@@ -83,7 +81,6 @@ const routes: Routes = [
     {
         path: 'employee-add',
         component: EmployeeAddLayoutComponent,
-        canActivate: [authGuard],
         children: [
             {
                 path: '',

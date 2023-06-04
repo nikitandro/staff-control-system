@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
 import { IAuthUserResponseModel } from '../response-models/auth-user.response-model.interface';
+import {Router} from '@angular/router';
 
 @Injectable({
     providedIn: 'root'
@@ -11,7 +12,7 @@ import { IAuthUserResponseModel } from '../response-models/auth-user.response-mo
 export class AuthService {
     private _token: string | undefined = undefined;
 
-    constructor(private _http: HttpClient) {
+    constructor(private _http: HttpClient, private router: Router) {
     }
 
     public register(user: IAuthUserRequestModel): Observable<IAuthUserResponseModel> {
@@ -35,6 +36,7 @@ export class AuthService {
     //TODO: В burger-button сделать кнопку "выйти", она будет использовать эту функцию
     public logout(): void {
         this.removeToken();
+        this.router.navigate(['auth/login']);
     }
 
     public isAuthenticated(): boolean {
@@ -52,7 +54,7 @@ export class AuthService {
     }
 
     //TODO: использовать, чтобы передавать токен в запросах
-    private getToken(): string | undefined {
-        return this._token;
+    private getToken(): string | null {
+        return localStorage.getItem('token');
     }
 }

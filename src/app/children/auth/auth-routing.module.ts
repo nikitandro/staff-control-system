@@ -16,6 +16,10 @@ const routes: Routes = [
             { path: 'login', component: LoginPageWebComponent },
             { path: 'register', component: RegisterPageWebComponent }
         ]
+    },
+    {
+        path: '**',
+        redirectTo: 'auth/login'
     }
 ];
 

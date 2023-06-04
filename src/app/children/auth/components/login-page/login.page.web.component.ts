@@ -60,7 +60,6 @@ export class LoginPageWebComponent implements OnInit, OnDestroy {
     public onSubmit(): void {
         if (this.loginForm.invalid) {
             this.loginForm.markAllAsTouched();
-
             return;
         }
         const user: IAuthUserRequestModel = {

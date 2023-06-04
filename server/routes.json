@@ -1,3 +1,6 @@
 {
-    "users": 600
+    "users": 600,
+    "employees": 660,
+    "posts": 660,
+    "departments": 660
 }

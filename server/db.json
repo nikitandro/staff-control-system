@@ -1,396 +1,401 @@
 {
-    "users": [
+  "users": [
+    {
+      "email": "aaa@aaa",
+      "password": "$2a$10$O5CUNtZBB7dmVULREdh4Ou28HcV/wC3bSNcvLLmDqdBNXkkPTMbeK",
+      "id": 1
+    },
+    {
+      "email": "nikitan@nikita.ru",
+      "password": "$2a$10$4eZwW7zddnFaE8XbEGvJceDaMB9OGrUQoKVZ9Y/LnGShrgj7bk.e2",
+      "id": 2
+    },
+    {
+      "email": "test1@test1.com",
+      "password": "$2a$10$3/UlxYNWi0OoCMI3l8sJVuiGYejSpfsek0KAGCKkQv/VlDc.WMIQ2",
+      "id": 3
+    },
+    {
+      "email": "test2@test2.com",
+      "password": "$2a$10$2QUcMqZ5UETnvuCC/.cUs.Uels4CtrbuvjEz9q42JcIcWsyM/V95S",
+      "id": 4
+    },
+    {
+      "email": "a@a.com",
+      "password": "$2a$10$SECZX3ZPGVjZEDLGFIN7jei6gm83u2ZjuT74Eml6DtkvyfOeT8LTa",
+      "id": 5
+    },
+    {
+      "email": "nik.vishnyakov.6256@gmail.com",
+      "password": "$2a$10$IWAj0dEGhYeL1IzEvK0O9OYVDprxIUmE5sE6.ppIDIWXi4Dc/2e/m",
+      "id": 6
+    },
+    {
+      "email": "test@test.com",
+      "password": "$2a$10$wvBHQhQIOelqqZM1Lzxz0.jAA/J7LLc5oYynNG/uSIQf2hO.4HBuG",
+      "id": 7
+    },
+    {
+      "email": "dima@ru",
+      "password": "$2a$10$wWoU0R1DzdZSGK68N2etYulN9JVVxOWYJkB3my0DZdrUa3ppw7vXu",
+      "id": 8
+    },
+    {
+      "email": "adad@daadda",
+      "password": "$2a$10$Ur5a5n8Bl1JZwSsB.Hh2Eu7QseqML5Ctc8ndMh4B.YfUsO3YowmK.",
+      "id": 9
+    },
+    {
+      "email": "test_form@mail.ru",
+      "password": "$2a$10$DS2LU0nha2XWc0a9P.myHuJIZ0CHRQd0IlUVoY/vzagYvhYZ2l7i6",
+      "id": 10
+    },
+    {
+      "email": "name@email",
+      "password": "$2a$10$K3qdu8ralo80qIBY1XnguOFkJR1Ux9A5O9jM3Z08XyvyPMRZsJ96S",
+      "id": 11
+    },
+    {
+      "email": "NAME@email",
+      "password": "$2a$10$2D/x15l4kK83X9Th3byyp.NGbloTmuaE06T8uMdJR3qvbkktHyml2",
+      "id": 12
+    },
+    {
+      "email": "asd@asd.asd",
+      "password": "$2a$10$xiH2iMNJQEjQpl8ud/iqgu0e4xIwWCe7vNYE7j7SCLv4qv9WLw.om",
+      "id": 13
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "Frontend-разработчик Angular",
+      "salaryCurrency": "RUB",
+      "salaryLowest": 60000,
+      "salaryHighest": 90000,
+      "responsibilitiesDescription": "",
+      "departmentId": 1
+    },
+    {
+      "id": 2,
+      "title": "Backend-разработчик ASP.NET",
+      "salaryCurrency": "RUB",
+      "salaryLowest": 90000,
+      "salaryHighest": 120000,
+      "responsibilitiesDescription": "",
+      "departmentId": 1
+    },
+    {
+      "id": 3,
+      "title": "HR-менеджер",
+      "salaryCurrency": "RUB",
+      "salaryLowest": 50000,
+      "salaryHighest": 70000,
+      "responsibilitiesDescription": ""
+    },
+    {
+      "id": 4,
+      "title": "DevOps-инженер",
+      "salaryCurrency": "RUB",
+      "salaryLowest": 80000,
+      "salaryHighest": 120000,
+      "responsibilitiesDescription": "",
+      "departmentId": 2
+    },
+    {
+      "id": 5,
+      "title": "UX/UI дизайнер",
+      "salaryCurrency": "RUB",
+      "salaryLowest": 60000,
+      "salaryHighest": 80000,
+      "responsibilitiesDescription": "",
+      "departmentId": 1
+    },
+    {
+      "id": 6,
+      "title": "Backend-разработчик NestJS",
+      "salaryCurrency": "RUB",
+      "salaryLowest": 110000,
+      "salaryHighest": 150000,
+      "responsibilitiesDescription": "",
+      "departmentId": 1
+    },
+    {
+      "id": 7,
+      "title": "Тестировщик",
+      "salaryCurrency": "RUB",
+      "salaryLowest": 45000,
+      "salaryHighest": 65000,
+      "responsibilitiesDescription": "",
+      "departmentId": 1
+    },
+    {
+      "id": 8,
+      "title": "Архитектор БД",
+      "salaryCurrency": "RUB",
+      "salaryLowest": 60000,
+      "salaryHighest": 90000,
+      "responsibilitiesDescription": "",
+      "departmentId": 1
+    },
+    {
+      "id": 9,
+      "title": "Frontend-разработчик React Native",
+      "salaryCurrency": "RUB",
+      "salaryLowest": 70000,
+      "salaryHighest": 100000,
+      "responsibilitiesDescription": "",
+      "departmentId": 1
+    },
+    {
+      "id": 10,
+      "title": "Аналитик",
+      "salaryCurrency": "RUB",
+      "salaryLowest": 70000,
+      "salaryHighest": 95000,
+      "responsibilitiesDescription": "",
+      "departmentId": 3
+    },
+    {
+      "id": 11,
+      "title": "Тимлид",
+      "salaryCurrency": "RUB",
+      "salaryLowest": 120000,
+      "salaryHighest": 150000,
+      "responsibilitiesDescription": "",
+      "departmentId": 1
+    }
+  ],
+  "departments": [
+    {
+      "id": 1,
+      "title": "Отдел разработки"
+    },
+    {
+      "id": 2,
+      "title": "Отдел подбора персонала"
+    },
+    {
+      "id": 3,
+      "title": "Отдел аналитики"
+    }
+  ],
+  "employees": [
+    {
+      "id": 1,
+      "avatarUrl": null,
+      "firstName": "Никита",
+      "lastName": "Вишняков",
+      "patronymic": "Сергеевич",
+      "birthDate": "2003-03-10",
+      "interviewDate": "2022-04-1",
+      "employmentDate": "2022-04-3",
+      "firstWorkDayDate": "2022-04-6",
+      "departmentId": 1,
+      "postId": 1,
+      "salary": 60000,
+      "isFired": false,
+      "successRate": -1,
+      "firstWorkDay": "",
+      "vacationsList": [],
+      "education": [],
+      "firingDate": null,
+      "salaryHistory": [],
+      "achievements": [
         {
-            "email": "aaa@aaa",
-            "password": "$2a$10$O5CUNtZBB7dmVULREdh4Ou28HcV/wC3bSNcvLLmDqdBNXkkPTMbeK",
-            "id": 1
+          "type": "Повышение в должности",
+          "supportDocument": "Приказ о повышении",
+          "date": "2023-02-25"
         },
         {
-            "email": "nikitan@nikita.ru",
-            "password": "$2a$10$4eZwW7zddnFaE8XbEGvJceDaMB9OGrUQoKVZ9Y/LnGShrgj7bk.e2",
-            "id": 2
-        },
-        {
-            "email": "test1@test1.com",
-            "password": "$2a$10$3/UlxYNWi0OoCMI3l8sJVuiGYejSpfsek0KAGCKkQv/VlDc.WMIQ2",
-            "id": 3
-        },
-        {
-            "email": "test2@test2.com",
-            "password": "$2a$10$2QUcMqZ5UETnvuCC/.cUs.Uels4CtrbuvjEz9q42JcIcWsyM/V95S",
-            "id": 4
-        },
-        {
-            "email": "a@a.com",
-            "password": "$2a$10$SECZX3ZPGVjZEDLGFIN7jei6gm83u2ZjuT74Eml6DtkvyfOeT8LTa",
-            "id": 5
-        },
-        {
-            "email": "nik.vishnyakov.6256@gmail.com",
-            "password": "$2a$10$IWAj0dEGhYeL1IzEvK0O9OYVDprxIUmE5sE6.ppIDIWXi4Dc/2e/m",
-            "id": 6
-        },
-        {
-            "email": "test@test.com",
-            "password": "$2a$10$wvBHQhQIOelqqZM1Lzxz0.jAA/J7LLc5oYynNG/uSIQf2hO.4HBuG",
-            "id": 7
-        },
-        {
-            "email": "dima@ru",
-            "password": "$2a$10$wWoU0R1DzdZSGK68N2etYulN9JVVxOWYJkB3my0DZdrUa3ppw7vXu",
-            "id": 8
-        },
-        {
-            "email": "adad@daadda",
-            "password": "$2a$10$Ur5a5n8Bl1JZwSsB.Hh2Eu7QseqML5Ctc8ndMh4B.YfUsO3YowmK.",
-            "id": 9
-        },
-        {
-            "email": "test_form@mail.ru",
-            "password": "$2a$10$DS2LU0nha2XWc0a9P.myHuJIZ0CHRQd0IlUVoY/vzagYvhYZ2l7i6",
-            "id": 10
-        },
-        {
-            "email": "name@email",
-            "password": "$2a$10$K3qdu8ralo80qIBY1XnguOFkJR1Ux9A5O9jM3Z08XyvyPMRZsJ96S",
-            "id": 11
-        },
-        {
-            "email": "NAME@email",
-            "password": "$2a$10$2D/x15l4kK83X9Th3byyp.NGbloTmuaE06T8uMdJR3qvbkktHyml2",
-            "id": 12
+          "type": "Статус крутости повышен",
+          "supportDocument": "Супер пупер документ",
+          "date": "2002-12-21"
         }
-    ],
-    "posts": [
+      ]
+    },
+    {
+      "id": 2,
+      "avatarUrl": null,
+      "firstName": "Дмитрий",
+      "lastName": "Козаченко",
+      "patronymic": "Сергеевич",
+      "birthDate": "2002-12-21",
+      "phoneNumber": "+71234567891",
+      "workEmail": "workEmail@mail.ru",
+      "personalEmail": "personalEmail@mail.ru",
+      "departmentId": 1,
+      "postId": 1,
+      "workFormat": "В офисе",
+      "achievements": [
         {
-            "id": 1,
-            "title": "Frontend-разработчик Angular",
-            "salaryCurrency": "RUB",
-            "salaryLowest": 60000,
-            "salaryHighest": 90000,
-            "responsibilitiesDescription": "",
-            "departmentId": 1
+          "type": "Повышение в должности",
+          "supportDocument": "Приказ о повышении",
+          "date": "2023-02-25",
+          "successRateIncrease": 1
         },
         {
-            "id": 2,
-            "title": "Backend-разработчик ASP.NET",
-            "salaryCurrency": "RUB",
-            "salaryLowest": 90000,
-            "salaryHighest": 120000,
-            "responsibilitiesDescription": "",
-            "departmentId": 1
-        },
-        {
-            "id": 3,
-            "title": "HR-менеджер",
-            "salaryCurrency": "RUB",
-            "salaryLowest": 50000,
-            "salaryHighest": 70000,
-            "responsibilitiesDescription": ""
-        },
-        {
-            "id": 4,
-            "title": "DevOps-инженер",
-            "salaryCurrency": "RUB",
-            "salaryLowest": 80000,
-            "salaryHighest": 120000,
-            "responsibilitiesDescription": "",
-            "departmentId": 2
-        },
-        {
-            "id": 5,
-            "title": "UX/UI дизайнер",
-            "salaryCurrency": "RUB",
-            "salaryLowest": 60000,
-            "salaryHighest": 80000,
-            "responsibilitiesDescription": "",
-            "departmentId": 1
-        },
-        {
-            "id": 6,
-            "title": "Backend-разработчик NestJS",
-            "salaryCurrency": "RUB",
-            "salaryLowest": 110000,
-            "salaryHighest": 150000,
-            "responsibilitiesDescription": "",
-            "departmentId": 1
-        },
-        {
-            "id": 7,
-            "title": "Тестировщик",
-            "salaryCurrency": "RUB",
-            "salaryLowest": 45000,
-            "salaryHighest": 65000,
-            "responsibilitiesDescription": "",
-            "departmentId": 1
-        },
-        {
-            "id": 8,
-            "title": "Архитектор БД",
-            "salaryCurrency": "RUB",
-            "salaryLowest": 60000,
-            "salaryHighest": 90000,
-            "responsibilitiesDescription": "",
-            "departmentId": 1
-        },
-        {
-            "id": 9,
-            "title": "Frontend-разработчик React Native",
-            "salaryCurrency": "RUB",
-            "salaryLowest": 70000,
-            "salaryHighest": 100000,
-            "responsibilitiesDescription": "",
-            "departmentId": 1
-        },
-        {
-            "id": 10,
-            "title": "Аналитик",
-            "salaryCurrency": "RUB",
-            "salaryLowest": 70000,
-            "salaryHighest": 95000,
-            "responsibilitiesDescription": "",
-            "departmentId": 3
-        },
-        {
-            "id": 11,
-            "title": "Тимлид",
-            "salaryCurrency": "RUB",
-            "salaryLowest": 120000,
-            "salaryHighest": 150000,
-            "responsibilitiesDescription": "",
-            "departmentId": 1
+          "type": "Статус крутости повышен",
+          "supportDocument": "Супер пупер документ",
+          "date": "2002-12-21",
+          "successRateIncrease": 1
         }
-    ],
-    "departments": [
+      ],
+      "interviewDate": "2022-04-1",
+      "employmentDate": "2022-04-3",
+      "firstWorkDayDate": "2022-04-6",
+      "salary": 60000,
+      "successRate": 0,
+      "isFired": false,
+      "firingDate": null,
+      "vacations": [
         {
-            "id": 1,
-            "title": "Отдел разработки"
+          "type": "Отпуск",
+          "startDate": "2022-04-1",
+          "endDate": "2022-04-15"
         },
         {
-            "id": 2,
-            "title": "Отдел подбора персонала"
-        },
-        {
-            "id": 3,
-            "title": "Отдел аналитики"
+          "type": "Отпуск",
+          "startDate": "2023-05-5",
+          "endDate": "2023-05-21"
         }
-    ],
-    "employees": [
+      ],
+      "education": [
         {
-            "id": 1,
-            "avatarUrl": null,
-            "firstName": "Никита",
-            "lastName": "Вишняков",
-            "patronymic": "Сергеевич",
-            "birthDate": "2003-03-10",
-            "interviewDate": "2022-04-1",
-            "employmentDate": "2022-04-3",
-            "firstWorkDayDate": "2022-04-6",
-            "departmentId": 1,
-            "postId": 1,
-            "salary": 60000,
-            "isFired": false,
-            "successRate": -1,
-            "firstWorkDay": "",
-            "vacationsList": [],
-            "education": [],
-            "firingDate": null,
-            "salaryHistory": [],
-            "achievements": [
-                {
-                    "type": "Повышение в должности",
-                    "supportDocument": "Приказ о повышении",
-                    "date": "2023-02-25"
-                },
-                {
-                    "type": "Статус крутости повышен",
-                    "supportDocument": "Супер пупер документ",
-                    "date": "2002-12-21"
-                }
-            ]
+          "type": "Высшее образование (бакалавриат)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2025-06-30",
+          "qualification": "Программист"
         },
         {
-            "id": 2,
-            "avatarUrl": null,
-            "firstName": "Дмитрий",
-            "lastName": "Козаченко",
-            "patronymic": "Сергеевич",
-            "birthDate": "2002-12-21",
-            "phoneNumber": "+71234567891",
-            "workEmail": "workEmail@mail.ru",
-            "personalEmail": "personalEmail@mail.ru",
-            "departmentId": 1,
-            "postId": 1,
-            "workFormat": "В офисе",
-            "achievements": [
-                {
-                    "type": "Повышение в должности",
-                    "supportDocument": "Приказ о повышении",
-                    "date": "2023-02-25",
-                    "successRateIncrease": 1
-                },
-                {
-                    "type": "Статус крутости повышен",
-                    "supportDocument": "Супер пупер документ",
-                    "date": "2002-12-21",
-                    "successRateIncrease": 1
-                }
-            ],
-            "interviewDate": "2022-04-1",
-            "employmentDate": "2022-04-3",
-            "firstWorkDayDate": "2022-04-6",
-            "salary": 60000,
-            "successRate": 0,
-            "isFired": false,
-            "firingDate": null,
-            "vacations": [
-                {
-                    "type": "Отпуск",
-                    "startDate": "2022-04-1",
-                    "endDate": "2022-04-15"
-                },
-                {
-                    "type": "Отпуск",
-                    "startDate": "2023-05-5",
-                    "endDate": "2023-05-21"
-                }
-            ],
-            "education": [
-                {
-                    "type": "Высшее образование (бакалавриат)",
-                    "educationalInstitution": "Уральский федеральный университет",
-                    "endDate": "2025-06-30",
-                    "qualification": "Программист"
-                },
-                {
-                    "type": "Высшее образование (магистратура)",
-                    "educationalInstitution": "Уральский федеральный университет",
-                    "endDate": "2027-06-30",
-                    "qualification": "Ваще крутой магистр"
-                }
-            ]
-        },
-        {
-            "id": 3,
-            "avatarUrl": null,
-            "firstName": "Дмитрий",
-            "lastName": "Козаченко",
-            "patronymic": "Сергеевич",
-            "birthDate": "2002-12-21",
-            "phoneNumber": "+71234567891",
-            "workEmail": "workEmail@mail.ru",
-            "personalEmail": "personalEmail@mail.ru",
-            "departmentId": 1,
-            "postId": 1,
-            "workFormat": "В офисе",
-            "achievements": [
-                {
-                    "type": "Повышение в должности",
-                    "supportDocument": "Приказ о повышении",
-                    "date": "2023-02-25",
-                    "successRateIncrease": 1
-                },
-                {
-                    "type": "Статус крутости повышен",
-                    "supportDocument": "Супер пупер документ",
-                    "date": "2002-12-21",
-                    "successRateIncrease": 1
-                }
-            ],
-            "interviewDate": "2022-04-1",
-            "employmentDate": "2022-04-3",
-            "firstWorkDayDate": "2022-04-6",
-            "salary": 60000,
-            "successRate": 2,
-            "isFired": false,
-            "firingDate": null,
-            "vacations": [
-                {
-                    "type": "Отпуск",
-                    "startDate": "2022-04-1",
-                    "endDate": "2022-04-15"
-                },
-                {
-                    "type": "Отпуск",
-                    "startDate": "2023-05-5",
-                    "endDate": "2023-05-21"
-                }
-            ],
-            "education": [
-                {
-                    "type": "Высшее образование (бакалавриат)",
-                    "educationalInstitution": "Уральский федеральный университет",
-                    "endDate": "2025-06-30",
-                    "qualification": "Программист"
-                },
-                {
-                    "type": "Высшее образование (магистратура)",
-                    "educationalInstitution": "Уральский федеральный университет",
-                    "endDate": "2027-06-30",
-                    "qualification": "Ваще крутой магистр"
-                }
-            ]
-        },
-        {
-            "id": 4,
-            "avatarUrl": null,
-            "firstName": "Дмитрий",
-            "lastName": "Козаченко",
-            "patronymic": "Сергеевич",
-            "birthDate": "2002-12-21",
-            "phoneNumber": "+71234567891",
-            "workEmail": "workEmail@mail.ru",
-            "personalEmail": "personalEmail@mail.ru",
-            "departmentId": 2,
-            "postId": 1,
-            "workFormat": "В офисе",
-            "achievements": [
-                {
-                    "type": "Повышение в должности",
-                    "supportDocument": "Приказ о повышении",
-                    "date": "2023-02-25",
-                    "successRateIncrease": 1
-                },
-                {
-                    "type": "Статус крутости повышен",
-                    "supportDocument": "Супер пупер документ",
-                    "date": "2002-12-21",
-                    "successRateIncrease": 1
-                }
-            ],
-            "interviewDate": "2022-04-1",
-            "employmentDate": "2022-04-3",
-            "firstWorkDayDate": "2022-04-6",
-            "salary": 70000,
-            "successRate": 2,
-            "isFired": false,
-            "firingDate": null,
-            "vacations": [
-                {
-                    "type": "Отпуск",
-                    "startDate": "2022-04-1",
-                    "endDate": "2022-04-15"
-                },
-                {
-                    "type": "Отпуск",
-                    "startDate": "2023-05-5",
-                    "endDate": "2023-05-21"
-                }
-            ],
-            "education": [
-                {
-                    "type": "Высшее образование (бакалавриат)",
-                    "educationalInstitution": "Уральский федеральный университет",
-                    "endDate": "2025-06-30",
-                    "qualification": "Программист"
-                },
-                {
-                    "type": "Высшее образование (магистратура)",
-                    "educationalInstitution": "Уральский федеральный университет",
-                    "endDate": "2027-06-30",
-                    "qualification": "Ваще крутой магистр"
-                }
-            ]
+          "type": "Высшее образование (магистратура)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2027-06-30",
+          "qualification": "Ваще крутой магистр"
         }
-    ]
+      ]
+    },
+    {
+      "id": 3,
+      "avatarUrl": null,
+      "firstName": "Дмитрий",
+      "lastName": "Козаченко",
+      "patronymic": "Сергеевич",
+      "birthDate": "2002-12-21",
+      "phoneNumber": "+71234567891",
+      "workEmail": "workEmail@mail.ru",
+      "personalEmail": "personalEmail@mail.ru",
+      "departmentId": 1,
+      "postId": 1,
+      "workFormat": "В офисе",
+      "achievements": [
+        {
+          "type": "Повышение в должности",
+          "supportDocument": "Приказ о повышении",
+          "date": "2023-02-25",
+          "successRateIncrease": 1
+        },
+        {
+          "type": "Статус крутости повышен",
+          "supportDocument": "Супер пупер документ",
+          "date": "2002-12-21",
+          "successRateIncrease": 1
+        }
+      ],
+      "interviewDate": "2022-04-1",
+      "employmentDate": "2022-04-3",
+      "firstWorkDayDate": "2022-04-6",
+      "salary": 60000,
+      "successRate": 2,
+      "isFired": false,
+      "firingDate": null,
+      "vacations": [
+        {
+          "type": "Отпуск",
+          "startDate": "2022-04-1",
+          "endDate": "2022-04-15"
+        },
+        {
+          "type": "Отпуск",
+          "startDate": "2023-05-5",
+          "endDate": "2023-05-21"
+        }
+      ],
+      "education": [
+        {
+          "type": "Высшее образование (бакалавриат)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2025-06-30",
+          "qualification": "Программист"
+        },
+        {
+          "type": "Высшее образование (магистратура)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2027-06-30",
+          "qualification": "Ваще крутой магистр"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "avatarUrl": null,
+      "firstName": "Дмитрий",
+      "lastName": "Козаченко",
+      "patronymic": "Сергеевич",
+      "birthDate": "2002-12-21",
+      "phoneNumber": "+71234567891",
+      "workEmail": "workEmail@mail.ru",
+      "personalEmail": "personalEmail@mail.ru",
+      "departmentId": 2,
+      "postId": 1,
+      "workFormat": "В офисе",
+      "achievements": [
+        {
+          "type": "Повышение в должности",
+          "supportDocument": "Приказ о повышении",
+          "date": "2023-02-25",
+          "successRateIncrease": 1
+        },
+        {
+          "type": "Статус крутости повышен",
+          "supportDocument": "Супер пупер документ",
+          "date": "2002-12-21",
+          "successRateIncrease": 1
+        }
+      ],
+      "interviewDate": "2022-04-1",
+      "employmentDate": "2022-04-3",
+      "firstWorkDayDate": "2022-04-6",
+      "salary": 70000,
+      "successRate": 2,
+      "isFired": false,
+      "firingDate": null,
+      "vacations": [
+        {
+          "type": "Отпуск",
+          "startDate": "2022-04-1",
+          "endDate": "2022-04-15"
+        },
+        {
+          "type": "Отпуск",
+          "startDate": "2023-05-5",
+          "endDate": "2023-05-21"
+        }
+      ],
+      "education": [
+        {
+          "type": "Высшее образование (бакалавриат)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2025-06-30",
+          "qualification": "Программист"
+        },
+        {
+          "type": "Высшее образование (магистратура)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2027-06-30",
+          "qualification": "Ваще крутой магистр"
+        }
+      ]
+    }
+  ]
 }
