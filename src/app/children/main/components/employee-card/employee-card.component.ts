@@ -59,19 +59,20 @@ export class EmployeeCardComponent implements OnInit, OnDestroy {
 
     public delete(id: number | undefined): void {
         let employee!: IEmployeeRequestModel;
+        const typeData: string = this._route.snapshot.url[1].path;
         this._employeeDataService.getEmployeeData(this._employeeId)
             .pipe(
                 switchMap((data: IEmployeeResponseModel) => {
                     employee = data;
-                    if (this.employeeCardData.title === 'Образование') {
+                    if (typeData === 'education') {
                         employee.education = employee.education.filter((education: IEmployeeEducation) => {
                             return education.educationId !== id;
                         });
-                    } else if (this.employeeCardData.title === 'Отпуска сотрудника') {
+                    } else if (typeData === 'vacation') {
                         employee.vacationsList = employee.vacationsList.filter((vacation: IEmployeeVacation) => {
                             return vacation.vacationId !== id;
                         });
-                    } else if (this.employeeCardData.title === 'Достижения сотрудника') {
+                    } else if (typeData === 'achievements') {
                         employee.achievementsList = employee.achievementsList.filter((achievement: IEmployeeAchievement) => {
                             return achievement.achievementId !== id;
                         });

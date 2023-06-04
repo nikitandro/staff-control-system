@@ -20,5 +20,17 @@
                 <img src="assets/images/icons/{{ employeeAddPhoto }}" alt="фото сотрудника">
             </div>
         </div>
+        <div
+            class="employee-add-form__error-text"
+            *ngIf="employeeAddForm.invalid && employeeAddForm.touched"
+        >
+            Пожалуйста, заполните все поля формы корректными данными
+        </div>
+        <div
+            class="employee-add-form__good-text"
+            *ngIf="employeeAddForm.valid && employeeAddForm.touched"
+        >
+            Ваша форма корректно заполнена!
+        </div>
     </div>
 </form>

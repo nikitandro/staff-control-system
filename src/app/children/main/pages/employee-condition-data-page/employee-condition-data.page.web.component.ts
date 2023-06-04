@@ -55,7 +55,6 @@ export class EmployeeConditionDataPageWebComponent implements OnInit, OnDestroy 
         this._employeeDataService.getEmployeeData(this._employeeId)
             .subscribe((data: IEmployeeResponseModel) => {
                 this.employeeConditionCardData = {
-                    title: 'Условия работы',
                     employeeCardFields: [
                         {
                             label: 'Отдел:',
@@ -82,22 +81,30 @@ export class EmployeeConditionDataPageWebComponent implements OnInit, OnDestroy 
                     employeeFormFields: [
                         {
                             label: 'Отдел:',
-                            control: new FormControl(data.departmentName, Validators.required),
+                            control: new FormControl(data.departmentName, [
+                                Validators.required
+                            ]),
                             controlType: 'text'
                         },
                         {
                             label: 'Должность:',
-                            control: new FormControl(data.post, Validators.required),
+                            control: new FormControl(data.post, [
+                                Validators.required
+                            ]),
                             controlType: 'text'
                         },
                         {
                             label: 'Заработая плата (в рублях):',
-                            control: new FormControl(data.salary, Validators.required),
+                            control: new FormControl(data.salary, [
+                                Validators.required
+                            ]),
                             controlType: 'number'
                         },
                         {
                             label: 'Формат работы:',
-                            control: new FormControl(data.workFormat, Validators.required),
+                            control: new FormControl(data.workFormat, [
+                                Validators.required
+                            ]),
                             controlType: 'text'
                         },
                     ]

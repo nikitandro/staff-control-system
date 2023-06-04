@@ -118,7 +118,7 @@
       "lastName": "Козаченко",
       "patronymic": "Сергеевич",
       "birthDate": "2002-11-21",
-      "phoneNumber": "+71234567891",
+      "phoneNumber": "+735353535",
       "workEmail": "workEmail@mail.ru",
       "personalEmail": "personalEmail@mail.ru",
       "departmentName": "Отдел разработки",
@@ -139,8 +139,8 @@
         }
       ],
       "interviewDate": "2022-04-11",
-      "employmentDate": "2022-04-3",
-      "firstWorkDayDate": "2022-04-6",
+      "employmentDate": "2023-06-25",
+      "firstWorkDayDate": "2023-06-18",
       "departmentId": "",
       "postId": "",
       "salary": 60000,
@@ -175,6 +175,11 @@
           "salaryChangeId": 3,
           "date": "2023-06-21",
           "salary": 90000
+        },
+        {
+          "salaryChangeId": 1685797311624,
+          "date": "2023-06-23",
+          "salary": 100000
         }
       ],
       "education": [

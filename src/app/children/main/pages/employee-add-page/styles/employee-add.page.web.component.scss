@@ -19,6 +19,18 @@
         margin-right: 79px;
         margin-top: 59px;
         margin-bottom: 106px;
+        border: none;
+        border-radius: 3px;
+
+        &:hover {
+            background-color: #507CB1;
+            color: white;
+            transition-duration: 0.2s;
+        }
+
+        &:active {
+            opacity: 0.8;
+        }
     }
 }
 

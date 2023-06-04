@@ -63,7 +63,6 @@ export class EmployeeAchievementsDataPageWebComponent implements OnInit, OnDestr
                     this.employeeAchievementsCardDataList.push(
                         {
                             id: achievement.achievementId,
-                            title: 'Достижения сотрудника',
                             employeeCardFields: [
                                 {
                                     label: 'Вид:',
@@ -88,17 +87,23 @@ export class EmployeeAchievementsDataPageWebComponent implements OnInit, OnDestr
                     employeeFormFields: [
                         {
                             label: 'Вид:',
-                            control: new FormControl('', Validators.required),
+                            control: new FormControl('', [
+                                Validators.required
+                            ]),
                             controlType: 'text'
                         },
                         {
                             label: 'Подтверждающий документ:',
-                            control: new FormControl('', Validators.required),
+                            control: new FormControl('', [
+                                Validators.required
+                            ]),
                             controlType: 'text'
                         },
                         {
                             label: 'Дата:',
-                            control: new FormControl('', Validators.required),
+                            control: new FormControl('', [
+                                Validators.required
+                            ]),
                             controlType: 'date'
                         },
                     ]

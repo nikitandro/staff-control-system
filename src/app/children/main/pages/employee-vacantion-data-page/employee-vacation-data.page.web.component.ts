@@ -63,7 +63,6 @@ export class EmployeeVacationDataPageWebComponent implements OnInit, OnDestroy {
                     this.employeeVacationCardDataList.push(
                         {
                             id: vacation.vacationId,
-                            title: 'Отпуска сотрудника',
                             employeeCardFields: [
                                 {
                                     label: 'Вид:',
@@ -88,17 +87,23 @@ export class EmployeeVacationDataPageWebComponent implements OnInit, OnDestroy {
                     employeeFormFields: [
                         {
                             label: 'Вид:',
-                            control: new FormControl('', Validators.required),
+                            control: new FormControl('', [
+                                Validators.required
+                            ]),
                             controlType: 'text'
                         },
                         {
                             label: 'Дата начала:',
-                            control: new FormControl('', Validators.required),
+                            control: new FormControl('', [
+                                Validators.required
+                            ]),
                             controlType: 'date'
                         },
                         {
                             label: 'Дата окончая:',
-                            control: new FormControl('', Validators.required),
+                            control: new FormControl('', [
+                                Validators.required
+                            ]),
                             controlType: 'date'
                         },
                     ]

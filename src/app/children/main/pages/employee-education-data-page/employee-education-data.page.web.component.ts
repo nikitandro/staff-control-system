@@ -63,7 +63,6 @@ export class EmployeeEducationDataPageWebComponent implements OnInit, OnDestroy 
                     this.employeeEducationCardDataList.push(
                         {
                             id: educationItem.educationId,
-                            title: 'Образование',
                             employeeCardFields: [
                                 {
                                     label: 'Вид:',
@@ -92,22 +91,30 @@ export class EmployeeEducationDataPageWebComponent implements OnInit, OnDestroy 
                     employeeFormFields: [
                         {
                             label: 'Вид:',
-                            control: new FormControl('', Validators.required),
+                            control: new FormControl('', [
+                                Validators.required
+                            ]),
                             controlType: 'text'
                         },
                         {
                             label: 'Учебное заведение:',
-                            control: new FormControl('', Validators.required),
+                            control: new FormControl('', [
+                                Validators.required
+                            ]),
                             controlType: 'text'
                         },
                         {
                             label: 'Дата окончания:',
-                            control: new FormControl('', Validators.required),
+                            control: new FormControl('', [
+                                Validators.required
+                            ]),
                             controlType: 'date'
                         },
                         {
                             label: 'Квалификация по выпуску:',
-                            control: new FormControl('', Validators.required),
+                            control: new FormControl('', [
+                                Validators.required
+                            ]),
                             controlType: 'text'
                         }
                     ]

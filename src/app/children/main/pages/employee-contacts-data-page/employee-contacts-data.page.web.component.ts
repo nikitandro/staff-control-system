@@ -55,7 +55,6 @@ export class EmployeeContactsDataPageWebComponent implements OnInit, OnDestroy {
         this._employeeDataService.getEmployeeData(this._employeeId)
             .subscribe((data: IEmployeeResponseModel) => {
                 this.employeeContactsCardData = {
-                    title: 'Контакты',
                     employeeCardFields: [
                         {
                             label: 'Номер телефона:',
@@ -78,17 +77,25 @@ export class EmployeeContactsDataPageWebComponent implements OnInit, OnDestroy {
                     employeeFormFields: [
                         {
                             label: 'Номер телефона:',
-                            control: new FormControl(data.phoneNumber, Validators.required),
+                            control: new FormControl(data.phoneNumber, [
+                                Validators.required
+                            ]),
                             controlType: 'tel'
                         },
                         {
                             label: 'Рабочая почта:',
-                            control: new FormControl(data.workEmail, Validators.required),
+                            control: new FormControl(data.workEmail, [
+                                Validators.required,
+                                Validators.email
+                            ]),
                             controlType: 'email'
                         },
                         {
                             label: 'Личная почта:',
-                            control: new FormControl(data.personalEmail, Validators.required),
+                            control: new FormControl(data.personalEmail, [
+                                Validators.required,
+                                Validators.email
+                            ]),
                             controlType: 'email'
                         },
                     ]

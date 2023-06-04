@@ -15,8 +15,12 @@ import { ActivatedRoute, Params } from '@angular/router';
 export class SalaryHistoryCardComponent implements OnInit, OnDestroy {
     public salaryHistoryData: ISalaryChange[] = [];
     public salaryChangeForm: FormGroup = new FormGroup({
-        changeDate: new FormControl('', Validators.required),
-        changeSalary: new FormControl('', Validators.required)
+        changeDate: new FormControl('', [
+            Validators.required
+        ]),
+        changeSalary: new FormControl('', [
+            Validators.required
+        ])
     });
 
     public showForm: boolean = false;
@@ -73,6 +77,11 @@ export class SalaryHistoryCardComponent implements OnInit, OnDestroy {
     }
 
     public onSubmit(): void {
+        if (this.salaryChangeForm.invalid) {
+            this.salaryChangeForm.markAllAsTouched();
+
+            return;
+        }
         this.showForm = false;
         const salaryChange: ISalaryChange = {
             salaryChangeId: Date.now(),

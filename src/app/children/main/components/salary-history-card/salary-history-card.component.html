@@ -54,6 +54,19 @@
                     </button>
                 </div>
 
+                <div
+                    class="salary-history-form__error-text"
+                    *ngIf="salaryChangeForm.invalid && salaryChangeForm.touched"
+                >
+                    Пожалуйста, заполните все поля формы корректными данными
+                </div>
+                <div
+                    class="salary-history-form__good-text"
+                    *ngIf="salaryChangeForm.valid && salaryChangeForm.touched"
+                >
+                    Ваша форма корректно заполнена!
+                </div>
+
             </form>
         </div>
     </div>

@@ -55,7 +55,6 @@ export class EmployeeExperienceDataPageWebComponent implements OnInit, OnDestroy
         this._employeeDataService.getEmployeeData(2)
             .subscribe((data: IEmployeeResponseModel) => {
                 this.employeeExperienceCardData = {
-                    title: 'Стаж работы',
                     employeeCardFields: [
                         {
                             label: 'Дата собеседования:',
@@ -78,17 +77,23 @@ export class EmployeeExperienceDataPageWebComponent implements OnInit, OnDestroy
                     employeeFormFields: [
                         {
                             label: 'Дата собеседования:',
-                            control: new FormControl(data.interviewDate, Validators.required),
+                            control: new FormControl(data.interviewDate, [
+                                Validators.required
+                            ]),
                             controlType: 'date'
                         },
                         {
                             label: 'Дата подтверждения оффера:',
-                            control: new FormControl(data.employmentDate, Validators.required),
+                            control: new FormControl(data.employmentDate, [
+                                Validators.required
+                            ]),
                             controlType: 'date'
                         },
                         {
                             label: 'Дата первого рабочего дня:',
-                            control: new FormControl(data.firstWorkDayDate, Validators.required),
+                            control: new FormControl(data.firstWorkDayDate, [
+                                Validators.required
+                            ]),
                             controlType: 'date'
                         },
                     ]

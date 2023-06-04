@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":[],"names":[],"mappings":"","file":"employee-personal-data.page.web.component.css"}
+{"version":3,"sourceRoot":"","sources":["employee-personal-data.page.web.component.scss"],"names":[],"mappings":"AAAA;EACI;EACA;EACA","file":"employee-personal-data.page.web.component.css"}

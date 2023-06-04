@@ -92,8 +92,15 @@ export class EmployeeFormComponent implements OnInit, OnDestroy {
     }
 
     public onSubmit(): void {
+        if (this.employeeForm.invalid) {
+            this.employeeForm.markAllAsTouched();
+
+            return;
+        }
+
         const data: string[] = this.employeeForm.value.employeeFormFields;
         const typeData: string = this._route.snapshot.url[1].path;
+
         if (typeData === 'personal') {
             this.submitPersonalData(data);
         } else if (typeData === 'condition') {

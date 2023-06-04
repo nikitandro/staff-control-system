@@ -55,7 +55,6 @@ export class EmployeePersonalDataPageWebComponent implements OnInit, OnDestroy {
         this._employeeDataService.getEmployeeData(2)
             .subscribe((data: IEmployeeResponseModel) => {
                 this.employeePersonalCardData = {
-                    title: 'Личная информация',
                     employeeCardFields: [
                         {
                             label: 'Фамилия:',
@@ -83,22 +82,30 @@ export class EmployeePersonalDataPageWebComponent implements OnInit, OnDestroy {
                     employeeFormFields: [
                         {
                             label: 'Фамилия:',
-                            control: new FormControl(data.lastName, Validators.required),
+                            control: new FormControl(data.lastName, [
+                                Validators.required
+                            ]),
                             controlType: 'text'
                         },
                         {
                             label: 'Имя:',
-                            control: new FormControl(data.firstName, Validators.required),
+                            control: new FormControl(data.firstName, [
+                                Validators.required
+                            ]),
                             controlType: 'text'
                         },
                         {
                             label: 'Отчество:',
-                            control: new FormControl(data.patronymic, Validators.required),
+                            control: new FormControl(data.patronymic, [
+                                Validators.required
+                            ]),
                             controlType: 'text'
                         },
                         {
                             label: 'Дата рождения:',
-                            control: new FormControl(data.birthDate, Validators.required),
+                            control: new FormControl(data.birthDate, [
+                                Validators.required
+                            ]),
                             controlType: 'date'
                         }
                     ]
