@@ -3,9 +3,9 @@ import {
     AfterViewInit,
     ChangeDetectionStrategy,
     Component, DoCheck,
-    ElementRef,
+    ElementRef, EventEmitter,
     forwardRef, Input, OnChanges,
-    OnInit, SimpleChanges,
+    OnInit, Output, SimpleChanges,
     ViewChild,
 } from '@angular/core';
 import {Options} from '@angular-slider/ngx-slider';
@@ -32,6 +32,9 @@ export class SalaryPickerComponent implements OnInit, ControlValueAccessor, OnCh
         floor: 0,
         ceil: 0,
     };
+
+    @Output()
+    public salaryChanges: EventEmitter<[number, number]> = new EventEmitter<[number, number]>();
 
     public lowestSalaryControl: FormControl<number> = new FormControl<number>(0, {nonNullable: true});
 
@@ -132,7 +135,6 @@ export class SalaryPickerComponent implements OnInit, ControlValueAccessor, OnCh
     }
 
     public ngOnChanges() {
-        console.log(1)
         this.sliderOptions.ceil = this.salaryBounds[1];
         this.sliderOptions.floor = this.salaryBounds[0];
         this.lowestSalary = this.salaryBounds[0];
@@ -148,6 +150,7 @@ export class SalaryPickerComponent implements OnInit, ControlValueAccessor, OnCh
                 if (this.lowestSalaryControl.getRawValue() > this.highestSalaryControl.getRawValue()) {
                     this.swapLowAndHighSalaryControlsValues();
                 }
+                this.writeValue([this.lowestSalaryControl.getRawValue(), this.highestSalaryControl.getRawValue()])
                 return;
             }
             this.lowestSalaryControl.setValue(value[0]);
@@ -170,6 +173,7 @@ export class SalaryPickerComponent implements OnInit, ControlValueAccessor, OnCh
             this.sliderControl.setValue([value, this.highestSalaryControl.getRawValue()]);
         });
         this.highestSalaryControl.valueChanges.pipe(filter(() => document.activeElement === this.highestSalaryElementRef?.nativeElement)).subscribe((value) => {
+            console.log(value)
             const currLowestSalaryControlValue = this.lowestSalaryControl.getRawValue();
             if (value > this.highestSalary) {
                 this.sliderControl.setValue([this.lowestSalaryControl.getRawValue(), this.highestSalary]);
@@ -195,6 +199,7 @@ export class SalaryPickerComponent implements OnInit, ControlValueAccessor, OnCh
     }
 
     public writeValue(value: [number, number]): void {
+        this.salaryChanges.emit(value);
         this.onChange(value);
     }
 }

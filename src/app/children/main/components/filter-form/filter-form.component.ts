@@ -30,10 +30,10 @@ export class FilterFormComponent implements OnInit {
             this.departments = value;
             this.changeDetection.detectChanges();
         });
-        this.filterService.salary$.subscribe((value) => {
+        this.filterService.getActualSalaryBounds().subscribe((value) => {
             this.sliderOptions = {floor: value[0], ceil: value[1]};
             this.salaryBounds = value;
-        });
+        })
         this.postsService.getPosts().subscribe((value) => {
             this.posts = value;
             this.changeDetection.detectChanges();
@@ -50,6 +50,10 @@ export class FilterFormComponent implements OnInit {
 
     public onSelectedPostsChange(value: number[]) {
         this.filterService.selectedPosts$.next(value);
+    }
+
+    public onSalaryChange(value: [number, number]) {
+        this.filterService.salary$.next(value);
     }
 
     public onFormTouchEnd(event: TouchEvent) {

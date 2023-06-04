@@ -4,7 +4,7 @@ import {IEmployeeResponseModel} from '../response-models/employee.response-model
 import {FilterService} from './filter.service';
 import {IFilters} from '../interfaces/filters.interface';
 import {SuccessStatus} from '../interfaces/SuccessStatus.interface';
-import {BehaviorSubject, Subject, combineLatest} from 'rxjs';
+import {BehaviorSubject, Subject, combineLatest, debounceTime} from 'rxjs';
 
 @Injectable()
 export class EmployeeService {
@@ -13,23 +13,23 @@ export class EmployeeService {
     public page$: Subject<number> = new Subject<number>();
 
     constructor(private _http: HttpClient, private filterService: FilterService) {
-        combineLatest(filterService.filters$, this.limit$, this.page$).subscribe((value) => {
-            this.updateEmployeeList(...value)
+        combineLatest(filterService.filters$, this.limit$, this.page$).pipe(debounceTime(300)).subscribe((value) => {
+            this.updateEmployeeList(...value);
         });
     }
 
     public updateEmployeeList(filters: IFilters, limit?: number, page?: number) {
-        let query: string = 'http://localhost:3000/employees?_expand=department&_expand=post';
+        let query: string = 'http://localhost:3000/employees?_expand=department&_expand=post&';
         if (limit !== undefined) {
-            query += `&_limit=${limit}`;
+            query += `_limit=${limit}&`;
         }
         if (page !== undefined) {
-            query += `&_page=${page}`
+            query += `_page=${page}&`;
         }
         this.getFilteredEmployeeList(query, filters);
     }
 
-    public getFilteredEmployeeList(query:string, filters: IFilters) {
+    public getFilteredEmployeeList(query: string, filters: IFilters) {
         if (filters.selectedDepartments.length > 0) {
             filters.selectedDepartments.forEach((value, index) => {
                 query += `departmentId=${value}&`;
@@ -52,7 +52,9 @@ export class EmployeeService {
                 break;
         }
         query += `isFired=${filters.isFired}&`;
-        query += `salary_gte=${filters.salary[0]}&salary_lte${filters.salary[1]}`;
-        this._http.get<IEmployeeResponseModel[]>(query).subscribe(this.employeeList$);
+        query += `salary_gte=${filters.salary[0]}&salary_lte=${filters.salary[1]}`;
+        this._http.get<IEmployeeResponseModel[]>(query).subscribe((value) => {
+            this.employeeList$.next(value);
+        });
     }
 }
