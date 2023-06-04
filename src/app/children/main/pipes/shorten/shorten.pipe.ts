@@ -5,5 +5,4 @@ export class ShortenPipe implements PipeTransform{
     public transform(value: string, by: number): string {
         return `${value.slice(0, by)}${value.length > by ? '...' : ''}`
     }
-
 }
