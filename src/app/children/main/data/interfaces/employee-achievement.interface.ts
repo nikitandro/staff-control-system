@@ -3,4 +3,5 @@ export interface IEmployeeAchievement {
     supportDocument: string;
     date: string;
     successRateIncrease: number;
+    achievementId: number;
 }

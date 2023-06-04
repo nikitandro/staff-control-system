@@ -1,8 +1,9 @@
-import { Component, Input, OnDestroy, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
 import { FormArray, FormGroup } from '@angular/forms';
 import { Subscription } from 'rxjs';
 import { IEmployeeFormData } from '../../data/interfaces/employee-form-data.interface';
 import { IEmployeeFormField } from '../../data/interfaces/employee-form-field.interface';
+import { UpdateDataService } from '../../services/update-data.service';
 
 @Component({
     selector: 'employee-add-form',
@@ -16,12 +17,27 @@ export class EmployeeAddFormComponent implements OnInit, OnDestroy {
 
     public employeeAddFormFieldsArray!: FormArray;
 
-    public employeeAddPhoto?: string;
+    public employeeFormControlTypes!: string[];
 
-    private _employeeAddFormSubscription!: Subscription;
+    public employeeAddPhoto?: string;
 
     @Input()
     public employeeAddFormData!: IEmployeeFormData;
+
+    @Output()
+    public data$: EventEmitter<string[]> = new EventEmitter<string[]>();
+
+    private _employeeAddFormSubscription!: Subscription;
+
+    constructor(
+        private _updateDataService: UpdateDataService
+    ) {
+        this._updateDataService.invokeEvent.subscribe((value: boolean) => {
+            if (value) {
+                this.onSubmit();
+            }
+        });
+    }
 
     public ngOnInit(): void {
         if (!this.employeeAddFormData) {
@@ -31,12 +47,12 @@ export class EmployeeAddFormComponent implements OnInit, OnDestroy {
         this.employeeAddFormFieldsArray = new FormArray(
             this.employeeAddFormData.employeeFormFields.map((field: IEmployeeFormField) => field.control)
         );
+        this.employeeFormControlTypes = this.employeeAddFormData.employeeFormFields.map((field: IEmployeeFormField) => field.controlType);
         this.employeeAddForm = new FormGroup({
             employeeAddFormFields: this.employeeAddFormFieldsArray
         });
         this.employeeAddPhoto = this.employeeAddFormData.photo;
     }
-
 
     public ngOnDestroy(): void {
         if (this._employeeAddFormSubscription) {
@@ -46,5 +62,14 @@ export class EmployeeAddFormComponent implements OnInit, OnDestroy {
 
     public get employeeAddFormFields(): FormArray {
         return this.employeeAddForm.controls['employeeAddFormFields'] as FormArray;
+    }
+
+    public onSubmit(): any {
+        if (this.employeeAddForm.invalid) {
+            this.employeeAddForm.markAllAsTouched();
+
+            return;
+        }
+        this.data$.emit(this.employeeAddForm.value.employeeAddFormFields);
     }
 }

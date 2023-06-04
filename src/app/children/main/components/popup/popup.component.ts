@@ -12,9 +12,6 @@ export class PopupComponent implements OnInit {
     @Output()
     public isOpen: EventEmitter<boolean> = new EventEmitter<boolean>();
 
-    // @Input()
-    // public employeeData!: IEmployeeFormData;
-
     public ngOnInit(): void {
         this.isOpen.emit(this.isOpenINP);
     }

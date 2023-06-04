@@ -1,7 +1,11 @@
+<div class="title">Достижения сотрудника</div>
 <div
     *ngFor="let employeeAchievementsCardData of employeeAchievementsCardDataList"
 >
-    <employee-card [employeeCardData]="employeeAchievementsCardData"></employee-card>
+    <employee-card
+        [employeeCardData]="employeeAchievementsCardData"
+        (emitUpdateDataMethod)="getAchievementList()"
+    ></employee-card>
 </div>
 <button
     class="add-button"

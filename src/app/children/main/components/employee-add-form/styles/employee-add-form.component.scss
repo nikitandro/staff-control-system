@@ -40,4 +40,18 @@
         width: 155px;
         height: 211px;
     }
+
+    &__error-text {
+        margin-top: 20px;
+        font-size: 20px;
+        line-height: 24px;
+        color: red;
+    }
+
+    &__good-text {
+        margin-top: 20px;
+        font-size: 20px;
+        line-height: 24px;
+        color: green;
+    }
 }

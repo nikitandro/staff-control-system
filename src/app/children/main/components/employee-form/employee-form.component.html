@@ -18,7 +18,7 @@
                     <input
                         class="employee-form__data"
                         id="field"
-                        type="text"
+                        type="{{ employeeFormControlTypes[i] }}"
                         formControlName="{{ i }}"
                     >
                 </ng-container>
@@ -27,12 +27,23 @@
                 <img src="assets/images/icons/{{ employeePhoto }}" alt="фото сотрудника">
             </div>
         </div>
+        <div
+            class="employee-form__error-text"
+            *ngIf="employeeForm.invalid && employeeForm.touched"
+        >
+            Пожалуйста, заполните все поля формы корректными данными
+        </div>
+        <div
+            class="employee-form__good-text"
+            *ngIf="employeeForm.valid && employeeForm.touched"
+        >
+            Ваша форма корректно заполнена!
+        </div>
     </div>
 
     <button
         class="employee-form__submit-button"
         type="submit"
-        (click)="onSubmit()"
     >
         Сохранить изменения
     </button>

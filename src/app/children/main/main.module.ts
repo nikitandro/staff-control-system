@@ -28,7 +28,7 @@ import {
 import { NavigationButtonComponent } from './components/navigation-button/navigation-button.component';
 import { EmployeeInfoLayoutComponent } from './layouts/employee-info-layout/employee-info-layout.component';
 import { EMPLOYEE_FORM_DATA_TOKEN } from './data/tokens/employee-form-data.token';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Subject } from 'rxjs';
 import { IEmployeeFormData } from './data/interfaces/employee-form-data.interface';
 import {
     EmployeeEducationDataPageWebComponent
@@ -59,6 +59,8 @@ import { EmployeeService } from './data/services/employee.service';
 import { DepartmentsService } from './data/services/departments.service';
 import { PostsService } from './data/services/posts.service';
 import { IntersectionObserverModule } from 'ng-intersection-observer';
+import { EMPLOYEE_ADD_TOKEN } from './data/tokens/employee-add.token';
+import { UpdateDataService } from './services/update-data.service';
 
 @NgModule({
     declarations: [
@@ -113,7 +115,12 @@ import { IntersectionObserverModule } from 'ng-intersection-observer';
         },
         EmployeeService,
         DepartmentsService,
-        PostsService
+        PostsService,
+        {
+            provide: EMPLOYEE_ADD_TOKEN,
+            useValue: new Subject<boolean>()
+        },
+        UpdateDataService,
     ],
 })
 export class MainModule {

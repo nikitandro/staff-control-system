@@ -1,7 +1,12 @@
+<div class="title">Образование</div>
 <div
     *ngFor="let employeeEducationCardData of employeeEducationCardDataList"
 >
-    <employee-card [employeeCardData]="employeeEducationCardData"></employee-card>
+    <employee-card
+        [employeeCardData]="employeeEducationCardData"
+        (emitUpdateDataMethod)="getEducationList()"
+    >
+    </employee-card>
 </div>
 <button
     class="add-button"

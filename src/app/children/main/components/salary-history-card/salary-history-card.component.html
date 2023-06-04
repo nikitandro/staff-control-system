@@ -18,10 +18,61 @@
                     {{ salaryChange.salary }}
                 </div>
             </ng-container>
+
+            <form
+                class="salary-history-form"
+                [formGroup]="salaryChangeForm"
+                (ngSubmit)="onSubmit()"
+                *ngIf="showForm"
+            >
+                <div class="salary-history-form__container">
+                    <input
+                        class="salary-history-form__data"
+                        type="date"
+                        formControlName="changeDate"
+                    >
+                    <input
+                        class="salary-history-form__data"
+                        type="number"
+                        formControlName="changeSalary"
+                    >
+                </div>
+                <div class="salary-history-form__action">
+                    <button
+                        class="salary-history-form__cancel-button"
+                        type="button"
+                        (click)="cancel()"
+                    >
+                        Отмена
+                    </button>
+
+                    <button
+                        class="salary-history-form__submit-button"
+                        type="submit"
+                    >
+                        Сохранить
+                    </button>
+                </div>
+
+                <div
+                    class="salary-history-form__error-text"
+                    *ngIf="salaryChangeForm.invalid && salaryChangeForm.touched"
+                >
+                    Пожалуйста, заполните все поля формы корректными данными
+                </div>
+                <div
+                    class="salary-history-form__good-text"
+                    *ngIf="salaryChangeForm.valid && salaryChangeForm.touched"
+                >
+                    Ваша форма корректно заполнена!
+                </div>
+
+            </form>
         </div>
     </div>
     <button
         class="salary-history-card__add-button"
+        [ngClass]="{'salary-history-card__add-button_hide': showForm}"
         (click)="add()"
     >
         Добавить изменения
