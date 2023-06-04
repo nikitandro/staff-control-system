@@ -25,7 +25,7 @@ export interface IEmployeeResponseModel {
     departmentId: string;
     postId: string;
     salary: number;
-    successRate: string;
+    successRate: number;
     isFired: boolean;
     vacations: IEmployeeVacation[];
     education: IEmployeeEducation[];

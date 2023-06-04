@@ -190,7 +190,7 @@
             "postId": 1,
             "salary": 60000,
             "isFired": false,
-            "successRate": 0,
+            "successRate": -1,
             "firstWorkDay": "",
             "vacationsList": [],
             "education": [],
@@ -240,7 +240,7 @@
             "employmentDate": "2022-04-3",
             "firstWorkDayDate": "2022-04-6",
             "salary": 60000,
-            "successRate": 2,
+            "successRate": 0,
             "isFired": false,
             "firingDate": null,
             "vacations": [

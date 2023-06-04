@@ -11,5 +11,7 @@
     </div>
     <!--    <div class="checkbox-container"><main-checkbox title="Успешные сотрудники" formControlName="isSuccessful"></main-checkbox></div>-->
 
-    <radio-button-group [radioButtons]="[{text: 'asdasd', name: 'asdasd', active: false}]"/>
+    <div class="filter-form__radio-buttons">
+        <radio-button-group [radioButtons]="successStatusRadioButtons" (groupChange)="onSuccessStatusChange($event)"/>
+    </div>
 </div>

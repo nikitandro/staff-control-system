@@ -5,6 +5,7 @@ import {IDepartment} from '../../data/interfaces/department.interface';
 import {PostsService} from '../../data/services/posts.service';
 import {IPost} from '../../data/interfaces/post.interface';
 import {SuccessStatus} from '../../data/interfaces/SuccessStatus.interface';
+import {IRadioButton} from '../radio-button-group/radio-button-group.types';
 
 @Component({
     selector: 'filter-form',
@@ -16,8 +17,25 @@ export class FilterFormComponent implements OnInit {
 
     public departments: IDepartment[] = [];
     public posts: IPost[] = [];
-    public sliderOptions: {floor: number, ceil: number} = {floor: 0, ceil: 0};
+    public sliderOptions: { floor: number, ceil: number } = {
+        floor: 0,
+        ceil: 0
+    };
     public salaryBounds: [number, number] = [0, 0];
+    public successStatusRadioButtons: IRadioButton[] = [
+        {
+            id: SuccessStatus.Successful,
+            text: 'Успешные'
+        },
+        {
+            id: SuccessStatus.Unsuccessful,
+            text: 'Неуспешные'
+        },
+        {
+            id: SuccessStatus.Zero,
+            text: 'Без оценки'
+        }
+    ];
 
     constructor(private filterService: FilterService,
                 private departmentsService: DepartmentsService,
@@ -26,14 +44,18 @@ export class FilterFormComponent implements OnInit {
     }
 
     public ngOnInit() {
+
         this.departmentsService.getDepartmentsList().subscribe((value) => {
             this.departments = value;
             this.changeDetection.detectChanges();
         });
         this.filterService.getActualSalaryBounds().subscribe((value) => {
-            this.sliderOptions = {floor: value[0], ceil: value[1]};
+            this.sliderOptions = {
+                floor: value[0],
+                ceil: value[1]
+            };
             this.salaryBounds = value;
-        })
+        });
         this.postsService.getPosts().subscribe((value) => {
             this.posts = value;
             this.changeDetection.detectChanges();
@@ -54,6 +76,14 @@ export class FilterFormComponent implements OnInit {
 
     public onSalaryChange(value: [number, number]) {
         this.filterService.salary$.next(value);
+    }
+
+    public onSuccessStatusChange(value: number | null) {
+        if (typeof value === 'number') {
+            this.filterService.successStatus$.next(value);
+            return;
+        }
+        this.filterService.successStatus$.next(SuccessStatus.NotStated);
     }
 
     public onFormTouchEnd(event: TouchEvent) {

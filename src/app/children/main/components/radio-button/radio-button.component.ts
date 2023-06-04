@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, EventEmitter, Input, Output} from "@angular/core";
+import {ChangeDetectionStrategy, Component, Input} from '@angular/core';
 
 @Component(
     {
@@ -11,16 +11,7 @@ import {ChangeDetectionStrategy, Component, EventEmitter, Input, Output} from "@
 export class RadioButtonComponent {
     @Input()
     public text: string = '';
-    @Output()
-    public isActive: EventEmitter<boolean>  = new EventEmitter<boolean>();
 
-    public _isActive: boolean = false;
-    constructor() {
-
-    }
-
-    public toggleIsActive() {
-        this._isActive = !this._isActive;
-        this.isActive.emit(this._isActive);
-    }
+    @Input()
+    public isActive: boolean = false;
 }

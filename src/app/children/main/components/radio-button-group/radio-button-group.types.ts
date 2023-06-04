@@ -1,7 +1,7 @@
 export interface IRadioButton {
+    id: number;
     text: string;
-    name: string;
-    active: boolean;
+    active?: boolean;
 }
 
 export type IRadioButtons = IRadioButton[];

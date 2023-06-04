@@ -12,7 +12,6 @@ import { CheckboxComponent } from './components/checkbox/checkbox.component';
 import { SalaryPickerComponent } from './components/salary-picker/salary-picker.component';
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { DropDownListItemComponent } from './components/drop-down-list-item/drop-down-list-item.component';
 import { EmployeeListItemComponent } from './components/employee-list-item/employee-list-item.component';
 import { ShortenPipe } from './pipes/shorten/shorten.pipe';
 import { MobileBottomSheetComponent } from './components/mobile-bottom-sheet/mobile-bottom-sheet.component';
@@ -66,7 +65,6 @@ import {PostsService} from './data/services/posts.service';
         DropDownListComponent,
         CheckboxComponent,
         SalaryPickerComponent,
-        DropDownListItemComponent,
         EmployeeListItemComponent,
         ShortenPipe,
         MobileBottomSheetComponent,

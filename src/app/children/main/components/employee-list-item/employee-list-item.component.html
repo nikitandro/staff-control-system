@@ -19,9 +19,9 @@
                     <span>{{info.salary | currency: 'RUB': 'symbol-narrow': '1.0'}}</span>
                 </div>
             </div>
-<!--            <div class="success-cont" *ngIf="isSuccessStatusStated()">-->
-<!--                <img ngSrc="assets/images/icons/like.svg" alt="" class="success" height="26" width="26">-->
-<!--            </div>-->
+            <div class="success-cont" *ngIf="isNonZeroSuccessRate()">
+                <img [ngSrc]=" isSuccessful() ? 'assets/images/icons/like.svg' : 'assets/images/icons/dislike.svg'" alt="" class="success" height="26" width="26">
+            </div>
         </div>
     </div>
 </div>

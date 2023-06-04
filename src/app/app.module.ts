@@ -6,10 +6,12 @@ import { AppComponent } from './component/app.component';
 import { AuthModule } from './children/auth/auth.module';
 import { MainModule } from './children/main/main.module';
 import { GlobalErrorHandler } from './global-error-handler/global-error-handler';
+import {NotFoundComponent} from './component/not-found/not-found.component';
 
 @NgModule({
     declarations: [
         AppComponent,
+        NotFoundComponent
     ],
     imports: [
         BrowserModule,
