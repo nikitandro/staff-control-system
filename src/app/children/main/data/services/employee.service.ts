@@ -60,9 +60,7 @@ export class EmployeeService {
         query += `isFired=${filters.isFired}&`;
         query += `salary_gte=${filters.salary[0]}&salary_lte=${filters.salary[1]}`;
         this._http.get<IEmployeeResponseModel[]>(query).subscribe((value: IEmployeeResponseModel[]) => {
-            if (value.length !== this.employeeList$.value.length) {
-                this.employeeList$.next(value);
-            }
+            this.employeeList$.next(value);
         });
     }
 }
