@@ -1,48 +1,62 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { IEmployeeNavigationButton } from '../../data/interfaces/employee-navigation-button.interface';
+import {ActivatedRoute, Params} from "@angular/router";
+import {NavigationService} from "../../services/navigation.service";
 
 @Component({
     selector: 'employee-info-navigation',
     templateUrl: './employee-info-navigation.component.html',
     styleUrls: ['./styles/employee-info-navigation.component.scss']
 })
-export class EmployeeInfoNavigationComponent {
-    public employeeNavigationButtons: IEmployeeNavigationButton[] = [
-        {
-            title: 'Личная информация',
-            iconSrc: '/assets/images/icons/navigate-button-personal-info.svg',
-            pageRoute: 'personal'
-        },
-        {
-            title: 'Контакты',
-            iconSrc: '/assets/images/icons/navigate-button-contacts.svg',
-            pageRoute: 'contacts'
-        },
-        {
-            title: 'Образование',
-            iconSrc: '/assets/images/icons/navigate-button-education.svg',
-            pageRoute: 'education'
-        },
-        {
-            title: 'Условия работы',
-            iconSrc: '/assets/images/icons/navigate-button-working-conditions.svg',
-            pageRoute: 'condition'
-        },
-        {
-            title: 'Отпуска сотрудника',
-            iconSrc: '/assets/images/icons/navigate-button-work-experience.svg',
-            pageRoute: 'experience'
-        },
-        {
-            title: 'Стаж работы',
-            iconSrc: '/assets/images/icons/navigate-button-vacation-history.svg',
-            pageRoute: 'vacation'
-        },
-        {
-            title: 'Достижения сотрудника',
-            iconSrc: '/assets/images/icons/navigate-button-achievements.svg',
-            pageRoute: 'achievements'
-        },
-    ];
+export class EmployeeInfoNavigationComponent implements OnInit{
+
+    public id!: number;
+
+    public employeeNavigationButtons: IEmployeeNavigationButton[] = []
+
+
+    constructor() {
+    }
+
+    public ngOnInit(): void {
+        this.id = Number(window.location.pathname.split('/')[3])
+        this.employeeNavigationButtons = [
+            {
+                title: 'Личная информация',
+                iconSrc: '/assets/images/icons/navigate-button-personal-info.svg',
+                pageRoute: `${this.id}/personal`
+            },
+            {
+                title: 'Контакты',
+                iconSrc: '/assets/images/icons/navigate-button-contacts.svg',
+                pageRoute: `${this.id}/contacts`
+            },
+            {
+                title: 'Образование',
+                iconSrc: '/assets/images/icons/navigate-button-education.svg',
+                pageRoute: `${this.id}/education`
+            },
+            {
+                title: 'Условия работы',
+                iconSrc: '/assets/images/icons/navigate-button-working-conditions.svg',
+                pageRoute: `${this.id}/condition`
+            },
+            {
+                title: 'Стаж работы',
+                iconSrc: '/assets/images/icons/navigate-button-work-experience.svg',
+                pageRoute: `${this.id}/experience`
+            },
+            {
+                title: 'Отпуска сотрудника',
+                iconSrc: '/assets/images/icons/navigate-button-vacation-history.svg',
+                pageRoute: `${this.id}/vacation`
+            },
+            {
+                title: 'Достижения сотрудника',
+                iconSrc: '/assets/images/icons/navigate-button-achievements.svg',
+                pageRoute: `${this.id}/achievements`
+            },
+        ];
+    }
 
 }

@@ -4,11 +4,7 @@ import { EmployeeDataService } from '../../data/services/employee-data.service';
 import { IEmployeeResponseModel } from '../../data/response-models/employee.response-model.interface';
 import { IEmployeeFormData } from '../../data/interfaces/employee-form-data.interface';
 import { EMPLOYEE_FORM_DATA_TOKEN } from '../../data/tokens/employee-form-data.token';
-<<<<<<< HEAD
-import {BehaviorSubject, delay} from 'rxjs';
-=======
 import { BehaviorSubject, Subscription } from 'rxjs';
->>>>>>> nikitandro
 import { FormControl, Validators } from '@angular/forms';
 import { UpdateDataService } from '../../services/update-data.service';
 import { ActivatedRoute, Params } from '@angular/router';
@@ -20,16 +16,13 @@ import { ActivatedRoute, Params } from '@angular/router';
 })
 export class EmployeePersonalDataPageWebComponent implements OnInit, OnDestroy {
     public isPopupOpen: boolean = false;
-
     public employeePersonalCardData!: IEmployeeCardData;
 
-<<<<<<< HEAD
     public loader: boolean = true;
-=======
+
     private _employeeId!: number;
 
     private _routeSubscription!: Subscription;
->>>>>>> nikitandro
 
     constructor(
         private _employeeDataService: EmployeeDataService,
@@ -61,7 +54,7 @@ export class EmployeePersonalDataPageWebComponent implements OnInit, OnDestroy {
     }
 
     public getPersonalData(): void {
-        this._employeeDataService.getEmployeeData(2)
+        this._employeeDataService.getEmployeeData(this._employeeId)
             .subscribe((data: IEmployeeResponseModel) => {
                 this.employeePersonalCardData = {
                     employeeCardFields: [

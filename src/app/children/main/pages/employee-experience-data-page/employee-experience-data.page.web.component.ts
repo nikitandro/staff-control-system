@@ -7,7 +7,7 @@ import { EMPLOYEE_FORM_DATA_TOKEN } from '../../data/tokens/employee-form-data.t
 import { BehaviorSubject, Subscription } from 'rxjs';
 import { FormControl, Validators } from '@angular/forms';
 import { UpdateDataService } from '../../services/update-data.service';
-import { ActivatedRoute, Params } from '@angular/router';
+import {ActivatedRoute, Params, Route, Router} from '@angular/router';
 
 @Component({
     selector: 'employee-experience-data',
@@ -53,7 +53,7 @@ export class EmployeeExperienceDataPageWebComponent implements OnInit, OnDestroy
     }
 
     public getExperienceData(): void {
-        this._employeeDataService.getEmployeeData(2)
+        this._employeeDataService.getEmployeeData(this._employeeId)
             .subscribe((data: IEmployeeResponseModel) => {
                 this.employeeExperienceCardData = {
                     employeeCardFields: [

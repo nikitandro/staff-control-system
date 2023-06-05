@@ -63,6 +63,7 @@ import { EMPLOYEE_ADD_TOKEN } from './data/tokens/employee-add.token';
 import { UpdateDataService } from './services/update-data.service';
 import { EmployeeCardSkeletonComponent } from './components/employee-card-skeleton/employee-card-skeleton.component';
 import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
+import {NavigationService} from "./services/navigation.service";
 
 
 @NgModule({
@@ -126,6 +127,7 @@ import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
             useValue: new Subject<boolean>()
         },
         UpdateDataService,
+        NavigationService,
     ],
 })
 export class MainModule {

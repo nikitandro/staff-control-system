@@ -44,35 +44,35 @@ const routes: Routes = [
         ],
     },
     {
-        path: 'employee-info/:employeeId',
+        path: 'employee-info',
         component: EmployeeInfoLayoutComponent,
         children: [
             {
-                path: 'personal',
+                path: ':employeeId/personal',
                 component: EmployeePersonalDataPageWebComponent
             },
             {
-                path: 'contacts',
+                path: ':employeeId/contacts',
                 component: EmployeeContactsDataPageWebComponent
             },
             {
-                path: 'education',
+                path: ':employeeId/education',
                 component: EmployeeEducationDataPageWebComponent
             },
             {
-                path: 'condition',
+                path: ':employeeId/condition',
                 component: EmployeeConditionDataPageWebComponent
             },
             {
-                path: 'experience',
+                path: ':employeeId/experience',
                 component: EmployeeExperienceDataPageWebComponent
             },
             {
-                path: 'vacation',
+                path: ':employeeId/vacation',
                 component: EmployeeVacationDataPageWebComponent
             },
             {
-                path: 'achievements',
+                path: ':employeeId/achievements',
                 component: EmployeeAchievementsDataPageWebComponent
             }
         ]

@@ -4,6 +4,7 @@ import {EmployeeService} from '../../data/services/employee.service';
 import {tap} from 'rxjs/operators';
 import {IEmployeeResponseModel} from '../../data/response-models/employee.response-model.interface';
 import { Router } from '@angular/router';
+import {NavigationService} from "../../services/navigation.service";
 
 @Component({
     selector: 'employee-list-page',
