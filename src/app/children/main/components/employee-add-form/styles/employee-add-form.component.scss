@@ -1,26 +1,23 @@
 .employee-add-form {
-    width: 957px;
-    padding: 50px 50px 65px;
-    position: relative;
+    width: 100%;
+    padding: 25px 25px;
     background-color: #F0F0F0;
     margin-bottom: 27px;
 
     &__content {
-        width: 857px;
         display: flex;
         justify-content: space-between;
-
     }
 
     &__employee-data {
         display: grid;
-        grid-template-columns: 1fr 2.5fr;
-        row-gap: 25px;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 10px;
         column-gap: min(30px);
     }
 
     &__label {
-        font-size: 20px;
+        font-size: 18px;
         line-height: 24px;
         font-weight: 600;
         display: flex;
@@ -28,13 +25,13 @@
     }
 
     &__data {
-        font-size: 20px;
-        line-height: 24px;
+        font-size: 18px;
+        line-height: 20px;
         border-radius: 3px;
         border: none;
-        padding-top: 5px;
+        padding-top: 3px;
         padding-left: 5px;
-        padding-bottom: 5px;
+        padding-bottom: 3px;
     }
 
     &__employee-photo {
@@ -59,18 +56,6 @@
 
 @media screen and (max-width: 895px) {
     .employee-add-form {
-        width: 100%;
-        padding: 25px;
 
-
-        &__content {
-            width: 100%;
-            flex-direction: column;
-        }
-
-        &__employee-data {
-            grid-template-columns: 100%;
-            row-gap: 15px;
-        }
     }
 }

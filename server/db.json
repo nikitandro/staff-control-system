@@ -1,6 +1,11 @@
 {
-
-  "users": [],
+  "users": [
+    {
+      "email": "a@a.com",
+      "password": "$2a$10$uOMsjXIvGaHvaCzf/bK8QusO.U/8QmQnsTJjto4ZWlPRiJTXj11eS",
+      "id": 1
+    }
+  ],
   "posts": [
     {
       "id": 1,
