@@ -4,7 +4,9 @@
         <ng-container *ngFor="let employeeData of employeeList">
             <employee-list-item [info]="employeeData" (click)="onEmployeeListItemClick(employeeData.id)"></employee-list-item>
         </ng-container>
-
+        <div class="intersection-observer" style="position: relative; height: 0; z-index: -1000">
+            <div observeVisibility [observeVisibilityThreshold]="0.7" (visible)="onIntersectionObserverVisible()" (hidden)="onIntersectionObserverHidden()" style="position: absolute; height: 300px; width: 100%; bottom: 0px"></div>
+        </div>
     </div>
 </div>
 <mobile-bottom-sheet></mobile-bottom-sheet>

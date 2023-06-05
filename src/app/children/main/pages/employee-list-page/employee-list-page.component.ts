@@ -1,9 +1,14 @@
-import {ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, OnInit, ViewChild} from '@angular/core';
-import { IEmployeeInfo } from '../../components/employee-list-item/employee-list-item.types';
-import {EmployeeService} from '../../data/services/employee.service';
-import {tap} from 'rxjs/operators';
-import {IEmployeeResponseModel} from '../../data/response-models/employee.response-model.interface';
+import {
+    AfterViewInit,
+    ChangeDetectionStrategy,
+    ChangeDetectorRef,
+    Component,
+    OnInit
+} from '@angular/core';
+import { EmployeeService } from '../../data/services/employee.service';
+import { IEmployeeResponseModel } from '../../data/response-models/employee.response-model.interface';
 import { Router } from '@angular/router';
+import { IntersectionObserverService } from 'ng-intersection-observer';
 
 @Component({
     selector: 'employee-list-page',
@@ -11,23 +16,32 @@ import { Router } from '@angular/router';
     styleUrls: ['./styles/employee-list-page.components.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class EmployeeListPageComponent implements OnInit{
+export class EmployeeListPageComponent implements OnInit, AfterViewInit {
 
-    public employeeList: IEmployeeResponseModel[] = []
-    constructor(public employeeService: EmployeeService, private changeDetection: ChangeDetectorRef, private router: Router) {
+    public employeeList: IEmployeeResponseModel[] = [];
+
+    constructor(private _employeeService: EmployeeService, private _changeDetection: ChangeDetectorRef, private _router: Router, private _intersectionService: IntersectionObserverService) {
 
     }
 
-    public ngOnInit() {
-        this.employeeService.employeeList$.subscribe((value) => {
+    public ngAfterViewInit(): void {
+
+    }
+
+    public ngOnInit(): void {
+        this._employeeService.employeeList$.subscribe((value: IEmployeeResponseModel[]) => {
             this.employeeList = value;
-            this.changeDetection.detectChanges();
-        })
-        this.employeeService.limit$.next(20);
-        this.employeeService.page$.next(1);
+            this._changeDetection.detectChanges();
+        });
     }
 
-    public onEmployeeListItemClick(id: number) {
-        this.router.navigate([`cabinet/employee-info/${id}/personal`])
+    public onEmployeeListItemClick(id: number): void {
+        this._router.navigate([`cabinet/employee-info/${id}/personal`]);
     }
+
+    public onIntersectionObserverVisible(): void {
+        this._employeeService.page$.next(this._employeeService.page$.value + 1);
+    }
+
+    public onIntersectionObserverHidden(): void {}
 }

@@ -1,16 +1,14 @@
 import {
-    AfterContentInit, AfterViewChecked,
-    AfterViewInit,
     ChangeDetectionStrategy,
-    Component, DoCheck,
+    Component,
     ElementRef, EventEmitter,
     forwardRef, Input, OnChanges,
-    OnInit, Output, SimpleChanges,
+    OnInit, Output,
     ViewChild,
 } from '@angular/core';
-import {Options} from '@angular-slider/ngx-slider';
-import {ControlValueAccessor, FormControl, NG_VALUE_ACCESSOR} from '@angular/forms';
-import {filter, iif} from 'rxjs';
+import { Options } from '@angular-slider/ngx-slider';
+import { ControlValueAccessor, FormControl, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { filter } from 'rxjs';
 
 @Component({
     selector: 'salary-picker',
@@ -29,18 +27,18 @@ export class SalaryPickerComponent implements OnInit, ControlValueAccessor, OnCh
 
     @Input()
     public sliderOptions: Options = {
-        floor: 0,
-        ceil: 0,
-    };
+            floor: 0,
+            ceil: 0,
+        };
 
     @Output()
     public salaryChanges: EventEmitter<[number, number]> = new EventEmitter<[number, number]>();
 
-    public lowestSalaryControl: FormControl<number> = new FormControl<number>(0, {nonNullable: true});
+    public lowestSalaryControl: FormControl<number> = new FormControl<number>(0, { nonNullable: true });
 
-    public highestSalaryControl: FormControl<number> = new FormControl<number>(0, {nonNullable: true});
+    public highestSalaryControl: FormControl<number> = new FormControl<number>(0, { nonNullable: true });
 
-    public sliderControl: FormControl<[number, number]> = new FormControl<[number, number]>([0, 0], {nonNullable: true});
+    public sliderControl: FormControl<[number, number]> = new FormControl<[number, number]>([0, 0], { nonNullable: true });
 
     public lowestSalary: number = 0;
 
@@ -52,34 +50,35 @@ export class SalaryPickerComponent implements OnInit, ControlValueAccessor, OnCh
     @ViewChild('highestSalary')
     public highestSalaryElementRef?: ElementRef<HTMLInputElement>;
 
-    public onChange = (value: [number, number]) => {
+    public onChange = (value: [number, number]): void => {
     };
 
-    public onTouch = () => {
+    public onTouch = (): void => {
     };
 
-    public isValidState() {
-        const currLowestSalaryValue = this.lowestSalaryControl.getRawValue();
-        const currHighestSalaryValue = this.highestSalaryControl.getRawValue();
+    public isValidState(): boolean {
+        const currLowestSalaryValue: number = this.lowestSalaryControl.getRawValue();
+        const currHighestSalaryValue: number = this.highestSalaryControl.getRawValue();
+
         return currLowestSalaryValue >= this.lowestSalary
             && currLowestSalaryValue <= this.highestSalary
             && currHighestSalaryValue >= this.lowestSalary
             && currHighestSalaryValue <= this.highestSalary;
     }
 
-    public swapLowAndHighSalaryControlsValues() {
+    public swapLowAndHighSalaryControlsValues(): void {
         if (!this.isValidState()) {
             return;
         }
-        const currLowestSalaryControlValue = this.lowestSalaryControl.getRawValue();
-        const currHighestSalaryControlValue = this.highestSalaryControl.getRawValue();
+        const currLowestSalaryControlValue: number = this.lowestSalaryControl.getRawValue();
+        const currHighestSalaryControlValue: number = this.highestSalaryControl.getRawValue();
         this.highestSalaryControl.setValue(currLowestSalaryControlValue);
         this.lowestSalaryControl.setValue(currHighestSalaryControlValue);
     }
 
-    public setValidSalary() {
-        const currLowestSalaryValue = this.lowestSalaryControl.getRawValue();
-        const currHighestSalaryValue = this.highestSalaryControl.getRawValue();
+    public setValidSalary(): void {
+        const currLowestSalaryValue: number = this.lowestSalaryControl.getRawValue();
+        const currHighestSalaryValue: number = this.highestSalaryControl.getRawValue();
         if (currLowestSalaryValue < this.lowestSalary) {
             this.lowestSalaryControl.setValue(this.lowestSalary);
         }
@@ -94,7 +93,7 @@ export class SalaryPickerComponent implements OnInit, ControlValueAccessor, OnCh
         }
     }
 
-    public onLowestSalaryControlKeyDownEnter() {
+    public onLowestSalaryControlKeyDownEnter(): void {
         this.setValidSalary();
         if (this.lowestSalaryControl.getRawValue() < this.lowestSalary) {
             this.lowestSalaryControl.setValue(this.lowestSalary);
@@ -102,9 +101,9 @@ export class SalaryPickerComponent implements OnInit, ControlValueAccessor, OnCh
         this.lowestSalaryElementRef?.nativeElement.blur();
     }
 
-    public onHighestSalaryControlKeyDownEnter() {
+    public onHighestSalaryControlKeyDownEnter(): void {
         this.setValidSalary();
-        const currValue = this.highestSalaryControl.getRawValue();
+        const currValue: number = this.highestSalaryControl.getRawValue();
         if (currValue > this.highestSalary) {
             this.highestSalaryControl.setValue(this.highestSalary);
         } else if (currValue < this.lowestSalary) {
@@ -113,9 +112,9 @@ export class SalaryPickerComponent implements OnInit, ControlValueAccessor, OnCh
         this.highestSalaryElementRef?.nativeElement.blur();
     }
 
-    public onLowestSalaryControlBlur() {
+    public onLowestSalaryControlBlur(): void {
         this.setValidSalary();
-        const currValue = this.lowestSalaryControl.getRawValue();
+        const currValue: number = this.lowestSalaryControl.getRawValue();
         if (currValue < this.lowestSalary) {
             this.lowestSalaryControl.setValue(this.lowestSalary);
         } else if (currValue > this.highestSalary) {
@@ -123,9 +122,9 @@ export class SalaryPickerComponent implements OnInit, ControlValueAccessor, OnCh
         }
     }
 
-    public onHighestSalaryControlBlur() {
+    public onHighestSalaryControlBlur(): void {
         this.setValidSalary();
-        const currValue = this.highestSalaryControl.getRawValue();
+        const currValue: number = this.highestSalaryControl.getRawValue();
         if (currValue > this.highestSalary) {
             this.highestSalaryControl.setValue(this.highestSalary);
         } else if (currValue < this.lowestSalary) {
@@ -134,58 +133,73 @@ export class SalaryPickerComponent implements OnInit, ControlValueAccessor, OnCh
 
     }
 
-    public ngOnChanges() {
+    public ngOnChanges(): void {
         this.sliderOptions.ceil = this.salaryBounds[1];
         this.sliderOptions.floor = this.salaryBounds[0];
         this.lowestSalary = this.salaryBounds[0];
         this.highestSalary = this.salaryBounds[1];
         this.sliderControl.setValue(this.salaryBounds);
+        console.log(this.highestSalaryControl.getRawValue());
     }
 
-    public ngOnInit() {
-        this.sliderControl.valueChanges.subscribe((value) => {
-            const lowestSalaryElement = this.lowestSalaryElementRef?.nativeElement;
-            const highestSalaryElement = this.highestSalaryElementRef?.nativeElement;
+    public ngOnInit(): void {
+        this.sliderControl.valueChanges.subscribe((value: [number, number]) => {
+            const lowestSalaryElement: HTMLInputElement | undefined = this.lowestSalaryElementRef?.nativeElement;
+            const highestSalaryElement: HTMLInputElement | undefined = this.highestSalaryElementRef?.nativeElement;
+
             if ((document.activeElement === lowestSalaryElement || document.activeElement === highestSalaryElement)) {
                 if (this.lowestSalaryControl.getRawValue() > this.highestSalaryControl.getRawValue()) {
                     this.swapLowAndHighSalaryControlsValues();
                 }
-                this.writeValue([this.lowestSalaryControl.getRawValue(), this.highestSalaryControl.getRawValue()])
+                this.writeValue([this.lowestSalaryControl.getRawValue(), this.highestSalaryControl.getRawValue()]);
+
                 return;
             }
+
             this.lowestSalaryControl.setValue(value[0]);
             this.highestSalaryControl.setValue(value[1]);
             this.writeValue(value);
         });
-        this.lowestSalaryControl.valueChanges.pipe(filter(() => document.activeElement === this.lowestSalaryElementRef?.nativeElement)).subscribe((value) => {
-            const currHighestSalaryControlValue = this.highestSalaryControl.getRawValue();
+
+        this.lowestSalaryControl.valueChanges.pipe(filter(() => document.activeElement === this.lowestSalaryElementRef?.nativeElement)).subscribe((value: number) => {
+            const currHighestSalaryControlValue: number = this.highestSalaryControl.getRawValue();
+
             if (value < this.lowestSalary) {
                 this.sliderControl.setValue([this.lowestSalary, this.highestSalaryControl.getRawValue()]);
+
                 return;
             } else if (value > this.highestSalary) {
                 this.sliderControl.setValue([this.highestSalary, this.highestSalaryControl.getRawValue()]);
+
                 return;
             } else if (value > currHighestSalaryControlValue) {
                 this.swapLowAndHighSalaryControlsValues();
                 this.sliderControl.setValue([this.lowestSalaryControl.getRawValue(), this.highestSalaryControl.getRawValue()]);
+
                 return;
             }
+
             this.sliderControl.setValue([value, this.highestSalaryControl.getRawValue()]);
         });
-        this.highestSalaryControl.valueChanges.pipe(filter(() => document.activeElement === this.highestSalaryElementRef?.nativeElement)).subscribe((value) => {
-            console.log(value)
-            const currLowestSalaryControlValue = this.lowestSalaryControl.getRawValue();
+
+        this.highestSalaryControl.valueChanges.pipe(filter(() => document.activeElement === this.highestSalaryElementRef?.nativeElement)).subscribe((value: number) => {
+            const currLowestSalaryControlValue: number = this.lowestSalaryControl.getRawValue();
+
             if (value > this.highestSalary) {
                 this.sliderControl.setValue([this.lowestSalaryControl.getRawValue(), this.highestSalary]);
+
                 return;
             } else if (value < this.lowestSalary) {
                 this.sliderControl.setValue([this.lowestSalaryControl.getRawValue(), this.lowestSalary]);
+
                 return;
             } else if (value < currLowestSalaryControlValue) {
                 this.swapLowAndHighSalaryControlsValues();
                 this.sliderControl.setValue([this.lowestSalaryControl.getRawValue(), this.highestSalaryControl.getRawValue()]);
+
                 return;
             }
+
             this.sliderControl.setValue([this.lowestSalaryControl.getRawValue(), value]);
         });
     }
