@@ -47,11 +47,11 @@
         left: 50px;
         bottom: 23px;
         position: absolute;
+        transition-duration: 0.2s;
 
         &:hover {
             background-color: #507CB1;
             color: white;
-            transition-duration: 0.2s;
         }
 
         &:active {

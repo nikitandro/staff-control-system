@@ -4,6 +4,11 @@
       "email": "12345@12345",
       "password": "$2a$10$xt1O.Gq1HHn17uYTtdcwg.lMeX0YakVDFeR2S84KO6ztbp5BDs.NO",
       "id": 1
+    },
+    {
+      "email": "a@a.com",
+      "password": "$2a$10$UupX9XnhcLE5mBDk8UqEK.OyG9e5ib0CrApwpHS7OOuSscwJE8KQ2",
+      "id": 2
     }
   ],
   "posts": [

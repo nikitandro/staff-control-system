@@ -5,7 +5,6 @@
     background: #FFFFFF;
     border: none;
     border-radius: 3px;
-
     transition: 150ms ease;
 
     &:hover {
@@ -58,6 +57,11 @@ a {
             margin-top: 10px;
             margin-bottom: 13px;
             padding: 5px;
+        }
+
+        &:hover {
+            transform: none;
+            margin-left: 0;
         }
     }
 
