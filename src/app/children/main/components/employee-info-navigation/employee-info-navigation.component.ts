@@ -1,7 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import { IEmployeeNavigationButton } from '../../data/interfaces/employee-navigation-button.interface';
-import {ActivatedRoute, Params} from "@angular/router";
-import {NavigationService} from "../../services/navigation.service";
 
 @Component({
     selector: 'employee-info-navigation',
