@@ -4,11 +4,16 @@
     position: relative;
     background-color: #F0F0F0;
 
+    &__body {
+        display: flex;
+    }
+
     &__title {
         font-size: 28px;
         line-height: 34px;
         margin-bottom: 19px;
     }
+
 
     &__content {
         width: 857px;
