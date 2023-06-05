@@ -1,0 +1,70 @@
+<form
+    class="employee-condition-form"
+    [formGroup]="employeeConditionForm"
+    *ngIf="employeeConditionFormData$ | async"
+    (ngSubmit)="onSubmit()"
+>
+    <div
+        class="employee-condition-form__close-button"
+        (click)="close()"
+        *ngIf="!isAddForm"
+    >
+        <img class="cross-img" src="assets/images/icons/close-button.svg" alt="закрыть">
+    </div>
+    <div class="employee-condition-form__body">
+        <div class="employee-condition-form__content">
+            <div class="employee-condition-form__employee-data">
+                <span class="employee-condition-form__label">Отдел:</span>
+                <radio-button-group
+                    *ngIf="!loadDepartments"
+                    [radioButtons]="radioButtonsDepartment"
+                    (groupChange)="onDepartmentChange($event)"
+                >
+                </radio-button-group>
+
+                <span class="employee-condition-form__label">Должность:</span>
+                <radio-button-group
+                    *ngIf="!loadPosts"
+                    [radioButtons]="radioButtonsPost"
+                    (groupChange)="onPostChange($event)"
+                >
+                </radio-button-group>
+
+                <label class="employee-condition-form__label" for="field1">Заработная плата:</label>
+                <input
+                    class="employee-condition-form__data"
+                    id="field1"
+                    type="number"
+                    formControlName="salary"
+                >
+                <label class="employee-condition-form__label" for="field2">Формат работы:</label>
+                <input
+                    class="employee-condition-form__data"
+                    id="field2"
+                    type="text"
+                    formControlName="workFormat"
+                >
+            </div>
+        </div>
+        <div
+            class="employee-condition-form__error-text"
+            *ngIf="employeeConditionForm.invalid && employeeConditionForm.touched"
+        >
+            Пожалуйста, заполните все поля формы корректными данными
+        </div>
+        <div
+            class="employee-condition-form__good-text"
+            *ngIf="employeeConditionForm.valid && employeeConditionForm.touched"
+        >
+            Ваша форма корректно заполнена!
+        </div>
+    </div>
+
+    <button
+        class="employee-condition-form__submit-button"
+        type="submit"
+        *ngIf="!isAddForm"
+    >
+        Сохранить изменения
+    </button>
+</form>

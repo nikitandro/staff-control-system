@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, Inject, OnInit } from '@angular/core';
 import { IEmployeeFormData } from '../../data/interfaces/employee-form-data.interface';
 import { FormControl, Validators } from '@angular/forms';
 import { UpdateDataService } from '../../services/update-data.service';
@@ -9,7 +9,10 @@ import { IEmployeeEducation } from '../../data/interfaces/employee-education.int
 import { IEmployeeCondition } from '../../data/interfaces/employee-condition.inteface';
 import { IEmployeeExperience } from '../../data/interfaces/employee-experience.interface';
 import { EmployeeDataService } from '../../data/services/employee-data.service';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { EMPLOYEE_CONDITION_FORM_DATA_TOKEN } from '../../data/tokens/employee-condition-form.data.token';
+import { BehaviorSubject } from 'rxjs';
+import { IEmployeeConditionFormData } from '../../data/interfaces/employee-condition-form-data.interface';
 
 @Component({
     selector: 'employee-add',
@@ -28,12 +31,19 @@ export class EmployeeAddPageWebComponent implements OnInit {
     constructor(
         private _ref: ChangeDetectorRef,
         private _router: Router,
+        private _route: ActivatedRoute,
         private _updateDataService: UpdateDataService,
-        private _employeeDataService: EmployeeDataService
+        private _employeeDataService: EmployeeDataService,
+        @Inject(EMPLOYEE_CONDITION_FORM_DATA_TOKEN) public employeeConditionFormData$: BehaviorSubject<IEmployeeConditionFormData>
     ) {
     }
 
     public ngOnInit(): void {
+        this.employeeConditionFormData$.next({
+            salary: 0,
+            workFormat: ''
+        });
+
         this.employeeAddFormDataList = [
             {
                 employeeFormFields: [
@@ -132,38 +142,6 @@ export class EmployeeAddPageWebComponent implements OnInit {
             {
                 employeeFormFields: [
                     {
-                        label: 'Отдел:',
-                        control: new FormControl('', [
-                            Validators.required
-                        ]),
-                        controlType: 'text'
-                    },
-                    {
-                        label: 'Должность:',
-                        control: new FormControl('', [
-                            Validators.required
-                        ]),
-                        controlType: 'text'
-                    },
-                    {
-                        label: 'Заработная плата (в рублях):',
-                        control: new FormControl('', [
-                            Validators.required
-                        ]),
-                        controlType: 'number'
-                    },
-                    {
-                        label: 'Формат работы:',
-                        control: new FormControl('', [
-                            Validators.required
-                        ]),
-                        controlType: 'text'
-                    }
-                ]
-            },
-            {
-                employeeFormFields: [
-                    {
                         label: 'Дата собеседования:',
                         control: new FormControl('', [
                             Validators.required
@@ -206,7 +184,7 @@ export class EmployeeAddPageWebComponent implements OnInit {
             phoneNumber: this.contactsData.phoneNumber,
             workEmail: this.contactsData.workEmail,
             personalEmail: this.contactsData.personalEmail,
-            departmentId: Number(this.conditionData.departmentName),
+            departmentId: this.conditionData.departmentId,
             postId: this.conditionData.postId,
             salary: this.conditionData.salary,
             workFormat: this.conditionData.workFormat,
@@ -264,12 +242,13 @@ export class EmployeeAddPageWebComponent implements OnInit {
         };
     }
 
-    public getConditionData(addConditionData: string[]): void {
+    public getConditionData(addConditionData: IEmployeeCondition): void {
+        console.log(addConditionData);
         this.conditionData = {
-            departmentName: addConditionData[0],
-            postId: Number(addConditionData[1]),
-            salary: Number(addConditionData[2]),
-            workFormat: addConditionData[3]
+            departmentId: addConditionData.departmentId,
+            postId: addConditionData.postId,
+            salary: addConditionData.salary,
+            workFormat: addConditionData.workFormat
         };
     }
 

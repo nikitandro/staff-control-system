@@ -22,6 +22,15 @@
                         formControlName="{{ i }}"
                     >
                 </ng-container>
+
+                <ng-container *ngIf="isAchievement">
+                    <span class="employee-form__label">Статус достижения</span>
+                    <radio-button-group
+                        [radioButtons]="radioButtonsAchievementStatus"
+                        (groupChange)="onAchievementStatusChange($event)"
+                    >
+                    </radio-button-group>
+                </ng-container>
             </div>
             <div class="employee-form__employee-photo" *ngIf="employeePhoto">
                 <img src="assets/images/icons/{{ employeePhoto }}" alt="фото сотрудника">

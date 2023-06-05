@@ -61,6 +61,9 @@ import { PostsService } from './data/services/posts.service';
 import { IntersectionObserverModule } from 'ng-intersection-observer';
 import { EMPLOYEE_ADD_TOKEN } from './data/tokens/employee-add.token';
 import { UpdateDataService } from './services/update-data.service';
+import { EmployeeConditionForm } from './components/employee-condition-form/employee-condition-form';
+import { EMPLOYEE_CONDITION_FORM_DATA_TOKEN } from './data/tokens/employee-condition-form.data.token';
+import { IEmployeeConditionFormData } from './data/interfaces/employee-condition-form-data.interface';
 
 @NgModule({
     declarations: [
@@ -94,7 +97,8 @@ import { UpdateDataService } from './services/update-data.service';
         EmployeeAddPageWebComponent,
         EmployeeAddLayoutComponent,
         EmployeeAddFormComponent,
-        DelayRenderingDirective
+        DelayRenderingDirective,
+        EmployeeConditionForm
     ],
     exports: [],
     imports: [
@@ -120,6 +124,11 @@ import { UpdateDataService } from './services/update-data.service';
             provide: EMPLOYEE_ADD_TOKEN,
             useValue: new Subject<boolean>()
         },
+        {
+            provide: EMPLOYEE_CONDITION_FORM_DATA_TOKEN,
+            useValue: new BehaviorSubject<IEmployeeConditionFormData | null>(null)
+        },
+
         UpdateDataService,
     ],
 })
