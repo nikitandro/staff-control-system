@@ -10,7 +10,7 @@
     "server": "json-server -w server/db.json -p 3000",
     "server-auth": "json-server-auth -w server/db.json -r server/routes.json -p 3000",
     "lint": "ng lint",
-      "start-all": "concurrently \"npm run start\" \"npm run server-auth\""
+    "start-all": "concurrently \"npm run start\" \"npm run server-auth\""
   },
   "private": true,
   "dependencies": {
@@ -23,6 +23,7 @@
     "@angular/platform-browser": "^15.2.0",
     "@angular/platform-browser-dynamic": "^15.2.0",
     "@angular/router": "^15.2.0",
+    "ngx-skeleton-loader": "^7.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0"

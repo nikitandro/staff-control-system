@@ -17,6 +17,7 @@ export class EmployeeConditionDataPageWebComponent implements OnInit {
     public isPopupOpen: boolean = false;
 
     public employeeConditionCardData!: IEmployeeCardData;
+    public loader: boolean = true;
 
     constructor(
         private _employeeDataService: EmployeeDataService,
@@ -83,6 +84,7 @@ export class EmployeeConditionDataPageWebComponent implements OnInit {
                         },
                     ]
                 });
+                this.loader = false;
                 this._ref.detectChanges();
             });
     }

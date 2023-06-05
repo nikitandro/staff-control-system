@@ -52,6 +52,8 @@ import { EmployeeAddFormComponent } from './components/employee-add-form/employe
 import { DelayRenderingDirective } from './directives/delay-rendering.directive';
 import { EMPLOYEE_ADD_TOKEN } from './data/tokens/employee-add.token';
 import { UpdateDataService } from './services/update-data.service';
+import { EmployeeCardSkeletonComponent } from './components/employee-card-skeleton/employee-card-skeleton.component';
+import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 
 
 @NgModule({
@@ -85,7 +87,8 @@ import { UpdateDataService } from './services/update-data.service';
         EmployeeAddPageWebComponent,
         EmployeeAddLayoutComponent,
         EmployeeAddFormComponent,
-        DelayRenderingDirective
+        DelayRenderingDirective,
+        EmployeeCardSkeletonComponent
     ],
     exports: [],
     imports: [
@@ -95,6 +98,7 @@ import { UpdateDataService } from './services/update-data.service';
         FormsModule,
         ReactiveFormsModule,
         NgOptimizedImage,
+        NgxSkeletonLoaderModule
     ],
     providers: [
         FilterService,

@@ -17,6 +17,7 @@ export class EmployeeContactsDataPageWebComponent implements OnInit {
     public isPopupOpen: boolean = false;
 
     public employeeContactsCardData!: IEmployeeCardData;
+    public loader: boolean = true;
 
     constructor(
         private _employeeDataService: EmployeeDataService,
@@ -75,6 +76,7 @@ export class EmployeeContactsDataPageWebComponent implements OnInit {
                         },
                     ]
                 });
+                this.loader = false;
                 this._ref.detectChanges();
             });
     }

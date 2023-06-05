@@ -11,8 +11,15 @@ img {
     display: none;
 }
 
+@media screen and (max-width: 1315px) {
+    .add-button {
+        float: right;
+    }
+}
+
 @media screen and (max-width: 895px) {
     .add-button {
+        float: none;
         font-size: 0;
         width: 29px;
         height: 29px;
@@ -32,4 +39,5 @@ img {
         display: flex;
     }
 }
+
 

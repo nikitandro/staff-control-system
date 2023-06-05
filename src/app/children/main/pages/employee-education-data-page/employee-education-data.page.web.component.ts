@@ -20,6 +20,7 @@ export class EmployeeEducationDataPageWebComponent implements OnInit {
     public addTitle: string = 'Добавить образование';
 
     public employeeEducationCardDataList: IEmployeeCardData[] = [];
+    public loader: boolean = true;
 
     constructor(
         private _employeeDataService: EmployeeDataService,
@@ -85,7 +86,7 @@ export class EmployeeEducationDataPageWebComponent implements OnInit {
                         }
                     ]
                 });
-
+                this.loader = false;
                 this._ref.detectChanges();
             });
     }

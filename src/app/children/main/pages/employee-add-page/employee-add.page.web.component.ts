@@ -20,6 +20,8 @@ export class EmployeeAddPageWebComponent implements OnInit {
         'Стаж работы'
     ];
 
+    public loader: boolean = true;
+
     constructor(
         private _ref: ChangeDetectorRef,
         @Inject(EMPLOYEE_ADD_TOKEN) public employeeAdd$: Subject<boolean>
@@ -121,7 +123,7 @@ export class EmployeeAddPageWebComponent implements OnInit {
                 ]
             }
         ];
-
+        this.loader = false;
         this._ref.detectChanges();
     }
 

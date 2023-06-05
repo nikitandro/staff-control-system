@@ -21,6 +21,8 @@ export class EmployeeVacationDataPageWebComponent implements OnInit {
 
     public employeeVacationCardDataList: IEmployeeCardData[] = [];
 
+    public loader: boolean = true;
+
     constructor(
         private _employeeDataService: EmployeeDataService,
         private _ref: ChangeDetectorRef,
@@ -77,7 +79,7 @@ export class EmployeeVacationDataPageWebComponent implements OnInit {
                         },
                     ]
                 });
-
+                this.loader = false;
                 this._ref.detectChanges();
             });
     }

@@ -4,6 +4,7 @@
     *delayRendering="200"
 >
 </employee-card>
+<ngx-skeleton-loader [theme]="{width: '900px', height: '350px', background: '#F0F0F0'}" *ngIf="loader"></ngx-skeleton-loader>
 <popup
     [isOpenINP]="isPopupOpen"
     (isOpen)="close($event)"

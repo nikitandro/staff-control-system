@@ -4,7 +4,7 @@ import { EmployeeDataService } from '../../data/services/employee-data.service';
 import { IEmployeeResponseModel } from '../../data/response-models/employee.response-model.interface';
 import { IEmployeeFormData } from '../../data/interfaces/employee-form-data.interface';
 import { EMPLOYEE_FORM_DATA_TOKEN } from '../../data/tokens/employee-form-data.token';
-import { BehaviorSubject } from 'rxjs';
+import {BehaviorSubject, delay} from 'rxjs';
 import { FormControl, Validators } from '@angular/forms';
 import { UpdateDataService } from '../../services/update-data.service';
 
@@ -17,6 +17,8 @@ export class EmployeePersonalDataPageWebComponent implements OnInit {
     public isPopupOpen: boolean = false;
 
     public employeePersonalCardData!: IEmployeeCardData;
+
+    public loader: boolean = true;
 
     constructor(
         private _employeeDataService: EmployeeDataService,
@@ -33,6 +35,7 @@ export class EmployeePersonalDataPageWebComponent implements OnInit {
 
     public ngOnInit(): void {
         this.getPersonalData();
+
     }
 
     public getPersonalData(): void {
@@ -84,6 +87,7 @@ export class EmployeePersonalDataPageWebComponent implements OnInit {
                     ]
                 });
                 this._ref.detectChanges();
+                this.loader = false;
             });
     }
 

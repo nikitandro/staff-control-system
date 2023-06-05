@@ -50,6 +50,17 @@
     }
 }
 
+@media screen and (max-width: 1315px) {
+    .salary-history-card {
+        width: 100%;
+        margin-top: 20px;
+
+        &__content {
+            width: 100%;
+        }
+    }
+}
+
 @media screen and (max-width: 895px) {
     .salary-history-card {
         width: 100%;
