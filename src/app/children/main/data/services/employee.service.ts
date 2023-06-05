@@ -5,6 +5,7 @@ import { FilterService } from './filter.service';
 import { IFilters } from '../interfaces/filters.interface';
 import { SuccessStatus } from '../interfaces/SuccessStatus.interface';
 import { BehaviorSubject, debounceTime } from 'rxjs';
+import { apiUrl } from '../api/api';
 
 @Injectable()
 export class EmployeeService {
@@ -25,7 +26,7 @@ export class EmployeeService {
     }
 
     public updateEmployeeList(filters: IFilters, limit?: number, page?: number): void {
-        let query: string = 'http://localhost:3000/employees?_expand=department&_expand=post&';
+        let query: string = `${apiUrl}/employees?_expand=department&_expand=post&`;
         if (limit !== undefined && page !== undefined) {
             query += `_limit=${limit * page}&`;
         }
