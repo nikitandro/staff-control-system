@@ -1,9 +1,9 @@
-import { Component, EventEmitter, Inject, Input, OnDestroy, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
 import { FormArray, FormGroup } from '@angular/forms';
-import { Subject, Subscription } from 'rxjs';
+import { Subscription } from 'rxjs';
 import { IEmployeeFormData } from '../../data/interfaces/employee-form-data.interface';
 import { IEmployeeFormField } from '../../data/interfaces/employee-form-field.interface';
-import { EMPLOYEE_ADD_TOKEN } from '../../data/tokens/employee-add.token';
+import { UpdateDataService } from '../../services/update-data.service';
 
 @Component({
     selector: 'employee-add-form',
@@ -17,6 +17,8 @@ export class EmployeeAddFormComponent implements OnInit, OnDestroy {
 
     public employeeAddFormFieldsArray!: FormArray;
 
+    public employeeFormControlTypes!: string[];
+
     public employeeAddPhoto?: string;
 
     @Input()
@@ -28,8 +30,13 @@ export class EmployeeAddFormComponent implements OnInit, OnDestroy {
     private _employeeAddFormSubscription!: Subscription;
 
     constructor(
-        @Inject(EMPLOYEE_ADD_TOKEN) public employeeAdd$: Subject<boolean>
+        private _updateDataService: UpdateDataService
     ) {
+        this._updateDataService.invokeEvent.subscribe((value: boolean) => {
+            if (value) {
+                this.onSubmit();
+            }
+        });
     }
 
     public ngOnInit(): void {
@@ -40,13 +47,11 @@ export class EmployeeAddFormComponent implements OnInit, OnDestroy {
         this.employeeAddFormFieldsArray = new FormArray(
             this.employeeAddFormData.employeeFormFields.map((field: IEmployeeFormField) => field.control)
         );
+        this.employeeFormControlTypes = this.employeeAddFormData.employeeFormFields.map((field: IEmployeeFormField) => field.controlType);
         this.employeeAddForm = new FormGroup({
             employeeAddFormFields: this.employeeAddFormFieldsArray
         });
         this.employeeAddPhoto = this.employeeAddFormData.photo;
-
-        //Подписываемся при инциализации
-        //this.employeeAdd$.subscribe(this.getData());
     }
 
     public ngOnDestroy(): void {
@@ -59,8 +64,12 @@ export class EmployeeAddFormComponent implements OnInit, OnDestroy {
         return this.employeeAddForm.controls['employeeAddFormFields'] as FormArray;
     }
 
-    public getData(): any {
+    public onSubmit(): any {
+        if (this.employeeAddForm.invalid) {
+            this.employeeAddForm.markAllAsTouched();
+
+            return;
+        }
         this.data$.emit(this.employeeAddForm.value.employeeAddFormFields);
-        //console.log(this.employeeAddForm.value.employeeAddFormFields);
     }
 }

@@ -43,5 +43,86 @@
   bottom: 23px;
   position: absolute;
 }
+.salary-history-card__add-button:hover {
+  background-color: #507CB1;
+  color: white;
+  transition-duration: 0.2s;
+}
+.salary-history-card__add-button:active {
+  opacity: 0.8;
+}
+.salary-history-card__add-button_hide {
+  display: none;
+}
+
+.salary-history-form {
+  width: 342px;
+  position: relative;
+}
+.salary-history-form__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.salary-history-form__data {
+  font-size: 20px;
+  line-height: 24px;
+  border-radius: 3px;
+  border: none;
+  padding-top: 5px;
+  padding-left: 5px;
+  padding-bottom: 5px;
+}
+.salary-history-form__action {
+  display: flex;
+}
+.salary-history-form__cancel-button {
+  font-size: 16px;
+  line-height: 20px;
+  width: 100px;
+  height: 25px;
+  border-radius: 3px;
+  margin-top: 10px;
+  border: solid 0.5px;
+}
+.salary-history-form__cancel-button:hover {
+  opacity: 0.7;
+  transition-duration: 0.2s;
+}
+.salary-history-form__cancel-button:active {
+  opacity: 0.4;
+}
+.salary-history-form__submit-button {
+  font-size: 16px;
+  line-height: 20px;
+  width: 100px;
+  height: 25px;
+  border-radius: 3px;
+  right: 0;
+  position: absolute;
+  margin-top: 10px;
+  background-color: #507CB1;
+  color: white;
+  border: none;
+}
+.salary-history-form__submit-button:hover {
+  opacity: 0.7;
+  transition-duration: 0.2s;
+}
+.salary-history-form__submit-button:active {
+  opacity: 0.4;
+}
+.salary-history-form__error-text {
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 18px;
+  color: red;
+}
+.salary-history-form__good-text {
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 18px;
+  color: green;
+}
 
 /*# sourceMappingURL=salary-history-card.component.css.map */

@@ -47,6 +47,101 @@
         left: 50px;
         bottom: 23px;
         position: absolute;
+
+        &:hover {
+            background-color: #507CB1;
+            color: white;
+            transition-duration: 0.2s;
+        }
+
+        &:active {
+            opacity: 0.8;
+        }
+
+        &_hide {
+            display: none;
+        }
+    }
+}
+
+.salary-history-form {
+    width: 342px;
+    position: relative;
+
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    &__data {
+        font-size: 20px;
+        line-height: 24px;
+        border-radius: 3px;
+        border: none;
+        padding-top: 5px;
+        padding-left: 5px;
+        padding-bottom: 5px;
+    }
+
+    &__action {
+        display: flex;
+    }
+
+    &__cancel-button {
+        font-size: 16px;
+        line-height: 20px;
+        width: 100px;
+        height: 25px;
+        border-radius: 3px;
+        margin-top: 10px;
+        border: solid 0.5px;
+
+        &:hover {
+            opacity: 0.7;
+            transition-duration: 0.2s;
+        }
+
+        &:active {
+            opacity: 0.4;
+        }
+    }
+
+    &__submit-button {
+        font-size: 16px;
+        line-height: 20px;
+        width: 100px;
+        height: 25px;
+        border-radius: 3px;
+        right: 0;
+        position: absolute;
+        margin-top: 10px;
+        background-color: #507CB1;
+        color: white;
+        border: none;
+
+        &:hover {
+            opacity: 0.7;
+            transition-duration: 0.2s;
+        }
+
+        &:active {
+            opacity: 0.4;
+        }
+    }
+
+    &__error-text {
+        margin-top: 10px;
+        font-size: 14px;
+        line-height: 18px;
+        color: red;
+    }
+
+    &__good-text {
+        margin-top: 10px;
+        font-size: 14px;
+        line-height: 18px;
+        color: green;
     }
 }
 

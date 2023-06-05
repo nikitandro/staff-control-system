@@ -1,11 +1,10 @@
 import {
     ChangeDetectionStrategy,
-    Component,
-    forwardRef,
-    Input,
+    Component, EventEmitter,
+    Input, Output,
 } from '@angular/core';
-import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
-import { ICheckboxModel } from './checkbox.types';
+
+import {BehaviorSubject, Subject} from 'rxjs';
 
 
 @Component({
@@ -13,36 +12,23 @@ import { ICheckboxModel } from './checkbox.types';
     templateUrl: './checkbox.component.html',
     styleUrls: ['./styles/checkbox.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush,
-    providers: [{
-        provide: NG_VALUE_ACCESSOR,
-        useExisting: forwardRef(() => CheckboxComponent),
-        multi: true,
-    }],
 })
-export class CheckboxComponent implements ControlValueAccessor {
+export class CheckboxComponent {
     @Input()
     public title: string = '';
-    @Input()
-    public isChecked?: boolean = false;
-    private onChange = (value: boolean) => {
-    };
-    private onTouched = () => {
-    };
 
-    public registerOnChange(fn: any): void {
-        this.onChange = fn;
+    @Output()
+    public isCheckedChange: EventEmitter<boolean> = new EventEmitter<boolean>();
+
+    public isChecked$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
+
+    constructor() {
+        this.isChecked$.subscribe((value) => {
+            this.isCheckedChange.emit(value);
+        });
     }
 
-    public registerOnTouched(fn: any): void {
-        this.onTouched = fn;
-    }
-
-    public writeValue(value: boolean): void {
-        this.isChecked = value;
-        this.onChange(value);
-    }
-
-    public click() {
-        this.writeValue(!this.isChecked);
+    public toggleIsChecked() {
+        this.isChecked$.next(!this.isChecked$.value);
     }
 }

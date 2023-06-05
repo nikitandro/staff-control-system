@@ -1,6 +1,7 @@
 export interface IEmployeeAchievement {
-    achievementId: number,
-    type: string,
-    supportDocument: string,
-    date: Date | string
+    type: string;
+    supportDocument: string;
+    date: string;
+    successRateIncrease: number;
+    achievementId: number;
 }

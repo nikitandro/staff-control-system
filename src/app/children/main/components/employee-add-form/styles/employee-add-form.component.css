@@ -36,5 +36,17 @@
   width: 155px;
   height: 211px;
 }
+.employee-add-form__error-text {
+  margin-top: 20px;
+  font-size: 20px;
+  line-height: 24px;
+  color: red;
+}
+.employee-add-form__good-text {
+  margin-top: 20px;
+  font-size: 20px;
+  line-height: 24px;
+  color: green;
+}
 
 /*# sourceMappingURL=employee-add-form.component.css.map */

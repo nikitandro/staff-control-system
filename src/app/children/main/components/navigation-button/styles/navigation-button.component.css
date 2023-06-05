@@ -4,6 +4,11 @@
   background: #FFFFFF;
   border: none;
   border-radius: 3px;
+  transition: 150ms ease;
+}
+.navigation-button:hover {
+  transform: scale(1.025);
+  margin-left: 5px;
 }
 .navigation-button__content {
   align-items: center;

@@ -46,11 +46,24 @@
   right: 15px;
   bottom: 15px;
   position: absolute;
+  cursor: pointer;
+}
+.employee-card__edit-button:hover {
+  opacity: 0.7;
+  transition-duration: 0.3s;
+}
+.employee-card__edit-button:active {
+  opacity: 0.3;
 }
 .employee-card__delete-button {
   right: 15px;
   top: 15px;
   position: absolute;
+  cursor: pointer;
+}
+.employee-card__delete-button:hover {
+  scale: 1.15;
+  transition-duration: 0.2s;
 }
 
 /*# sourceMappingURL=employee-card.component.css.map */

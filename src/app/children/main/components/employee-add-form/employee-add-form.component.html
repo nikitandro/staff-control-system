@@ -1,6 +1,7 @@
 <form
     class="employee-add-form"
     [formGroup]="employeeAddForm"
+    (ngSubmit)="onSubmit()"
 >
     <div class="employee-add-form__body">
         <div class="employee-add-form__content">
@@ -10,7 +11,7 @@
                     <input
                         class="employee-add-form__data"
                         id="field"
-                        type="text"
+                        type="{{ employeeFormControlTypes[i] }}"
                         formControlName="{{ i }}"
                     >
                 </ng-container>
@@ -19,8 +20,17 @@
                 <img src="assets/images/icons/{{ employeeAddPhoto }}" alt="фото сотрудника">
             </div>
         </div>
+        <div
+            class="employee-add-form__error-text"
+            *ngIf="employeeAddForm.invalid && employeeAddForm.touched"
+        >
+            Пожалуйста, заполните все поля формы корректными данными
+        </div>
+        <div
+            class="employee-add-form__good-text"
+            *ngIf="employeeAddForm.valid && employeeAddForm.touched"
+        >
+            Ваша форма корректно заполнена!
+        </div>
     </div>
 </form>
-<ng-container *ngIf="employeeAdd$ | async">
-    <button (click)="getData()">Получить данные с формы</button>
-</ng-container>

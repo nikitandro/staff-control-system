@@ -52,6 +52,13 @@
   top: -50px;
   position: absolute;
 }
+.employee-form__close-button:hover {
+  opacity: 0.7;
+  transition-duration: 0.2s;
+}
+.employee-form__close-button:active {
+  opacity: 0.3;
+}
 .employee-form__submit-button {
   font-size: 24px;
   line-height: 29px;
@@ -59,9 +66,32 @@
   height: 43px;
   padding: 7px;
   border-radius: 3px;
+  border: none;
   right: 0;
   bottom: -50px;
   position: absolute;
+}
+.employee-form__submit-button:hover {
+  background-color: #507CB1;
+  color: white;
+  transition-duration: 0.2s;
+}
+.employee-form__submit-button:active {
+  opacity: 0.8;
+  background-color: #507CB1;
+  color: white;
+}
+.employee-form__error-text {
+  margin-top: 20px;
+  font-size: 20px;
+  line-height: 24px;
+  color: red;
+}
+.employee-form__good-text {
+  margin-top: 20px;
+  font-size: 20px;
+  line-height: 24px;
+  color: green;
 }
 
 .cross-img {

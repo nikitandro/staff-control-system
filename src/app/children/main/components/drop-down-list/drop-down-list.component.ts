@@ -1,70 +1,50 @@
 import {
-    AfterViewInit,
-    ChangeDetectionStrategy,
-    Component,
-    forwardRef,
-    Input,
+    ChangeDetectionStrategy, Component, EventEmitter,
+    Input, Output,
 } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
-import {
-    ControlValueAccessor,
-    FormControl, FormGroup,
-    NG_VALUE_ACCESSOR,
-} from '@angular/forms';
-import {
-    IDropDownListInputOptions, IDropDownListOptions,
-    IDropDownListOptionsFormGroup, IDropDownListOption,
-} from './drop-down-list.types';
+import {BehaviorSubject} from 'rxjs';
+import {IDropDownListOption} from './drop-down-list.types';
 
 @Component({
     selector: 'drop-down-list',
     templateUrl: './drop-down-list.component.html',
     changeDetection: ChangeDetectionStrategy.OnPush,
     styleUrls: ['./styles/drop-down-list.component.scss'],
-    providers: [{
-        provide: NG_VALUE_ACCESSOR,
-        useExisting: forwardRef(() => DropDownListComponent),
-        multi: true,
-    }],
 })
-export class DropDownListComponent implements ControlValueAccessor, AfterViewInit {
+export class DropDownListComponent {
     @Input()
     public title: string = '';
 
     @Input()
     public options: IDropDownListOption[] = [];
 
+    @Output()
+    public checkedOptionsChange: EventEmitter<number[]> = new EventEmitter<number[]>();
+
+    public checkedOptions$: BehaviorSubject<number[]> = new BehaviorSubject<number[]>([]);
+
     public isOpen$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
 
-    private onChange: (properties: IDropDownListOptions) => void = () => {
-    };
-
-    private onTouched: () => void = () => {
-    };
-
-    public ngAfterViewInit() {
-
+    constructor() {
+        this.checkedOptions$.subscribe((value) => {
+            this.checkedOptionsChange.emit(value);
+        });
     }
+
 
     public toggleIsOpen(): void {
         this.isOpen$.next(!this.isOpen$.value);
     }
 
-    public registerOnChange(fn: (properties: IDropDownListOptions) => void): void {
-        this.onChange = fn;
+
+    public onPropertyIsCheckedChange(id: number, isChecked: boolean) {
+        if (isChecked) {
+            this.checkedOptions$.next([...this.checkedOptions$.value, id]);
+        } else {
+            this.checkedOptions$.next([...this.checkedOptions$.value.filter((value) => {
+                return value !== id;
+            })]);
+        }
     }
 
-    public registerOnTouched(fn: any): void {
-        this.onTouched = fn;
-    }
-
-    public writeValue(properties: IDropDownListOptions): void {
-        this.onChange(properties);
-    }
-
-    public onPropertyIsCheckedChange(name: string) {
-        return (value: IDropDownListOption) => {
-
-        };
-    }
 }

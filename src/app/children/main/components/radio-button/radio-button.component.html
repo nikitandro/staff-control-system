@@ -1,0 +1,4 @@
+<div class="radio-button unselectable clickable">
+    <img [src]="isActive ? '/assets/images/icons/radio-button_on.svg' : '/assets/images/icons/radio-button_off.svg'" alt="" class="radio-button__mark">
+    <span *ngIf="!!text" class="radio-button__text">{{text}}</span>
+</div>

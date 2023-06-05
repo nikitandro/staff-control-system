@@ -1,3 +1,16 @@
-<button class="burger-button">
+<button class="burger-button clickable" (click)="toggleOpen()">
     <img src="assets/images/icons/burger-button-icon.svg" class="burger-button__icon">
 </button>
+<div class="burger-button-menu-cont" [style]="{display: isOpen ? 'block' : 'none'}">
+    <div class="burger-button-menu">
+        <a class="burger-button-menu__link" [routerLink]="'/cabinet/employee-list'">
+            Список сотрудников
+        </a>
+        <a class="burger-button-menu__link" [routerLink]="'/cabinet/employee-add'">
+            Добавить сотрудника
+        </a>
+        <a class="burger-button-menu__link" (click)="logout()">
+            Выйти
+        </a>
+    </div>
+</div>

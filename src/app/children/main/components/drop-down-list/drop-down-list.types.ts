@@ -1,10 +1,4 @@
-import { FormControl } from '@angular/forms';
-
-export type IDropDownListOptionsFormGroup = { [name: string]: FormControl<IDropDownListOption> }
-
-export type IDropDownListOptions = {
-    [name: string]: IDropDownListOption;
-};
+export type IDropDownListOptions = IDropDownListOption[];
 
 export type IDropDownListInputOptions = {
     [name: string]: {
@@ -14,12 +8,6 @@ export type IDropDownListInputOptions = {
 }
 
 export interface IDropDownListOption {
-    name: string;
+    id: number;
     title: string;
-    isChecked: boolean;
-}
-
-export interface IDropDownListControlValue {
-    title: string;
-    selectedProperties: IDropDownListOptionsFormGroup;
 }

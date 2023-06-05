@@ -1,5 +1,5 @@
 export interface ISalaryChange {
-    salaryChangeId: number,
-    date: Date,
-    salary: number
+    date: string;
+    salaryChangeId: number;
+    salary: number;
 }

@@ -1,0 +1,5 @@
+<div class="radio-button-group">
+    <ng-container *ngFor="let button of radioButtons">
+        <radio-button [isActive]="(currentActiveRadioButton | async) === button.id" [text]="button.text" (click)="onRadioButtonChange(button.id)"/>
+    </ng-container>
+</div>

@@ -21,8 +21,8 @@
                        (blur)="onHighestSalaryControlBlur()">
             </div>
         </div>
-        <div class="salary-picker__slider">
-            <ngx-slider [options]="sliderOptions" [formControl]="sliderControl"></ngx-slider>
+        <div class="salary-picker__slider" (click)="$event.stopPropagation()">
+            <ngx-slider [options]="sliderOptions" [formControl]="sliderControl" (touchmove)="$event.stopPropagation()"/>
         </div>
     </div>
 </div>

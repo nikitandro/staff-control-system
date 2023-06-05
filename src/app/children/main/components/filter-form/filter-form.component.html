@@ -1,7 +1,19 @@
-<div class="filter-form" [formGroup]="filterForm">
-    <drop-down-list title="Отдел" formControlName="selectedDepartments"></drop-down-list>
-    <drop-down-list title="Должность" formControlName="selectedPosts"></drop-down-list>
-    <salary-picker formControlName="salary" [salaryBounds]="[300, 100000]"></salary-picker>
-    <div class="checkbox-container"><main-checkbox title="Уволенные сотрудники" formControlName="isFired"></main-checkbox></div>
-    <div class="checkbox-container"><main-checkbox title="Успешные сотрудники" formControlName="isSuccessful"></main-checkbox></div>
+<div class="filter-form" (touchend)="onFormTouchEnd($event)">
+    <drop-down-list title="Отдел" [options]="departments" (checkedOptionsChange)="onSelectedDepartmentsChange($event)"/>
+    <drop-down-list title="Должность" [options]="posts"
+                    (checkedOptionsChange)="onSelectedPostsChange($event)"></drop-down-list>
+
+    <salary-picker [sliderOptions]="sliderOptions"
+                   [salaryBounds]="salaryBounds"
+                   (salaryChanges)="onSalaryChange($event)"
+    />
+
+    <div class="checkbox-container">
+        <main-checkbox title="Уволенные сотрудники" (isCheckedChange)="onIsFiredChange($event)"/>
+    </div>
+    <!--    <div class="checkbox-container"><main-checkbox title="Успешные сотрудники" formControlName="isSuccessful"></main-checkbox></div>-->
+
+    <div class="filter-form__radio-buttons">
+        <radio-button-group [radioButtons]="successStatusRadioButtons" (groupChange)="onSuccessStatusChange($event)"/>
+    </div>
 </div>

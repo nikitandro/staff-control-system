@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MainLayoutComponent } from './layouts/main-layout/main-layout.component';
 import { EmployeeListPageComponent } from './pages/employee-list-page/employee-list-page.component';
-import { authGuard } from '../auth/guards/auth.guard';
 import {
     EmployeePersonalDataPageWebComponent
 } from './pages/employee-personal-data-page/employee-personal-data.page.web.component';
@@ -32,15 +31,14 @@ const routes: Routes = [
     {
         path: '',
         component: MainLayoutComponent,
-        canActivate: [authGuard],
         children: [
             {
                 path: '',
-                redirectTo: 'employee-list/1',
+                redirectTo: 'employee-list',
                 pathMatch: 'full'
             },
             {
-                path: 'employee-list/:page',
+                path: 'employee-list',
                 component: EmployeeListPageComponent
             },
         ],
@@ -48,7 +46,6 @@ const routes: Routes = [
     {
         path: 'employee-info/:employeeId',
         component: EmployeeInfoLayoutComponent,
-        canActivate: [authGuard],
         children: [
             {
                 path: 'personal',
@@ -83,7 +80,6 @@ const routes: Routes = [
     {
         path: 'employee-add',
         component: EmployeeAddLayoutComponent,
-        canActivate: [authGuard],
         children: [
             {
                 path: '',

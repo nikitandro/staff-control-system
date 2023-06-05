@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { AuthService } from '../../../auth/data/services/auth.service';
 
 @Component({
     selector: 'burger-button',
@@ -7,5 +8,16 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class BurgerButtonComponent {
-    private isOpen: boolean = false;
+    public isOpen: boolean = false;
+
+    constructor(private authService: AuthService) {
+    }
+
+    public toggleOpen() {
+        this.isOpen = !this.isOpen;
+    }
+
+    public logout() {
+        this.authService.logout();
+    }
 }
