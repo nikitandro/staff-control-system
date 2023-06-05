@@ -22,6 +22,7 @@ export class EmployeeEducationDataPageWebComponent implements OnInit, OnDestroy 
     public addTitle: string = 'Добавить образование';
 
     public employeeEducationCardDataList: IEmployeeCardData[] = [];
+    public loader: boolean = true;
 
     private _employeeId!: number;
 
@@ -119,7 +120,7 @@ export class EmployeeEducationDataPageWebComponent implements OnInit, OnDestroy 
                         }
                     ]
                 });
-
+                this.loader = false;
                 this._ref.detectChanges();
             });
     }

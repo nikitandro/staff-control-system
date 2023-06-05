@@ -23,6 +23,7 @@ export class EmployeeAchievementsDataPageWebComponent implements OnInit, OnDestr
 
     public employeeAchievementsCardDataList: IEmployeeCardData[] = [];
 
+    public loader: boolean = true;
     private _employeeId!: number;
 
     private _routeSubscription!: Subscription;
@@ -108,7 +109,7 @@ export class EmployeeAchievementsDataPageWebComponent implements OnInit, OnDestr
                         },
                     ]
                 });
-
+                this.loader = false;
                 this._ref.detectChanges();
             });
     }

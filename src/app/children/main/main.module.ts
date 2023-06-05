@@ -61,6 +61,9 @@ import { PostsService } from './data/services/posts.service';
 import { IntersectionObserverModule } from 'ng-intersection-observer';
 import { EMPLOYEE_ADD_TOKEN } from './data/tokens/employee-add.token';
 import { UpdateDataService } from './services/update-data.service';
+import { EmployeeCardSkeletonComponent } from './components/employee-card-skeleton/employee-card-skeleton.component';
+import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
+
 
 @NgModule({
     declarations: [
@@ -94,7 +97,8 @@ import { UpdateDataService } from './services/update-data.service';
         EmployeeAddPageWebComponent,
         EmployeeAddLayoutComponent,
         EmployeeAddFormComponent,
-        DelayRenderingDirective
+        DelayRenderingDirective,
+        EmployeeCardSkeletonComponent
     ],
     exports: [],
     imports: [
@@ -104,6 +108,7 @@ import { UpdateDataService } from './services/update-data.service';
         FormsModule,
         ReactiveFormsModule,
         NgOptimizedImage,
+        NgxSkeletonLoaderModule,
         IntersectionObserverModule
     ],
     providers: [

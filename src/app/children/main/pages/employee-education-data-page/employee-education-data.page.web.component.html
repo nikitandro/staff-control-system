@@ -8,12 +8,14 @@
     >
     </employee-card>
 </div>
+<ngx-skeleton-loader [theme]="{width: '900px', height: '350px', background: '#F0F0F0'}" *ngIf="loader"></ngx-skeleton-loader>
 <button
     class="add-button"
     (click)="add()"
     *ngIf="canAdd"
 >
     {{ addTitle }}
+    <img src="/assets/images/icons/add-button.svg" alt="add">
 </button>
 <popup
     [isOpenINP]="isPopupOpen"

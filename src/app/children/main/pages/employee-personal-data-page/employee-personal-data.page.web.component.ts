@@ -16,8 +16,9 @@ import { ActivatedRoute, Params } from '@angular/router';
 })
 export class EmployeePersonalDataPageWebComponent implements OnInit, OnDestroy {
     public isPopupOpen: boolean = false;
-
     public employeePersonalCardData!: IEmployeeCardData;
+
+    public loader: boolean = true;
 
     private _employeeId!: number;
 
@@ -43,6 +44,7 @@ export class EmployeePersonalDataPageWebComponent implements OnInit, OnDestroy {
         });
 
         this.getPersonalData();
+
     }
 
     public ngOnDestroy(): void {
@@ -52,7 +54,7 @@ export class EmployeePersonalDataPageWebComponent implements OnInit, OnDestroy {
     }
 
     public getPersonalData(): void {
-        this._employeeDataService.getEmployeeData(2)
+        this._employeeDataService.getEmployeeData(this._employeeId)
             .subscribe((data: IEmployeeResponseModel) => {
                 this.employeePersonalCardData = {
                     employeeCardFields: [
@@ -111,6 +113,7 @@ export class EmployeePersonalDataPageWebComponent implements OnInit, OnDestroy {
                     ]
                 });
                 this._ref.detectChanges();
+                this.loader = false;
             });
     }
 

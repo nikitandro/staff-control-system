@@ -1,8 +1,8 @@
 {
   "users": [
     {
-      "email": "a@a.com",
-      "password": "$2a$10$7OiyOmUFb1kMwTtrldA6Hev2m2QlnAiIMEvSDf.S/bEO5NrHItNlu",
+      "email": "12345@12345",
+      "password": "$2a$10$xt1O.Gq1HHn17uYTtdcwg.lMeX0YakVDFeR2S84KO6ztbp5BDs.NO",
       "id": 1
     }
   ],
@@ -31,7 +31,8 @@
       "salaryCurrency": "RUB",
       "salaryLowest": 50000,
       "salaryHighest": 70000,
-      "responsibilitiesDescription": ""
+      "responsibilitiesDescription": "",
+      "departmentId": 2
     },
     {
       "id": 4,
@@ -124,28 +125,6 @@
     {
       "id": 1,
       "avatarUrl": null,
-      "firstName": "Никита",
-      "lastName": "Вишняков",
-      "patronymic": "Сергеевич",
-      "birthDate": "2003-03-10",
-      "interviewDate": "2022-04-1",
-      "employmentDate": "2022-04-3",
-      "firstWorkDayDate": "2022-04-6",
-      "departmentId": 1,
-      "postId": 1,
-      "salary": 60000,
-      "isFired": false,
-      "successRate": -1,
-      "firstWorkDay": "",
-      "vacationsList": [],
-      "education": [],
-      "firingDate": null,
-      "salaryHistory": [],
-      "achievements": []
-    },
-    {
-      "id": 2,
-      "avatarUrl": null,
       "firstName": "Дмитрий",
       "lastName": "Козаченко",
       "patronymic": "Сергеевич",
@@ -183,12 +162,87 @@
           "type": "Отпуск",
           "startDate": "2022-04-1",
           "endDate": "2022-04-15"
+        }
+      ],
+      "salaryHistory": [
+        {
+          "salaryChangeId": 1,
+          "date": "2022-04-3",
+          "salary": 60000
         },
         {
-          "vacationId": 2,
+          "salaryChangeId": 2,
+          "date": "2022-10-3",
+          "salary": 80000
+        },
+        {
+          "salaryChangeId": 3,
+          "date": "2023-06-21",
+          "salary": 90000
+        },
+        {
+          "salaryChangeId": 1685797311624,
+          "date": "2023-06-23",
+          "salary": 100000
+        }
+      ],
+      "education": [
+        {
+          "educationId": 1,
+          "type": "Высшее образование (бакалавриат)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2025-06-30",
+          "qualification": "Программист"
+        },
+        {
+          "educationId": 2,
+          "type": "Высшее образование (магистратура)",
+          "educationalInstitution": "Уральский федеральный университет",
+          "endDate": "2027-06-30",
+          "qualification": "Ваще крутой магистр"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "avatarUrl": null,
+      "firstName": "Потапов",
+      "lastName": "Михаил",
+      "patronymic": "Сергеевич",
+      "birthDate": "2002-12-21",
+      "phoneNumber": "+71234567891",
+      "workEmail": "workEmail@mail.ru",
+      "personalEmail": "personalEmail@mail.ru",
+      "departmentId": 1,
+      "postId": 1,
+      "workFormat": "В офисе",
+      "achievements": [
+        {
+          "type": "Повышение в должности",
+          "supportDocument": "Приказ о повышении",
+          "date": "2023-02-25",
+          "successRateIncrease": 1
+        },
+        {
+          "type": "Статус крутости повышен",
+          "supportDocument": "Супер пупер документ",
+          "date": "2002-12-21",
+          "successRateIncrease": 1
+        }
+      ],
+      "interviewDate": "2022-04-1",
+      "employmentDate": "2022-04-3",
+      "firstWorkDayDate": "2022-04-6",
+      "salary": 90000,
+      "successRate": 0,
+      "isFired": false,
+      "firingDate": null,
+      "vacations": [
+        {
+          "vacationId": 1,
           "type": "Отпуск",
-          "startDate": "2023-05-5",
-          "endDate": "2023-05-21"
+          "startDate": "2022-04-1",
+          "endDate": "2022-04-15"
         }
       ],
       "salaryHistory": [
@@ -233,14 +287,14 @@
     {
       "id": 3,
       "avatarUrl": null,
-      "firstName": "Дмитрий",
-      "lastName": "Козаченко",
-      "patronymic": "Сергеевич",
+      "firstName": "Софья",
+      "lastName": "Захаров",
+      "patronymic": "Георгиевна",
       "birthDate": "2002-12-21",
-      "phoneNumber": "+71234567891",
+      "phoneNumber": "+7123456",
       "workEmail": "workEmail@mail.ru",
       "personalEmail": "personalEmail@mail.ru",
-      "departmentId": 1,
+      "departmentId": 7,
       "postId": 1,
       "workFormat": "В офисе",
       "achievements": [
@@ -260,7 +314,7 @@
       "interviewDate": "2022-04-1",
       "employmentDate": "2022-04-3",
       "firstWorkDayDate": "2022-04-6",
-      "salary": 60000,
+      "salary": 50000,
       "successRate": 2,
       "isFired": false,
       "firingDate": null,
@@ -274,6 +328,18 @@
           "type": "Отпуск",
           "startDate": "2023-05-5",
           "endDate": "2023-05-21"
+        },
+        {
+          "vacationId": 1685974443472,
+          "type": "jhgjhbh",
+          "startDate": "2023-06-14",
+          "endDate": "2023-06-30"
+        },
+        {
+          "vacationId": 1685974467057,
+          "type": "kjjkkjbj",
+          "startDate": "2023-06-03",
+          "endDate": "2023-07-01"
         }
       ],
       "education": [
@@ -288,15 +354,31 @@
           "educationalInstitution": "Уральский федеральный университет",
           "endDate": "2027-06-30",
           "qualification": "Ваще крутой магистр"
+        },
+        {
+          "educationId": 1685974068832,
+          "type": "риритр",
+          "educationalInstitution": "риормро",
+          "endDate": "2023-06-22",
+          "qualification": "лиллои"
         }
-      ]
+      ],
+      "post": {
+        "id": 1,
+        "title": "Frontend-разработчик Angular",
+        "salaryCurrency": "RUB",
+        "salaryLowest": 60000,
+        "salaryHighest": 90000,
+        "responsibilitiesDescription": "",
+        "departmentId": 1
+      }
     },
     {
       "id": 4,
       "avatarUrl": null,
-      "firstName": "Дмитрий",
-      "lastName": "Козаченко",
-      "patronymic": "Сергеевич",
+      "firstName": "Денис",
+      "lastName": "Медведев",
+      "patronymic": "Михайлович",
       "birthDate": "2002-12-21",
       "phoneNumber": "+71234567891",
       "workEmail": "workEmail@mail.ru",
@@ -355,15 +437,15 @@
     {
       "id": 5,
       "avatarUrl": null,
-      "firstName": "Дмитрий",
-      "lastName": "Козаченко",
-      "patronymic": "Сергеевич",
+      "firstName": "Алина",
+      "lastName": "Громова",
+      "patronymic": "Демидовна",
       "birthDate": "2002-12-21",
       "phoneNumber": "+71234567891",
       "workEmail": "workEmail@mail.ru",
       "personalEmail": "personalEmail@mail.ru",
-      "departmentId": 2,
-      "postId": 1,
+      "departmentId": 1,
+      "postId": 5,
       "workFormat": "В офисе",
       "achievements": [
         {
@@ -382,7 +464,7 @@
       "interviewDate": "2022-04-1",
       "employmentDate": "2022-04-3",
       "firstWorkDayDate": "2022-04-6",
-      "salary": 70000,
+      "salary": 100000,
       "successRate": 2,
       "isFired": false,
       "firingDate": null,
@@ -416,15 +498,15 @@
     {
       "id": 6,
       "avatarUrl": null,
-      "firstName": "Дмитрий",
-      "lastName": "Козаченко",
-      "patronymic": "Сергеевич",
+      "firstName": "Юрий",
+      "lastName": "Уткин",
+      "patronymic": "Александрович",
       "birthDate": "2002-12-21",
       "phoneNumber": "+71234567891",
       "workEmail": "workEmail@mail.ru",
       "personalEmail": "personalEmail@mail.ru",
-      "departmentId": 2,
-      "postId": 3,
+      "departmentId": 1,
+      "postId": 9,
       "workFormat": "В офисе",
       "achievements": [
         {
@@ -443,7 +525,7 @@
       "interviewDate": "2022-04-1",
       "employmentDate": "2022-04-3",
       "firstWorkDayDate": "2022-04-6",
-      "salary": 70000,
+      "salary": 80000,
       "successRate": 2,
       "isFired": false,
       "firingDate": null,
@@ -477,15 +559,15 @@
     {
       "id": 7,
       "avatarUrl": null,
-      "firstName": "Дмитрий",
-      "lastName": "Козаченко",
-      "patronymic": "Сергеевич",
+      "firstName": "Алексей",
+      "lastName": "Аксенов",
+      "patronymic": "Леонидович",
       "birthDate": "2002-12-21",
       "phoneNumber": "+71234567891",
       "workEmail": "workEmail@mail.ru",
       "personalEmail": "personalEmail@mail.ru",
-      "departmentId": 2,
-      "postId": 1,
+      "departmentId": 3,
+      "postId": 10,
       "workFormat": "В офисе",
       "achievements": [
         {
@@ -504,7 +586,7 @@
       "interviewDate": "2022-04-1",
       "employmentDate": "2022-04-3",
       "firstWorkDayDate": "2022-04-6",
-      "salary": 70000,
+      "salary": 820000,
       "successRate": 2,
       "isFired": false,
       "firingDate": null,
@@ -538,15 +620,15 @@
     {
       "id": 8,
       "avatarUrl": null,
-      "firstName": "Дмитрий",
-      "lastName": "Козаченко",
-      "patronymic": "Сергеевич",
+      "firstName": "Александр",
+      "lastName": "Комаров",
+      "patronymic": "Романович",
       "birthDate": "2002-12-21",
       "phoneNumber": "+71234567891",
       "workEmail": "workEmail@mail.ru",
       "personalEmail": "personalEmail@mail.ru",
       "departmentId": 2,
-      "postId": 1,
+      "postId": 3,
       "workFormat": "В офисе",
       "achievements": [
         {
@@ -565,7 +647,7 @@
       "interviewDate": "2022-04-1",
       "employmentDate": "2022-04-3",
       "firstWorkDayDate": "2022-04-6",
-      "salary": 70000,
+      "salary": 65000,
       "successRate": 2,
       "isFired": false,
       "firingDate": null,
@@ -599,15 +681,15 @@
     {
       "id": 9,
       "avatarUrl": null,
-      "firstName": "Дмитрий",
-      "lastName": "Козаченко",
-      "patronymic": "Сергеевич",
+      "firstName": "Али",
+      "lastName": "Степанов",
+      "patronymic": "Арсентьевич",
       "birthDate": "2002-12-21",
       "phoneNumber": "+71234567891",
       "workEmail": "workEmail@mail.ru",
       "personalEmail": "personalEmail@mail.ru",
-      "departmentId": 2,
-      "postId": 1,
+      "departmentId": 1,
+      "postId": 11,
       "workFormat": "В офисе",
       "achievements": [
         {
@@ -626,7 +708,7 @@
       "interviewDate": "2022-04-1",
       "employmentDate": "2022-04-3",
       "firstWorkDayDate": "2022-04-6",
-      "salary": 70000,
+      "salary": 130000,
       "successRate": 2,
       "isFired": false,
       "firingDate": null,
@@ -661,14 +743,14 @@
       "id": 10,
       "avatarUrl": null,
       "firstName": "Дмитрий",
-      "lastName": "Козаченко",
-      "patronymic": "Сергеевич",
+      "lastName": "Сахаров",
+      "patronymic": "Никитич",
       "birthDate": "2002-12-21",
       "phoneNumber": "+71234567891",
       "workEmail": "workEmail@mail.ru",
       "personalEmail": "personalEmail@mail.ru",
-      "departmentId": 2,
-      "postId": 1,
+      "departmentId": 1,
+      "postId": 9,
       "workFormat": "В офисе",
       "achievements": [
         {
@@ -687,7 +769,7 @@
       "interviewDate": "2022-04-1",
       "employmentDate": "2022-04-3",
       "firstWorkDayDate": "2022-04-6",
-      "salary": 70000,
+      "salary": 80000,
       "successRate": 2,
       "isFired": false,
       "firingDate": null,

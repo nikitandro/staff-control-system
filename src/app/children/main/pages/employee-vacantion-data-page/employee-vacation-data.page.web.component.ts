@@ -23,9 +23,12 @@ export class EmployeeVacationDataPageWebComponent implements OnInit, OnDestroy {
 
     public employeeVacationCardDataList: IEmployeeCardData[] = [];
 
+    public loader: boolean = true;
+
     private _employeeId!: number;
 
     private _routeSubscription!: Subscription;
+
 
     constructor(
         private _employeeDataService: EmployeeDataService,
@@ -57,8 +60,9 @@ export class EmployeeVacationDataPageWebComponent implements OnInit, OnDestroy {
 
     public getVacationList(): void {
         this.employeeVacationCardDataList = [];
-        this._employeeDataService.getEmployeeData(2)
+        this._employeeDataService.getEmployeeData(this._employeeId)
             .subscribe((data: IEmployeeResponseModel) => {
+                console.log(data)
                 data.vacations.forEach((vacation: IEmployeeVacation) => {
                     this.employeeVacationCardDataList.push(
                         {
@@ -108,7 +112,7 @@ export class EmployeeVacationDataPageWebComponent implements OnInit, OnDestroy {
                         },
                     ]
                 });
-
+                this.loader = false;
                 this._ref.detectChanges();
             });
     }

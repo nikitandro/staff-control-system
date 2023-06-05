@@ -18,6 +18,7 @@ export class EmployeeContactsDataPageWebComponent implements OnInit, OnDestroy {
     public isPopupOpen: boolean = false;
 
     public employeeContactsCardData!: IEmployeeCardData;
+    public loader: boolean = true;
 
     private _employeeId!: number;
 
@@ -100,6 +101,7 @@ export class EmployeeContactsDataPageWebComponent implements OnInit, OnDestroy {
                         },
                     ]
                 });
+                this.loader = false;
                 this._ref.detectChanges();
             });
     }

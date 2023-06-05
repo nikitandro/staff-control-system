@@ -5,3 +5,10 @@
     gap: 12px;
 }
 
+@media screen and (max-width: 1150px) {
+    .navigation-button-group {
+        justify-content: space-around;
+        display: flex;
+        flex-direction: row;
+    }
+}

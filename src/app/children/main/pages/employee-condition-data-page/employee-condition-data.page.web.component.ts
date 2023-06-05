@@ -18,6 +18,7 @@ export class EmployeeConditionDataPageWebComponent implements OnInit, OnDestroy 
     public isPopupOpen: boolean = false;
 
     public employeeConditionCardData!: IEmployeeCardData;
+    public loader: boolean = true;
 
     private _employeeId!: number;
 
@@ -109,6 +110,7 @@ export class EmployeeConditionDataPageWebComponent implements OnInit, OnDestroy 
                         },
                     ]
                 });
+                this.loader = false;
                 this._ref.detectChanges();
             });
     }

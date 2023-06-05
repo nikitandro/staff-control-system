@@ -25,6 +25,8 @@ export class EmployeeAddPageWebComponent implements OnInit {
     public conditionData!: IEmployeeCondition;
     public experienceData!: IEmployeeExperience;
 
+    public loader: boolean = true;
+
     constructor(
         private _ref: ChangeDetectorRef,
         private _router: Router,
@@ -187,7 +189,7 @@ export class EmployeeAddPageWebComponent implements OnInit {
                 ]
             }
         ];
-
+        this.loader = false;
         this._ref.detectChanges();
     }
 
