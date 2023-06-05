@@ -16,6 +16,10 @@ body {
 *::-webkit-scrollbar {
     width: 8px;
     background: white;
+
+    @media screen and (max-width: 895px) {
+        display: none;
+    }
 }
 
 *::-webkit-scrollbar-track {
