@@ -28,5 +28,10 @@
   margin: 0 auto 0 auto;
   width: fit-content;
 }
+@media screen and (max-width: 895px) {
+  .employee-list-page {
+    padding-bottom: 40px;
+  }
+}
 
 /*# sourceMappingURL=employee-list-page.components.css.map */

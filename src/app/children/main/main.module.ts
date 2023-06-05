@@ -63,6 +63,9 @@ import { EMPLOYEE_ADD_TOKEN } from './data/tokens/employee-add.token';
 import { UpdateDataService } from './services/update-data.service';
 import { EmployeeCardSkeletonComponent } from './components/employee-card-skeleton/employee-card-skeleton.component';
 import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
+import { EmployeeConditionForm } from './components/employee-condition-form/employee-condition-form';
+import { EMPLOYEE_CONDITION_FORM_DATA_TOKEN } from './data/tokens/employee-condition-form.data.token';
+import { IEmployeeConditionFormData } from './data/interfaces/employee-condition-form-data.interface';
 
 
 @NgModule({
@@ -98,7 +101,8 @@ import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
         EmployeeAddLayoutComponent,
         EmployeeAddFormComponent,
         DelayRenderingDirective,
-        EmployeeCardSkeletonComponent
+        EmployeeCardSkeletonComponent,
+        EmployeeConditionForm
     ],
     exports: [],
     imports: [
@@ -125,6 +129,11 @@ import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
             provide: EMPLOYEE_ADD_TOKEN,
             useValue: new Subject<boolean>()
         },
+        {
+            provide: EMPLOYEE_CONDITION_FORM_DATA_TOKEN,
+            useValue: new BehaviorSubject<IEmployeeConditionFormData | null>(null)
+        },
+
         UpdateDataService,
     ],
 })

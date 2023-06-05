@@ -9,6 +9,9 @@ export class PopupComponent implements OnInit {
     @Input()
     public isOpenINP!: boolean;
 
+    @Input()
+    public isCondition: boolean = false;
+
     @Output()
     public isOpen: EventEmitter<boolean> = new EventEmitter<boolean>();
 

@@ -22,15 +22,15 @@
     </employee-add-form>
 
     <h2 class="form-title">Условия работы</h2>
-    <employee-add-form
-        [employeeAddFormData]="employeeAddFormDataList[3]"
+    <employee-condition-form
         (data$)="getConditionData($event)"
+        [isAddForm]="true"
     >
-    </employee-add-form>
+    </employee-condition-form>
 
     <h2 class="form-title">Стаж работы</h2>
     <employee-add-form
-        [employeeAddFormData]="employeeAddFormDataList[4]"
+        [employeeAddFormData]="employeeAddFormDataList[3]"
         (data$)="getExperienceData($event)"
     >
     </employee-add-form>

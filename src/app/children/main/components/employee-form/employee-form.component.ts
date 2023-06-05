@@ -18,6 +18,7 @@ import { IEmployeeAchievement } from '../../data/interfaces/employee-achievement
 import { IEmployeeEducation } from '../../data/interfaces/employee-education.interface';
 import { ActivatedRoute, Params } from '@angular/router';
 import { UpdateDataService } from '../../services/update-data.service';
+import { IRadioButton } from '../radio-button-group/radio-button-group.types';
 
 @Component({
     selector: 'employee-form',
@@ -38,6 +39,21 @@ export class EmployeeFormComponent implements OnInit, OnDestroy {
     public employeeForm!: FormGroup;
 
     public employeePhoto?: string;
+
+    public isAchievement: boolean = false;
+
+    public radioButtonsAchievementStatus: IRadioButton[] = [
+        {
+            id: 1,
+            text: 'Положительное достижение'
+        },
+        {
+            id: 2,
+            text: 'Отрицательное достижение'
+        }
+    ];
+
+    public achievementStatus: number = 1;
 
     private _employeeId!: number;
 
@@ -72,10 +88,12 @@ export class EmployeeFormComponent implements OnInit, OnDestroy {
                     employeeFormFields: this.employeeFormFieldsArray
                 });
                 this.employeePhoto = data.photo;
-            }
-            );
-    }
 
+                if (this.employeeFormLabels[1] === 'Подтверждающий документ:') {
+                    this.isAchievement = true;
+                }
+            });
+    }
 
     public ngOnDestroy(): void {
         if (this._employeeFormSubscription) {
@@ -84,6 +102,14 @@ export class EmployeeFormComponent implements OnInit, OnDestroy {
 
         if (this._routeSubscription) {
             this._routeSubscription.unsubscribe();
+        }
+    }
+
+    public onAchievementStatusChange(value: number | null): void {
+        if (typeof value === 'number') {
+            this.achievementStatus = value;
+
+            return;
         }
     }
 
@@ -103,8 +129,6 @@ export class EmployeeFormComponent implements OnInit, OnDestroy {
 
         if (typeData === 'personal') {
             this.submitPersonalData(data);
-        } else if (typeData === 'condition') {
-            this.submitConditionData(data);
         } else if (typeData === 'contacts') {
             this.submitContactsData(data);
         } else if (typeData === 'experience') {
@@ -138,23 +162,6 @@ export class EmployeeFormComponent implements OnInit, OnDestroy {
                     return this._employeeDataService.updateEmployeeData(this._employeeId, updateEmployee);
                 })
             ).subscribe(() => this._updateDataService.callMethodOfPageComponent());
-    }
-
-    public submitConditionData(data: string[]): void {
-        let updateEmployee!: IEmployeeRequestModel;
-        this._employeeDataService.getEmployeeData(this._employeeId)
-            .pipe(
-                switchMap((currentEmployeeData: IEmployeeResponseModel) => {
-                    updateEmployee = currentEmployeeData;
-                    updateEmployee.departmentId = Number(data[0]);
-                    updateEmployee.postId = Number(data[1]);
-                    updateEmployee.salary = Number(data[2]);
-                    updateEmployee.workFormat = data[3];
-
-                    return this._employeeDataService.updateEmployeeData(this._employeeId, updateEmployee);
-                })
-            ).subscribe(() => this._updateDataService.callMethodOfPageComponent());
-
     }
 
     public submitContactsData(data: string[]): void {
@@ -220,6 +227,12 @@ export class EmployeeFormComponent implements OnInit, OnDestroy {
                 switchMap((currentEmployeeData: IEmployeeResponseModel) => {
                     updateEmployee = currentEmployeeData;
                     updateEmployee.achievements.push(newAchievement);
+                    if (this.achievementStatus === 1) {
+                        updateEmployee.successRate += 1;
+                    }
+                    if (this.achievementStatus === 2) {
+                        updateEmployee.successRate -= 1;
+                    }
 
                     return this._employeeDataService.updateEmployeeData(this._employeeId, updateEmployee);
                 })

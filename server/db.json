@@ -1,15 +1,5 @@
 {
   "users": [
-    {
-      "email": "12345@12345",
-      "password": "$2a$10$xt1O.Gq1HHn17uYTtdcwg.lMeX0YakVDFeR2S84KO6ztbp5BDs.NO",
-      "id": 1
-    },
-    {
-      "email": "a@a.com",
-      "password": "$2a$10$UupX9XnhcLE5mBDk8UqEK.OyG9e5ib0CrApwpHS7OOuSscwJE8KQ2",
-      "id": 2
-    }
   ],
   "posts": [
     {
@@ -138,8 +128,8 @@
       "workEmail": "workEmail@mail.ru",
       "personalEmail": "personalEmail@mail.ru",
       "departmentId": 1,
-      "postId": 1,
-      "workFormat": "В офисе",
+      "postId": 4,
+      "workFormat": "Удаленно",
       "achievements": [
         {
           "type": "Повышение в должности",
@@ -154,11 +144,11 @@
           "successRateIncrease": 1
         }
       ],
-      "interviewDate": "2022-04-1",
-      "employmentDate": "2022-04-3",
-      "firstWorkDayDate": "2022-04-6",
-      "salary": 60000,
-      "successRate": 0,
+      "interviewDate": "2023-07-09",
+      "employmentDate": "2023-06-18",
+      "firstWorkDayDate": "2023-06-04",
+      "salary": 70000,
+      "successRate": 1,
       "isFired": false,
       "firingDate": null,
       "vacations": [
@@ -270,6 +260,11 @@
           "salaryChangeId": 1685797311624,
           "date": "2023-06-23",
           "salary": 100000
+        },
+        {
+          "salaryChangeId": 1685966054324,
+          "date": "2023-06-22",
+          "salary": 50000
         }
       ],
       "education": [
@@ -287,7 +282,20 @@
           "endDate": "2027-06-30",
           "qualification": "Ваще крутой магистр"
         }
-      ]
+      ],
+      "post": {
+        "id": 4,
+        "title": "DevOps-инженер",
+        "salaryCurrency": "RUB",
+        "salaryLowest": 80000,
+        "salaryHighest": 120000,
+        "responsibilitiesDescription": "",
+        "departmentId": 2
+      },
+      "department": {
+        "id": 1,
+        "title": "Отдел разработки"
+      }
     },
     {
       "id": 3,

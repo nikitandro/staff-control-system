@@ -1,7 +1,5 @@
-import { IPost } from './post.interface';
-
 export interface IEmployeeCondition {
-    departmentName: string;
+    departmentId: number;
     postId: number;
     salary: number;
     workFormat: string;

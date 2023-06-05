@@ -64,7 +64,7 @@ export class EmployeeAddFormComponent implements OnInit, OnDestroy {
         return this.employeeAddForm.controls['employeeAddFormFields'] as FormArray;
     }
 
-    public onSubmit(): any {
+    public onSubmit(): void {
         if (this.employeeAddForm.invalid) {
             this.employeeAddForm.markAllAsTouched();
 

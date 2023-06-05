@@ -2,17 +2,17 @@ import { ChangeDetectorRef, Component, Inject, OnDestroy, OnInit } from '@angula
 import { IEmployeeCardData } from '../../data/interfaces/employee-card-data.interface';
 import { EmployeeDataService } from '../../data/services/employee-data.service';
 import { IEmployeeResponseModel } from '../../data/response-models/employee.response-model.interface';
-import { IEmployeeFormData } from '../../data/interfaces/employee-form-data.interface';
-import { EMPLOYEE_FORM_DATA_TOKEN } from '../../data/tokens/employee-form-data.token';
 import { BehaviorSubject, Subscription } from 'rxjs';
-import { FormControl, Validators } from '@angular/forms';
 import { UpdateDataService } from '../../services/update-data.service';
 import { ActivatedRoute, Params } from '@angular/router';
+import { DepartmentsService } from '../../data/services/departments.service';
+import { EMPLOYEE_CONDITION_FORM_DATA_TOKEN } from '../../data/tokens/employee-condition-form.data.token';
+import { IEmployeeConditionFormData } from '../../data/interfaces/employee-condition-form-data.interface';
 
 @Component({
     selector: 'employee-condition-data',
     templateUrl: 'employee-condition-data.page.web.component.html',
-    styleUrls: ['./styles/employee-condition-data.page.web.component.scss'],
+    styleUrls: ['./styles/employee-condition-data.page.web.component.scss']
 })
 export class EmployeeConditionDataPageWebComponent implements OnInit, OnDestroy {
     public isPopupOpen: boolean = false;
@@ -28,8 +28,9 @@ export class EmployeeConditionDataPageWebComponent implements OnInit, OnDestroy 
         private _employeeDataService: EmployeeDataService,
         private _ref: ChangeDetectorRef,
         private _route: ActivatedRoute,
-        @Inject(EMPLOYEE_FORM_DATA_TOKEN) public employeeConditionFormData$: BehaviorSubject<IEmployeeFormData>,
-        private _updateDataService: UpdateDataService
+        @Inject(EMPLOYEE_CONDITION_FORM_DATA_TOKEN) public employeeConditionFormData$: BehaviorSubject<IEmployeeConditionFormData>,
+        private _updateDataService: UpdateDataService,
+        private _departmentsService: DepartmentsService
     ) {
         this._updateDataService.invokeEvent.subscribe((value: boolean) => {
             if (value) {
@@ -79,36 +80,8 @@ export class EmployeeConditionDataPageWebComponent implements OnInit, OnDestroy 
                 };
 
                 this.employeeConditionFormData$.next({
-                    employeeFormFields: [
-                        {
-                            label: 'Отдел:',
-                            control: new FormControl(data.department.title, [
-                                Validators.required
-                            ]),
-                            controlType: 'text'
-                        },
-                        {
-                            label: 'Должность:',
-                            control: new FormControl(data.post, [
-                                Validators.required
-                            ]),
-                            controlType: 'text'
-                        },
-                        {
-                            label: 'Заработая плата (в рублях):',
-                            control: new FormControl(data.salary, [
-                                Validators.required
-                            ]),
-                            controlType: 'number'
-                        },
-                        {
-                            label: 'Формат работы:',
-                            control: new FormControl(data.workFormat, [
-                                Validators.required
-                            ]),
-                            controlType: 'text'
-                        },
-                    ]
+                    salary: data.salary,
+                    workFormat: data.workFormat
                 });
                 this.loader = false;
                 this._ref.detectChanges();
