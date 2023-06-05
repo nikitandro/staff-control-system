@@ -5,6 +5,7 @@
     <employee-card
         [employeeCardData]="employeeEducationCardData"
         (emitUpdateDataMethod)="getEducationList()"
+        *delayRendering="200"
     >
     </employee-card>
 </div>

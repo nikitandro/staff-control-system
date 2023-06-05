@@ -10,11 +10,6 @@
   display: block;
 }
 
-@media screen and (max-width: 895px) {
-  .burger-button__icon {
-    width: 40px;
-  }
-}
 .burger-button-menu-cont {
   position: relative;
 }
@@ -42,6 +37,21 @@
   cursor: pointer;
   text-decoration: none;
   color: black;
+}
+
+@media screen and (max-width: 895px) {
+  .burger-button__icon {
+    width: 40px;
+  }
+  .burger-button-menu {
+    width: 200px;
+    gap: 6px;
+    padding-top: 65px;
+  }
+  .burger-button-menu__link {
+    font-size: 12px;
+    padding: 6px 4px;
+  }
 }
 
 /*# sourceMappingURL=burger-button.component.css.map */

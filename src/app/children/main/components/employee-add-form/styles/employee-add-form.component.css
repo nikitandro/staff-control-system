@@ -1,36 +1,34 @@
 .employee-add-form {
-  width: 957px;
-  padding: 50px 50px 65px;
-  position: relative;
+  width: 100%;
+  padding: 25px 25px;
   background-color: #F0F0F0;
   margin-bottom: 27px;
 }
 .employee-add-form__content {
-  width: 857px;
   display: flex;
   justify-content: space-between;
 }
 .employee-add-form__employee-data {
   display: grid;
-  grid-template-columns: 1fr 2.5fr;
-  row-gap: 25px;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 10px;
   column-gap: 30px;
 }
 .employee-add-form__label {
-  font-size: 20px;
+  font-size: 18px;
   line-height: 24px;
   font-weight: 600;
   display: flex;
   align-items: center;
 }
 .employee-add-form__data {
-  font-size: 20px;
-  line-height: 24px;
+  font-size: 18px;
+  line-height: 20px;
   border-radius: 3px;
   border: none;
-  padding-top: 5px;
+  padding-top: 3px;
   padding-left: 5px;
-  padding-bottom: 5px;
+  padding-bottom: 3px;
 }
 .employee-add-form__employee-photo {
   width: 155px;

@@ -62,7 +62,6 @@ export class EmployeeVacationDataPageWebComponent implements OnInit, OnDestroy {
         this.employeeVacationCardDataList = [];
         this._employeeDataService.getEmployeeData(this._employeeId)
             .subscribe((data: IEmployeeResponseModel) => {
-                console.log(data)
                 data.vacations.forEach((vacation: IEmployeeVacation) => {
                     this.employeeVacationCardDataList.push(
                         {

@@ -49,6 +49,11 @@
 .salary-picker__slider ::ng-deep .ngx-slider .ngx-slider-bubble {
   display: none;
 }
+@media screen and (max-width: 895px) {
+  .salary-picker__slider {
+    display: none;
+  }
+}
 
 .salary-input {
   display: flex;

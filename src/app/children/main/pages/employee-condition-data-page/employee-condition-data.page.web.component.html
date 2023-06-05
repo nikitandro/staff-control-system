@@ -2,6 +2,7 @@
 <employee-card
     [employeeCardData]="employeeConditionCardData"
     (isEdit$)="open($event)"
+    *delayRendering="200"
 >
 </employee-card>
 <ngx-skeleton-loader [theme]="{width: '900px', height: '350px', background: '#F0F0F0'}" *ngIf="loader"></ngx-skeleton-loader>

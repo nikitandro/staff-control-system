@@ -68,4 +68,18 @@ input.ng-touched.ng-valid {
   border: solid green 3px;
 }
 
+@media screen and (max-width: 895px) {
+  .login-form__title {
+    font-size: 40px;
+  }
+  .login-form-field__input {
+    width: 200px;
+    height: 42px;
+  }
+  .login-form-action__button {
+    width: 190px;
+    height: 60px;
+  }
+}
+
 /*# sourceMappingURL=login.page.web.component.css.map */

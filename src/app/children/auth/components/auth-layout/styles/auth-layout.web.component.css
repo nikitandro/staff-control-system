@@ -13,6 +13,11 @@
   margin-top: 17px;
   margin-bottom: 16px;
 }
+@media screen and (max-width: 895px) {
+  .header__logo {
+    font-size: 20px;
+  }
+}
 .header__link {
   text-decoration: none;
   color: black;

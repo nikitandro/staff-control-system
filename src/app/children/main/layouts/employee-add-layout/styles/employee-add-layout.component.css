@@ -1,6 +1,8 @@
 .meta-page {
-  margin-left: 202px;
-  padding: 107px 40px 25px 40px;
+  padding-top: 107px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media screen and (max-width: 895px) {

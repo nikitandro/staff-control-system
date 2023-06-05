@@ -13,14 +13,45 @@
   margin-left: 671px;
   border: none;
   border-radius: 3px;
+  transition-duration: 0.2s;
 }
 .add-button:hover {
   background-color: #507CB1;
   color: white;
-  transition-duration: 0.2s;
 }
 .add-button:active {
   opacity: 0.8;
+}
+
+img {
+  display: none;
+}
+
+@media screen and (max-width: 1315px) {
+  .add-button {
+    float: right;
+  }
+}
+@media screen and (max-width: 895px) {
+  .add-button {
+    float: none;
+    font-size: 0;
+    width: 29px;
+    height: 29px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    border: none;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  img {
+    display: flex;
+  }
 }
 
 /*# sourceMappingURL=employee-education-data.page.web.component.css.map */

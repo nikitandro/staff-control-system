@@ -4,6 +4,9 @@
   position: relative;
   background-color: #F0F0F0;
 }
+.employee-form__body {
+  display: flex;
+}
 .employee-form__title {
   font-size: 28px;
   line-height: 34px;
@@ -51,10 +54,10 @@
   right: 0;
   top: -50px;
   position: absolute;
+  transition-duration: 0.2s;
 }
 .employee-form__close-button:hover {
   opacity: 0.7;
-  transition-duration: 0.2s;
 }
 .employee-form__close-button:active {
   opacity: 0.3;
@@ -70,11 +73,11 @@
   right: 0;
   bottom: -50px;
   position: absolute;
+  transition-duration: 0.2s;
 }
 .employee-form__submit-button:hover {
   background-color: #507CB1;
   color: white;
-  transition-duration: 0.2s;
 }
 .employee-form__submit-button:active {
   opacity: 0.8;
@@ -96,6 +99,24 @@
 
 .cross-img {
   display: block;
+}
+
+@media screen and (max-width: 895px) {
+  .employee-form {
+    width: 100%;
+    padding: 25px;
+  }
+  .employee-form__content {
+    width: 100%;
+    flex-direction: column;
+  }
+  .employee-form__employee-data {
+    grid-template-columns: 100%;
+    row-gap: 15px;
+  }
+  .employee-form__submit-button {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=employee-form.component.css.map */

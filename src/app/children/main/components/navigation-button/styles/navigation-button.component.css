@@ -1,5 +1,5 @@
 .navigation-button {
-  width: 251px;
+  width: 259px;
   height: 37px;
   background: #FFFFFF;
   border: none;
@@ -28,6 +28,38 @@
 a {
   text-decoration: none;
   color: #000000;
+}
+
+.active-link {
+  background: #D8D8D8;
+}
+
+@media screen and (max-width: 1150px) {
+  .navigation-button__name {
+    display: none;
+  }
+  .navigation-button {
+    border-radius: 100px;
+    width: auto;
+    height: auto;
+    background: none;
+  }
+  .navigation-button__icon {
+    padding: 0;
+  }
+  .navigation-button__content {
+    margin-top: 10px;
+    margin-bottom: 13px;
+    padding: 5px;
+  }
+  .navigation-button:hover {
+    transform: none;
+    margin-left: 0;
+  }
+  .active-link {
+    background: #F0F0F0;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  }
 }
 
 /*# sourceMappingURL=navigation-button.component.css.map */

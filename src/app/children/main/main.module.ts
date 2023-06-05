@@ -66,6 +66,7 @@ import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 import { EmployeeConditionForm } from './components/employee-condition-form/employee-condition-form';
 import { EMPLOYEE_CONDITION_FORM_DATA_TOKEN } from './data/tokens/employee-condition-form.data.token';
 import { IEmployeeConditionFormData } from './data/interfaces/employee-condition-form-data.interface';
+import { ZoomDirective } from './directives/zoom.directive';
 
 
 @NgModule({
@@ -102,7 +103,8 @@ import { IEmployeeConditionFormData } from './data/interfaces/employee-condition
         EmployeeAddFormComponent,
         DelayRenderingDirective,
         EmployeeCardSkeletonComponent,
-        EmployeeConditionForm
+        EmployeeConditionForm,
+        ZoomDirective
     ],
     exports: [],
     imports: [
