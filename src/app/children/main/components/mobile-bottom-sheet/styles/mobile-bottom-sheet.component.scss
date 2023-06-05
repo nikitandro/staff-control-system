@@ -8,6 +8,7 @@
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     z-index: 2000;
+
     &_changing {
         transition: 300ms ease;
     }
@@ -17,7 +18,14 @@
         width: 100%;
         display: flex;
         align-items: center;
-        justify-content: center;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 100px;
+        padding-bottom: 40px;
+        overflow: auto;
+        &::-webkit-scrollbar {
+            display: none;
+        }
     }
 
     &::before {

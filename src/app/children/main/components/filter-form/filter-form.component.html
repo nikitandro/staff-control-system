@@ -2,10 +2,12 @@
     <drop-down-list title="Отдел" [options]="departments" (checkedOptionsChange)="onSelectedDepartmentsChange($event)"/>
     <drop-down-list title="Должность" [options]="posts"
                     (checkedOptionsChange)="onSelectedPostsChange($event)"></drop-down-list>
+
     <salary-picker [sliderOptions]="sliderOptions"
                    [salaryBounds]="salaryBounds"
                    (salaryChanges)="onSalaryChange($event)"
     />
+
     <div class="checkbox-container">
         <main-checkbox title="Уволенные сотрудники" (isCheckedChange)="onIsFiredChange($event)"/>
     </div>

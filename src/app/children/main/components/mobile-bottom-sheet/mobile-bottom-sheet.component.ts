@@ -1,6 +1,6 @@
-import {AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, OnInit, ViewChild} from '@angular/core';
-import {delay, Subject, timeout, timer} from 'rxjs';
-import {tap} from 'rxjs/operators';
+import { ChangeDetectionStrategy, Component, ElementRef, ViewChild } from '@angular/core';
+import { Subject, timer } from 'rxjs';
+
 
 @Component({
     selector: 'mobile-bottom-sheet',
@@ -8,7 +8,7 @@ import {tap} from 'rxjs/operators';
     templateUrl: './mobile-bottom-sheet.component.html',
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class MobileBottomSheetComponent implements AfterViewInit {
+export class MobileBottomSheetComponent {
 
     @ViewChild('sheet')
     private sheetElementRef?: ElementRef<HTMLDivElement>;
@@ -18,12 +18,6 @@ export class MobileBottomSheetComponent implements AfterViewInit {
     public startTopPosition: number | null = null;
     public isOpen: boolean = false;
     public isChangingState$: Subject<boolean> = new Subject<boolean>();
-
-    public ngAfterViewInit() {
-        if (!this.sheetElementRef) {
-            return;
-        }
-    }
 
     public getStyles() {
         if (this.isDragged) {
@@ -83,9 +77,6 @@ export class MobileBottomSheetComponent implements AfterViewInit {
     }
 
     public stopPropagation(event: MouseEvent) {
-        event.stopPropagation()
+        event.stopPropagation();
     }
-
-    protected readonly stop = stop;
-    protected readonly event = event;
 }
