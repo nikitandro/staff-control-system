@@ -75,3 +75,26 @@ input.ng-touched.ng-invalid {
 input.ng-touched.ng-valid {
     border: solid green 3px;
 }
+
+@media screen and (max-width: 895px) {
+    .login-form {
+        &__title {
+            font-size: 40px;
+        }
+    }
+
+    .login-form-field {
+        &__input {
+            width: 200px;
+            height: 42px;
+        }
+    }
+
+    .login-form-action {
+
+        &__button {
+            width: 190px;
+            height: 60px;
+        }
+    }
+}

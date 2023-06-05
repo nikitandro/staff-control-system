@@ -9,6 +9,7 @@
         width: 857px;
         display: flex;
         justify-content: space-between;
+
     }
 
     &__employee-data {
@@ -53,5 +54,23 @@
         font-size: 20px;
         line-height: 24px;
         color: green;
+    }
+}
+
+@media screen and (max-width: 895px) {
+    .employee-add-form {
+        width: 100%;
+        padding: 25px;
+
+
+        &__content {
+            width: 100%;
+            flex-direction: column;
+        }
+
+        &__employee-data {
+            grid-template-columns: 100%;
+            row-gap: 15px;
+        }
     }
 }

@@ -1,5 +1,10 @@
 {
   "users": [
+    {
+      "email": "12345@12345",
+      "password": "$2a$10$en5CXv3nKMo5ys.Hf2djMeEp2aPUZZPfToJa6mxpzMZ05kiVJiHKa",
+      "id": 1
+    }
   ],
   "posts": [
     {
