@@ -195,7 +195,7 @@ export class EmployeeAddPageWebComponent implements OnInit {
             employmentDate: this.experienceData.employmentDate,
             firstWorkDayDate: this.experienceData.firstWorkDayDate,
             successRate: 0,
-            isFired: true,
+            isFired: false,
             vacations: [],
             education: [
                 {

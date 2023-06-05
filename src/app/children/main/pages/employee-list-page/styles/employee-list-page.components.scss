@@ -1,7 +1,7 @@
 .employee-list {
     display: grid;
     width: fit-content;
-    grid-template-columns: repeat(3, 500px);
+    grid-template-columns: repeat(2, 500px);
     grid-row-gap: 15px;
     grid-column-gap: 15px;
     margin-top: 20px;

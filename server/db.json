@@ -1,6 +1,5 @@
 {
-  "users": [
-  ],
+  "users": [],
   "posts": [
     {
       "id": 1,
@@ -201,16 +200,16 @@
     {
       "id": 2,
       "avatarUrl": null,
-      "firstName": "Потапов",
-      "lastName": "Михаил",
+      "firstName": "Михаил",
+      "lastName": "Потапов",
       "patronymic": "Сергеевич",
       "birthDate": "2002-12-21",
-      "phoneNumber": "+71234567891",
-      "workEmail": "workEmail@mail.ru",
-      "personalEmail": "personalEmail@mail.ru",
+      "phoneNumber": "+71231231212",
+      "workEmail": "workEmail@mail.com",
+      "personalEmail": "personalEmail@mail.com",
+      "workFormat": "В офисе",
       "departmentId": 1,
       "postId": 1,
-      "workFormat": "В офисе",
       "achievements": [
         {
           "type": "Повышение в должности",
@@ -228,7 +227,7 @@
       "interviewDate": "2022-04-1",
       "employmentDate": "2022-04-3",
       "firstWorkDayDate": "2022-04-6",
-      "salary": 90000,
+      "salary": 200000,
       "successRate": 0,
       "isFired": false,
       "firingDate": null,
@@ -281,20 +280,27 @@
           "educationalInstitution": "Уральский федеральный университет",
           "endDate": "2027-06-30",
           "qualification": "Ваще крутой магистр"
+        },
+        {
+          "educationId": 1685979406570,
+          "type": "Потапов",
+          "educationalInstitution": "УРФУ",
+          "endDate": "2023-06-22",
+          "qualification": "Крол"
         }
       ],
       "post": {
-        "id": 4,
-        "title": "DevOps-инженер",
+        "id": 3,
+        "title": "HR-менеджер",
         "salaryCurrency": "RUB",
-        "salaryLowest": 80000,
-        "salaryHighest": 120000,
+        "salaryLowest": 50000,
+        "salaryHighest": 70000,
         "responsibilitiesDescription": "",
         "departmentId": 2
       },
       "department": {
-        "id": 1,
-        "title": "Отдел разработки"
+        "id": 2,
+        "title": "Отдел подбора персонала"
       }
     },
     {
@@ -2581,6 +2587,39 @@
           "qualification": "Ваще крутой магистр"
         }
       ]
+    },
+    {
+      "id": 1685980485568,
+      "avatarUrl": null,
+      "firstName": "Антон",
+      "lastName": "Антонов",
+      "patronymic": "Антонович",
+      "birthDate": "2023-06-14",
+      "phoneNumber": "+71231231212",
+      "workEmail": "asd@asd.asd",
+      "personalEmail": "asd@asd.asd",
+      "departmentId": 2,
+      "postId": 3,
+      "salary": 20000,
+      "workFormat": "Офис",
+      "achievements": [],
+      "interviewDate": "2023-06-08",
+      "employmentDate": "2023-06-16",
+      "firstWorkDayDate": "2023-06-20",
+      "successRate": 0,
+      "isFired": true,
+      "vacations": [],
+      "education": [
+        {
+          "educationId": 1685980485567,
+          "type": "Высшее",
+          "educationalInstitution": "Урфу",
+          "endDate": "2023-06-14",
+          "qualification": "Потапов"
+        }
+      ],
+      "salaryHistory": [],
+      "firingDate": null
     }
   ]
 }

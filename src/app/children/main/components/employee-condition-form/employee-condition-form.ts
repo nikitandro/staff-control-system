@@ -35,8 +35,8 @@ export class EmployeeConditionForm implements OnInit, OnDestroy {
     public loadDepartments: boolean = true;
     public loadPosts: boolean = true;
 
-    public departmentId!: number;
-    public postId!: number;
+    public departmentId: number | null = null;
+    public postId: number | null = null;
 
     public radioButtonsDepartment: IRadioButton[] = [];
     public radioButtonsPost: IRadioButton[] = [];
@@ -110,7 +110,7 @@ export class EmployeeConditionForm implements OnInit, OnDestroy {
     }
 
     public onSubmit(): void {
-        if (this.employeeConditionForm.invalid) {
+        if (this.employeeConditionForm.invalid || this.departmentId === null || this.postId === null) {
             this.employeeConditionForm.markAllAsTouched();
 
             return;
