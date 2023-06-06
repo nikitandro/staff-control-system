@@ -1,1 +1,1 @@
-export const apiUrl: string = 'https://scs.chrry.pro';
+export const apiUrl: string = 'http://scs.chrry.pro';
