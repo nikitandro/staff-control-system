@@ -4,7 +4,8 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
 import { IAuthUserResponseModel } from '../response-models/auth-user.response-model.interface';
-import {Router} from '@angular/router';
+import { Router } from '@angular/router';
+import { apiUrl } from '../api/api';
 
 @Injectable({
     providedIn: 'root'
@@ -12,11 +13,11 @@ import {Router} from '@angular/router';
 export class AuthService {
     private _token: string | undefined = undefined;
 
-    constructor(private _http: HttpClient, private router: Router) {
+    constructor(private _http: HttpClient, private _router: Router) {
     }
 
     public register(user: IAuthUserRequestModel): Observable<IAuthUserResponseModel> {
-        return this._http.post<IAuthUserResponseModel>('http://localhost:3000/register', user)
+        return this._http.post<IAuthUserResponseModel>(`${apiUrl}/register`, user)
             .pipe(
                 tap((response: IAuthUserResponseModel) => {
                     this.setToken(response.accessToken);
@@ -32,11 +33,9 @@ export class AuthService {
                 })
             );
     }
-
-    //TODO: В burger-button сделать кнопку "выйти", она будет использовать эту функцию
     public logout(): void {
         this.removeToken();
-        this.router.navigate(['auth/login']);
+        this._router.navigate(['auth/login']);
     }
 
     public isAuthenticated(): boolean {
@@ -51,10 +50,5 @@ export class AuthService {
     private removeToken(): void {
         localStorage.removeItem('token');
         this._token = undefined;
-    }
-
-    //TODO: использовать, чтобы передавать токен в запросах
-    private getToken(): string | null {
-        return localStorage.getItem('token');
     }
 }
